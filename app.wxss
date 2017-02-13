@@ -7,6 +7,4 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-  background: #E6E6FF;
-  /*opacity: 0.1;*/
 } 

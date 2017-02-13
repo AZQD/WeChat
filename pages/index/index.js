@@ -26,7 +26,7 @@ Page({
   },
   clickBtn: function(){
     console.log(666);
-    console.log(window);
+    console.log(window); 
     // window.location.href = 'https://www.baidu.com/';//暂时不支持跳转到外部链接；
   }
 })

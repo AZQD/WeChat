@@ -21,6 +21,6 @@
   text-align: center;
   color: fuchsia;
 }
-.fatburn {
+.fatburn { 
   border: 1px solid red;
 }
