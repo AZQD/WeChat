@@ -3,7 +3,8 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    // motto: 'Hello World',
+    motto: 'Welcome to WeChat applet !',
     userInfo: {}
   },
   //事件处理函数
@@ -22,5 +23,10 @@ Page({
         userInfo:userInfo
       })
     })
+  },
+  clickBtn: function(){
+    console.log(666);
+    console.log(window);
+    // window.location.href = 'https://www.baidu.com/';//暂时不支持跳转到外部链接；
   }
 })
