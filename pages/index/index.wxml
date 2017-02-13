@@ -6,5 +6,6 @@
   </view>
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
+    <image class="fatburn" src="http://cdn2.picooc.com/web/res/fatburnSystem/1/燃脂营-售卖640x640.jpg"></image>
   </view>
 </view>
