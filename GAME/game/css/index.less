@@ -1,0 +1,126 @@
+@rem: 102.4rem;
+
+.container{
+    min-height: 100vh;
+    width: 1024/@rem;
+    background: url("../image/bodyBg.png") no-repeat;
+    background-size: 100%;
+
+    .partA{
+        //overflow: hidden;
+        height: 322/@rem;
+        width: 100%;
+        position: relative;
+        .partAImg1{
+            position: absolute;
+            width: 1014/@rem;
+            left:18/@rem;
+            top: 0;
+        }
+        .partAImg2{
+            position: absolute;
+            z-index: 1;
+            width: 659/@rem;
+            left:226/@rem;
+            top: 54/@rem;
+        }
+    }
+
+    .partB{
+        height: 222/@rem;
+        width: 100%;
+        position: relative;
+        .partBImg1{
+            position: absolute;
+            width: 1015/@rem;
+            left:0/@rem;
+            top: 64/@rem;
+        }
+        .partBImg2{
+            position: absolute;
+            z-index: 1;
+            width: 898/@rem;
+            left: 72/@rem;
+            top: 0/@rem;
+        }
+    }
+
+    .partC{
+        height: 1000px;
+        position: relative;
+        z-index: 2;
+        background: url("../image/partCBg.png") no-repeat 0 -240/@rem;
+        background-size: 100% 100%;
+
+        .boxVS{
+            text-align: center;
+            height: 606/@rem;
+            width: 100%;
+            position: relative;
+            .boxVSImg1{
+                position: absolute;
+                width: 881/@rem;
+                left:67/@rem;
+                top: 36/@rem;
+            }
+            .boxVSImg2{
+                position: absolute;
+                z-index: 1;
+                width: 881/@rem;
+                left: 67/@rem;
+                top: 36/@rem;
+            }
+            .xieZhu{
+                position: relative;
+                z-index: 2;
+                width: 680/@rem;
+                margin-top: 13/@rem;
+            }
+
+            .gamer{
+                height: 435/@rem;
+                overflow: hidden;
+                position: relative;
+                padding-top: 4/@rem;
+                z-index: 4;
+                .wanJia{
+                    text-align: left;
+                    .wanJiaImg{
+                        width: 320/@rem;
+                        margin-left: 68/@rem;
+                        margin-top: 90/@rem;
+                    }
+                }
+                .lingZhu{
+                    text-align: right;
+                    .lingZhuImg{
+                        width: 480/@rem;
+                    }
+                }
+            }
+
+            .userName{
+                position: relative;
+                z-index: 5;
+                font-size: 42/@rem;
+                font-weight: bold;
+                color: #fff;
+                .userNameBg{
+                    text-shadow: 5/@rem 5/@rem 50/@rem #000;
+                    background: url("../image/userNameBg.png") no-repeat;
+                    background-size: 100% 64/@rem;
+                }
+            }
+
+            .vs{
+                position: absolute;
+                left: 394/@rem;
+                bottom: 0;
+                width: 247/@rem;
+                z-index: 6;
+            }
+        }
+
+    }
+
+}

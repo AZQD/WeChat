@@ -1,0 +1,114 @@
+.container {
+  min-height: 100vh;
+  width: 10rem;
+  background: url("../image/bodyBg.png") no-repeat;
+  background-size: 100%;
+}
+.container .partA {
+  height: 3.14453125rem;
+  width: 100%;
+  position: relative;
+}
+.container .partA .partAImg1 {
+  position: absolute;
+  width: 9.90234375rem;
+  left: 0.17578125rem;
+  top: 0;
+}
+.container .partA .partAImg2 {
+  position: absolute;
+  z-index: 1;
+  width: 6.43554688rem;
+  left: 2.20703125rem;
+  top: 0.52734375rem;
+}
+.container .partB {
+  height: 2.16796875rem;
+  width: 100%;
+  position: relative;
+}
+.container .partB .partBImg1 {
+  position: absolute;
+  width: 9.91210938rem;
+  left: 0rem;
+  top: 0.625rem;
+}
+.container .partB .partBImg2 {
+  position: absolute;
+  z-index: 1;
+  width: 8.76953125rem;
+  left: 0.703125rem;
+  top: 0rem;
+}
+.container .partC {
+  height: 1000px;
+  position: relative;
+  z-index: 2;
+  background: url("../image/partCBg.png") no-repeat 0 -2.34375rem;
+  background-size: 100% 100%;
+}
+.container .partC .boxVS {
+  text-align: center;
+  height: 5.91796875rem;
+  width: 100%;
+  position: relative;
+}
+.container .partC .boxVS .boxVSImg1 {
+  position: absolute;
+  width: 8.60351563rem;
+  left: 0.65429688rem;
+  top: 0.3515625rem;
+}
+.container .partC .boxVS .boxVSImg2 {
+  position: absolute;
+  z-index: 1;
+  width: 8.60351563rem;
+  left: 0.65429688rem;
+  top: 0.3515625rem;
+}
+.container .partC .boxVS .xieZhu {
+  position: relative;
+  z-index: 2;
+  width: 6.640625rem;
+  margin-top: 0.12695313rem;
+}
+.container .partC .boxVS .gamer {
+  height: 4.24804688rem;
+  overflow: hidden;
+  position: relative;
+  padding-top: 0.0390625rem;
+  z-index: 4;
+}
+.container .partC .boxVS .gamer .wanJia {
+  text-align: left;
+}
+.container .partC .boxVS .gamer .wanJia .wanJiaImg {
+  width: 3.125rem;
+  margin-left: 0.6640625rem;
+  margin-top: 0.87890625rem;
+}
+.container .partC .boxVS .gamer .lingZhu {
+  text-align: right;
+}
+.container .partC .boxVS .gamer .lingZhu .lingZhuImg {
+  width: 4.6875rem;
+}
+.container .partC .boxVS .userName {
+  position: relative;
+  z-index: 5;
+  font-size: 0.41015625rem;
+  font-weight: bold;
+  color: #fff;
+}
+.container .partC .boxVS .userName .userNameBg {
+  text-shadow: 0.04882813rem 0.04882813rem 0.48828125rem #000000;
+  background: url("../image/userNameBg.png") no-repeat;
+  background-size: 100% 0.625rem;
+}
+.container .partC .boxVS .vs {
+  position: absolute;
+  left: 3.84765625rem;
+  bottom: 0;
+  width: 2.41210938rem;
+  z-index: 6;
+}
