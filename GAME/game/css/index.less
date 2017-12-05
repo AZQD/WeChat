@@ -1,10 +1,14 @@
 @rem: 102.4rem;
 
+body{
+    font-family: '微软雅黑';
+}
 .container{
     min-height: 100vh;
     width: 1024/@rem;
     background: url("../image/bodyBg.png") no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+    padding-bottom: 102/@rem;
 
     .partA{
         //overflow: hidden;
@@ -46,10 +50,10 @@
     }
 
     .partC{
-        height: 1000px;
+        //height: 1000px;
         position: relative;
         z-index: 2;
-        background: url("../image/partCBg.png") no-repeat 0 -240/@rem;
+        background: url("../image/partCBgNew.png") no-repeat 0 0;
         background-size: 100% 100%;
 
         .boxVS{
@@ -74,7 +78,7 @@
                 position: relative;
                 z-index: 2;
                 width: 680/@rem;
-                margin-top: 13/@rem;
+                margin-top: 10/@rem;
             }
 
             .gamer{
@@ -118,6 +122,140 @@
                 bottom: 0;
                 width: 247/@rem;
                 z-index: 6;
+            }
+        }
+
+        .codeWrap{
+
+            .miLing{
+                padding-top: 40/@rem;
+                padding-bottom: 5/@rem;
+                text-align: center;
+                .miLingImg{
+                    width: 244/@rem;
+                }
+            }
+            .codeBox{
+                text-align: center;
+                .codeBtn{
+                    width: 754/@rem;
+                    height: 109/@rem;
+                    line-height: 109/@rem;
+                    text-align: center;
+                    border: none;
+                    outline: none;
+                    background: url("../image/codeBg.png") no-repeat;
+                    background-size: 100% 100%;
+                    .code{
+                        color: #fff;
+                        font-size: 80/@rem;
+                    }
+                }
+            }
+
+            .codeTip{
+                padding: 6/@rem 0;
+                text-align: center;
+                font-size: 42/@rem;
+                color: #0dab01;
+            }
+
+            .copyBox{
+                text-align: center;
+                .copyBtn{
+                    width: 334/@rem;
+                    height: 152/@rem;
+                    line-height: 100/@rem;
+                    text-align: center;
+                    border: none;
+                    outline: none;
+                    background: url("../image/copyBg.png") no-repeat;
+                    background-size: 100% 100%;
+                    padding-bottom: 5/@rem;
+                    .copy{
+                        color: #fff;
+                        font-size: 72/@rem;
+                        text-shadow: 0 0 16/@rem #000;
+                    }
+                }
+            }
+
+        }
+        
+        .downloadWarp{
+            position: relative;
+            .bigJianTou{
+                width:613/@rem;
+                height:242/@rem;
+                position: absolute;
+                left:207/@rem;
+                top:5/@rem;
+                z-index: 7;
+            }
+            .part{
+                text-align: center;
+                height: 652/@rem;
+                .isInstall{
+                    padding-top: 252/@rem;
+                    img{
+                        width: 335/@rem;
+                        height: 56/@rem;
+                    }
+                }
+                .smallJianTou{
+                    padding-top: 20/@rem;
+                    img{
+                        width: 95/@rem;
+                        height: 109/@rem;
+                    }
+                }
+                .btnBox{
+                    .btn{
+                        width: 334/@rem;
+                        height: 152/@rem;
+                        line-height: 100/@rem;
+                        text-align: center;
+                        border: none;
+                        outline: none;
+                        color: #fff;
+                        font-size: 60/@rem;
+                        text-shadow: 0 0 16/@rem #000;
+                        padding-bottom: 5/@rem;
+                    }
+                    .leftBtn{
+                        background: url("../image/leftBtn.png") no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .rightBtn{
+                        background: url("../image/rightBtn.png") no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            .left{
+                background: url("../image/blueBg.png") no-repeat 0 -24/@rem;
+                background-size: 100%;
+            }
+            .right{
+                background: url("../image/orangeBg.png") no-repeat 0 -24/@rem;
+                background-size: 100%;
+            }
+        }
+
+        .explainBox{
+            padding-bottom: 182/@rem;
+            margin: 0 28/@rem;
+            position: relative;
+            top: -20/@rem;
+            .divide{
+                img{
+                    width: 100%;
+                }
+            }
+            .explain{
+                padding: 0 56/@rem;
+                color: #4b3636;
+                font-size: 42/@rem;
             }
         }
 
