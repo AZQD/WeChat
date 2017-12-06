@@ -22,8 +22,9 @@ body {
 .container .partA .partAImg2 {
   position: absolute;
   z-index: 1;
-  width: 6.43554688rem;
-  left: 2.20703125rem;
+  width: 7.03125rem;
+  height: 3.3203125rem;
+  left: 1.953125rem;
   top: 0.52734375rem;
 }
 .container .partB {
@@ -41,6 +42,7 @@ body {
   position: absolute;
   z-index: 1;
   width: 8.76953125rem;
+  height: 2.20703125rem;
   left: 0.703125rem;
   top: 0rem;
 }
@@ -73,6 +75,7 @@ body {
   position: relative;
   z-index: 2;
   width: 6.640625rem;
+  height: 0.859375rem;
   margin-top: 0.09765625rem;
 }
 .container .partC .boxVS .gamer {
@@ -122,6 +125,7 @@ body {
 }
 .container .partC .codeWrap .miLing .miLingImg {
   width: 2.3828125rem;
+  height: 0.67382813rem;
 }
 .container .partC .codeWrap .codeBox {
   text-align: center;
@@ -142,6 +146,7 @@ body {
   padding: 0.05859375rem 0;
   text-align: center;
   font-size: 0.41015625rem;
+  height: 0.625rem;
   color: #0dab01;
 }
 .container .partC .codeWrap .copyBox {
@@ -183,7 +188,7 @@ body {
 }
 .container .partC .downloadWarp .part .isInstall img {
   width: 3.27148438rem;
-  height: 0.546875rem;
+  height: 0.55664063rem;
 }
 .container .partC .downloadWarp .part .smallJianTou {
   padding-top: 0.1953125rem;
