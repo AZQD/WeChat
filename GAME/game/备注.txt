@@ -1,0 +1,5 @@
+ 数据暂时用这个：http://image.youkongwan.com/rqdld/data.json
+
+回头游戏后台会给一个api给你请求数据。可能会有2个问题：
+1. 跨域请求
+2. 页面接受一个用户id，把这个id传给api获得数据

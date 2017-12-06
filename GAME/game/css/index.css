@@ -133,12 +133,10 @@ body {
   text-align: center;
   border: none;
   outline: none;
-  background: url("../image/codeBg.png") no-repeat;
-  background-size: 100% 100%;
-}
-.container .partC .codeWrap .codeBox .codeBtn .code {
   color: #fff;
   font-size: 0.78125rem;
+  background: url("../image/codeBg.png") no-repeat;
+  background-size: 100% 100%;
 }
 .container .partC .codeWrap .codeTip {
   padding: 0.05859375rem 0;
