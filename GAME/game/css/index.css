@@ -34,7 +34,7 @@ body {
 }
 .container .partB .partBImg1 {
   position: absolute;
-  width: 9.91210938rem;
+  width: 100%;
   left: 0rem;
   top: 0.625rem;
 }
@@ -49,7 +49,7 @@ body {
 .container .partC {
   position: relative;
   z-index: 2;
-  background: url("../image/partCBgNew.png") no-repeat 0 0;
+  background: url("../image/partCBg.png") no-repeat 0 0;
   background-size: 100% 100%;
 }
 .container .partC .boxVS {
@@ -105,6 +105,7 @@ body {
   font-size: 0.41015625rem;
   font-weight: bold;
   color: #fff;
+  margin: 0 0.2734375rem;
 }
 .container .partC .boxVS .userName .userNameBg {
   text-shadow: 0.04882813rem 0.04882813rem 0.48828125rem #000000;
@@ -170,6 +171,7 @@ body {
 }
 .container .partC .downloadWarp {
   position: relative;
+  margin: 0 0.2734375rem;
 }
 .container .partC .downloadWarp .bigJianTou {
   width: 5.98632813rem;
@@ -238,4 +240,11 @@ body {
   padding: 0 0.546875rem;
   color: #4b3636;
   font-size: 0.41015625rem;
+}
+.container .partC .bottomImg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
 }

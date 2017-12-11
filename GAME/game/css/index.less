@@ -37,7 +37,7 @@ body{
         position: relative;
         .partBImg1{
             position: absolute;
-            width: 1015/@rem;
+            width: 100%;
             left:0/@rem;
             top: 64/@rem;
         }
@@ -55,7 +55,7 @@ body{
         //height: 1000px;
         position: relative;
         z-index: 2;
-        background: url("../image/partCBgNew.png") no-repeat 0 0;
+        background: url("../image/partCBg.png") no-repeat 0 0;
         background-size: 100% 100%;
 
         .boxVS{
@@ -112,6 +112,7 @@ body{
                 font-size: 42/@rem;
                 font-weight: bold;
                 color: #fff;
+                margin: 0 28/@rem;
                 .userNameBg{
                     text-shadow: 5/@rem 5/@rem 50/@rem #000;
                     background: url("../image/userNameBg.png") no-repeat;
@@ -187,6 +188,7 @@ body{
         
         .downloadWarp{
             position: relative;
+            margin: 0 28/@rem;
             .bigJianTou{
                 width:613/@rem;
                 height:242/@rem;
@@ -260,6 +262,14 @@ body{
                 color: #4b3636;
                 font-size: 42/@rem;
             }
+        }
+
+        .bottomImg{
+            position: absolute;
+            left: 0;
+            bottom:0;
+            z-index: 10;
+            width: 100%;
         }
 
     }
