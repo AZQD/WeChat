@@ -1,5 +1,19 @@
 //语言切换
-var lang = getParamByUrl('lang');
+
+var sysLanguage=window.navigator.systemLanguage?window.navigator.systemLanguage:window.navigator.language;
+
+// alert(sysLanguage);
+var lang;
+switch(sysLanguage) {
+    case "zh-TW"://中文繁体
+        lang = 'fan';
+        break;
+    case "en_US"://英文
+        lang = 'en';
+        break;
+    default://中文简体
+}
+
 if(lang == 'fan'){
     $('.container .partC .codeWrap .codeTip').html('*在遊戲中填寫以協助好友');
     $('.container .partC .codeWrap .copyBox .copyBtn .copy').html('複製');
@@ -12,7 +26,7 @@ if(lang == 'fan'){
     $('.container .partC .codeWrap .miLing .miLingImg').attr('src', 'image/miLingImg_f.png');
     $('.container .partC .downloadWarp .part .isInstall .leftNoInstall').attr('src', 'image/leftNoInstall_f.png');
     $('.container .partC .downloadWarp .part .isInstall .rightInstall').attr('src', 'image/rightInstall_f.png');
-}else{
+}else {
     $('.container .partC .codeWrap .codeTip').html('*在游戏中填写以协助好友');
     $('.container .partC .codeWrap .copyBox .copyBtn .copy').html('复制');
     $('#downloadBtn').html('前往下载');
