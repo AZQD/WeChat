@@ -14,7 +14,7 @@ switch(sysLanguage) {
     default://中文简体
 }
 
-if(lang == 'fan'){
+if((lang == 'fan') || (getParamByUrl('test') == 'chaojie')){
     $('.container .partC .codeWrap .codeTip').html('*在遊戲中填寫以協助好友');
     $('.container .partC .codeWrap .copyBox .copyBtn .copy').html('複製');
     $('#downloadBtn').html('前往下載');
@@ -40,8 +40,28 @@ if(lang == 'fan'){
     $('.container .partC .downloadWarp .part .isInstall .rightInstall').attr('src', 'image/rightInstall.png');//我已经安装游戏
 
 }
+var goodsInfo = {
+    "uid":"7126"
+};
+$.ajax({
+    type: "get",
+    url: 'http://rqdld-test.youkongwan.com/api/boss_inv_data?uid=7126',
+    dataType:"jsonp",
+    //"contentType": "application/json;charset=utf-8",
+    //contentType: 'application/json',
+    //data:JSON.stringify(goodsInfo),
+    success: function(data){
+        console.log(data);
+    },
+    error:function(error){
+        console.log(error);
+    }
+});
 
-
+//var str = "12\u9636\u82cd\u72fc";
+//var reg = eval(str);
+//alert(str);
+//var reg5 = /[\u4e00-\u9fa5]/g;
 //数据交互
 var jsonData =
 {

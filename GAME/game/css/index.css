@@ -36,7 +36,7 @@ body {
   position: absolute;
   width: 100%;
   left: 0rem;
-  top: 0.625rem;
+  top: 0.63476563rem;
 }
 .container .partB .partBImg2 {
   position: absolute;
@@ -171,7 +171,7 @@ body {
 }
 .container .partC .downloadWarp {
   position: relative;
-  margin: 0 0.2734375rem;
+  padding: 0 0.2734375rem;
 }
 .container .partC .downloadWarp .bigJianTou {
   width: 5.98632813rem;
@@ -209,7 +209,7 @@ body {
   color: #fff;
   font-size: 0.5859375rem;
   text-shadow: 0 0 0.15625rem #000000;
-  padding-bottom: 0.04882813rem;
+  padding-bottom: 0.09765625rem;
 }
 .container .partC .downloadWarp .part .btnBox .leftBtn {
   background: url("../image/leftBtn.png") no-repeat;
@@ -247,4 +247,5 @@ body {
   bottom: 0;
   z-index: 10;
   width: 100%;
+  background-color: #55403D;
 }
