@@ -40,29 +40,67 @@ if((lang == 'fan') || (getParamByUrl('test') == 'chaojie')){
     $('.container .partC .downloadWarp .part .isInstall .rightInstall').attr('src', 'image/rightInstall.png');//我已经安装游戏
 
 }
-var goodsInfo = {
-    "uid":"7126"
-};
-$.ajax({
-    type: "get",
-    url: 'http://rqdld-test.youkongwan.com/api/boss_inv_data?uid=7126',
-    dataType:"jsonp",
-    //"contentType": "application/json;charset=utf-8",
-    //contentType: 'application/json',
-    //data:JSON.stringify(goodsInfo),
-    success: function(data){
-        console.log(data);
-    },
-    error:function(error){
-        console.log(error);
-    }
-});
+var uid;//7126
+uid = getParamByUrl('uid');
+if(uid == 'false'){
+    alert('请携带uid参数');
+}else{
+    //数据交互
+    $.ajax({
+        type: "get",
+        url: 'http://rqdld-test.youkongwan.com/api/boss_inv_data?uid='+ uid,
+        dataType:"json",
+        success: function(data){
+            console.log(data);
 
-//var str = "12\u9636\u82cd\u72fc";
-//var reg = eval(str);
-//alert(str);
-//var reg5 = /[\u4e00-\u9fa5]/g;
-//数据交互
+            var jsonData = data;
+            $('.container .partC .boxVS .userName .left').html(jsonData.challenger.name);//左侧用户名称
+            //$('.container .partC .boxVS .gamer .wanJia .wanJiaImg').attr('src', 'image/wanJiaImg.png');//左侧用户头像
+            $('.container .partC .boxVS .gamer .wanJia .wanJiaImg').attr('src', jsonData.challenger.img);//左侧用户头像
+            $('#copyCode').val(jsonData.challenger.invicode);//协助密码code
+
+            $('.container .partC .boxVS .userName .right').html(jsonData.boss.name);//右侧用户名称
+            //$('.container .partC .boxVS .gamer .lingZhu .lingZhuImg').attr('src', 'image/lingZhuImg.png');//右侧用户头像
+            $('.container .partC .boxVS .gamer .lingZhu .lingZhuImg').attr('src', jsonData.boss.img);//右侧用户头像
+            $('body').show();
+
+
+            //复制功能
+            $('#copyBtn').unbind('click').bind('click', function (ev) {
+                ev = ev || event;
+                if(ev.preventDefault){
+                    ev.preventDefault();
+                }else{
+                    return false;
+                }
+                var Url1=document.getElementById("copyCode");
+                console.log(Url1);
+                Url1.select(); // 选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                alert('复制成功!');
+                document.documentElement.style.webkitUserSelect = 'none';
+                document.documentElement.style.webkitTouchCallout = 'none';
+            });
+
+            //前往下载
+            $('#downloadBtn').unbind('click').bind('click', function(){
+                window.location.href = jsonData.download;
+            });
+
+            //马上协助
+            $('#helpBtn').unbind('click').bind('click', function(){
+                alert('马上协助');
+            });
+
+        },
+        error:function(error){
+            console.log(error);
+        }
+    });
+}
+
+
+/*//数据交互
 var jsonData =
 {
     "challenger": {
@@ -76,41 +114,8 @@ var jsonData =
     },
     "download":"http://h.youkongwan.com/rqdld/index.html"
 };
+console.log(jsonData);*/
+/*$(function(){
 
-$('.container .partC .boxVS .userName .left').html(jsonData.challenger.name);//左侧用户名称
-//$('.container .partC .boxVS .gamer .wanJia .wanJiaImg').attr('src', 'image/wanJiaImg.png');//左侧用户头像
-$('.container .partC .boxVS .gamer .wanJia .wanJiaImg').attr('src', jsonData.challenger.img);//左侧用户头像
-$('#copyCode').val(jsonData.challenger.invicode);//协助密码code
+});*/
 
-$('.container .partC .boxVS .userName .right').html(jsonData.boss.name);//右侧用户名称
-//$('.container .partC .boxVS .gamer .lingZhu .lingZhuImg').attr('src', 'image/lingZhuImg.png');//右侧用户头像
-$('.container .partC .boxVS .gamer .lingZhu .lingZhuImg').attr('src', jsonData.boss.img);//右侧用户头像
-
-
-
-//复制功能
-$('#copyBtn').unbind('click').bind('click', function (ev) {
-    ev = ev || event;
-    if(ev.preventDefault){
-        ev.preventDefault();
-    }else{
-        return false;
-    }
-    var Url1=document.getElementById("copyCode");
-    console.log(Url1);
-    Url1.select(); // 选择对象
-    document.execCommand("Copy"); // 执行浏览器复制命令
-    alert('复制成功!');
-    document.documentElement.style.webkitUserSelect = 'none';
-    document.documentElement.style.webkitTouchCallout = 'none';
-});
-
-//前往下载
-$('#downloadBtn').unbind('click').bind('click', function(){
-    window.location.href = jsonData.download;
-});
-
-//马上协助
-$('#helpBtn').unbind('click').bind('click', function(){
-    alert('马上协助');
-});
