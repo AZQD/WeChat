@@ -2,4 +2,9 @@
 
 回头游戏后台会给一个api给你请求数据。可能会有2个问题：
 1. 跨域请求
-2. 页面接受一个用户id，把这个id传给api获得数据
+2. 页面接受一个用户id，把这个id传给api获得数据；
+
+代码SVN地址：https://182.92.177.5/svn/h5/糖游游/h.youkongwan.com/rqdld/invite
+lcj_789
+账号:liuchaojie
+密码:lcj_789
