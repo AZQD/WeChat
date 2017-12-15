@@ -1,7 +1,5 @@
 //语言切换
-
 var sysLanguage=window.navigator.systemLanguage?window.navigator.systemLanguage:window.navigator.language;
-
 // alert(sysLanguage);
 var lang;
 switch(sysLanguage) {
@@ -64,7 +62,6 @@ if(uid == 'false'){
             $('.container .partC .boxVS .gamer .lingZhu .lingZhuImg').attr('src', jsonData.boss.img);//右侧用户头像
             $('body').show();
 
-
             //复制功能
             $('#copyBtn').unbind('click').bind('click', function (ev) {
                 ev = ev || event;
@@ -98,24 +95,4 @@ if(uid == 'false'){
         }
     });
 }
-
-
-/*//数据交互
-var jsonData =
-{
-    "challenger": {
-        "name": "肉球猫",
-        "img": "http://image.youkongwan.com/rqdld/cat.png",
-        "invicode": "ABHLT"
-    },
-    "boss": {
-        "name":"12阶苍狼",
-        "img": "http://image.youkongwan.com/rqdld/wolf.png"
-    },
-    "download":"http://h.youkongwan.com/rqdld/index.html"
-};
-console.log(jsonData);*/
-/*$(function(){
-
-});*/
 

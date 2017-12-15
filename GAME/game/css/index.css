@@ -31,12 +31,14 @@ body {
   height: 2.16796875rem;
   width: 100%;
   position: relative;
+  top: 0.01953125rem;
 }
 .container .partB .partBImg1 {
   position: absolute;
   width: 100%;
   left: 0rem;
   top: 0.63476563rem;
+  padding: 0 0.06835938rem;
 }
 .container .partB .partBImg2 {
   position: absolute;
@@ -51,6 +53,7 @@ body {
   z-index: 2;
   background: url("../image/partCBg.png") no-repeat 0 0;
   background-size: 100% 100%;
+  margin: 0 0.06835938rem;
 }
 .container .partC .boxVS {
   text-align: center;
@@ -91,7 +94,7 @@ body {
 .container .partC .boxVS .gamer .wanJia .wanJiaImg {
   width: 3.125rem;
   margin-left: 0.6640625rem;
-  margin-top: 0.87890625rem;
+  margin-top: 1.1328125rem;
 }
 .container .partC .boxVS .gamer .lingZhu {
   text-align: right;
