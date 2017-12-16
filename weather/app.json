@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/search/search",
-    "pages/info/infos"
+    "pages/info/info"
   ],
   "window": {
-    "navigationBarBackgroundColor": "#bfa",
+    "navigationBarBackgroundColor": "#ccc",
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "天气预报",
     "backgroundColor": "#eeeeee",
