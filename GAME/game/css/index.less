@@ -89,12 +89,14 @@ body{
             }
 
             .gamer{
-                height: 435/@rem;
+                height: 490/@rem;
                 overflow: hidden;
                 position: relative;
                 padding-top: 4/@rem;
                 z-index: 4;
                 .wanJia{
+                    height: 485/@rem;
+                    overflow: hidden;
                     text-align: left;
                     .wanJiaImg{
                         width: 320/@rem;
@@ -111,12 +113,19 @@ body{
             }
 
             .userName{
-                position: relative;
+                position: absolute;
                 z-index: 5;
                 font-size: 42/@rem;
                 font-weight: bold;
                 color: #fff;
                 margin: 0 28/@rem;
+
+                /*新增*/
+                overflow: hidden;
+                width: 100%;
+                top: 535/@rem;
+                opacity: .9;
+
                 .userNameBg{
                     text-shadow: 5/@rem 5/@rem 50/@rem #000;
                     background: url("../image/userNameBg.png") no-repeat;

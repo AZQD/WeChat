@@ -82,13 +82,15 @@ body {
   margin-top: 0.09765625rem;
 }
 .container .partC .boxVS .gamer {
-  height: 4.24804688rem;
+  height: 4.78515625rem;
   overflow: hidden;
   position: relative;
   padding-top: 0.0390625rem;
   z-index: 4;
 }
 .container .partC .boxVS .gamer .wanJia {
+  height: 4.73632813rem;
+  overflow: hidden;
   text-align: left;
 }
 .container .partC .boxVS .gamer .wanJia .wanJiaImg {
@@ -103,12 +105,17 @@ body {
   width: 4.6875rem;
 }
 .container .partC .boxVS .userName {
-  position: relative;
+  position: absolute;
   z-index: 5;
   font-size: 0.41015625rem;
   font-weight: bold;
   color: #fff;
   margin: 0 0.2734375rem;
+  /*新增*/
+  overflow: hidden;
+  width: 100%;
+  top: 5.22460938rem;
+  opacity: .9;
 }
 .container .partC .boxVS .userName .userNameBg {
   text-shadow: 0.04882813rem 0.04882813rem 0.48828125rem #000000;
