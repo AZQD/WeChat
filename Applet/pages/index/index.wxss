@@ -19,7 +19,7 @@
 .usermotto {
   margin-top: 200px;
   text-align: center;
-  color: fuchsia;
+  color: yellow;
 }
 .fatburn { 
   border: 1px solid red;
