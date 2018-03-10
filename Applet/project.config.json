@@ -24,7 +24,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -35,7 +35,13 @@
 				{
 					"id": -1,
 					"name": "elipsis",
-					"pathName": "pages/elipsis/elipsis"
+					"pathName": "pages/elipsis/elipsis",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "canvas",
+					"pathName": "pages/canvas/canvas"
 				}
 			]
 		}

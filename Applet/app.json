@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/swiper/swiper",
-    "pages/elipsis/elipsis"
+    "pages/elipsis/elipsis",
+    "pages/canvas/canvas"
   ],
   "window":{
     "backgroundTextStyle":"light",
