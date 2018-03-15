@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/swiper/swiper",
     "pages/elipsis/elipsis",
-    "pages/canvas/canvas"
+    "pages/canvas/canvas",
+    "pages/setting/setting"
   ],
   "window":{
     "backgroundTextStyle":"light",

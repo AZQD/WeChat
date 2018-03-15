@@ -1,6 +1,18 @@
 //app.js
 App({
   onLaunch: function () {
+
+      wx.login({
+          success: function(res) {
+
+              if (res.code) {
+                  console.log('登录成功！',res);
+              } else {
+                  console.log('登录失败！',res);
+              }
+          }
+      });
+
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
