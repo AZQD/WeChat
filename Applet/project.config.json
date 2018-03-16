@@ -45,9 +45,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "setting",
-					"pathName": "pages/setting/setting"
+					"id": 3,
+					"name": "授权setting",
+					"pathName": "pages/setting/setting",
+					"query": ""
 				}
 			]
 		}
