@@ -5,7 +5,8 @@
     "pages/swiper/swiper",
     "pages/elipsis/elipsis",
     "pages/canvas/canvas",
-    "pages/setting/setting"
+    "pages/setting/setting",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",

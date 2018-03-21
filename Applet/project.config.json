@@ -24,7 +24,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -48,6 +48,12 @@
 					"id": 3,
 					"name": "授权setting",
 					"pathName": "pages/setting/setting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "获取unionId和openId",
+					"pathName": "pages/login/login",
 					"query": ""
 				}
 			]
