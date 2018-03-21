@@ -6,7 +6,8 @@
     "pages/elipsis/elipsis",
     "pages/canvas/canvas",
     "pages/setting/setting",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/launchApp/launchApp"
   ],
   "window":{
     "backgroundTextStyle":"light",
