@@ -14,7 +14,7 @@ Page({
   onLoad: function (options) {
     const ctx = wx.createCanvasContext('myCanvas');
     ctx.setFillStyle('blue');
-      ctx.fillRect(10,10,395,300);
+      ctx.fillRect(0,0,375,300);
 
 
       ctx.setFillStyle('pink');
