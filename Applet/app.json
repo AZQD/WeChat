@@ -7,7 +7,8 @@
     "pages/canvas/canvas",
     "pages/setting/setting",
     "pages/login/login",
-    "pages/launchApp/launchApp"
+    "pages/launchApp/launchApp",
+    "pages/juZhong/juZhong"
   ],
   "window":{
     "backgroundTextStyle":"light",

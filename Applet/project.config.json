@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -69,6 +69,11 @@
 					"referrerInfo": {
 						"appId": "wxc97b21c63d084d92"
 					}
+				},
+				{
+					"id": -1,
+					"name": "遮罩居中",
+					"pathName": "pages/juZhong/juZhong"
 				}
 			]
 		}
