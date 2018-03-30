@@ -1,4 +1,4 @@
-<!--pages/index/index.wxml-->
+<!--pages/index/index.wxml  test-->
 <!--<text>pages/index/index.wxml</text>-->
 <import src="/pages/public/temp.wxml"/>
 <template is='wt_main' data="{{...weatherData}}">
