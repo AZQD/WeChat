@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -73,7 +73,13 @@
 				{
 					"id": -1,
 					"name": "遮罩居中",
-					"pathName": "pages/juZhong/juZhong"
+					"pathName": "pages/juZhong/juZhong",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "截屏事件",
+					"pathName": "pages/jiePing/jiePing"
 				}
 			]
 		}
