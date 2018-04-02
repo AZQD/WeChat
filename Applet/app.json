@@ -10,7 +10,9 @@
     "pages/launchApp/launchApp",
     "pages/juZhong/juZhong",
     "pages/jiePing/jiePing",
-    "pages/chooseLocation/chooseLocation"
+    "pages/chooseLocation/chooseLocation",
+    "pages/chooseImage/chooseImage",
+    "pages/getPhoneNumber/getPhoneNumber"
   ],
   "window":{
     "backgroundTextStyle":"light",

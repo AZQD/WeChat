@@ -5,6 +5,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+      this.getUserInfo()
   },
   getUserInfo:function(cb){
     var that = this
@@ -17,6 +18,7 @@ App({
         success: function () {
           wx.getUserInfo({
             success: function (res) {
+                console.log('登陆wx.login', res);
               that.globalData.userInfo = res.userInfo
               console.log(res.userInfo);
               typeof cb == "function" && cb(that.globalData.userInfo)
