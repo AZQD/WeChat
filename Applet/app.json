@@ -9,7 +9,8 @@
     "pages/login/login",
     "pages/launchApp/launchApp",
     "pages/juZhong/juZhong",
-    "pages/jiePing/jiePing"
+    "pages/jiePing/jiePing",
+    "pages/chooseLocation/chooseLocation"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -79,7 +79,14 @@
 				{
 					"id": -1,
 					"name": "截屏事件",
-					"pathName": "pages/jiePing/jiePing"
+					"pathName": "pages/jiePing/jiePing",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "chooseLocation",
+					"pathName": "pages/chooseLocation/chooseLocation",
+					"query": ""
 				}
 			]
 		}
