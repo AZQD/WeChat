@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -99,6 +99,11 @@
 					"name": "getPhoneNumber",
 					"pathName": "pages/getPhoneNumber/getPhoneNumber",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "bindscrolltolower",
+					"pathName": "pages/bindscrolltolower/bindscrolltolower"
 				}
 			]
 		}

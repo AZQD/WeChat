@@ -12,7 +12,8 @@
     "pages/jiePing/jiePing",
     "pages/chooseLocation/chooseLocation",
     "pages/chooseImage/chooseImage",
-    "pages/getPhoneNumber/getPhoneNumber"
+    "pages/getPhoneNumber/getPhoneNumber",
+    "pages/bindscrolltolower/bindscrolltolower"
   ],
   "window":{
     "backgroundTextStyle":"light",
