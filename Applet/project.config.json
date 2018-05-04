@@ -107,9 +107,10 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 12,
 					"name": "cutPicture",
-					"pathName": "pages/cutPicture/cutPicture"
+					"pathName": "pages/cutPicture/dashboard/index",
+					"query": ""
 				}
 			]
 		}

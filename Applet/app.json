@@ -14,7 +14,13 @@
     "pages/chooseImage/chooseImage",
     "pages/getPhoneNumber/getPhoneNumber",
     "pages/bindscrolltolower/bindscrolltolower",
-    "pages/cutPicture/cutPicture"
+    "pages/cutPicture/dashboard/index",
+    "pages/cutPicture/normal/normal",
+    "pages/cutPicture/avatarUpload/index/index",
+    "pages/cutPicture/avatarUpload/upload/upload",
+    "pages/cutPicture/network/network",
+    "pages/cutPicture/watermark/watermark",
+    "pages/cutPicture/cutInside/cutInside"
   ],
   "window":{
     "backgroundTextStyle":"light",
