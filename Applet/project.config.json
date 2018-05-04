@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -105,6 +105,11 @@
 					"name": "bindscrolltolower",
 					"pathName": "pages/bindscrolltolower/bindscrolltolower",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cutPicture",
+					"pathName": "pages/cutPicture/cutPicture"
 				}
 			]
 		}

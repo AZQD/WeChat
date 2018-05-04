@@ -13,7 +13,8 @@
     "pages/chooseLocation/chooseLocation",
     "pages/chooseImage/chooseImage",
     "pages/getPhoneNumber/getPhoneNumber",
-    "pages/bindscrolltolower/bindscrolltolower"
+    "pages/bindscrolltolower/bindscrolltolower",
+    "pages/cutPicture/cutPicture"
   ],
   "window":{
     "backgroundTextStyle":"light",
