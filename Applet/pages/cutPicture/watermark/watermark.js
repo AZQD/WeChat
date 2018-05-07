@@ -1,6 +1,6 @@
 import WeCropper from '../we-cropper/we-cropper.js'
 
-const WATERMARK_FONT = '@we-cropper'
+const WATERMARK_FONT = '58集团'
 const device = wx.getSystemInfoSync()
 
 Page({
@@ -76,7 +76,7 @@ Page({
         //  那就尝试在图片上加个水印吧
         // ctx.drawImage(path, 50, 50, 50, 30)
         ctx.setFontSize(14)
-        ctx.setFillStyle('#ffffff')
+        ctx.setFillStyle('#ff0000')
         ctx.fillText(WATERMARK_FONT, 265, 350)
       })
   }
