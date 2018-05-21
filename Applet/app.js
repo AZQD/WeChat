@@ -15,15 +15,17 @@ App({
     }else{
       //调用登录接口
       wx.login({
+
         success: function () {
-          wx.getUserInfo({
+          /*wx.getUserInfo({
+              withCredentials:true,
             success: function (res) {
                 console.log('登陆wx.login', res);
               that.globalData.userInfo = res.userInfo
               console.log(res.userInfo);
               typeof cb == "function" && cb(that.globalData.userInfo)
             }
-          })
+          })*/
         }
       })
     }
