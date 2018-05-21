@@ -20,7 +20,8 @@
     "pages/cutPicture/avatarUpload/upload/upload",
     "pages/cutPicture/network/network",
     "pages/cutPicture/watermark/watermark",
-    "pages/cutPicture/cutInside/cutInside"
+    "pages/cutPicture/cutInside/cutInside",
+    "pages/copy/copy"
   ],
   "window":{
     "backgroundTextStyle":"light",

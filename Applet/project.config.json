@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 13,
 			"list": [
 				{
 					"id": -1,
@@ -111,6 +111,16 @@
 					"name": "cutPicture",
 					"pathName": "pages/cutPicture/dashboard/index",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "复制到剪切板",
+					"pathName": "pages/copy/copy",
+					"query": "",
+					"scene": "1036",
+					"referrerInfo": {
+						"appId": "wxc97b21c63d084d92"
+					}
 				}
 			]
 		}

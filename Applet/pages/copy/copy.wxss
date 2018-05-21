@@ -1,0 +1,5 @@
+/* pages/copy/copy.wxss */
+.box{
+  margin-top: 200rpx;
+  text-align: center;
+}

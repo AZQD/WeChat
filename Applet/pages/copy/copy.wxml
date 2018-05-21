@@ -1,0 +1,2 @@
+<view class="box">{{phoneNum}}</view>
+<button catchtap="copyText">复制到剪切板</button>
