@@ -1,0 +1,68 @@
+<scroll-view class="wrapper">
+    <swiper indicator-dots="true" class="swiper-box"
+            autoplay="{{true}}" interval="2000" duration="500" indicator-color="#E0DCDC" indicator-active-color="#fff">
+        <block wx:for="{{img_urls}}" wx:key="i">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="title">积分排行</view>
+    <view class="integral-box">
+        <view class="integral-item color1">
+            <view class="left">
+                <text class="ranking">1</text>
+                <text class="radius bg1"></text>
+                <text class="name">昵称</text>
+            </view>
+            <view class="right">
+                <image class="icon" src="../../images/rank/icon1.png" alt="icon1"></image>
+                <text class="integral">2000</text>
+            </view>
+        </view>
+        <view class="integral-item color2">
+            <view class="left">
+                <text class="ranking">2</text>
+                <text class="radius bg2"></text>
+                <text class="name">昵称</text>
+            </view>
+            <view class="right">
+                <image class="icon" src="../../images/rank/icon2.png" alt="icon2"></image>
+                <text class="integral">2000</text>
+            </view>
+        </view>
+        <view class="integral-item color3">
+            <view class="left">
+                <text class="ranking">3</text>
+                <text class="radius bg3"></text>
+                <text class="name">昵称</text>
+            </view>
+            <view class="right">
+                <image class="icon" src="../../images/rank/icon3.png" alt="icon3"></image>
+                <text class="integral">2000</text>
+            </view>
+        </view>
+        <view class="integral-item">
+            <view class="left">
+                <text class="ranking">4</text>
+                <text class="radius bg4"></text>
+                <text class="name">昵称</text>
+            </view>
+            <view class="right">
+                <image class="icon" src="../../images/rank/icon4.png" alt="icon4"></image>
+                <text class="integral">2000</text>
+            </view>
+        </view>
+        <view class="integral-item">
+            <view class="left">
+                <text class="ranking">5</text>
+                <text class="radius bg5"></text>
+                <text class="name">昵称</text>
+            </view>
+            <view class="right">
+                <image class="icon" src="../../images/rank/icon4.png" alt="icon4"></image>
+                <text class="integral">2000</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

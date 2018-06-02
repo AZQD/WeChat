@@ -21,7 +21,8 @@
     "pages/cutPicture/network/network",
     "pages/cutPicture/watermark/watermark",
     "pages/cutPicture/cutInside/cutInside",
-    "pages/copy/copy"
+    "pages/copy/copy",
+    "pages/rank/rank"
   ],
   "window":{
     "backgroundTextStyle":"light",
