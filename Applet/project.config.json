@@ -137,7 +137,8 @@
 				{
 					"id": -1,
 					"name": "日历-自定义",
-					"pathName": "pages/calendar-DIY/calendar-DIY"
+					"pathName": "pages/calendar-DIY/calendar-DIY",
+					"query": ""
 				}
 			]
 		}
