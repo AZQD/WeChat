@@ -8,7 +8,7 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.9.93",
+	"libVersion": "2.0.9",
 	"appid": "wx201070c15385a377",
 	"projectname": "Applet",
 	"condition": {
@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -126,6 +126,12 @@
 					"id": -1,
 					"name": "rank",
 					"pathName": "pages/rank/rank",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "日历插件",
+					"pathName": "pages/calendar/calendar",
 					"query": ""
 				}
 			]

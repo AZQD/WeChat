@@ -22,12 +22,19 @@
     "pages/cutPicture/watermark/watermark",
     "pages/cutPicture/cutInside/cutInside",
     "pages/copy/copy",
-    "pages/rank/rank"
+    "pages/rank/rank",
+    "pages/calendar/calendar"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"yellow" 
+  },
+  "plugins": {
+    "calendar": {
+      "version": "1.1.2",
+      "provider": "wx92c68dae5a8bb046"
+    }
   }
 }
