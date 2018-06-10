@@ -23,7 +23,8 @@
     "pages/cutPicture/cutInside/cutInside",
     "pages/copy/copy",
     "pages/rank/rank",
-    "pages/calendar/calendar"
+    "pages/calendar/calendar",
+    "pages/calendar-DIY/calendar-DIY"
   ],
   "window":{
     "backgroundTextStyle":"light",

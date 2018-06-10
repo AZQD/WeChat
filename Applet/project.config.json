@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 15,
+			"current": 16,
 			"list": [
 				{
 					"id": -1,
@@ -133,6 +133,11 @@
 					"name": "日历插件",
 					"pathName": "pages/calendar/calendar",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "日历-自定义",
+					"pathName": "pages/calendar-DIY/calendar-DIY"
 				}
 			]
 		}
