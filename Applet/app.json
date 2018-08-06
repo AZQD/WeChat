@@ -24,7 +24,8 @@
     "pages/copy/copy",
     "pages/rank/rank",
     "pages/calendar/calendar",
-    "pages/calendar-DIY/calendar-DIY"
+    "pages/calendar-DIY/calendar-DIY",
+    "pages/canvasNew/canvas/New"
   ],
   "window":{
     "backgroundTextStyle":"light",

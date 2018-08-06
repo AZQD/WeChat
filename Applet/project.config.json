@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 16,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -139,6 +139,11 @@
 					"name": "日历-自定义",
 					"pathName": "pages/calendar-DIY/calendar-DIY",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "canvasNew",
+					"pathName": "pages/canvasNew/canvas/New"
 				}
 			]
 		}
