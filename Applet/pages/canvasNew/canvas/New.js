@@ -1,20 +1,10 @@
-// pages/canvasNew/canvas/New.js
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
-        cover:{
-                    width_r:100,
-                    height_r:100,
-                    src:'https://img.58cdn.com.cn/weixin/img/wechat-app/operator/hongbao.png'
-                },
-        windowWidth:wx.getSystemInfoSync().windowWidth,
-        windowHeight:wx.getSystemInfoSync().windowHeight,
-        ctx:'',
-        rem:''
-
+        windowWidth: wx.getSystemInfoSync().windowWidth,
+        windowHeight: wx.getSystemInfoSync().windowHeight,
     },
 
     /**
@@ -25,40 +15,46 @@ Page({
     },
 
     rem(size) {
-        return this.data.windowWidth * size / 750
-    },
-    //文本，颜色，字号，x坐标位置，y坐标位置
-    textFun(text,color, fontSize,x,y) {
-        let ctx = this.data.ctx;
-        let rem = this.data.rem;
-        ctx.setFontSize(rem(fontSize));
-        ctx.setFillStyle(color);
-        ctx.fillText(text, x, y)
+        return this.data.windowWidth * size / 750;//除以设计图宽度；
     },
 
-    tempFile(src){
+    //Canvas，文本，颜色，字号，X 轴坐标位置，Y 轴坐标位置
+    drawText(ctx, text = 'hello world', color = '#000000', fontSize = 32, x = 20, y = 20) {
+        let rem = this.rem;
+        return new Promise(function (resolve, reject) {
+            ctx.setFontSize(rem(fontSize));
+            ctx.setFillStyle(color);
+            ctx.fillText(text, x, y);
+            resolve('text-success');
+        });
+    },
+
+    //Canvas，图片资源，X 轴坐标位置，Y 轴坐标位置，宽度，高度，圆形
+    drawImg(ctx, src = "http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg", dx = 0, dy = 0, dWidth = 100, dHeight = 100, circle = false) {
+        let rem = this.rem;
         return new Promise((resolve, reject) => {
             wx.getImageInfo({
                 src,
                 success(res) {
+                    if (circle) {
+                        // 圆形切割-开始
+                        ctx.save();
+                        ctx.beginPath();
+                        //arc(x坐标，y坐标，半径，起始弧度，起始弧度，顺时针/逆时针)
+                        ctx.arc(rem(dx) + rem(dWidth) / 2, rem(dy) + rem(dWidth) / 2, rem(dWidth) / 2, 0, Math.PI * 2, false);
+                        ctx.clip();
+                        // 圆形切割-结束
+                        ctx.drawImage(res.path, rem(dx), rem(dy), rem(dWidth), rem(dHeight));
+                        ctx.restore();
+                    } else {
+                        ctx.drawImage(res.path, rem(dx), rem(dy), rem(dWidth), rem(dHeight));
+                    }
                     resolve(res);
                 },
                 fail() {
                     reject();
                 }
             });
-        })
-    },
-
-
-    //图片资源， X 轴的位置， Y 轴的位置，宽度，高度
-    imgFun(src, dx, dy, dWidth, dHeight) {
-        let ctx = this.data.ctx;
-        let rem = this.data.rem;
-        console.log();
-        this.tempFile(src).then(function (res) {
-            console.log(res.path);
-            ctx.drawImage(res.path, rem(dx), rem(dy), rem(dWidth), rem(dHeight));
         });
     },
 
@@ -68,53 +64,26 @@ Page({
     onReady: function () {
         console.log('onReady');
         //初始化ctx
-        var ctx = wx.createCanvasContext('myCanvas');
+        let that = this;
+        let ctx = wx.createCanvasContext('myCanvas');
         ctx.setFillStyle('#fff');
-        /*ctx.fillRect(0, 0, this.data.windowWidth, this.data.windowHeight);
-
-        this.setData({
-            ctx: ctx,
-            rem:this.rem
-        });*/
-        //绘制文本
-        // this.textFun('abcde','red',32,100,200);
-
-        this.imgFun('https://img.58cdn.com.cn/weixin/img/wechat-app/operator/hongbao.png', 20, 10, 200, 200);
-
-
-
-        //绘制图片圆角
-        // var cover = this.data.cover
-
-
-
-        wx.downloadFile({
-            url: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
-            success: function(res) {
-                ctx.save()
-                ctx.beginPath()
-                ctx.arc(50, 50, 25, 0, 2*Math.PI)
-                ctx.clip()
-                ctx.drawImage(res.tempFilePath, 25, 25)
-                ctx.restore()
-                ctx.draw()
-            }
-        })
-
-        /*//圆形切割-开始
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(cover.height_r / 2, cover.height_r / 2, cover.height_r / 2, 0, Math.PI * 2, false);
-        ctx.clip();
-        //圆形切割-结束
-        this.imgFun(cover.src, 0, 0, cover.width_r, cover.height_r);
-        ctx.restore();
-        ctx.draw();*/
-
-        //后面改成Promise
-        /*setTimeout(function () {
-
-        },2000)*/
+        that.drawText(ctx, 'abc', 'red', 32, 100, 200).then(function (res) {
+            return that.drawText(ctx, 'def', 'red', 32, 200, 200);
+        }).then(function (res) {
+            return that.drawImg(ctx, 'https://img.58cdn.com.cn/weixin/img/wechat-app/operator/hongbao.png', 200, 500, 200, 200);
+        }).then(function (res) {
+            return that.drawImg(ctx, 'https://wx1.sinaimg.cn/orj360/5ba8d1cbgy1fu1fultpj9j223r23rqv5.jpg', 50, 50, 200, 200, true);
+        }).then(function (res) {
+            return that.drawImg(ctx, 'https://img.58cdn.com.cn/weixin/img/wechat-app/operator/hongbao.png', 200, 800, 200, 200, true);
+        }).then(function (res) {
+            return that.drawImg(ctx, 'https://img.58cdn.com.cn/weixin/img/weapp-tongzhen/index/muying.png', 350, 50, 200, 200, true);
+        }).then(function (res) {
+            return that.drawImg(ctx);
+        }).then(function (res) {
+            ctx.draw();
+        }).catch(function (error) {
+            console.log(error);
+        });
     },
 
     /**
@@ -158,10 +127,4 @@ Page({
     onShareAppMessage: function () {
 
     }
-})
-/*
-*ToDo
-* 1.ctx不能放到data里面；
-* 2.promose实现；
-* 3.rem是不是也不能放在data;
-* */
+});
