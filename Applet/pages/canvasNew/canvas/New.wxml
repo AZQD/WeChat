@@ -1,1 +1,1 @@
-<canvas canvas-id="myCanvas" id="myCanvas"></canvas>
+<canvas canvas-id="myCanvas" id="myCanvas" bindlongtap="saveImg"></canvas>

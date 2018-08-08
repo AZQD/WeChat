@@ -58,6 +58,46 @@ Page({
         });
     },
 
+    saveImg() {
+        let that = this;
+        wx.canvasToTempFilePath({
+            x: 0,
+            y: 0,
+            canvasId: 'myCanvas',
+            success: function (res) {
+                //成功之后保存到本地
+                wx.saveImageToPhotosAlbum({
+                    filePath: res.tempFilePath,
+                    success: function (result) {
+                        console.log('保存成功', result);
+                        wx.showToast({
+                            title: '保存成功',
+                            icon: 'success',
+                            duration: 2000
+                        });
+                    },
+                    fail: function (result) {
+                        console.log('fail', result);
+                        wx.showToast({
+                            title: '保存失败',
+                            icon: 'none',
+                            duration: 2000
+                        });
+                    },
+                    complete: function (result) {
+                        console.log('complete', result);
+                    }
+                });
+            },
+            fail: function (res) {
+                console.log('fail', res);
+            },
+            complete: function (res) {
+                console.log('complete', res);
+            }
+        });
+    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
