@@ -1,0 +1,29 @@
+<view class="wrapper">
+    <view class="header">
+        <view class="time_box">
+            00:00
+        </view>
+    </view>
+    <view class="begin_box">
+        <view class="begin">开始</view>
+        <view class="tips">剩余挑战机会：10</view>
+    </view>
+
+    <view class="alert_box">
+
+        <view class="success">
+            <view class="title">恭喜你!挑战成功</view>
+            <view class="code">095637874</view>
+            <view class="tips">可凭此码向商家兑换</view>
+            <view class="btn">保存成功凭证</view>
+            <view class="btn">继续挑战</view>
+        </view>
+
+        <view class="fail">
+            <view class="title">挑战失败</view>
+            <view class="tips1">您还有0次挑战机会</view>
+            <view class="btn">分享可获继续挑战机会</view>
+            <view class="tips2">分享到群立即复活</view>
+        </view>
+    </view>
+</view>

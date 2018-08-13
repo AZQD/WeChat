@@ -1,0 +1,12 @@
+<template name="bottom_menu">
+    <view class="bottom_menu">
+        <view class="item left">
+            <image class="item_icon" src="../../images/index/about_icon.png"></image>
+            <text class="item_text">挑战</text>
+        </view>
+        <view class="item right">
+            <image class="item_icon" src="../../images/index/about_icon.png"></image>
+            <text class="item_text">关于</text>
+        </view>
+    </view>
+</template>

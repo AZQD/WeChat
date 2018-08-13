@@ -1,0 +1,57 @@
+@import "/pages/public/temp.wxss";
+
+.header{
+  padding: 34rpx;
+  padding-bottom: 58rpx;
+}
+.header .head_pic{
+  width: 100%;
+}
+
+.info_box{
+  font-size: 0;
+  color: #fff;
+  padding: 0 46rpx;
+}
+.info_box .shop_name{
+  font-size: 40rpx;
+}
+.info_box .shop_desc{
+  font-size: 40rpx;
+  padding-top: 42rpx;
+  padding-bottom: 56rpx;
+}
+.info_box .city{
+  font-size: 32rpx;
+  padding-bottom: 26rpx;
+}
+.info_box .address{
+  display: flex;
+  align-items: center;
+}
+.info_box .address .details{
+  font-size: 24rpx;
+  flex-grow: 1;
+}
+.info_box .address .icons{
+
+}
+.info_box .address .icons .info_icon{
+  width: 30rpx;
+  height: 37rpx;
+}
+.info_box .address .icons .phone_icon{
+  margin-right: 88rpx;
+}
+.info_box .address .icons .address_icon{
+  margin-right: 16rpx;
+}
+.info_box .service{
+  font-size: 32rpx;
+  padding-right: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 62rpx;
+  padding-bottom: 470rpx;
+}

@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<import src="/pages/public/temp.wxml"/>
+<view class="wrapper">
+
+    <view class="header">
+        <image class="head_pic" src="../../images/about/head_pic.png"></image>
+    </view>
+
+    <view class="info_box">
+        <view class="shop_name">望京小腰（二七万达店）</view>
+        <view class="shop_desc">烧烤</view>
+        <view class="city">郑州市</view>
+        <view class="address">
+            <view class="details">汉江路人和路向东30米路南</view>
+            <view class="icons">
+                <image class="info_icon phone_icon" src="../../images/about/phone_icon.png"></image>
+                <image class="info_icon address_icon" src="../../images/about/address_icon.png"></image>
+            </view>
+        </view>
+        <view class="service">
+            <view class="left">客服电话</view>
+            <view class="right">18515599924</view>
+        </view>
+    </view>
+
+    <template is='bottom_menu' data="{{...weatherData}}">
+    </template>
+</view>

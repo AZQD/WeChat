@@ -1,21 +1,48 @@
-/**index.wxss**/
-.userinfo {
+@import "/pages/public/temp.wxss";
+
+.header{
+  padding: 44rpx;
+  padding-bottom: 46rpx;
+}
+.header .head_pic{
+  width: 100%;
+}
+
+.rule_box{
+  font-size: 0;
+  padding: 0 54rpx;
+}
+.rule_title{
+  width: 176rpx;
+  height: 42rpx;
+  padding-left: 8rpx;
+}
+.rule_item{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  margin-top: 30rpx;
+}
+.rule_item .left{
+  width: 75rpx;
+  height: 75rpx;
+}
+.rule_item .left .rule_icon{
+  width: 100%;
+  height: 100%;
+}
+.rule_item .right{
+  flex-grow: 1;
+  font-size: 26rpx;
+  color: #fff;
+  padding-left: 18rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
+.btn_box{
 
-.userinfo-nickname {
-  color: #aaa;
 }
-
-.usermotto {
-  margin-top: 200px;
+.btn_box .goto_btn{
+  width: 100%;
+  height: 88rpx;
+  margin-top: 105rpx;
+  margin-bottom: 175rpx;
 }

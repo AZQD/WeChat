@@ -7,4 +7,10 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.wrapper{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #1E1D23;
+}
