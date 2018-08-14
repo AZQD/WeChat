@@ -28,7 +28,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      if(wx.getStorageSync("leftTime") !== ''){
+          this.setData({
+              leftTime:wx.getStorageSync("leftTime")
+          });
+      }
   },
     beginGame:function(event){
       let type = event.currentTarget.dataset.type;
@@ -40,6 +44,7 @@ Page({
                   btnText:'停止',
                   leftTime:that.data.leftTime-1
               });
+              wx.setStorageSync("leftTime", that.data.leftTime);
               timer4 = setInterval(function(){
                   if(that.data.time4>=9){
                       that.setData({
@@ -213,7 +218,12 @@ Page({
       let shareImageUrl = '';
       if (res.from === 'button') {
           // 来自页面内转发按钮
+          console.log(212);
+          console.log(wx.getStorageSync("share"));
+          console.log(wx.getStorageSync("leftTime"));
+          console.log(that.data.leftTime);
           if(!wx.getStorageSync("share")){
+              wx.setStorageSync("leftTime", that.data.leftTime+1);
               wx.setStorageSync("share", true);
               that.setData({
                   leftTime:that.data.leftTime+1

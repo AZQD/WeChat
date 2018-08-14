@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+      info:{
+          shop_name:'望京小腰（二七万达店）',
+          shop_desc:'烧烤',
+          city:'郑州市',
+          addDetails:'汉江路人和路向东30米路南',
+          phone:'18515599924',
+          latitude:39.915,
+          longitude:116.404
+      }
   },
 
   /**
@@ -16,7 +24,7 @@ Page({
   },
     calling: function () {
         wx.makePhoneCall({
-            phoneNumber: '18515599924',
+            phoneNumber: this.data.info.phone,
             success: function () {
                 console.log("拨打电话成功！")
             },
@@ -28,7 +36,7 @@ Page({
 
     toAddress:function(){
         wx.navigateTo({
-            url: '/pages/map/map?latitude=39.915&longitude=116.404'
+            url: '/pages/map/map?latitude='+this.data.info.latitude+'&longitude='+this.data.info.longitude
         })
     },
   /**
@@ -86,8 +94,8 @@ Page({
         })
     },
     toAbout:function(){
-        wx.navigateTo({
+        /*wx.navigateTo({
             url: '/pages/about/about'
-        })
+        })*/
     }
 })

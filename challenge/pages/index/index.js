@@ -15,9 +15,9 @@ Page({
         })
     },
     toIndex:function(){
-        wx.navigateTo({
+       /* wx.navigateTo({
             url: '/pages/index/index'
-        })
+        })*/
     },
     toAbout:function(){
         wx.navigateTo({
