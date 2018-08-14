@@ -15,7 +15,8 @@
             <view class="icons">
                 <!--<button type="default" bindtap="calling">客服电话</button>-->
                 <image class="info_icon phone_icon" src="../../images/about/phone_icon.png" bindtap="calling"></image>
-                <image class="info_icon address_icon" src="../../images/about/address_icon.png" bindtap="toAddress"></image>
+                <image class="info_icon address_icon" src="../../images/about/address_icon.png"
+                       bindtap="toAddress"></image>
             </view>
         </view>
         <view class="service">

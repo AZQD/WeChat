@@ -2,7 +2,11 @@
 <view class="wrapper">
     <view class="header">
         <view class="time_box">
-            <text>{{time1}}</text><text>{{time2}}</text>:<text>{{time3}}</text><text>{{time4}}</text>
+            <text>{{time1}}</text>
+            <text>{{time2}}</text>
+            :
+            <text>{{time3}}</text>
+            <text>{{time4}}</text>
         </view>
     </view>
     <view class="begin_box">
@@ -10,7 +14,7 @@
         <view class="tips">剩余挑战机会：{{leftTime}}</view>
     </view>
 
-    <view class="alert_box"  wx:if="{{status == -1 || status == 1}}">
+    <view class="alert_box" wx:if="{{status == -1 || status == 1}}">
 
         <block wx:if="{{status == 1}}">
             <view class="success">

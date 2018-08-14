@@ -3,23 +3,21 @@
 const app = getApp()
 
 Page({
-  data: {
+    data: {},
+    onLoad: function () {
 
-  },
-  onLoad: function () {
-
-  },
-    toGame:function(){
+    },
+    toGame: function () {
         wx.navigateTo({
             url: '/pages/game/game'
         })
     },
-    toIndex:function(){
-       /* wx.navigateTo({
-            url: '/pages/index/index'
-        })*/
+    toIndex: function () {
+        /* wx.navigateTo({
+             url: '/pages/index/index'
+         })*/
     },
-    toAbout:function(){
+    toAbout: function () {
         wx.navigateTo({
             url: '/pages/about/about'
         })
