@@ -14,7 +14,23 @@ Page({
   onLoad: function (options) {
   
   },
+    calling: function () {
+        wx.makePhoneCall({
+            phoneNumber: '18515599924',
+            success: function () {
+                console.log("拨打电话成功！")
+            },
+            fail: function () {
+                console.log("拨打电话失败！")
+            }
+        })
+    },
 
+    toAddress:function(){
+        wx.navigateTo({
+            url: '/pages/map/map?latitude=39.915&longitude=116.404'
+        })
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -62,5 +78,16 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+
+    toIndex:function(){
+        wx.navigateTo({
+            url: '/pages/index/index'
+        })
+    },
+    toAbout:function(){
+        wx.navigateTo({
+            url: '/pages/about/about'
+        })
+    }
 })

@@ -20,7 +20,7 @@ Page({
       type:true,
       btnText:'开始',
       leftTime:3,
-      status:1,
+      status:0,
   },
 
 
@@ -122,6 +122,45 @@ Page({
         });
     },
 
+    saveImg() {
+        let that = this;
+        wx.canvasToTempFilePath({
+            x: 0,
+            y: 0,
+            canvasId: 'myCanvas',
+            success: function (res) {
+                //成功之后保存到本地
+                wx.saveImageToPhotosAlbum({
+                    filePath: res.tempFilePath,
+                    success: function (result) {
+                        console.log('保存成功', result);
+                        wx.showToast({
+                            title: '保存成功',
+                            icon: 'success',
+                            duration: 2000
+                        });
+                    },
+                    fail: function (result) {
+                        console.log('fail', result);
+                        wx.showToast({
+                            title: '保存失败',
+                            icon: 'none',
+                            duration: 2000
+                        });
+                    },
+                    complete: function (result) {
+                        console.log('complete', result);
+                    }
+                });
+            },
+            fail: function (res) {
+                console.log('fail', res);
+            },
+            complete: function (res) {
+                console.log('complete', res);
+            }
+        });
+    },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -169,9 +208,9 @@ Page({
    */
   onShareAppMessage: function (res) {
       let that = this;
-      let shareTitle = '红果换好物，点此免费领';
+      let shareTitle = '';
       let sharePath = '/pages/index/index';
-      let shareImageUrl = 'https://img.58cdn.com.cn/weixin/img/weapp-huanhuan/share.png';
+      let shareImageUrl = '';
       if (res.from === 'button') {
           // 来自页面内转发按钮
           if(!wx.getStorageSync("share")){

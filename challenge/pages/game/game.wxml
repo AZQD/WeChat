@@ -18,7 +18,7 @@
                 <view class="title">恭喜你!挑战成功</view>
                 <view class="code">095637874</view>
                 <view class="tips">可凭此码向商家兑换</view>
-                <view class="btn">保存成功凭证</view>
+                <view class="btn" bindtap="saveImg">保存成功凭证</view>
                 <view class="btn" bindtap="closeAlert">继续挑战</view>
             </view>
         </block>
@@ -36,4 +36,6 @@
             <view class="tips2">分享到群立即复活</view>
         </view>
     </view>
+
+    <canvas canvas-id="myCanvas" id="myCanvas" bindlongtap="saveImg"></canvas>
 </view>

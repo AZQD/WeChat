@@ -13,8 +13,9 @@
         <view class="address">
             <view class="details">汉江路人和路向东30米路南</view>
             <view class="icons">
-                <image class="info_icon phone_icon" src="../../images/about/phone_icon.png"></image>
-                <image class="info_icon address_icon" src="../../images/about/address_icon.png"></image>
+                <!--<button type="default" bindtap="calling">客服电话</button>-->
+                <image class="info_icon phone_icon" src="../../images/about/phone_icon.png" bindtap="calling"></image>
+                <image class="info_icon address_icon" src="../../images/about/address_icon.png" bindtap="toAddress"></image>
             </view>
         </view>
         <view class="service">

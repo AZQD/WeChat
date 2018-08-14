@@ -34,7 +34,7 @@
         </view>
     </view>
 
-    <view class="btn_box">
+    <view class="btn_box" bindtap="toGame">
         <image class="goto_btn" src="../../images/index/goto_btn.png"></image>
     </view>
 

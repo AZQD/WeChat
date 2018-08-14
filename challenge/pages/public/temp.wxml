@@ -1,10 +1,10 @@
 <template name="bottom_menu">
     <view class="bottom_menu">
-        <view class="item left">
+        <view class="item left" bindtap="toIndex">
             <image class="item_icon" src="../../images/index/about_icon.png"></image>
             <text class="item_text">挑战</text>
         </view>
-        <view class="item right">
+        <view class="item right" bindtap="toAbout">
             <image class="item_icon" src="../../images/index/about_icon.png"></image>
             <text class="item_text">关于</text>
         </view>

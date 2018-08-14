@@ -8,5 +8,20 @@ Page({
   },
   onLoad: function () {
 
-  }
+  },
+    toGame:function(){
+        wx.navigateTo({
+            url: '/pages/game/game'
+        })
+    },
+    toIndex:function(){
+        wx.navigateTo({
+            url: '/pages/index/index'
+        })
+    },
+    toAbout:function(){
+        wx.navigateTo({
+            url: '/pages/about/about'
+        })
+    }
 })
