@@ -1,28 +1,38 @@
+<!--<wxs module="filters" src="./toFixed.wxs"></wxs>-->
 <view class="wrapper">
     <view class="header">
         <view class="time_box">
-            00:00
+            <text>{{time1}}</text><text>{{time2}}</text>:<text>{{time3}}</text><text>{{time4}}</text>
         </view>
     </view>
     <view class="begin_box">
-        <view class="begin">开始</view>
-        <view class="tips">剩余挑战机会：10</view>
+        <view class="begin" data-type="{{type}}" bindtap="beginGame">{{btnText}}</view>
+        <view class="tips">剩余挑战机会：{{leftTime}}</view>
     </view>
 
-    <view class="alert_box">
+    <view class="alert_box"  wx:if="{{status == -1 || status == 1}}">
 
-        <view class="success">
-            <view class="title">恭喜你!挑战成功</view>
-            <view class="code">095637874</view>
-            <view class="tips">可凭此码向商家兑换</view>
-            <view class="btn">保存成功凭证</view>
-            <view class="btn">继续挑战</view>
-        </view>
+        <block wx:if="{{status == 1}}">
+            <view class="success">
+                <image class="close_icon" src="../../images/game/close_icon.png" bindtap="closeAlert"></image>
+                <view class="title">恭喜你!挑战成功</view>
+                <view class="code">095637874</view>
+                <view class="tips">可凭此码向商家兑换</view>
+                <view class="btn">保存成功凭证</view>
+                <view class="btn" bindtap="closeAlert">继续挑战</view>
+            </view>
+        </block>
+        <block wx:elif="{{status == -1}}">
+
+        </block>
+
 
         <view class="fail">
+            <image class="close_icon" src="../../images/game/close_icon.png" bindtap="closeAlert"></image>
             <view class="title">挑战失败</view>
-            <view class="tips1">您还有0次挑战机会</view>
-            <view class="btn">分享可获继续挑战机会</view>
+            <view class="tips1">您还有{{leftTime}}次挑战机会</view>
+            <button class="btn" data-name="shareBtn" open-type="share">分享可获继续挑战机会</button>
+            <!--<view class="btn">分享可获继续挑战机会</view>-->
             <view class="tips2">分享到群立即复活</view>
         </view>
     </view>

@@ -45,10 +45,12 @@
   height: 100vh;
   z-index: 9;
   font-size: 0;
+  /*display: none;*/
 }
 
 .alert_box .success{
-  display: none;
+  position: relative;
+  /*display: none;*/
   margin: 0 60rpx;
   padding: 0 62rpx;
   margin-top: 418rpx;
@@ -56,6 +58,13 @@
   text-align: center;
   border-radius: 40rpx;
   background-color: #fff;
+}
+.alert_box .success .close_icon{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  right: 20rpx;
+  top: 20rpx;
 }
 .alert_box .success .title{
   font-size: 47rpx;
@@ -86,6 +95,8 @@
 
 
 .alert_box .fail{
+  /*display: none;*/
+  position: relative;
   margin: 0 60rpx;
   padding: 0 62rpx;
   margin-top: 418rpx;
@@ -93,6 +104,13 @@
   text-align: center;
   border-radius: 40rpx;
   background-color: #fff;
+}
+.alert_box .fail .close_icon{
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  right: 20rpx;
+  top: 20rpx;
 }
 .alert_box .fail .title{
   font-size: 47rpx;
