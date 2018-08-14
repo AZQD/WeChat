@@ -30,7 +30,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(1, options);
         this.setData({
             longitude: options.longitude,
             latitude: options.latitude
