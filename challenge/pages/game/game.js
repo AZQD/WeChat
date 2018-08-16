@@ -19,7 +19,7 @@ Page({
         time4: 0,
         type: true,
         btnText: '开始',
-        leftTime: 3,
+        leftTime: 5,
         status: 0,
     },
 
@@ -218,13 +218,14 @@ Page({
         let shareImageUrl = '';
         if (res.from === 'button') {
             // 来自页面内转发按钮
-            if (!wx.getStorageSync("share")) {
-                wx.setStorageSync("leftTime", that.data.leftTime + 1);
-                wx.setStorageSync("share", true);
-                that.setData({
-                    leftTime: that.data.leftTime + 1
-                });
-            }
+            /*if (!wx.getStorageSync("share")) {
+
+            }*/
+            wx.setStorageSync("leftTime", that.data.leftTime + 1);
+            wx.setStorageSync("share", true);
+            that.setData({
+                leftTime: that.data.leftTime + 1
+            });
         }
         return {
             title: shareTitle,
