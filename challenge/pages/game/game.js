@@ -23,7 +23,8 @@ Page({
         type: true,
         btnText: '开始',
         leftTime: app.globalData.initCount,
-        status: 0,
+        priceCode: app.globalData.priceCode,
+        status: 0, //-1 fail; 0: normal 1: success
     },
 
 
@@ -36,6 +37,7 @@ Page({
                 leftTime: wx.getStorageSync("leftTime")
             });
         }
+        this.drawCanvas();
     },
     beginGame: function (event) {
         let type = event.currentTarget.dataset.type;
@@ -128,6 +130,62 @@ Page({
             time3: 0,
             time4: 0,
         });
+    },
+
+    getNowTime() {
+        let date = new Date();
+        let year = date.getFullYear();
+        let month = date.getMonth() + 1;
+        let day = date.getDate();
+        let hour = date.getHours();
+        let minute = date.getMinutes();
+        let second = date.getSeconds();
+        return year + '年' + (month > 9 ? month : '0' + String(month)) + '月' + (day > 9 ? day : '0' + String(day)) + '日 ' + (hour > 9 ? hour : '0' + String(hour)) + ':' + (minute > 9 ? minute : '0' + String(minute));
+    },
+
+    drawCanvas() {
+        let that = this;
+        const ctx = wx.createCanvasContext('myCanvas');
+        let windowWidth = wx.getSystemInfoSync().windowWidth;
+        let windowHeight = wx.getSystemInfoSync().windowHeight;
+
+        function remSize(size) {
+            return windowWidth * size / 750
+        }
+
+        ctx.setFillStyle('#fff');
+        ctx.fillRect(0, 0, windowWidth, remSize(660));
+
+
+        wx.getImageInfo({
+            src: app.globalData.shop_pic,
+            success(res) {
+
+                ctx.drawImage(res.path, remSize(64), remSize(64), remSize(622), remSize(306));
+
+                ctx.setFillStyle('#000');
+                ctx.setFontSize(remSize(34));
+                ctx.fillText("商家名称", remSize(80), remSize(445));
+                ctx.setFillStyle('#000');
+                ctx.setFontSize(remSize(24));
+                ctx.fillText(app.globalData.shop_name, remSize(300), remSize(445));
+
+                ctx.setFillStyle('#000');
+                ctx.setFontSize(remSize(34));
+                ctx.fillText("中奖凭证", remSize(80), remSize(520));
+                ctx.setFillStyle('#000');
+                ctx.setFontSize(remSize(24));
+                ctx.fillText(app.globalData.priceCode, remSize(300), remSize(520));
+                ctx.fillText(that.getNowTime(), remSize(390), remSize(618));
+
+                ctx.draw();
+            },
+            fail() {
+                console.log('请求图片失败');
+            }
+        });
+
+
     },
 
     saveImg() {

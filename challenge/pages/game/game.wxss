@@ -1,3 +1,7 @@
+.wrapper{
+  position: relative;
+}
+
 .header{
   padding: 0 60rpx;
   padding-top: 68rpx;
@@ -137,4 +141,15 @@
   font-size: 27.6rpx;
   color: #1e1d23;
   padding-top: 80rpx;
+}
+
+#myCanvas{
+  width: 100vw;
+  height: 650rpx;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:-9;
+  padding-top: 100rpx;
+
 }
