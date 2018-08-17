@@ -146,10 +146,8 @@
 #myCanvas{
   width: 100vw;
   height: 650rpx;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:-9;
-  padding-top: 100rpx;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -9;
 }

@@ -25,6 +25,7 @@ Page({
         leftTime: app.globalData.initCount,
         priceCode: app.globalData.priceCode,
         status: 0, //-1 fail; 0: normal 1: success
+        tempFilePaths:'../../images/about/head_pic.png'
     },
 
 
@@ -158,7 +159,7 @@ Page({
 
 
         wx.getImageInfo({
-            src: app.globalData.shop_pic,
+            src: that.data.tempFilePaths,
             success(res) {
 
                 ctx.drawImage(res.path, remSize(64), remSize(64), remSize(622), remSize(306));
@@ -180,8 +181,8 @@ Page({
 
                 ctx.draw();
             },
-            fail() {
-                console.log('请求图片失败');
+            fail(error) {
+                console.log('请求图片失败',error);
             }
         });
 
