@@ -2,10 +2,10 @@
 //index.js
 //获取应用实例
 const app = getApp();
-var timer1 = null;
-var timer2 = null;
-var timer3 = null;
-var timer4 = null;
+let timer1 = null;
+let timer2 = null;
+let timer3 = null;
+let timer4 = null;
 Page({
 
     /**
