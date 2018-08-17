@@ -1,4 +1,7 @@
 // pages/about/about.js
+//index.js
+//获取应用实例
+const app = getApp();
 Page({
 
     /**
@@ -6,13 +9,13 @@ Page({
      */
     data: {
         info: {
-            shop_name: '望京小腰（二七万达店）',
-            shop_desc: '烧烤',
-            city: '郑州市',
-            addDetails: '汉江路人和路向东30米路南',
-            phone: '18515599924',
-            latitude: 39.915,
-            longitude: 116.404
+            shop_name: app.globalData.shop_name,
+            shop_desc: app.globalData.shop_desc,
+            city: app.globalData.city,
+            addDetails: app.globalData.addDetails,
+            phone: app.globalData.phone,
+            latitude: app.globalData.latitude,
+            longitude: app.globalData.longitude
         }
     },
 

@@ -1,4 +1,7 @@
 // pages/game/game.js
+//index.js
+//获取应用实例
+const app = getApp();
 var timer1 = null;
 var timer2 = null;
 var timer3 = null;
@@ -19,7 +22,7 @@ Page({
         time4: 0,
         type: true,
         btnText: '开始',
-        leftTime: 5,
+        leftTime: app.globalData.initCount,
         status: 0,
     },
 
@@ -222,7 +225,7 @@ Page({
 
             }*/
             wx.setStorageSync("leftTime", that.data.leftTime + 1);
-            wx.setStorageSync("share", true);
+            // wx.setStorageSync("share", true);
             that.setData({
                 leftTime: that.data.leftTime + 1
             });
