@@ -24,7 +24,7 @@ Page({
         btnText: '开始',
         leftTime: app.globalData.initCount,
         priceCode: app.globalData.priceCode,
-        status: 0, //-1 fail; 0: normal 1: success
+        status: 1, //-1 fail; 0: normal 1: success
         tempFilePaths:'../../images/about/head_pic.png'
     },
 

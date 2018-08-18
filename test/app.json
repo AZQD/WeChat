@@ -2,9 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test/index",
-    "pages/about/about",
-    "pages/game/game"
+    "pages/test/test"
   ],
   "window":{
     "backgroundTextStyle":"light",

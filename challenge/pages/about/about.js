@@ -38,8 +38,15 @@ Page({
     },
 
     toAddress: function () {
-        wx.navigateTo({
+        /*wx.navigateTo({
             url: '/pages/map/map?latitude=' + this.data.info.latitude + '&longitude=' + this.data.info.longitude
+        })*/
+        wx.openLocation({
+            latitude: this.data.info.latitude,
+            longitude: this.data.info.longitude,
+            scale: 28,
+            name:this.data.info.shop_name,
+            address:this.data.info.shop_desc
         })
     },
     /**

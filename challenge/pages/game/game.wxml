@@ -35,8 +35,8 @@
             <image class="close_icon" src="../../images/game/close_icon.png" bindtap="closeAlert"></image>
             <view class="title">挑战失败</view>
             <view class="tips1">您还有{{leftTime}}次挑战机会</view>
-            <button class="btn" data-name="shareBtn" open-type="share">分享可获继续挑战机会</button>
-            <!--<view class="btn">分享可获继续挑战机会</view>-->
+            <view wx:if="{{leftTime}}" class="btn" bindtap="closeAlert">继续挑战</view>
+            <button wx:else class="btn" data-name="shareBtn" open-type="share">分享可获继续挑战机会</button>
             <view class="tips2">分享到群立即复活</view>
         </view>
     </view>

@@ -1,4 +1,7 @@
 @import "/pages/public/temp.wxss";
+.wrapper{
+  margin-bottom: 146rpx;
+}
 
 .header{
   padding: 44rpx;
