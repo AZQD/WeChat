@@ -37,7 +37,6 @@ App({
         userInfo: null,
         initCount: 5,//初始游戏次数
         shop_name: '望京小腰（二七万达店）',
-        shop_pic: 'http://is5.mzstatic.com/image/thumb/Purple128/v4/75/3b/90/753b907c-b7fb-5877-215a-759bd73691a4/source/50x50bb.jpg',
         shop_desc: '烧烤',
         priceCode: '095637874',
         city: '郑州市',
