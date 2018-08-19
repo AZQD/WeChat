@@ -277,7 +277,7 @@ Page({
         let that = this;
         let shareTitle = '';
         let sharePath = '/pages/index/index';
-        let shareImageUrl = '';
+        let imageUrl = '/images/index/imageUrl.png';
         if (res.from === 'button') {
             // 来自页面内转发按钮
             /*if (!wx.getStorageSync("share")) {
@@ -292,7 +292,7 @@ Page({
         return {
             title: shareTitle,
             path: sharePath,
-            imageUrl: shareImageUrl,
+            imageUrl: imageUrl,
             /*complete: function() {
                 console.log('分享成功');
             }*/
