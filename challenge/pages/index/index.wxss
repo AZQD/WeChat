@@ -9,6 +9,7 @@
 }
 .header .head_pic{
   width: 100%;
+  height: 402rpx;
 }
 
 .rule_box{
@@ -23,7 +24,7 @@
 .rule_item{
   display: flex;
   align-items: center;
-  margin-top: 30rpx;
+  margin-top: 20rpx;
 }
 .rule_item .left{
   width: 75rpx;
@@ -46,6 +47,7 @@
 .btn_box .goto_btn{
   width: 100%;
   height: 88rpx;
-  margin-top: 105rpx;
+  margin-top: 30rpx;
+  /*margin-top: 105rpx;*/
   margin-bottom: 175rpx;
 }

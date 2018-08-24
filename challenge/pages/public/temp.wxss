@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   font-size: 0;
-  padding-top: 10rpx;
+  padding-top: 15rpx;
   background-color: #1E1D23;
   padding-bottom: 66rpx;
 }
