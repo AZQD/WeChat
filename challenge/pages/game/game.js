@@ -102,6 +102,19 @@ Page({
                 });
             }
         } else {
+          if (that.data.time1 === 1 && that.data.time2 === 0 && that.data.time3 === 0 && that.data.time4 === 0) {
+            that.setData({
+              status: 1,
+              time1: 1,
+              time2: 0,
+              time3: 0,
+              time4: 0
+            });
+          } else {
+            that.setData({
+              status: -1,
+            });
+          }
             clearInterval(timer1);
             clearInterval(timer2);
             clearInterval(timer3);
@@ -110,15 +123,6 @@ Page({
                 type: true,
                 btnText: '开始',
             });
-            if (that.data.time1 === 1 && that.data.time1 === 0 && that.data.time1 === 0 && that.data.time1 === 0) {
-                that.setData({
-                    status: 1
-                });
-            } else {
-                that.setData({
-                    status: -1,
-                });
-            }
         }
 
     },
