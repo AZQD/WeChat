@@ -25,7 +25,8 @@
     "pages/rank/rank",
     "pages/calendar/calendar",
     "pages/calendar-DIY/calendar-DIY",
-    "pages/canvasNew/canvas/New"
+    "pages/canvasNew/canvas/New",
+    "pages/ajaxLimit/ajaxLimit"
   ],
   "window":{
     "backgroundTextStyle":"light",
