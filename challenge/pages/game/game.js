@@ -103,12 +103,19 @@ Page({
             }
         } else {
           if (that.data.time1 === 1 && that.data.time2 === 0 && that.data.time3 === 0 && that.data.time4 === 0) {
-            that.setData({
+            /*that.setData({
               status: 1,
               time1: 1,
               time2: 0,
               time3: 0,
               time4: 0
+            });*/
+            that.setData({
+              status: -1,
+              time1: 1,
+              time2: 0,
+              time3: 0,
+              time4: 1
             });
           } else {
             that.setData({

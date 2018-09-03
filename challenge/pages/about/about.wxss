@@ -23,6 +23,14 @@
   padding-top: 42rpx;
   padding-bottom: 56rpx;
 }
+.info_box .businessHours{
+  font-size: 32rpx;
+  padding-top: 20rpx;
+  padding-bottom: 56rpx;
+}
+.info_box .businessHours .text{
+  padding-left: 80rpx;
+}
 .info_box .city{
   font-size: 32rpx;
   padding-bottom: 26rpx;

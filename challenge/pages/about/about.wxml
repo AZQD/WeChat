@@ -9,6 +9,7 @@
     <view class="info_box">
         <view class="shop_name">{{info.shop_name}}</view>
         <view class="shop_desc">{{info.shop_desc}}</view>
+        <view class="businessHours">营业时间 <span class="text">{{info.businessHours}}</span></view>
         <view class="city">{{info.city}}</view>
         <view class="address">
             <view class="details">{{info.addDetails}}</view>

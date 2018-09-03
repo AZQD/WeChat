@@ -38,6 +38,7 @@ App({
         initCount: 5,//初始游戏次数
         shop_name: '望京小腰（二七万达店）',
         shop_desc: '烧烤',
+        businessHours:'9:00-21:00',
         priceCode: '095637874',
         city: '郑州市',
         addDetails: '汉江路人和路向东30米路南',

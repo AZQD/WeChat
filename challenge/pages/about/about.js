@@ -11,6 +11,7 @@ Page({
         info: {
             shop_name: app.globalData.shop_name,
             shop_desc: app.globalData.shop_desc,
+            businessHours:app.globalData.businessHours,
             city: app.globalData.city,
             addDetails: app.globalData.addDetails,
             phone: app.globalData.phone,
