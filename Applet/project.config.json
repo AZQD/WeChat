@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 19,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -155,7 +155,13 @@
 				{
 					"id": -1,
 					"name": "wifi",
-					"pathName": "pages/wifi/wifi"
+					"pathName": "pages/wifi/wifi",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "promiseTest",
+					"pathName": "pages/promiseTest/promiseTest"
 				}
 			]
 		}
