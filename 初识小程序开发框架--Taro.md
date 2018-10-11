@@ -140,7 +140,7 @@ Taro UI 是一款由凹凸实验室打造、基于 Taro 编写的多端 UI 组�
 
 # 支持情况
 
-[Taro 是什么？](https://mp.weixin.qq.com/s/2j8wB-xo6p7ISeraJsrsCA)
+![支持情况](https://i.imgur.com/ex4t9qR.png)
 
 # 注意点
 1.import引入
@@ -179,6 +179,8 @@ const ENV = Taro.getEnv()
 		    }).then(res => console.log(res.data))
 
 #项目实例
+
+![项目实例](https://i.imgur.com/szr5q2d.png)
 
 # 带来的思考
 
