@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
-import './index.less'
+import './demo.less'
 
 export default class Index extends Component {
 
@@ -28,7 +28,7 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello 58!！</Text>
+        <Text>Hello 58!</Text>
       </View>
     )
   }
