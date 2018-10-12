@@ -101,7 +101,7 @@ export default class Index extends Component {
 
     console.log("demo页面的this:", this);
 
-    Taro.request({
+    /*Taro.request({
       url: 'https://txapp.58.com/m/cate/listIcon',
       data: {
         localId: '1101095',
@@ -109,7 +109,7 @@ export default class Index extends Component {
       header: {
         'content-type': 'application/json'
       }
-    }).then(res => console.log(res.data))
+    }).then(res => console.log(res.data))*/
 
   }
 
