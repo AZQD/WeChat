@@ -59,7 +59,7 @@ export default class Index extends Component {
     else if (ENV === 'WEB') content && alert(content)
 
     if(index === 2){
-      Taro.redirectTo({
+      Taro.navigateTo({
       url: '/pages/demo/demo?test=1'
     })
     }
@@ -72,7 +72,7 @@ export default class Index extends Component {
           show={this.state.show}
           mask
           onClose={this.onClose.bind(this)}
-          items={['项目一', '项目二', '58校校', '个人中心']}
+          items={['项目一', '项目二', '58校校']}
           onItemClick={this.onItemClick.bind(this)}
         ></AtDrawer>
 
