@@ -32,4 +32,4 @@ App({
   globalData:{
     userInfo:null
   }
-})
+});
