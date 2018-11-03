@@ -1,0 +1,5 @@
+<!--pages/list/list.wxml-->
+
+<view wx:for="{{pages}}" wx:for-item="item" wx:for-index="key" wx:key="index">
+    <navigator class="navigator-item" url="/{{item}}" hover-class="navigator-hover">{{item}}</navigator>
+</view>

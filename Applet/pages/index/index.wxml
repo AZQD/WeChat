@@ -21,7 +21,7 @@
 
     <view class="gotoList">
         <view>3、前往列表</view>
-        <button class="gotoListBtn">MENU BUTTON</button>
+        <button class="gotoListBtn" catchtap="gotoList">MENU BUTTON</button>
     </view>
 
 

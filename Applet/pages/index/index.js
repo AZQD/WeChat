@@ -36,5 +36,10 @@ Page({
     },
   clickBtn: function(){
     console.log(wx);
+  },
+  gotoList: function(){
+    wx.navigateTo({
+      url:'/pages/list/list'
+    });
   }
 })

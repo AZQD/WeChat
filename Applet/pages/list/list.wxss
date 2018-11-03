@@ -1,0 +1,9 @@
+/* pages/list/list.wxss */
+.navigator-item{
+  border: 1rpx solid pink;
+  padding: 20rpx;
+}
+.navigator-hover{
+  opacity: .6;
+  background-color: yellow;
+}
