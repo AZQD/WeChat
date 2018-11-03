@@ -4,7 +4,7 @@
   padding-right: 20rpx;
 }
 .open-data-box{
-  margin-top: 100rpx;
+  margin-top: 50rpx;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,7 +44,12 @@
   text-align: center;
 }
 .usermotto {
-  margin-top: 100px;
+  margin-bottom: 40rpx;
   text-align: center;
-  color: blue;
+  color: deeppink;
+}
+
+.gotoListBtn{
+  margin: 20rpx 0;
+  border: 1px solid #1AAD19;
 }
