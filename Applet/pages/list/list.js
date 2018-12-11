@@ -36,7 +36,8 @@ Page({
       "pages/ajaxLimit/ajaxLimit",
       "pages/wifi/wifi",
       "pages/promiseTest/promiseTest",
-      "pages/picker/picker"
+      "pages/picker/picker",
+      "pages/pickerTime/pickerTime"
     ],
   },
 

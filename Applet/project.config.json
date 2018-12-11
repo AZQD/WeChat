@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 22,
 			"list": [
 				{
 					"id": -1,
@@ -168,6 +168,12 @@
 					"id": -1,
 					"name": "picker",
 					"pathName": "pages/picker/picker",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pickerTime",
+					"pathName": "pages/pickerTime/pickerTime",
 					"query": ""
 				}
 			]
