@@ -35,7 +35,8 @@ Page({
       "pages/canvasNew/canvas/New",
       "pages/ajaxLimit/ajaxLimit",
       "pages/wifi/wifi",
-      "pages/promiseTest/promiseTest"
+      "pages/promiseTest/promiseTest",
+      "pages/picker/picker"
     ],
   },
 
