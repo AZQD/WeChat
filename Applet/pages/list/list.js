@@ -37,6 +37,7 @@ Page({
       "pages/wifi/wifi",
       "pages/promiseTest/promiseTest",
       "pages/picker/picker",
+      "pages/pickerView/pickerView",
       "pages/pickerTime/pickerTime"
     ],
   },

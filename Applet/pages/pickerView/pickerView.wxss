@@ -1,0 +1,11 @@
+/* pages/pickerView/pickerView.wxss */
+
+.pickerViewWrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  text-align: center;
+}
+
