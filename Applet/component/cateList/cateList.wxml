@@ -1,0 +1,12 @@
+<view class="menu-box">
+    <view class="item-ul">
+        <block wx:for="{{cateList}}" wx:for-item="item" wx:for-index="key" wx:key="index">
+            <view class="item" data-cate-id="{{item.iconId}}" data-cate-name="{{item.iconName}}">
+                <image class="item-icon skeleton-radius"
+                       src="{{'//img.58cdn.com.cn/weixin/r/school/visuals/visual_icon_'+item.iconId+'.png'}}"
+                       alt="item-icon"/>
+                <text class="item-name skeleton-rect">{{item.iconName}}</text>
+            </view>
+        </block>
+    </view>
+</view>

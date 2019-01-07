@@ -7,6 +7,7 @@ Page({
   data: {
     "pages":[
       "pages/skeleton/demo",
+      "pages/skeleton/demo-component",
       "pages/skeleton/demo-position",
       "pages/list/list",
       "pages/index/index",

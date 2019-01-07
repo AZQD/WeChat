@@ -1,0 +1,31 @@
+.menu-box {
+  font-size: 0;
+}
+.menu-box .item-ul {
+  overflow: hidden;
+  padding-top: 52rpx;
+  padding-bottom: 8rpx;
+}
+.menu-box .item-ul .item {
+  float: left;
+  padding: 0 40rpx 0 30rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+.menu-box .item-ul .item:nth-child(4n) {
+  padding-right: 30rpx;
+}
+.menu-box .item-ul .item .item-icon {
+  width: 120rpx;
+  height: 120rpx;
+}
+.menu-box .item-ul .item .item-name {
+  font-size: 24rpx;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  line-height: 22rpx;
+  margin-top: 22rpx;
+  margin-bottom: 32rpx;
+}

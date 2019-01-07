@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "小程序骨架屏",
+  "usingComponents": {
+    "skeleton": "/component/skeleton/skeleton",
+    "cateList": "/component/cateList/cateList"
+  }
+}

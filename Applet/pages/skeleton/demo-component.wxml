@@ -1,0 +1,47 @@
+<skeleton selector="skeleton"
+          loading="chiaroscuro"
+          bgcolor="#FFF"
+          wx:if="{{showSkeleton}}">
+</skeleton>
+
+<view class="wrapper skeleton">
+
+    <view class="toggle-box">
+        <text class="school-name skeleton-radius">北京邮电大学</text>
+    </view>
+
+    <cateList />
+
+    <view class="list-box">
+        <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="key" wx:key="index">
+            <view class="item">
+                <view class="list-li">
+                    <view class="top">
+                        <image class="cate-icon skeleton-radius"
+                               src="{{'//img.58cdn.com.cn/weixin/r/school/visuals/second_icon_'+item.cateInfo.cateId+'.png'}}"
+                               alt="cate-icon"/>
+                        <text class="cate-name skeleton-rect">{{item.cateInfo.name}}</text>
+                    </view>
+                    <view class="title skeleton-rect">{{item.title}}</view>
+                    <view class="desc skeleton-rect">{{item.content}}</view>
+                    <view class="img-box">
+
+                        <!--
+                        缩放	scaleToFill	不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素
+                        缩放	aspectFit	保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。
+                        缩放	aspectFill	保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。
+                        缩放	widthFix	宽度不变，高度自动变化，保持原图宽高比不变
+
+                        widthFix兼容方式：mode="{{showSkeleton?'scaleToFill':'widthFix'}}"
+                        -->
+
+                        <image class="img-item skeleton-rect" mode="{{showSkeleton?'scaleToFill':'widthFix'}}"
+                               src="https://pic6.58cdn.com.cn/images/xq_img/n_v2194e796765724971910fc3ef666471d5.jpg"
+                               alt="item-icon"/>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+</view>
