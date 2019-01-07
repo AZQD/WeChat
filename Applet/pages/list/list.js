@@ -6,7 +6,7 @@ Page({
    */
   data: {
     "pages":[
-      "pages/skeleton/skeleton",
+      "pages/skeleton/demo",
       "pages/skeleton-position/skeleton-position",
       "pages/list/list",
       "pages/index/index",
