@@ -7,7 +7,7 @@ Page({
   data: {
     "pages":[
       "pages/skeleton/demo",
-      "pages/skeleton-position/skeleton-position",
+      "pages/skeleton/demo-position",
       "pages/list/list",
       "pages/index/index",
       "pages/logs/logs",

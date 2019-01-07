@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": 25,
 			"list": [
 				{
 					"id": -1,
@@ -189,9 +189,9 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 25,
 					"name": "skeleton骨架屏-定位",
-					"pathName": "pages/skeleton-position/skeleton-position",
+					"pathName": "pages/skeleton/demo-position",
 					"query": ""
 				}
 			]
