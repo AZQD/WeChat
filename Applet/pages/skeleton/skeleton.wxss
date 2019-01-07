@@ -1,4 +1,3 @@
-/* pages/skeleton/skeleton.wxss */
 .wrapper{
   background-color: #fff;
 }
@@ -47,8 +46,8 @@
   color: #4A4A4A;
   letter-spacing: 0;
   line-height: 22rpx;
-  padding-top: 22rpx;
-  padding-bottom: 32rpx;
+  margin-top: 22rpx;
+  margin-bottom: 32rpx;
 }
 
 .list-box {
@@ -137,5 +136,5 @@
 }
 .list-box .list-li .img-box .img-item {
   width: 100%;
-  padding-right: 20rpx;
+  margin-right: 20rpx;
 }

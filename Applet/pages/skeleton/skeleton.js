@@ -1,4 +1,3 @@
-// pages/skeleton/skeleton.js
 Page({
 
   /**
@@ -59,30 +58,14 @@ Page({
 
     listData: [
       {
-        "identifyInfo": {"wxIcon": null, "wxNickName": null, "postDate": "12-31 14:19"},
-        "localInfo": {
-          "localId": "6501025",
-          "localName": "新疆生产建设兵团兴新职业技术学院",
-          "pid": "6501000",
-          "fullpath": "6500000,6501000,6501025",
-          "depth": 2,
-          "dirname": "",
-          "pinyin": ""
-        },
-        "interactionOperation": {"praiseCount": "0", "hasPraise": false, "commentCount": "0", "whetherCanComment": true},
-        "contactWay": {"phone": "", "wxNumber": null, "qqNumber": null},
         "cateInfo": {"name": "校园一刻", "cateId": 12052, "dispcatefullpath": "12010,12051,12052", "secondCateId": 12051},
-        "infoId": "946048679253757952",
-        "pics": "",
         "content": "因为相信，所以看见。",
-        "pv": null,
-        "localId": null,
-        "tagList": null,
-        "postDate": null,
-        "title": "2018最后一天，加油！",
-        "source": null,
-        "member": 1,
-        "param": null
+        "title": "2019新的一年，加油！！",
+      },
+      {
+        "cateInfo": {"name": "校园一刻", "cateId": 12052, "dispcatefullpath": "12010,12051,12052", "secondCateId": 12051},
+        "content": "因为相信，所以看见。",
+        "title": "2019新的一年，加油！！",
       }
     ],
 
@@ -93,7 +76,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this;
+    setTimeout(function () {
+      that.setData({
+        showSkeleton: false
+      })
+    }, 3000)
   },
 
   /**
