@@ -1,0 +1,63 @@
+<!--<skeleton selector="skeleton"
+          loading="spin"
+          bgcolor="#FFF"
+          wx:if="{{showSkeleton}}">
+</skeleton>-->
+
+<!--<view class="container skeleton">
+
+    <view class="userinfo">
+
+        <view>
+            <image class="userinfo-avatar skeleton-radius" src="{{userInfo.avatarUrl}}"
+                   mode="cover"></image>
+        </view>
+        <view>
+
+            <text class="userinfo-nickname skeleton-rect">666</text>
+        </view>
+    </view>
+</view>-->
+
+
+<view class="wrapper">
+
+    <view class="toggle-box">
+        <text class="school-name">北京邮电大学</text>
+    </view>
+
+    <view class="menu-box">
+        <view class="item-ul">
+            <block wx:for="{{cateList}}" wx:for-item="item" wx:for-index="key" wx:key="index">
+                <view class="item" data-cate-id="{{item.iconId}}" data-cate-name="{{item.iconName}}">
+                    <image class="item-icon"
+                           src="{{'//img.58cdn.com.cn/weixin/r/school/visuals/visual_icon_'+item.iconId+'.png'}}"
+                           alt="item-icon"/>
+                    <text class="item-name">{{item.iconName}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class="list-box">
+        <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="key" wx:key="index">
+            <view class="item" data-cate-id="{{item.iconId}}" data-cate-name="{{item.iconName}}">
+                <view class="list-li">
+                    <view class="top">
+                        <image class="cate-icon"
+                             src="{{'//img.58cdn.com.cn/weixin/r/school/visuals/second_icon_'+item.cateInfo.cateId+'.png'}}"
+                             alt="cate-icon"/>
+                        <text class="cate-name">{{item.cateInfo.name}}</text>
+                    </view>
+                    <view class="title">{{item.title}}</view>
+                    <view class="desc">{{item.content}}</view>
+                    <view class="img-box">
+                        <image class="img-item" mode="widthFix"
+                               src="https://pic6.58cdn.com.cn/images/xq_img/n_v2194e796765724971910fc3ef666471d5.jpg"
+                               alt="item-icon"/>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

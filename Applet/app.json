@@ -32,7 +32,8 @@
     "pages/promiseTest/promiseTest",
     "pages/picker/picker",
     "pages/pickerView/pickerView",
-    "pages/pickerTime/pickerTime"
+    "pages/pickerTime/pickerTime",
+    "pages/skeleton/skeleton"
   ],
   "window":{
     "backgroundTextStyle":"light",

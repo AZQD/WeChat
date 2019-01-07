@@ -6,6 +6,7 @@ Page({
    */
   data: {
     "pages":[
+      "pages/skeleton/skeleton",
       "pages/list/list",
       "pages/index/index",
       "pages/logs/logs",

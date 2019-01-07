@@ -1,0 +1,141 @@
+/* pages/skeleton/skeleton.wxss */
+.wrapper{
+  background-color: #fff;
+}
+
+.toggle-box {
+  font-size: 0;
+  padding: 0 30rpx;
+  padding-top: 20rpx;
+}
+.toggle-box .school-name {
+  display: inline-block;
+  font-size: 32rpx;
+  color: #4A4A4A;
+  padding: 13rpx 30rpx;
+  padding-right: 90rpx;
+  border-radius: 100rpx;
+  background: #F1F1F1 url("https://img.58cdn.com.cn/weixin/r/school/visuals/more_icon.png") no-repeat right 30rpx center;
+  background-size: 50rpx 50rpx;
+}
+
+.menu-box {
+  font-size: 0;
+}
+.menu-box .item-ul {
+  overflow: hidden;
+  padding-top: 52rpx;
+  padding-bottom: 8rpx;
+}
+.menu-box .item-ul .item {
+  float: left;
+  padding: 0 40rpx 0 30rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+.menu-box .item-ul .item:nth-child(4n) {
+  padding-right: 30rpx;
+}
+.menu-box .item-ul .item .item-icon {
+  width: 120rpx;
+  height: 120rpx;
+}
+.menu-box .item-ul .item .item-name {
+  font-size: 24rpx;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  line-height: 22rpx;
+  padding-top: 22rpx;
+  padding-bottom: 32rpx;
+}
+
+.list-box {
+  font-size: 0;
+}
+.list-box .list-li{
+  padding: 0 30rpx;
+  background-color: #fff;
+  border-top: 20rpx solid RGBA(247, 249, 250, 1);
+}
+
+.list-box .list-li .top {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 0;
+}
+
+.list-box .list-li .top .cate-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 14rpx;
+}
+.list-box .list-li .top .cate-name {
+  font-size: 32rpx;
+  color: #4A4A4A;
+  letter-spacing: 0.02rpx;
+  line-height: 32rpx;
+}
+
+.list-box .list-li .top .left {
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.list-box .list-li .top .left .head-icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+.list-box .list-li .top .right {
+
+}
+.list-box .list-li .top .right .name {
+  font-size: 24rpx;
+  color: #4A4A4A;
+  line-height: 30rpx;
+}
+.list-box .list-li .top .right .date {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #9B9B9B;
+  letter-spacing: 0;
+  line-height: 24rpx;
+  padding-top: 6rpx;
+}
+
+.list-box .list-li .title {
+  font-size: 36rpx;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 54rpx;
+  margin-bottom: 20rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-all;
+}
+.list-box .list-li .desc {
+  font-size: 30rpx;
+  color: #4A4A4A;
+  letter-spacing: 0;
+  line-height: 48rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-word;
+}
+.list-box .list-li .img-box {
+  padding-top: 20rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.list-box .list-li .img-box .img-item {
+  width: 100%;
+  padding-right: 20rpx;
+}
