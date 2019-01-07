@@ -33,7 +33,8 @@
     "pages/picker/picker",
     "pages/pickerView/pickerView",
     "pages/pickerTime/pickerTime",
-    "pages/skeleton/skeleton"
+    "pages/skeleton/skeleton",
+    "pages/skeleton-position/skeleton-position"
   ],
   "window":{
     "backgroundTextStyle":"light",

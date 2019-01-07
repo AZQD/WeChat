@@ -1,0 +1,59 @@
+/* pages/skeleton-position/skeleton-position.wxss */
+.title{
+  margin-top: 50rpx;
+  display: inline-block;
+  margin-bottom: 16rpx;
+}
+.box{
+  background-color: pink;
+}
+.box .item{
+  display: inline-block;
+  background-color: yellow;
+  width: 33.33%;
+  text-align: center;
+  height: 160rpx;
+  line-height: 160rpx;
+}
+.box .item:nth-child(2n+1){
+  background-color: pink;
+}
+
+.box2{
+  overflow: hidden;
+}
+.box2 .item2{
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  height: 160rpx;
+  line-height: 160rpx;
+  background-color: yellow;
+}
+.box2 .item2:nth-child(2n+1){
+  background-color: pink;
+}
+
+.box3{
+  position: relative;
+}
+.box3 .item3{
+  left: 0;
+  width: 300rpx;
+  position: absolute;
+}
+.box3 .item3:nth-child(1){
+  top: 0;
+  height: 300rpx;
+  background-color: red;
+}
+.box3 .item3:nth-child(2){
+  top: 50rpx;
+  height: 200rpx;
+  background-color: yellow;
+}
+.box3 .item3:nth-child(3){
+  top: 100rpx;
+  height: 100rpx;
+  background-color: blue;
+}
