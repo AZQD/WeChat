@@ -10,7 +10,6 @@
 
     <view class="spinbox" wx:if="{{loading == 'spin'}}">
         <view class="spin"></view>
-
     </view>
 
 
