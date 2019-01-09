@@ -1,5 +1,5 @@
 <skeleton selector="skeleton"
-          loading="chiaroscuro"
+          loading="spin"
           bgcolor="#FFF"
           wx:if="{{showSkeleton}}">
 </skeleton>
