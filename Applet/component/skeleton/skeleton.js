@@ -6,7 +6,7 @@ Component({
       type: String,
       value: '#FFF'
     },
-    selector: {
+    selector: { // 定义骨架屏的容器
       type: String,
       value: 'skeleton'
     },
