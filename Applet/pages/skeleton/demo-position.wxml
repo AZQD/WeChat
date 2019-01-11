@@ -35,7 +35,7 @@
 
 
     <text class="title skeleton-rect">定位元素</text>
-    <view class="box3 skeleton-rect">
+    <view class="box3">
         <view class="item3 skeleton-rect">
             <text class="skeleton-radius">求职</text>
         </view>
