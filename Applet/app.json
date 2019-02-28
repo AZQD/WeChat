@@ -39,9 +39,9 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"yellow" 
+    "navigationBarTextStyle":"black"
   },
   "plugins": {
     "calendar": {

@@ -1,6 +1,6 @@
 {
   "backgroundTextStyle":"dark",
-  "navigationBarBackgroundColor": "#000",
+  "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "裁剪头像",
-  "navigationBarTextStyle":"#fff"
+  "navigationBarTextStyle":"black"
 }

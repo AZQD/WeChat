@@ -1,6 +1,6 @@
 {
   "backgroundTextStyle":"dark",
-  "navigationBarBackgroundColor": "#000",
+  "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "加载网络图",
-  "navigationBarTextStyle":"#fff"
+  "navigationBarTextStyle":"black"
 }
