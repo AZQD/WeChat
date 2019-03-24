@@ -1,0 +1,8 @@
+<button type="default" bindtap="actionSheetChange">弹出action sheet</button>
+
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
+  <block wx:for-items="{{actionSheetItems}}" wx:key="index">
+    <action-sheet-item bindtap="bindItem" data-type="{{item.type}}">{{item.name}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel>取消</action-sheet-cancel>
+</action-sheet>

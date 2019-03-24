@@ -6,9 +6,11 @@ Page({
    */
   data: {
     "pages":[
+      "pages/action-sheet/action-sheet",/*微信小程序之----底部菜单action-sheet*/
       "pages/skeleton/demo",
       "pages/skeleton/demo-component",
       "pages/skeleton/demo-position",
+
       "pages/list/list",
       "pages/index/index",
       "pages/logs/logs",

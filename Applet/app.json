@@ -35,7 +35,8 @@
     "pages/pickerTime/pickerTime",
     "pages/skeleton/demo",
     "pages/skeleton/demo-position",
-    "pages/skeleton/demo-component"
+    "pages/skeleton/demo-component",
+    "pages/action-sheet/action-sheet"
   ],
   "window":{
     "backgroundTextStyle":"light",
