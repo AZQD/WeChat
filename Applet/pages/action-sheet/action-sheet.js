@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    actionSheetHidden: true,
-    actionSheetItems: [
+    actionSheetHidden: true,//底部弹出菜单是否展示
+    actionSheetItems: [ //底部弹出菜单
       {
         type: 1,
         name: '选择图片'
