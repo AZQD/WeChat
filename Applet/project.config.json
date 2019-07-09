@@ -11,6 +11,8 @@
 	"libVersion": "2.2.5",
 	"appid": "wx201070c15385a377",
 	"projectname": "Applet",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
