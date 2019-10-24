@@ -37,6 +37,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 26,
 			"list": [
@@ -209,6 +213,12 @@
 					"name": "skeleton骨架屏-component",
 					"pathName": "pages/skeleton/demo-component",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "联系客服",
+					"pathName": "pages/contactService/contactService",
+					"scene": null
 				}
 			]
 		}

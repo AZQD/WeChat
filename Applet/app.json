@@ -36,7 +36,8 @@
     "pages/skeleton/demo",
     "pages/skeleton/demo-position",
     "pages/skeleton/demo-component",
-    "pages/action-sheet/action-sheet"
+    "pages/action-sheet/action-sheet",
+    "pages/contactService/contactService"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,14 @@
+<button
+  class="contactService"
+  open-type="contact"
+  send-message-title="下载58本地版，做生意更容易"
+  show-message-card="true"
+  send-message-img="https://img.58cdn.com.cn/weixin/img/guide_card.png"
+  send-message-path="/pages/index/index"
+  bindcontact='handleContact'
+  catchtap="clickContact"
+  >
+  <view class="contactBox">
+    <text>联系客服</text>
+  </view>
+</button>
