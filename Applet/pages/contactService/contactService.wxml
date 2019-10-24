@@ -8,6 +8,7 @@
   bindcontact='handleContact'
   catchtap="clickContact"
   >
+  <!--send-message-path：实际操作中：还是只会返回到上一个页面。只有当你重新从微信的聊天界面，进入小程序客服会话窗口，点击卡片，才会进入目标path页面。-->
   <view class="contactBox">
     <text>联系客服</text>
   </view>
