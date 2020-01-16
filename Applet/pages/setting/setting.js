@@ -203,15 +203,15 @@ Page({
     },
 
     //获取系统信息
-    getSystemInfoFun:function () {
-        wx.getSystemInfo({
+    getSystemInfoFun: function () {
+        wx.getSystemInfo ({
             success: function(res) {
                 console.log('获取系统信息success', res);
             },
-            fail:function (res) {
+            fail: function (res) {
                 console.log('获取系统信息fail', res);
             },
-            complete:function(res){
+            complete: function(res){
                 console.log('获取系统信息complete', res);
             }
         })
