@@ -202,6 +202,21 @@ Page({
         })
     },
 
+    //获取系统信息
+    getSystemInfoFun:function () {
+        wx.getSystemInfo({
+            success: function(res) {
+                console.log('获取系统信息success',res);
+            },
+            fail:function (res) {
+                console.log('获取系统信息fail',res);
+            },
+            complete:function(res){
+                console.log('获取系统信息complete',res);
+            }
+        })
+    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

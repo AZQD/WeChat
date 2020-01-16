@@ -11,3 +11,4 @@
 <button class="viewBtn" catchtap="startRecordFun">录音功能</button>
 <button class="viewBtn" catchtap="saveImageToPhotosAlbumFun">保存到相册(图片)</button>
 <button class="viewBtn" catchtap="saveVideoToPhotosAlbumFun">保存到相册(视频)</button>
+<button class="viewBtn" catchtap="getSystemInfoFun">获取系统信息</button>
