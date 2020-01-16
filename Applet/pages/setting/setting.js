@@ -206,13 +206,13 @@ Page({
     getSystemInfoFun:function () {
         wx.getSystemInfo({
             success: function(res) {
-                console.log('获取系统信息success',res);
+                console.log('获取系统信息success', res);
             },
             fail:function (res) {
-                console.log('获取系统信息fail',res);
+                console.log('获取系统信息fail', res);
             },
             complete:function(res){
-                console.log('获取系统信息complete',res);
+                console.log('获取系统信息complete', res);
             }
         })
     },
