@@ -1,4 +1,3 @@
-
 <view>部分接口需要获得用户授权同意后才能调用：</view>
 <button class="viewBtn setting" catchtap="openSettingFun">打开授权设置界面</button>
 <button class="viewBtn setting" catchtap="getSettingFun">获取授权信息</button>
