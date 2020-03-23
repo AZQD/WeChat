@@ -1,1 +1,48 @@
 /* pages/shop/shop.wxss */
+
+.container{
+  min-height: 100vh;
+  background-color: #F5F5F5;
+  padding: 0 20rpx;
+  font-size: 0;
+}
+
+.topBox {
+  background-color:#FFF;
+  border-radius:10rpx;
+  opacity:0.9;
+  padding: 18rpx 20rpx 4rpx 20rpx;
+}
+.topBox .title{
+  font-size:32rpx;
+  color:#1A1A1A;
+  line-height:48rpx;
+}
+.topBox .goodList{
+  padding-top: 14rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.topBox .goodList .goodItem{
+  float: left;
+  width:160rpx;
+  padding-right: 10rpx;
+}
+.topBox .goodList .goodItem:nth-child(4n){
+  padding-right: 0;
+}
+.topBox .goodList .goodItem .goodImg{
+  width:160rpx;
+  height:160rpx;
+  border-radius:10rpx;
+  overflow: hidden;
+}
+.topBox .goodList .goodItem .price{
+  color: #1A1A1A;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 10rpx 0 14rpx 0;
+}
+.topBox .goodList .goodItem .price .unit{
+  font-size: 20rpx;
+}

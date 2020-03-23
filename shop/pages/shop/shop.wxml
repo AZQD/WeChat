@@ -1,2 +1,42 @@
 <!--pages/shop/shop.wxml-->
-<text>pages/shop/shop.wxml</text>
+<view class="container">
+
+  <view class="topBox">
+    <view class="title">精选拼团</view>
+    <view class="goodList">
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+    </view>
+  </view>
+
+</view>
