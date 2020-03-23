@@ -14,43 +14,43 @@
   color: transparent;
 }
 
-.topBox {
+.selectedBox {
   background-color:#FFF;
   border-radius:10rpx;
   opacity:0.9;
   padding: 18rpx 20rpx 4rpx 20rpx;
 }
-.topBox .title{
+.selectedBox .title{
   font-size:32rpx;
   color:#1A1A1A;
   line-height:48rpx;
 }
-.topBox .goodList{
+.selectedBox .goodList{
   padding-top: 14rpx;
   overflow: hidden;
   box-sizing: border-box;
 }
-.topBox .goodList .goodItem{
+.selectedBox .goodList .goodItem{
   float: left;
   width:160rpx;
   padding-right: 10rpx;
 }
-.topBox .goodList .goodItem:nth-child(4n){
+.selectedBox .goodList .goodItem:nth-child(4n){
   padding-right: 0;
 }
-.topBox .goodList .goodItem .goodImg{
+.selectedBox .goodList .goodItem .goodImg{
   width:160rpx;
   height:160rpx;
   border-radius:10rpx;
   overflow: hidden;
 }
-.topBox .goodList .goodItem .price{
+.selectedBox .goodList .goodItem .price{
   color: #1A1A1A;
   font-size: 24rpx;
   text-align: center;
   padding: 10rpx 0 14rpx 0;
 }
-.topBox .goodList .goodItem .price .unit{
+.selectedBox .goodList .goodItem .price .unit{
   font-size: 20rpx;
 }
 
