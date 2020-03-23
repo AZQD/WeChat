@@ -7,6 +7,13 @@
   font-size: 0;
 }
 
+/*隐藏滚动条*/
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
 .topBox {
   background-color:#FFF;
   border-radius:10rpx;
@@ -45,4 +52,143 @@
 }
 .topBox .goodList .goodItem .price .unit{
   font-size: 20rpx;
+}
+
+.toggleBox{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-top: 32rpx;
+  padding-bottom: 24rpx;
+}
+.toggleBox .toggleItem{
+  text-align: center;
+  display: inline-block;
+  margin-right: 56rpx;
+}
+.toggleBox .toggleItem:last-child{
+  margin-right: 30rpx;
+}
+.toggleBox .toggleItem .desc1{
+  color:#1A1A1A;
+  font-size:32rpx;
+  line-height:48rpx;
+  margin-bottom: 4rpx;
+}
+.toggleBox .toggleItem .desc2{
+  display: inline-block;
+  color:#666;
+  font-size:20rpx;
+  height: 32rpx;
+  line-height:32rpx;
+}
+.toggleBox .active .desc1{
+  color:#F15E34;
+}
+.toggleBox .active .desc2{
+  color:#FFF;
+  padding: 0 10rpx;
+  border-radius:16rpx;
+  background-color: #F15E34;
+}
+
+.listBox{
+
+}
+.listBox .listItem{
+  margin-bottom: 24rpx;
+  background-color: #fff;
+  border-radius:10rpx;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.listBox .listItem .left{
+  width:220rpx;
+  height:220rpx;
+  border-radius:10rpx;
+  overflow: hidden;
+}
+.listBox .listItem .left .goodImg{
+  width: 100%;
+  height: 100%;
+}
+.listBox .listItem .right{
+  width: 0;
+  flex-grow: 1;
+  padding-left: 20rpx;
+}
+.listBox .listItem .right .desc1{
+  color:#1A1A1A;
+  font-size:24rpx;
+  line-height:36rpx;
+}
+.listBox .listItem .right .desc2{
+  color:#666;
+  font-size:24rpx;
+  line-height:36rpx;
+  padding-top: 4rpx;
+}
+.listBox .listItem .right .desc3{
+  display: flex;
+  align-items: center;
+  padding-top: 18rpx;
+}
+.listBox .listItem .right .desc3 .avatars{
+  padding-left: 12rpx;
+}
+.listBox .listItem .right .desc3 .avatars .avatarImg{
+  width:32rpx;
+  height:32rpx;
+  border-radius: 50rpx;
+  float: left;
+  margin-left: -12rpx;
+}
+.listBox .listItem .right .desc3 .number{
+  color: #B2B2B2;
+  font-size: 20rpx;
+  padding-left: 8rpx;
+}
+.listBox .listItem .right .desc4{
+  display: flex;
+  align-items: center;
+  padding-top: 42rpx;
+}
+.listBox .listItem .right .desc4 .numbers{
+  width: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.listBox .listItem .right .desc4 .numbers .currentPrice{
+  color:#E25026;
+  font-size:32rpx;
+  line-height:48rpx;
+}
+.listBox .listItem .right .desc4 .numbers .originPrice{
+  color:#B2B2B2;
+  font-size:22rpx;
+  line-height:30rpx;
+  margin-left: 8rpx;
+  text-decoration: line-through;
+  padding-top: 12rpx;
+}
+.listBox .listItem .right .desc4 .numbers .regiment{
+  color:#F15E34;
+  font-size:20rpx;
+  line-height:30rpx;
+  margin-left: 6rpx;
+  border: 1rpx solid #F15E34;
+  border-radius:4rpx;
+  padding: 0 8rpx;
+}
+.listBox .listItem .right .desc4 .join{
+  color:#FFFFFF;
+  font-size:26rpx;
+  line-height:38rpx;
+  background:linear-gradient(135deg,rgba(241,147,52,1) 0%,rgba(241,94,52,1) 100%);
+  box-shadow:0rpx 4rpx 8rpx 0rpx rgba(241,94,52,0.3);
+  border-radius:28rpx;
+  padding: 9rpx 36rpx;
+  float: right;
 }

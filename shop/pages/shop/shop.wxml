@@ -39,4 +39,146 @@
     </view>
   </view>
 
+  <view class="toggleBox">
+    <view class="toggleItem active">
+      <view class="desc1">全部拼团</view>
+      <view class="desc2">来拼吧</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">爆款热卖</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">百元内好物</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">低价拼</view>
+      <view class="desc2">血拼进行</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">全部拼团</view>
+      <view class="desc2">来拼吧</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">爆款热卖</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">百元内好物</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">低价拼</view>
+      <view class="desc2">血拼进行</view>
+    </view>
+  </view>
+
+  <view class="listBox">
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
 </view>
