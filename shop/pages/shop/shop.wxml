@@ -4,53 +4,181 @@
   <view class="selectedBox">
     <view class="title">精选拼团</view>
     <view class="goodList">
-      <block wx:for="{{selectedData}}" wx:key="index"  wx:for-index="index" wx:for-item="item">
-        <view class="goodItem">
-          <image class="goodImg" src="{{item.goodImg}}" />
-          <view class="price"><text class="unit">¥</text>{{item.price}}</view>
-        </view>
-      </block>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <view class="price"><text class="unit">¥</text>230</view>
+      </view>
     </view>
   </view>
 
   <view class="toggleBox">
-    <block wx:for="{{toggleData}}" wx:key="index"  wx:for-index="index" wx:for-item="item">
-      <view catchtap="toggleItemFun" data-type="{{index}}" class="{{activeMenu==index?'toggleItem active':'toggleItem'}}">
-        <view class="desc1">{{item.desc1}}</view>
-        <view class="desc2">{{item.desc2}}</view>
-      </view>
-    </block>
+    <view class="toggleItem active">
+      <view class="desc1">全部拼团</view>
+      <view class="desc2">来拼吧</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">爆款热卖</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">百元内好物</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">低价拼</view>
+      <view class="desc2">血拼进行</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">全部拼团</view>
+      <view class="desc2">来拼吧</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">爆款热卖</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">百元内好物</view>
+      <view class="desc2">百万人在拼</view>
+    </view>
+    <view class="toggleItem">
+      <view class="desc1">低价拼</view>
+      <view class="desc2">血拼进行</view>
+    </view>
   </view>
 
   <view class="listBox">
-    <block wx:for="{{listData}}" wx:key="index"  wx:for-index="index" wx:for-item="item">
-      <view class="listItem">
-        <view class="left">
-          <image class="goodImg" src="{{item.goodImg}}" />
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
         </view>
-        <view class="right">
-          <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
-          <view class="desc2">菱格链条时尚单肩包</view>
-          <view class="desc3">
-            <view class="avatars">
-              <block wx:if="{{indexChild<3}}" wx:for="{{item.avatarsArr}}" wx:key="indexChild"  wx:for-index="indexChild" wx:for-item="itemChild">
-                <image class="avatarImg" src="{{itemChild.avatarImg}}" />
-              </block>
-              <image wx:if="{{item.avatarsArr.length>3}}" class="avatarImg" src='/images/shop/moreImg.png' />
-            </view>
-            <view class="number">{{item.number}} 人已拼</view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
           </view>
-          <view class="desc4">
-            <view class="numbers">
-              <view class="currentPrice">¥{{item.currentPrice}}</view>
-              <view class="originPrice">¥{{item.originPrice}}</view>
-              <view class="regiment">{{item.regiment}}人团</view>
-            </view>
-            <view class="join">去开团</view>
-          </view>
+          <view class="join">去开团</view>
         </view>
       </view>
-    </block>
+    </view>
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
+    <view class="listItem">
+      <view class="left">
+        <image class="goodImg" src='/images/shop/goodImg.png' />
+      </view>
+      <view class="right">
+        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
+        <view class="desc2">菱格链条时尚单肩包</view>
+        <view class="desc3">
+          <view class="avatars">
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
+            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
+            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          </view>
+          <view class="number">12948 人已拼</view>
+        </view>
+        <view class="desc4">
+          <view class="numbers">
+            <view class="currentPrice">¥268</view>
+            <view class="originPrice">¥300</view>
+            <view class="regiment">99人团</view>
+          </view>
+          <view class="join">去开团</view>
+        </view>
+      </view>
+    </view>
   </view>
 
 </view>
