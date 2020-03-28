@@ -8,6 +8,7 @@
     </view>
   </view>
 
+  <!--容器信息-->
   <view class="contentWrap">
 
     <view class="orderBox">
@@ -117,9 +118,6 @@
       </view>
     </view>
 
-
   </view>
 
 </view>
-
-<tabbar activeCode="3"></tabbar>
