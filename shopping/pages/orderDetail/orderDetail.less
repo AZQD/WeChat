@@ -1,0 +1,230 @@
+@import "../../assets/common";
+
+.container{
+  border-top: 1rpx solid #F4F4F4;
+  padding-bottom: 270rpx;
+  .addressBox{
+    height: 88rpx;
+    padding: 0 74rpx 0 50rpx;
+    background-color: #F4F4F4;
+    .hasAddress{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #000;
+      .info1{
+        font-size: 26rpx;
+        .name{
+          padding-right: 30rpx;
+        }
+      }
+      .info2{
+        display: flex;
+        align-items: center;
+        .left{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 88rpx;
+          height: 24rpx;
+          font-size: 16rpx;
+          color: #fff;
+          background-color: #FB0E04;
+          margin-right: 24rpx;
+        }
+        .right{
+          width: 0;
+          flex-grow: 1;
+          font-size: 21rpx;
+          overflow: hidden;
+          display: -webkit-box;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          white-space: normal;
+        }
+      }
+    }
+  }
+
+  .goodsBox{
+    margin: 60rpx 0;
+    .goodsItem{
+      padding: 18rpx 50rpx;
+      background-color: #F4F4F4;
+      font-size: 24rpx;
+      color: #000;
+      display: flex;
+      align-items: stretch;
+      .goodImg{
+        width: 160rpx;
+        height: 160rpx;
+        margin-right: 23rpx;
+      }
+      .goodsInfo{
+        width: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .desc1{
+          font-size: 21rpx;
+          color: #000;
+          .ellipsis(2);
+        }
+        .desc2{
+          font-size: 21rpx;
+          color: #595959;
+        }
+        .num_desc{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .num_left{
+            color: #595959;
+            font-size: 30rpx;
+          }
+          .num_right{
+            color: #595959;
+            font-size: 24rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .deliverBox{
+    color: #000;
+    font-size: 24rpx;
+    padding: 13rpx 50rpx;
+    background-color: #F4F4F4;
+    .wayInfo{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .name{
+
+      }
+      .company{
+
+      }
+    }
+    .time{
+      color: #595959;
+      font-size: 20rpx;
+      padding-top: 40rpx;
+      padding-bottom: 10rpx;
+    }
+  }
+
+  .discountBox{
+    color: #000;
+    font-size: 24rpx;
+    .item{
+      height: 60rpx;
+      padding: 0 55rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1rpx solid #D8D8D8;
+      &:last-child{
+        border-bottom: 0;
+      }
+      .left{
+
+      }
+      .right{
+
+      }
+    }
+    .title{
+      height: 82rpx;
+    }
+    .mt30{
+      margin-top: 30rpx;
+      border-top: 1rpx solid #D8D8D8;
+    }
+  }
+
+  .bottomBox{
+    position: fixed;
+    left: 0;
+    bottom: 36rpx;
+    width: 100%;
+    background-color: #ffffff;
+    .bottomBtn{
+      color: #fff;
+      font-size: 36rpx;
+      height: 90rpx;
+      line-height: 90rpx;
+      border-radius: 10rpx;
+      margin: 0 40rpx 46rpx;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    .green{
+      color: #fff;
+      border: 2rpx solid #1AAD19;
+      background-color: #1AAD19;
+    }
+    .red{
+      color: #fff;
+      border: 2rpx solid @redColor;
+      background-color: @redColor;
+    }
+    .gray{
+      color: #595959;
+      border: 2rpx solid #595959;
+      background-color: #fff;
+    }
+  }
+
+  .shadowBox{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background:rgba(0,0,0,.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .shadowInfo{
+      width: 298rpx;
+      background-color: #fff;
+      padding: 31rpx 98rpx 38rpx;
+      border-radius: 8rpx;
+      position: relative;
+      .close_icon{
+        position: absolute;
+        left: 10rpx;
+        top: 10rpx;
+        height: 42rpx;
+        width: 42rpx;
+      }
+
+      .title{
+        color: #000;
+        font-size: 30rpx;
+        padding-bottom: 40rpx;
+      }
+      .ctrlBtn{
+        width: 100%;
+        color: #fff;
+        font-size: 21rpx;
+        height: 64rpx;
+        line-height: 64rpx;
+        border-radius: 5rpx;
+        margin-bottom: 60rpx;
+        background-color: #1AAD19;
+        border: none;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+@import "../../assets/common";
+
+.container{
+  background-color: #EEEEEE;
+  border-top: 1rpx solid #EEEEEE;
+  .descBox {
+    .descItem{
+      margin-bottom: 4rpx;
+      padding-left: 40rpx;
+      padding-right: 31rpx;
+      padding-top: 32rpx;
+      padding-bottom: 42rpx;
+      background-color: #fff;
+      display: flex;
+      color: #595959;
+      align-items: center;
+      .left{
+        .check_icon{
+          width: 40rpx;
+          height: 40rpx;
+          margin-right: 32rpx;
+        }
+      }
+      .middle{
+        width: 0;
+        flex-grow: 1;
+        font-size: 30rpx;
+        .desc1{
+          display: flex;
+          align-items: center;
+          .name{
+            padding-right: 88rpx;
+          }
+          .default{
+            display: inline-block;
+            text-align: center;
+            width: 66rpx;
+            height: 24rpx;
+            line-height: 26rpx;
+            border-radius: 10rpx;
+            font-size: 16rpx;
+            color: #fff;
+            background-color: #FB0E04;
+            margin-left: 22rpx;
+          }
+        }
+        .desc2{
+          font-size: 24rpx;
+          padding-top: 8rpx;
+        }
+      }
+      .right{
+        .edit_icon{
+          width: 38rpx;
+          height: 36rpx;
+          margin-left: 32rpx;
+        }
+      }
+    }
+  }
+
+  .bottomBox{
+    position: fixed;
+    left: 0;
+    bottom: 138rpx;
+    width: 100%;
+    .bottomBtn{
+      margin: 0 75rpx;
+      height: 88rpx;
+      font-size: 36rpx;
+      color: #fff;
+      background-color: #FB0E04;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius:10rpx;
+      .text{
+        position: relative;
+        padding-left: 50rpx;
+        &::before{
+          width:36rpx;
+          height:36rpx;
+          display: inline-block;
+          content: '';
+          background: url(https://file.gongjian.mobi/wechat/gongjian/images/common/add_icon3.png) no-repeat left center;/*兼容没测*/
+          background-size: 100% 100%;
+          position: absolute;
+          left: 0;
+          top: calc(50% - 18rpx);
+          z-index: 2;
+        }
+      }
+    }
+  }
+}

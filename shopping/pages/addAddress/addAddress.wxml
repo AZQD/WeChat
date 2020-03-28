@@ -1,0 +1,48 @@
+<view class="container">
+
+  <view class="descBox">
+    <view class="itemBox">
+      <view class="left">收货人：</view>
+      <input bindinput="consigneeFun" value="{{consignee}}" type="text" class="right" placeholder="请输入收货人姓名" placeholder-class="placeholderStyle"/>
+    </view>
+    <view class="itemBox">
+      <view class="left">联系方式：</view>
+      <input bindinput="contactFun" value="{{contact}}" type="number" maxlength="11" class="right" placeholder="请输入联系方式" placeholder-class="placeholderStyle"/>
+    </view>
+
+
+    <picker
+      mode="region"
+      bindchange="bindRegionChange"
+      value="{{pickerAddress.value}}"
+    >
+      <view class="itemBox">
+        <view class="left">所在区域：</view>
+        <input type="text" value="{{pickerAddress.value.length>0?pickerAddress.value[0]+' '+pickerAddress.value[1]+' '+pickerAddress.value[2]:''}}" disabled class="right address" placeholder="请选择所在区域" placeholder-class="placeholderStyle"/>
+      </view>
+    </picker>
+
+
+    <view class="itemBox">
+      <view class="left">详细地址：</view>
+      <input bindinput="detailAddressFun" value="{{detailAddress}}" type="text" class="right" placeholder="请输入详细地址" placeholder-class="placeholderStyle"/>
+    </view>
+    <view class="itemBox">
+      <view class="left">设置为默认地址：</view>
+      <view class="switchBox"><switch class="wx-switch-input" checked="{{addressStatus==1? true: false}}" bindchange="switchChange" color="#FB0E04"/></view>
+    </view>
+  </view>
+
+  <view class="bottomBox" wx:if="{{!addressId}}">
+    <view class="bottomBtn" bindtap="saveAddressFun">保存并使用</view>
+  </view>
+
+  <view class="bottomBox bottomBoxConfirm" wx:if="{{addressId}}">
+    <view class="bottomBtn" bindtap="saveAddressFun">确认</view>
+  </view>
+  <view class="bottomBox bottomBoxDelete" wx:if="{{addressId}}">
+    <view class="bottomBtn" bindtap="deleteAddressFun">删除地址</view>
+  </view>
+
+</view>
+<tabbar activeCode="1"></tabbar>

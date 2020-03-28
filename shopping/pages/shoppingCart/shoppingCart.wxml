@@ -1,0 +1,49 @@
+<view class="container">
+
+  <view class="cartList">
+
+    <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="cartItem"  scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
+        <view class="item checkWrap" bindtap="checkSkusFun" data-index="{{index}}">
+          <image wx:if="{{item.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
+          <image wx:else class="check_icon" src='{{ossDomain}}common/check_icon.png'></image>
+        </view>
+
+        <view class="item">
+          <image class="goodImg" mode="aspectFit" src="{{item.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+        </view>
+
+        <view class="item descBox">
+          <view class="desc1">{{item.goodsTitle}}</view>
+          <view class="desc2">{{item.skuTitle}}</view>
+          <view class="desc3" wx:if="{{item.currentPrice}}">¥{{item.currentPrice}}</view>
+          <view class="desc3" wx:else>价格面议</view>
+        </view>
+
+        <view class="item ctrlBox">
+          <image bindtap="modifyNumFun" data-type="0" data-index="{{index}}" class="ctrl_icon" src='{{ossDomain}}common/reduce_icon2.png'></image>
+          <input disabled type="number" class="num" value="{{item.number}}" />
+          <image bindtap="modifyNumFun" data-type="1" data-index="{{index}}" class="ctrl_icon" src='{{ossDomain}}common/add_icon2.png'></image>
+        </view>
+
+        <view class="item delBox" bindtap="deleteFun" data-index="{{index}}">删除</view>
+      </view>
+    </block>
+    <view class="noMoreData" wx:if="{{lastPage}}">没有更多数据</view>
+  </view>
+
+  <view class="bottomFixBox">
+    <view class="left">
+      <image bindtap="checkAllSkusFun" class="check_icon" src='{{ossDomain}}common/{{checkAll && listData.length?"check_active_icon":"check_icon"}}.png'></image>
+      <view class="name">全选</view>
+      <view class="nums">
+        <view class="desc1">合计:¥{{orderCartData.totalPrice || 0}}</view>
+        <view class="desc2">已减¥{{orderCartData.couponPrice || 0}}</view>
+      </view>
+    </view>
+    <view class="right" bindtap="toConfirmOrder">去结算({{orderCartData.goodsNumber || 0}})</view>
+  </view>
+
+</view>
+
+<!--<tabbar activeCode="2"></tabbar>-->

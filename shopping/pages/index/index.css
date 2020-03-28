@@ -1,0 +1,15 @@
+button::after {
+  border: none;
+}
+.noMoreData {
+  text-align: center;
+  padding: 32rpx 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.container {
+  font-size: 16rpx;
+}

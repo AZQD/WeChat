@@ -1,0 +1,40 @@
+@redColor: #FB0E04;
+@ossDomain: 'https://file.gongjian.mobi/wechat/gongjian/images/';
+
+.placeholder-color (@color: #999) {
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: @color;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @color;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: @color;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: @color;
+  }
+}
+
+.ellipsis(@value: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @value;
+  -webkit-box-orient: vertical;
+}
+button::after{
+  border:none;
+}
+
+.noMoreData {
+  text-align: center;
+  padding: 32rpx 0;
+}
+
+//隐藏滚动条
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

@@ -1,0 +1,82 @@
+<view class="container">
+
+  <view class="addressBox">
+    <view class="hasAddress" wx:if="{{shippingAddress.addressId}}" bindtap="toAddressPage" data-type="{{1}}">
+      <view class="info1">
+        <text class="name">{{shippingAddress.consignee}}</text>
+        <text class="phone">{{shippingAddress.contact}}</text>
+      </view>
+      <view class="info2">
+        <view class="left" wx:if="{{shippingAddress.addressStatus==1}}">默认</view>
+        <view class="right">
+          {{shippingAddress.provinceName}}
+          {{shippingAddress.cityName}}
+          {{shippingAddress.districtName}}
+          {{shippingAddress.address}}
+        </view>
+      </view>
+    </view>
+    <view class="notAddress" wx:else bindtap="toAddressPage" data-type="{{0}}">您的收货地址为空，点此添加收货地址</view>
+  </view>
+
+  <view class="goodsBox">
+    <block wx:for="{{confirmOrderData}}" wx:for-item="item" wx:key="index">
+      <view class="goodsItem">
+        <image class="goodImg" mode="aspectFit" src="{{item.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+        <view class="goodsInfo">
+          <view class="desc1">{{item.goodsTitle}}</view>
+          <view class="desc2">{{item.skuTitle}}</view>
+          <view class="num_desc">
+            <view class="num_left">￥{{item.currentPrice}}</view>
+            <view class="num_right">
+              <image bindtap="modifyNumFun" data-index="{{index}}" data-type="0" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/reduce_icon.png'></image>
+              <input disabled type="number" class="num" value="{{item.number}}" />
+              <image bindtap="modifyNumFun" data-index="{{index}}" data-type="1" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/add_icon.png'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="deliverBox">
+    <view class="wayInfo">
+      <view class="name">配送服务</view>
+      <!--<view class="company">顺丰快递</view>-->
+    </view>
+    <view class="desc">
+      <text class="text">标准商品，满500包邮，不足500普通地区收10元运费，偏远地区收25元运费。非标准商品，双方协商确定。</text>
+    </view>
+    <view class="time">预计送达时间：{{orderCartData.expressTime}}</view>
+  </view>
+
+  <view class="discountBox">
+    <view class="item">
+      <view class="left">运费</view>
+      <view class="right">¥{{orderCartData.expressPrice || 0}}</view>
+    </view>
+    <view class="item">
+      <view class="left">订单金额</view>
+      <view class="right">¥{{orderCartData.orderPrice}}</view>
+    </view>
+    <view class="item">
+      <view class="left">总计</view>
+      <view class="right">¥{{orderCartData.totalPrice}}</view>
+    </view>
+  </view>
+
+  <view class="bottomBox">
+    <button class="bottomBtn" type="primary" catchtap='choosePayFun'>立即支付</button>
+  </view>
+
+  <view class="shadowBox" catchtap="showShadowFun"  wx:if="{{showShadow}}">
+    <view class="shadowInfo" catchtap="stopPropagation">
+      <!--<image class="close_icon" catchtap="showShadowFun" src="{{ossDomain}}common/close_icon.png"></image>-->
+      <view class="title">选择支付方式</view>
+      <button class="ctrlBtn" type="primary" catchtap='gotoSave' data-type="1">微信支付</button>
+      <button class="ctrlBtn" type="primary" catchtap='gotoSave' data-type="3">钱包支付</button>
+      <button class="ctrlBtn" hover-class="contactHover" open-type="contact">银行转账，请咨询客服</button>
+    </view>
+  </view>
+
+</view>

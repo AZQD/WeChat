@@ -1,0 +1,110 @@
+<view class="container">
+
+  <view class="addressBox">
+    <view class="hasAddress">
+      <view class="info1">
+        <text class="name">{{orderDetailData.orderAddress.consignee}}</text>
+        <text class="phone">{{orderDetailData.orderAddress.contact}}</text>
+      </view>
+      <view class="info2">
+        <view class="left" wx:if="{{orderDetailData.orderAddress.addressStatus==1}}">默认</view>
+        <view class="right">
+          {{orderDetailData.orderAddress.provinceName}}
+          {{orderDetailData.orderAddress.cityName}}
+          {{orderDetailData.orderAddress.districtName}}
+          {{orderDetailData.orderAddress.address}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="goodsBox">
+    <block wx:for="{{orderDetailData.orderItemList}}" wx:for-item="item" wx:key="index">
+      <view class="goodsItem">
+        <image class="goodImg" mode="aspectFit" src="{{item.skuThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+        <view class="goodsInfo">
+          <view class="desc1">{{item.goodsTitle}}</view>
+          <view class="desc2">{{item.skuTitle}}</view>
+          <view class="num_desc">
+            <view class="num_left">￥{{item.skuPrice}}</view>
+            <view class="num_right">数量：{{item.number}}件</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="deliverBox">
+    <view class="wayInfo">
+      <view class="name">配送服务</view>
+      <!--<view class="company">顺丰快递</view>-->
+    </view>
+    <view class="time">预计送达时间：{{orderDetailData.expressTime}}</view>
+  </view>
+
+  <view class="discountBox">
+    <view class="item mt30">
+      <view class="left">商品金额</view>
+      <view class="right">¥{{orderDetailData.orderPrice}}</view>
+    </view>
+    <view class="item">
+      <view class="left">运费</view>
+      <view class="right">¥{{orderDetailData.expressPrice || ''}}</view>
+    </view>
+    <view class="item mt30">
+      <view class="left">总计</view>
+      <view class="right">¥{{orderDetailData.totalPrice}}</view>
+    </view>
+    <view class="item">
+      <view class="left">实际付款</view>
+      <view class="right">¥{{orderDetailData.totalPrice}}</view>
+    </view>
+    <view class="item title">
+      <view class="left">订单信息</view>
+      <view class="right"></view>
+    </view>
+    <view class="item">
+      <view class="left">订单编号</view>
+      <view class="right">{{orderCode}}</view>
+    </view>
+    <view class="item">
+      <view class="left">创建时间</view>
+      <view class="right">{{orderDetailData.createTimeDateFormat}}</view>
+    </view>
+  </view>
+
+  <!--订单状态（0：全部；1：已完成；2：待付款；3：已取消；4：待发货,5：待收货）-->
+  <view class="bottomBox"><!--确认收货、再来一单、申请售后、恢复订单、立即支付、取消订单、提醒发货、提醒加快速度、重新下单、再次申请-->
+
+    <!--待付款-->
+    <button class="bottomBtn green" wx:if="{{orderDetailData.orderStatus === 2}}" catchtap="paySelect" data-type="1">立即支付</button>
+    <button class="bottomBtn gray" wx:if="{{orderDetailData.orderStatus === 2}}" catchtap='cancelItem'>取消订单</button>
+
+    <!--待发货-->
+    <form bindsubmit='remindItem' report-submit='true' wx:if="{{orderDetailData.orderStatus === 4}}">
+      <button class='bottomBtn green' form-type='submit'>提醒发货</button>
+    </form>
+    <!--<button class="bottomBtn green" wx:if="{{orderDetailData.orderStatus === 4}}" catchtap="remindItem">提醒发货</button>-->
+
+    <!--待收货-->
+    <form bindsubmit='confirmItem' report-submit='true' wx:if="{{orderDetailData.orderStatus === 5}}">
+      <button class='bottomBtn green' form-type='submit'>确认收货</button>
+    </form>
+    <!--<button class="bottomBtn green" wx:if="{{orderDetailData.orderStatus === 5}}" catchtap="confirmItem">确认收货</button>-->
+
+    <!--已收货-->
+    <button class="bottomBtn green" wx:if="{{orderDetailData.orderStatus === 1}}" catchtap="paySelect" data-type="2">再来一单</button>
+    <button class="bottomBtn red" wx:if="{{orderDetailData.orderStatus === 1}}" catchtap="toAfterSale">申请售后</button>
+
+  </view>
+
+  <view class="shadowBox" catchtap="showShadowFun"  wx:if="{{showShadow}}">
+    <view class="shadowInfo" catchtap="stopPropagation">
+      <!--<image class="close_icon" catchtap="showShadowFun" src="{{ossDomain}}common/close_icon.png"></image>-->
+      <view class="title">选择支付方式</view>
+      <button class="ctrlBtn" type="primary" catchtap='payItem' data-type="1">微信支付</button>
+      <button class="ctrlBtn" type="primary" catchtap='payItem' data-type="3">钱包支付</button>
+      <button class="ctrlBtn" hover-class="contactHover" open-type="contact">银行转账，请咨询客服</button>
+    </view>
+  </view>
+
+</view>

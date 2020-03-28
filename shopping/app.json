@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/productDetail/productDetail",
+    "pages/confirmOrder/confirmOrder",
+    "pages/orderDetail/orderDetail",
+    "pages/myOrder/myOrder",
+    "pages/addressList/addressList",
+    "pages/addAddress/addAddress",
+    "pages/mine/mine",
+    "pages/shoppingCart/shoppingCart",
+    "pages/assemble/assemble"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FF6D4C",
+    "navigationBarTitleText": "天天商城",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页1",
+        "iconPath": "images/tabbar/tabbar_icon02.png",
+        "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "首页2",
+        "iconPath": "images/tabbar/tabbar_icon02.png",
+        "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "首页3",
+        "iconPath": "images/tabbar/tabbar_icon02.png",
+        "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于天天小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

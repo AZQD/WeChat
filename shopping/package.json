@@ -1,0 +1,21 @@
+{
+  "name": "shopping",
+  "version": "1.0.0",
+  "description": "天天商城",
+  "scripts": {
+    "lint": "eslint --fix app.js api.js pages utils"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.4.0"
+  },
+  "license": "ISC",
+  "author": "liuchaojie",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "vant-weapp": "^1.0.0-beta.0"
+  }
+}

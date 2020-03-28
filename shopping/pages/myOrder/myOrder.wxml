@@ -1,0 +1,118 @@
+<view class="container">
+
+  <view class="menuBox">
+    <!--<view catchtap="stateToggle" data-type="6" class="{{orderStatus==6?'menu_item active':'menu_item'}}">待购单</view>-->
+    <view catchtap="stateToggle" data-type="2" class="{{orderStatus==2?'menu_item active':'menu_item'}}">待付款</view>
+    <view catchtap="stateToggle" data-type="4" class="{{orderStatus==4?'menu_item active':'menu_item'}}">待发货</view>
+    <view catchtap="stateToggle" data-type="5" class="{{orderStatus==5?'menu_item active':'menu_item'}}">待收货</view>
+    <view catchtap="stateToggle" data-type="1" class="{{orderStatus==1?'menu_item active':'menu_item'}}">已收货</view>
+  </view>
+  <view class="listBox" wx:if="{{listData.length>0}}">
+    <!--购物车分页列表-->
+    <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+
+      <!--购物车分页列表-->
+      <view wx:if="{{orderStatus === 6}}" class="list-item">
+        <view class="list-goods-item">
+          <!--类别-->
+          <view class="list-type-item">
+            <view class="list-type-item-left" catchtap="cartCheckFun" data-type="1" data-index1="{{index}}">
+              <image wx:if="{{item.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
+              <image wx:else class="check_icon" src='{{ossDomain}}common/check_icon.png'></image>
+            </view>
+            <view class="list-type-item-middle">{{item.shopName}}</view>
+            <view class="list-type-item-right red">订单未支付</view>
+          </view>
+
+          <!--商品数据-->
+          <block  wx:for="{{item.skus}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild">
+            <view class="list-good-item">
+              <view class="list-good-item-left" catchtap="cartCheckFun" data-type="2" data-index1="{{index}}" data-index2="{{indexChild}}">
+                <image wx:if="{{itemChild.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
+                <image wx:else class="check_icon" src='{{ossDomain}}common/check_icon.png'></image>
+              </view>
+              <view class="list-good-item-middle">
+                <image class="list-good-item-shop-img" mode="aspectFit" src="{{itemChild.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+              </view>
+              <view class="list-good-item-right">
+                <view class="list-good-item-desc1">{{itemChild.goodsTitle}}</view>
+                <view class="list-good-item-desc2">{{itemChild.skuTitle}}</view>
+                <view class="list-good-item-desc2">￥{{itemChild.currentPrice}} x{{itemChild.number}}件 </view>
+                <view class="list-good-item-desc4">总计 {{itemChild.totalPrice}} 元</view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="list-ctrls-item">
+          <view class="ctrlBtn" catchtap="setGoodsItemFun" data-index="{{index}}">立即支付</view>
+        </view>
+      </view>
+
+      <!--订单分页列表-->
+      <view wx:else class="list-item">
+        <view class="list-goods-item" catchtap="toOrderDetail" data-order-code="{{item.orderCode}}">
+          <!--类别-->
+          <view class="list-type-item">
+            <view class="list-type-item-left">
+            </view>
+            <view class="list-type-item-middle">{{item.orderTitle}}</view>
+            <view wx:if="{{item.orderStatus === 2}}" class="list-type-item-right black">{{item.createTimeDateFormat}}</view>
+            <view wx:if="{{item.orderStatus === 4}}" class="list-type-item-right"></view>
+            <view wx:if="{{item.orderStatus === 5}}" class="list-type-item-right"></view>
+            <view wx:if="{{item.orderStatus === 1}}" class="list-type-item-right gray">已成交，获得{{item.orderIntegral}}积分</view>
+          </view>
+
+          <!--商品数据-->
+          <block  wx:for="{{item.orderItemList}}" wx:for-item="itemChild" wx:key="indexChild">
+            <view class="list-good-item">
+              <view class="list-good-item-left">
+              </view>
+              <view class="list-good-item-middle">
+                <image class="list-good-item-shop-img" mode="aspectFit" src="{{itemChild.skuThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+              </view>
+              <view class="list-good-item-right">
+                <view class="list-good-item-desc1">{{itemChild.goodsTitle}}</view>
+                <view class="list-good-item-desc2">{{itemChild.skuTitle}}</view>
+                <view class="list-good-item-desc2">￥{{itemChild.skuPrice}} x{{itemChild.number}}件 </view>
+                <view class="list-good-item-desc4">总计 {{itemChild.totalPrice}} 元</view>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="list-ctrls-item">
+
+          <!--待付款-->
+          <view class="ctrlBtn" catchtap="paySelect" wx:if="{{item.orderStatus === 2}}" data-index="{{index}}">立即支付</view>
+          <view class="ctrlBtn gray" catchtap="cancelItem"  wx:if="{{item.orderStatus === 2}}" data-index="{{index}}" data-order-code="{{item.orderCode}}">取消订单</view>
+
+          <!--待发货-->
+          <form bindsubmit='remindItem' report-submit='true' wx:if="{{item.orderStatus === 4}}" data-index="{{index}}" data-order-code="{{item.orderCode}}">
+            <button class='ctrlBtn' form-type='submit'>提醒发货</button>
+          </form>
+          <!--<view class="ctrlBtn" catchtap="remindItem"  wx:if="{{item.orderStatus === 4}}" data-index="{{index}}" data-order-code="{{item.orderCode}}">提醒发货</view>-->
+
+          <!--待收货-->
+          <form bindsubmit='confirmItem' report-submit='true' wx:if="{{item.orderStatus === 5}}" data-index="{{index}}" data-order-code="{{item.orderCode}}">
+            <button class='ctrlBtn' form-type='submit'>确认收货</button>
+          </form>
+          <!--<view class="ctrlBtn" catchtap="confirmItem"  wx:if="{{item.orderStatus === 5}}" data-index="{{index}}" data-order-code="{{item.orderCode}}">确认收货</view>-->
+
+          <!--已收货，没有按钮-->
+        </view>
+      </view>
+
+    </block>
+  </view>
+  <view class="noMoreData" wx:if="{{lastPage}}">没有更多数据</view>
+
+  <view class="shadowBox" catchtap="showShadowFun"  wx:if="{{showShadow}}">
+    <view class="shadowInfo" catchtap="stopPropagation">
+      <!--<image class="close_icon" catchtap="showShadowFun" src="{{ossDomain}}common/close_icon.png"></image>-->
+      <view class="title">选择支付方式</view>
+      <button class="ctrlBtn" type="primary" catchtap='payItem' data-type="1">微信支付</button>
+      <button class="ctrlBtn" type="primary" catchtap='payItem' data-type="3">钱包支付</button>
+      <button class="ctrlBtn" hover-class="contactHover" open-type="contact">银行转账，请咨询客服</button>
+    </view>
+  </view>
+
+</view>

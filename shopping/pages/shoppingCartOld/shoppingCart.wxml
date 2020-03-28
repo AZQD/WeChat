@@ -1,0 +1,57 @@
+<view class="container">
+
+  <block wx:for="{{cartPageData}}" wx:for-item="item" wx:key="index">
+    <view class="shopInfo">
+      <image class="shop_icon" mode="aspectFit" src="{{item.shopLogo}}"></image>
+      <view class="shop_name">{{item.shopName}}</view>
+    </view>
+
+    <view class="cartList">
+
+      <block wx:for="{{item.skus}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild">
+        <view class="cartItem"  scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
+          <view class="item checkWrap" bindtap="checkSkusFun" data-index="{{index}}" data-index-child="{{indexChild}}">
+            <image wx:if="{{itemChild.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
+            <image wx:else class="check_icon" src='{{ossDomain}}common/check_icon.png'></image>
+          </view>
+
+          <view class="item">
+            <image class="goodImg" mode="aspectFit" src="{{itemChild.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+          </view>
+
+          <view class="item descBox">
+            <view class="desc1">{{itemChild.skuTitle}}</view>
+            <view class="desc2">规格</view>
+            <view class="desc3" wx:if="{{itemChild.currentPrice}}">¥{{itemChild.currentPrice}}</view>
+            <view class="desc3" wx:else>价格面议</view>
+          </view>
+
+          <view class="item ctrlBox">
+            <image bindtap="modifyNumFun" data-type="0" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='{{ossDomain}}common/reduce_icon2.png'></image>
+            <input disabled type="number" class="num" value="{{itemChild.number}}" />
+            <image bindtap="modifyNumFun" data-type="1" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='{{ossDomain}}common/add_icon2.png'></image>
+          </view>
+
+          <view class="item delBox" bindtap="deleteSkusFun" data-index="{{index}}" data-index-child="{{indexChild}}">删除</view>
+        </view>
+      </block>
+
+    </view>
+  </block>
+  <view class="noMoreData" wx:if="{{lastPage}}">没有更多数据</view>
+
+  <view class="bottomFixBox">
+    <view class="left">
+      <image bindtap="checkAllSkusFun" class="check_icon" src='{{ossDomain}}common/{{checkAll && cartPageData.length?"check_active_icon":"check_icon"}}.png'></image>
+      <view class="name">全选</view>
+      <view class="nums">
+        <view class="desc1">合计:¥{{totalPrice}}</view>
+        <view class="desc2">已减¥{{couponPrice}}</view>
+      </view>
+    </view>
+    <view class="right" bindtap="toConfirmOrder">去结算({{totalNumber}})</view>
+  </view>
+
+</view>
+
+<tabbar activeCode="2" cartTotalNumber="{{cartTotalNumber}}"></tabbar>

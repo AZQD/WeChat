@@ -1,0 +1,204 @@
+button::after {
+  border: none;
+}
+.noMoreData {
+  text-align: center;
+  padding: 32rpx 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.container .menuBox {
+  background-color: #fff;
+  display: flex;
+  border: 2rpx dotted #595959;
+}
+.container .menuBox .menu_item {
+  color: #000;
+  font-size: 26rpx;
+  width: 0;
+  height: 58rpx;
+  flex-grow: 1;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 2rpx dotted #595959;
+}
+.container .menuBox .menu_item:last-child {
+  border-right: none;
+}
+.container .menuBox .active {
+  background-color: #f4f4f4;
+}
+.container .listBox .list-item .list-ctrls-item {
+  padding: 20rpx 40rpx;
+  background-color: #eee;
+}
+.container .listBox .list-item .list-ctrls-item .ctrlBtn {
+  color: #fff;
+  font-size: 36rpx;
+  height: 94rpx;
+  line-height: 94rpx;
+  border-radius: 10rpx;
+  background-color: #1AAD19;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid #1AAD19;
+  margin-bottom: 30rpx;
+}
+.container .listBox .list-item .list-ctrls-item .ctrlBtn:last-child {
+  margin-bottom: 0;
+}
+.container .listBox .list-item .list-ctrls-item .gray {
+  color: #595959;
+  background-color: transparent;
+  border: 2rpx solid #595959;
+}
+.container .listBox .list-item .list-ctrls-item .red {
+  color: #fff;
+  background-color: #FB0E04;
+  border: 2rpx solid #FB0E04;
+}
+.container .listBox .list-item .list-goods-item {
+  margin: 0 12rpx;
+}
+.container .listBox .list-item .list-goods-item .list-type-item {
+  border-bottom: 1rpx solid #D8D8D8;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  font-size: 18rpx;
+  padding: 16rpx 0;
+}
+.container .listBox .list-item .list-goods-item .list-type-item-left {
+  font-size: 0;
+  width: 40rpx;
+  height: 100%;
+}
+.container .listBox .list-item .list-goods-item .list-type-item-left .check_icon {
+  width: 26rpx;
+  height: 26rpx;
+}
+.container .listBox .list-item .list-goods-item .list-type-item-middle {
+  color: #000;
+  flex-grow: 1;
+  padding-left: 34rpx;
+  background: url("https://file.gongjian.mobi/wechat/gongjian/images/purchaser/myOrder/cate_icon.png") no-repeat left center;
+  background-size: 22rpx 22rpx;
+}
+.container .listBox .list-item .list-goods-item .list-type-item-right {
+  padding-right: 70rpx;
+  background: url("https://file.gongjian.mobi/wechat/gongjian/images/common/more2_black_right.png") no-repeat right 36rpx center;
+  background-size: 18rpx 18rpx;
+}
+.container .listBox .list-item .list-goods-item .list-type-item .red {
+  color: #FB0E04;
+}
+.container .listBox .list-item .list-goods-item .list-type-item .black {
+  color: #000;
+}
+.container .listBox .list-item .list-goods-item .list-type-item .gray {
+  color: #595959;
+}
+.container .listBox .list-item .list-goods-item .list-good-item {
+  padding: 20rpx 0;
+  display: flex;
+  align-items: stretch;
+  font-size: 0;
+  border-bottom: 1rpx solid #F4F4F4;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-left {
+  font-size: 0;
+  width: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-left .check_icon {
+  width: 26rpx;
+  height: 26rpx;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-middle {
+  width: 175rpx;
+  height: 175rpx;
+  overflow: hidden;
+  margin-right: 42rpx;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-middle .list-good-item-shop-img {
+  width: 100%;
+  height: 100%;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 0;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-right .list-good-item-desc1 {
+  color: #000;
+  font-size: 26rpx;
+  line-height: 35rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-right .list-good-item-desc2 {
+  color: #BBBBBB;
+  font-size: 21rpx;
+}
+.container .listBox .list-item .list-goods-item .list-good-item .list-good-item-right .list-good-item-desc4 {
+  color: #FB0E04;
+  font-size: 26rpx;
+}
+.container .shadowBox {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background: rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .shadowBox .shadowInfo {
+  width: 298rpx;
+  background-color: #fff;
+  padding: 31rpx 98rpx 38rpx;
+  border-radius: 8rpx;
+  position: relative;
+}
+.container .shadowBox .shadowInfo .close_icon {
+  position: absolute;
+  left: 10rpx;
+  top: 10rpx;
+  height: 42rpx;
+  width: 42rpx;
+}
+.container .shadowBox .shadowInfo .title {
+  color: #000;
+  font-size: 30rpx;
+  padding-bottom: 40rpx;
+}
+.container .shadowBox .shadowInfo .ctrlBtn {
+  width: 100%;
+  color: #fff;
+  font-size: 21rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  border-radius: 5rpx;
+  margin-bottom: 60rpx;
+  background-color: #1AAD19;
+  border: none;
+}
+.container .shadowBox .shadowInfo .ctrlBtn:last-child {
+  margin-bottom: 0;
+}

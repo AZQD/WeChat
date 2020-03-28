@@ -1,0 +1,133 @@
+<view class="container">
+
+  <!--<view class="headerBox">
+    <view class="avatarWrap">
+      <image class="avatar" src="{{userInfoData.wechatAvatarUrl || userInfoData.headurl}}" mode="aspectFill"></image>
+    </view>
+    <view class="desc">采购员：{{userInfoData.nickname || userInfoData.wechatName}}</view>
+    <view class="desc">ID:{{userInfoData.uid}}</view>
+  </view>
+
+  <view class="numBox">
+    <view class="numItem" catchtap="jumpPageFun" data-type="1">
+      <view class="desc1">￥{{walletBlance}}</view>
+      <view class="desc2">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/balance_icon.png"></image>
+        <text class="name">钱包余额</text>
+      </view>
+      <view class="desc3" catchtap="jumpPageFun" data-type="2">立即充值</view>
+    </view>
+    <view class="numItem" catchtap="jumpPageFun" data-type="3">
+      <view class="desc1">{{integralBlance}}</view>
+      <view class="desc2">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/integral_black.png"></image>
+        <text class="name">当前积分</text>
+      </view>
+      <view class="desc3">立即兑换</view>
+    </view>
+  </view>-->
+
+  <!--顶部信息-->
+  <view class="topBox">
+    <view class="left" catchtap="jumpPageFun" data-type="6">
+      <view class="avatarWrap">
+        <image class="avatar" src="{{userInfoData.wechatAvatarUrl || userInfoData.headurl}}" mode="aspectFill"></image>
+      </view>
+      <view class="descWrap">
+        <view class="desc">已认证</view>
+      </view>
+    </view>
+    <view class="middle">
+      <view class="desc">采购员：{{userInfoData.nickname || userInfoData.wechatName}}</view>
+      <view class="desc">ID:{{userInfoData.uid}}</view>
+    </view>
+    <view class="right" catchtap="jumpPageFun" data-type="3">
+      <view class="desc1">
+        <view class="desc_text">积分商城</view>
+      </view>
+      <view class="desc2">有效积分：{{integralBlance}}</view>
+    </view>
+  </view>
+
+  <!--获取钱包余额-->
+  <!--<view class="yueBox">
+    <image class="money_icon" src="https://file.gongjian.mobi/wechat/gongjian/images/mine/money_icon.png"></image>
+    <text class="yue" space="ensp">我的余额 {{walletBlance}}元</text>
+    <image class="recharge" catchtap="jumpPageFun" data-type="2" src="https://file.gongjian.mobi/wechat/gongjian/images/mine/recharge.png"></image>
+  </view>-->
+
+
+  <view class="menu1Box">
+    <view class="menuItem">
+      <view class="item" catchtap="jumpPageFun" data-type="5" data-order-status="2">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon01.png"></image>
+        <text class="name">待付款</text>
+      </view>
+      <view class="item" catchtap="jumpPageFun" data-type="5" data-order-status="4">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon02.png"></image>
+        <text class="name">待发货</text>
+      </view>
+      <view class="item" catchtap="jumpPageFun" data-type="5" data-order-status="5">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon03.png"></image>
+        <text class="name">待收货</text>
+      </view>
+      <view class="item" catchtap="jumpPageFun" data-type="4">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon04.png"></image>
+        <text class="name">询价单</text>
+      </view>
+    </view>
+  </view>
+
+  <!--<view class="menu1Box">
+    <view class="menuItem">
+      <view class="item" catchtap="jumpPageFun" data-type="2">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon05.png"></image>
+        <text class="name">充值</text>
+      </view>
+      <view class="item" catchtap="jumpPageFun" data-type="1" data-from="1">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon06.png"></image>
+        <text class="name">充值记录</text>
+      </view>
+      <view class="item" catchtap="jumpPageFun" data-type="1" data-from="2">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon07.png"></image>
+        <text class="name">消费记录</text>
+      </view>
+      <view class="item" catchtap="jumpPageFun" data-type="1">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon08.png"></image>
+        <text class="name">我的钱包</text>
+      </view>
+    </view>
+  </view>-->
+
+  <view class="menu2Box">
+    <view class="menuItem" catchtap="jumpPageFun" data-type="8">
+      <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon09.png"></image>
+      <text class="name">常见问题</text>
+    </view>
+    <view class="menuItem" catchtap="jumpPageFun" data-type="10">
+      <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon10.png"></image>
+      <text class="name">地址管理 </text>
+    </view>
+    <view class="menuItem noMore" catchtap="jumpPageFun" data-type="7">
+      <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon11.png"></image>
+      <text class="name">联系客服</text>
+    </view>
+    <view class="menuItem" catchtap="jumpPageFun" data-type="9">
+      <image class="icon" src="{{ossDomain}}purchaser/mine/menu_icon12.png"></image>
+      <text class="name">关于我们</text>
+    </view>
+  </view>
+
+  <view class="shadowBox" catchtap="showShadowFun"  wx:if="{{showShadow}}">
+    <view class="shadowInfo" catchtap="stopPropagation">
+      <button class="ctrlBtn" hover-class="contactHover" open-type="contact" catchtap="showShadowFun">联系在线客服</button>
+      <button class="ctrlBtn" type="primary" catchtap="jumpPageFun" data-type="11">
+        <image class="icon" src="{{ossDomain}}purchaser/mine/phone_icon2.png"></image>
+        <text class="text">400-0000-216</text>
+      </button>
+    </view>
+  </view>
+
+</view>
+
+<tabbar activeCode="3"></tabbar>

@@ -1,0 +1,165 @@
+button::after {
+  border: none;
+}
+.noMoreData {
+  text-align: center;
+  padding: 32rpx 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.container {
+  background-color: #fff;
+  border-top: 1rpx solid #f5f5f5;
+  padding-bottom: 196rpx;
+  /*购物车列表*/
+}
+.container .shopInfo {
+  display: flex;
+  align-items: center;
+  padding: 30rpx 24rpx 0 16rpx;
+}
+.container .shopInfo .shop_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.container .shopInfo .shop_name {
+  font-size: 24rpx;
+  color: #000;
+  flex-grow: 1;
+  padding-bottom: 8rpx;
+  border-bottom: 1rpx solid #000000;
+}
+.container .cartList {
+  padding-left: 16rpx;
+  padding-right: 26rpx;
+  padding-top: 24rpx;
+}
+.container .cartList .cartItem {
+  margin-bottom: 72rpx;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.container .cartList .cartItem::-webkit-scrollbar {
+  display: none;
+}
+.container .cartList .cartItem:last-child {
+  margin-bottom: 32rpx;
+}
+.container .cartList .cartItem .item {
+  display: inline-block;
+  vertical-align: middle;
+}
+.container .cartList .cartItem .item .goodImg {
+  width: 150rpx;
+  height: 150rpx;
+  margin-right: 21rpx;
+}
+.container .cartList .cartItem .checkWrap .check_icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 14rpx;
+}
+.container .cartList .cartItem .descBox {
+  width: 315rpx;
+}
+.container .cartList .cartItem .descBox .desc1 {
+  font-size: 24rpx;
+  color: #3C2E25;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.container .cartList .cartItem .descBox .desc2 {
+  font-size: 20rpx;
+  color: #595959;
+  padding-top: 48rpx;
+  padding-bottom: 12rpx;
+}
+.container .cartList .cartItem .descBox .desc3 {
+  font-size: 24rpx;
+  color: #FE0E04;
+}
+.container .cartList .cartItem .ctrlBox {
+  vertical-align: bottom;
+}
+.container .cartList .cartItem .ctrlBox .ctrl_icon {
+  width: 25rpx;
+  height: 25rpx;
+  vertical-align: middle;
+  padding: 12rpx;
+}
+.container .cartList .cartItem .ctrlBox .num {
+  display: inline-block;
+  width: 79rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border: 1rpx solid #E3E3E3;
+  border-radius: 3rpx;
+  color: #3C2E25;
+  font-size: 24rpx;
+  text-align: center;
+  vertical-align: middle;
+}
+.container .cartList .cartItem .delBox {
+  margin-left: 75rpx;
+  width: 149rpx;
+  height: 159rpx;
+  line-height: 159rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: #FE0E04;
+}
+/*底部定位*/
+.bottomFixBox {
+  position: fixed;
+  left: 0;
+  bottom: 100rpx;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  height: 96rpx;
+  border-top: 1rpx solid #ddd;
+  display: flex;
+}
+.bottomFixBox .left {
+  flex-grow: 1;
+  padding-left: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.bottomFixBox .left .check_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.bottomFixBox .left .name {
+  margin: 0 16rpx;
+  font-size: 20rpx;
+  color: #3C2E25;
+}
+.bottomFixBox .left .nums {
+  font-size: 20rpx;
+}
+.bottomFixBox .left .nums .desc1 {
+  color: #FB0E04;
+}
+.bottomFixBox .left .nums .desc2 {
+  color: #4A4A4A;
+  padding-top: 8rpx;
+}
+.bottomFixBox .right {
+  width: 184rpx;
+  background-color: #FB0E04;
+  font-size: 30rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
