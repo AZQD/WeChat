@@ -2,25 +2,26 @@
 
   <view class="descBox">
 
-    <block wx:for="{{addressPageData}}" wx:for-item="item" wx:key="index">
+    <block wx:for="{{3}}" wx:for-item="item" wx:key="index">
       <view class="descItem" bindtap="selectAddressFun" data-index="{{index}}">
-        <view class="left" wx:if="{{addressId==item.addressId}}">
-          <image class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
-        </view>
         <view class="middle">
           <view class="desc1">
-            <text class="name">{{item.consignee}}</text>
-            <text class="phone">{{item.contact}}</text>
-            <text class="default" wx:if="{{item.addressStatus==1}}">默认</text></view>
-          <view class="desc2">
-            {{item.provinceName}}
-            {{item.cityName}}
-            {{item.districtName}}
-            {{item.address}}
+            <text class="name">{{item.consignee}}小月月</text>
+            <text class="phone">{{item.contact}}18504599499</text>
           </view>
+          <view class="desc2">北京北京朝阳区三间房地区岩井里中地区岩井里中街3区5号楼2单元901</view>
         </view>
-        <view class="right" catchtap="toAddAddress" data-address-id="{{item.addressId}}">
-          <image class="edit_icon" src='{{ossDomain}}common/edit_icon.png'></image>
+        <view class="ctrls">
+          <view class="part" wx:if="{{addressId!==item.addressId}}">
+            <image wx:if="{{index===0}}" class="ctrl_icon" src='/images/addressList/check_active_icon.png'></image>
+            <image wx:else class="ctrl_icon" src='/images/addressList/check_icon.png'></image>
+            <!--<van-icon class="ctrl_icon" name="passed" color="red" size="18" />-->
+            <text class="ctrl_desc">设为默认地址</text>
+          </view>
+          <view class="part" catchtap="toAddAddress" data-address-id="{{item.addressId}}">
+            <image class="ctrl_icon" src='/images/addressList/edit_icon.png'></image>
+            <text class="ctrl_desc">编辑</text>
+          </view>
         </view>
       </view>
     </block>
@@ -29,7 +30,10 @@
   </view>
 
   <view class="bottomBox" bindtap="toAddAddress">
-    <view class="bottomBtn"><text class="text">新建收货地址</text></view>
+    <view class="bottomBtn">
+      <image class="add_icon" src='/images/addressList/add_icon.png'></image>
+      <text class="text">新建收货地址</text>
+    </view>
   </view>
 
 </view>

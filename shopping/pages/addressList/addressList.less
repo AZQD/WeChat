@@ -1,59 +1,52 @@
 @import "../../assets/common";
 
 .container{
-  background-color: #EEEEEE;
-  border-top: 1rpx solid #EEEEEE;
+  min-height: 100vh;
+  background-color: #F5F5F5;
   .descBox {
+    padding: 24rpx 20rpx 0;
     .descItem{
-      margin-bottom: 4rpx;
-      padding-left: 40rpx;
-      padding-right: 31rpx;
-      padding-top: 32rpx;
-      padding-bottom: 42rpx;
+      padding: 30rpx 0 32rpx;
+      margin-bottom: 24rpx;
+      border-radius:10rpx;
       background-color: #fff;
-      display: flex;
-      color: #595959;
-      align-items: center;
-      .left{
-        .check_icon{
-          width: 40rpx;
-          height: 40rpx;
-          margin-right: 32rpx;
-        }
-      }
+
       .middle{
-        width: 0;
-        flex-grow: 1;
-        font-size: 30rpx;
+        padding: 0 20rpx;
+        color: #1A1A1A;
+        font-size: 32rpx;
+        line-height: 48rpx;
+        border-bottom: 2rpx solid #F5F6F8;
         .desc1{
-          display: flex;
-          align-items: center;
           .name{
-            padding-right: 88rpx;
-          }
-          .default{
-            display: inline-block;
-            text-align: center;
-            width: 66rpx;
-            height: 24rpx;
-            line-height: 26rpx;
-            border-radius: 10rpx;
-            font-size: 16rpx;
-            color: #fff;
-            background-color: #FB0E04;
-            margin-left: 22rpx;
+            padding-right: 80rpx;
           }
         }
         .desc2{
+          color: #666;
           font-size: 24rpx;
-          padding-top: 8rpx;
+          line-height: 36rpx;
+          padding-top: 10rpx;
+          padding-bottom: 22rpx;
         }
       }
-      .right{
-        .edit_icon{
-          width: 38rpx;
-          height: 36rpx;
-          margin-left: 32rpx;
+      .ctrls{
+        display: flex;
+        justify-content: space-between;
+        padding: 32rpx 20rpx 0;
+        .part{
+          display: flex;
+          align-items: center;
+          .ctrl_icon{
+            width: 36rpx;
+            height: 36rpx;
+            margin-right: 8rpx;
+          }
+          .ctrl_desc{
+            color: #B2B2B2;
+            font-size: 24rpx;
+            line-height: 36rpx;
+          }
         }
       }
     }
@@ -62,33 +55,24 @@
   .bottomBox{
     position: fixed;
     left: 0;
-    bottom: 138rpx;
+    bottom: 32rpx;
     width: 100%;
     .bottomBtn{
-      margin: 0 75rpx;
-      height: 88rpx;
-      font-size: 36rpx;
-      color: #fff;
-      background-color: #FB0E04;
+      margin: 0 20rpx;
+      height: 76rpx;
+      background-color: @redColor;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius:10rpx;
+      border-radius:44rpx;
+      .add_icon{
+        width: 36rpx;
+        height: 36rpx;
+        margin-right: 8rpx;
+      }
       .text{
-        position: relative;
-        padding-left: 50rpx;
-        &::before{
-          width:36rpx;
-          height:36rpx;
-          display: inline-block;
-          content: '';
-          background: url(https://file.gongjian.mobi/wechat/gongjian/images/common/add_icon3.png) no-repeat left center;/*兼容没测*/
-          background-size: 100% 100%;
-          position: absolute;
-          left: 0;
-          top: calc(50% - 18rpx);
-          z-index: 2;
-        }
+        font-size: 26rpx;
+        color: #fff;
       }
     }
   }
