@@ -1,2 +1,6 @@
-﻿*/.idea
+#忽略文件
+
 *.idea
+node_modules/
+miniprogram_npm/
+*wxss
