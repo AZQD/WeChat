@@ -19,24 +19,38 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
+    "color": "#595D66",
+    "selectedColor": "#F15E34",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页1",
-        "iconPath": "images/tabbar/tabbar_icon02.png",
+        "text": "首页",
+        "iconPath": "images/tabbar/tabbar_icon01.png",
         "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
       },
       {
         "pagePath": "pages/shoppingCart/shoppingCart",
-        "text": "首页2",
+        "text": "分类",
         "iconPath": "images/tabbar/tabbar_icon02.png",
-        "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
+        "selectedIconPath": "images/tabbar/tabbar_icon02.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "附近店铺",
+        "iconPath": "images/tabbar/tabbar_icon03.png",
+        "selectedIconPath": "images/tabbar/tabbar_icon03.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "购物车",
+        "iconPath": "images/tabbar/tabbar_icon04.png",
+        "selectedIconPath": "images/tabbar/tabbar_active_icon04.png"
       },
       {
         "pagePath": "pages/mine/mine",
-        "text": "首页3",
-        "iconPath": "images/tabbar/tabbar_icon02.png",
-        "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
+        "text": "个人",
+        "iconPath": "images/tabbar/tabbar_icon05.png",
+        "selectedIconPath": "images/tabbar/tabbar_active_icon05.png"
       }
     ]
   },
