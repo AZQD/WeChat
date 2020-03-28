@@ -8,6 +8,7 @@ Page({
    */
   data: {
     ossDomain: appUtils.globalData.ossDomain,
+    BASECOLOR: appUtils.globalData.BASECOLOR,
     addressId: '', // 如果为编辑时使用
     consignee: '', // 收货人
     contact: '', // 联系方式,
@@ -28,12 +29,12 @@ Page({
     if (addressId) {
       this.setData({addressId});
       wx.setNavigationBarTitle({
-        title: '编辑配送地址'
+        title: '编辑地址'
       });
       this.getAddressItem();
     } else {
       wx.setNavigationBarTitle({
-        title: '增加配送地址'
+        title: '新建地址'
       });
     }
   },
@@ -88,9 +89,10 @@ Page({
 
   // 设置为默认地址
   switchChange (e) {
-    console.log(e.detail.value);
+    console.log(e);
+    console.log(e.detail);
     this.setData({
-      addressStatus: e.detail.value ? 1 : 2
+      addressStatus: e.detail ? 1 : 2
     });
   },
 

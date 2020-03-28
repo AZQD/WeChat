@@ -15,7 +15,7 @@
           <view class="part" wx:if="{{addressId!==item.addressId}}">
             <image wx:if="{{index===0}}" class="ctrl_icon" src='/images/addressList/check_active_icon.png'></image>
             <image wx:else class="ctrl_icon" src='/images/addressList/check_icon.png'></image>
-            <!--<van-icon class="ctrl_icon" name="passed" color="red" size="18" />-->
+            <!--<van-icon class="ctrl_icon" name="passed" color="red" size="18px" />-->
             <text class="ctrl_desc">设为默认地址</text>
           </view>
           <view class="part" catchtap="toAddAddress" data-address-id="{{item.addressId}}">

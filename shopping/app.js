@@ -10,6 +10,7 @@ App({
     wechatId: WECHATID,
     pageSize: PAGESIZE,
     openid: null,
+    BASECOLOR: '#FF6D4C',
     appid: 'wx013ed01479b3663c',
     ossDomain: 'https://file.gongjian.mobi/wechat/gongjian/images/'// 阿里云图片域名
   }

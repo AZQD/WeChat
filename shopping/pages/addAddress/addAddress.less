@@ -1,5 +1,6 @@
 @import "./../../assets/common";
 .switchBox{
+  font-size: 0;
 
 }
 .wx-switch-input{
@@ -9,61 +10,55 @@
   transform: scale(0.8);
 }
 .container{
-  background-color: #EEEEEE;
-  border-top: 1rpx solid #EEEEEE;
+  background-color: #FFF;
+  border-top: 24rpx solid #F5F5F5;
   .descBox {
+    padding: 0 20rpx;
     .itemBox {
-      background-color: #fff;
+      color: #000;
+      height: 100rpx;
       display: flex;
       align-items: center;
-      padding: 19.5rpx 0;
-      font-size: 30rpx;
-      color: #000;
-      padding-left: 48rpx;
-      margin-bottom: 4rpx;
-      .left {
-        font-size: 28rpx;
-      }
+      border-bottom: 2rpx solid #F5F6F8;
       .right {
         flex-grow: 1;
-        font-size: 24rpx;
+        font-size: 26rpx;
         .placeholderStyle {
-          color: #595959;
+          color: #B2B2B2;
         }
       }
-      .address {
-        background: #fff url('https://file.gongjian.mobi/wechat/gongjian/images/common/more2_black_right.png') no-repeat right 24rpx center;
-        background-size: 28rpx 28rpx;
+      .address{
+        color: #B2B2B2;
+      }
+      .more_icon {
+        width: 28rpx;
+        height: 28rpx;
       }
     }
   }
 
   .bottomBox{
     width: 100%;
-    padding-top: 54rpx;
+    position: fixed;
+    left: 0;
+    bottom: 32rpx;
     .bottomBtn{
-      margin: 0 25rpx;
-      height: 88rpx;
-      font-size: 36rpx;
+      margin: 0 20rpx;
+      height: 76rpx;
+      font-size: 26rpx;
       color: #fff;
-      background-color: #1AAD19;
+      background-color: @redColor;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius:10rpx;
+      border-radius:44rpx;
     }
   }
   .bottomBoxConfirm{
-    padding-top: 32rpx;
+    bottom: 32rpx;
   }
   .bottomBoxDelete{
-    padding-top: 32rpx;
-    .bottomBtn{
-      font-size: 30rpx;
-      color: #fff;
-      border: none;
-      background-color: @redColor;
-    }
+    bottom: 132rpx;
   }
 }
 
