@@ -9,9 +9,18 @@ Page({
 
     showShadow: false,
 
-    closeMini: false // 关闭掉小程序
+    closeMini: false, // 关闭掉小程序
+
+    showSkeleton: true,
+
   },
   onLoad: function () {
+    let that = this;
+    setTimeout(function () {
+      that.setData({
+        showSkeleton: false
+      })
+    }, 1500)
   },
 
   onShow () {

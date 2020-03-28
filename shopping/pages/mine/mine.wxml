@@ -1,10 +1,17 @@
-<view class="container">
+<skeleton selector="skeleton"
+          loading="spin"
+          bgcolor="transparent"
+          wx:if="{{showSkeleton}}">
+</skeleton>
+
+
+<view class="container skeleton">
 
   <!--顶部信息-->
   <view class="headerBox">
     <view class="avatarInfo">
-      <image class="avatar" src='/images/shop/goodImg.png' />
-      <text class="name">185***849</text>
+      <image class="avatar skeleton-radius" src='/images/shop/goodImg.png' />
+      <text class="name skeleton-radius">185***849</text>
     </view>
   </view>
 
@@ -13,30 +20,30 @@
 
     <view class="orderBox">
       <view class="titleInfo">
-        <view class="left">我的订单</view>
-        <view class="right">全部订单</view>
+        <view class="left"><text class="skeleton-rect">我的订单</text></view>
+        <view class="right skeleton-rect">全部订单</view>
         <image class="more" src='/images/common/more_icon.png' />
       </view>
       <view class="menuItem">
         <view class="item" catchtap="jumpPageFun" data-type="5" data-order-status="2">
-          <image class="icon" src='/images/mine/order_icon1.png'></image>
-          <text class="name">待付款</text>
+          <image class="icon skeleton-radius" src='/images/mine/order_icon1.png'></image>
+          <text class="name skeleton-rect">待付款</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="5" data-order-status="4">
-          <image class="icon" src='/images/mine/order_icon2.png'></image>
-          <text class="name">待发货</text>
+          <image class="icon skeleton-radius" src='/images/mine/order_icon2.png'></image>
+          <text class="name skeleton-rect">待发货</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="5" data-order-status="5">
-          <image class="icon" src='/images/mine/order_icon3.png'></image>
-          <text class="name">待收货</text>
+          <image class="icon skeleton-radius" src='/images/mine/order_icon3.png'></image>
+          <text class="name skeleton-rect">待收货</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/order_icon4.png'></image>
-          <text class="name">待评价</text>
+          <image class="icon skeleton-radius" src='/images/mine/order_icon4.png'></image>
+          <text class="name skeleton-rect">待评价</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/order_icon4.png'></image>
-          <text class="name">退款/售后</text>
+          <image class="icon skeleton-radius" src='/images/mine/order_icon4.png'></image>
+          <text class="name skeleton-rect">退款/售后</text>
         </view>
       </view>
     </view>
@@ -44,29 +51,29 @@
     <view class="accountBox">
       <view class="menuItem">
         <view class="item">
-          <view class="account">
+          <view class="account skeleton-rect">
             <text class="num">9</text><text class="unit">张</text>
           </view>
-          <text class="name">优惠券</text>
+          <text class="name skeleton-rect">优惠券</text>
         </view>
         <view class="item">
-          <view class="account">
+          <view class="account skeleton-rect">
             <text class="num">200</text><text class="unit">元</text>
           </view>
-          <text class="name">账户余额</text>
+          <text class="name skeleton-rect">账户余额</text>
         </view>
         <view class="item">
-          <view class="account">
+          <view class="account skeleton-rect">
             <text class="num">3000</text><text class="unit">点</text>
           </view>
-          <text class="name">积分</text>
+          <text class="name skeleton-rect">积分</text>
         </view>
       </view>
     </view>
 
 
     <!--轮播图-->
-    <view class='swiperBox'>
+    <view class='swiperBox skeleton-rect'>
       <swiper circular="true">
         <swiper-item>
           <image class="slideImage" src='/images/shop/goodImg.png'/>
@@ -80,40 +87,40 @@
     <!--其他功能-->
     <view class="moduleBox">
       <view class="titleInfo">
-        <view class="left">其他功能</view>
+        <view class="left skeleton-rect">其他功能</view>
       </view>
       <view class="menuItem">
         <view class="item" catchtap="jumpPageFun" data-type="5">
-          <image class="icon" src='/images/mine/module_icon01.png'></image>
-          <text class="name">拼团</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon01.png'></image>
+          <text class="name skeleton-rect">拼团</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="5">
-          <image class="icon" src='/images/mine/module_icon02.png'></image>
-          <text class="name">分销</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon02.png'></image>
+          <text class="name skeleton-rect">分销</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="5">
-          <image class="icon" src='/images/mine/module_icon03.png'></image>
-          <text class="name">秒杀</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon03.png'></image>
+          <text class="name skeleton-rect">秒杀</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/module_icon04.png'></image>
-          <text class="name">兑换</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon04.png'></image>
+          <text class="name skeleton-rect">兑换</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/module_icon05.png'></image>
-          <text class="name">收藏</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon05.png'></image>
+          <text class="name skeleton-rect">收藏</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/module_icon06.png'></image>
-          <text class="name">预约</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon06.png'></image>
+          <text class="name skeleton-rect">预约</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/module_icon07.png'></image>
-          <text class="name">地址管理</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon07.png'></image>
+          <text class="name skeleton-rect">地址管理</text>
         </view>
         <view class="item" catchtap="jumpPageFun" data-type="4">
-          <image class="icon" src='/images/mine/module_icon08.png'></image>
-          <text class="name">入驻</text>
+          <image class="icon skeleton-radius" src='/images/mine/module_icon08.png'></image>
+          <text class="name skeleton-rect">入驻</text>
         </view>
       </view>
     </view>
