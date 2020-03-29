@@ -24,54 +24,75 @@
     </view>
   </view>
 
-  <view class="goodsBox">
-    <block wx:for="{{confirmOrderData}}" wx:for-item="item" wx:key="index">
-      <view class="goodsItem">
-        <image class="goodImg" mode="aspectFit" src="{{item.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
-        <view class="goodsInfo">
-          <view class="desc1">{{item.goodsTitle}}</view>
-          <view class="desc2">{{item.skuTitle}}</view>
-          <view class="num_desc">
-            <view class="num_left">￥{{item.currentPrice}}</view>
-            <view class="num_right">
-              <image bindtap="modifyNumFun" data-index="{{index}}" data-type="0" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/reduce_icon.png'></image>
-              <input disabled type="number" class="num" value="{{item.number}}" />
-              <image bindtap="modifyNumFun" data-index="{{index}}" data-type="1" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/add_icon.png'></image>
-            </view>
-          </view>
-        </view>
-      </view>
-    </block>
+  <view class="payBox">
+    <text class="desc">支付方式</text>
+    <image class="more_icon" src='/images/common/more_icon.png' />
   </view>
 
-  <view class="deliverBox">
-    <view class="wayInfo">
-      <view class="name">配送服务</view>
-      <!--<view class="company">顺丰快递</view>-->
+  <view class="goodsBox">
+    <view class="list-item">
+      <view class="list-goods-item" catchtap="toOrderDetail" data-order-code="{{item.orderCode}}">
+        <!--类别-->
+        <view class="list-type-item">
+          <view class="list-type-item-left">
+            <image class="logo" mode="aspectFit" src='/images/shop/goodImg.png' />
+            <view class="name">波司登羽绒服（海淀店）</view>
+          </view>
+        </view>
+
+        <!--商品数据-->
+        <block  wx:for="{{2}}" wx:for-item="itemChild" wx:key="indexChild">
+          <view class="list-good-item">
+            <view class="list-good-item-left">
+              <image class="list-good-item-shop-img" mode="aspectFit" src='/images/shop/goodImg.png'></image>
+            </view>
+            <view class="list-good-item-middle">
+              <view class="list-good-item-desc1">{{itemChild.goodsTitle}}太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套</view>
+              <view class="list-good-item-desc2">69 藏青色;160/84A/M</view>
+              <view class="list-good-item-desc3">订单完成赠送<text class="light">203</text>积分</view>
+            </view>
+            <view class="list-good-item-right">
+              <view class="list-good-item-right-desc1">¥239</view>
+              <view class="list-good-item-right-desc2">x1</view>
+            </view>
+          </view>
+        </block>
+
+        <view class="list-mark-item">
+          <text class="list-mark-item-desc1">订单备注</text>
+          <text class="list-mark-item-desc2">你需要和商家说点什么</text>
+        </view>
+        <view class="list-total-item">
+          <text class="list-total-item-desc1">共3件商品 合计:</text>
+          <text class="list-total-item-desc2">¥890</text>
+        </view>
+      </view>
     </view>
-    <view class="desc">
-      <text class="text">标准商品，满500包邮，不足500普通地区收10元运费，偏远地区收25元运费。非标准商品，双方协商确定。</text>
-    </view>
-    <view class="time">预计送达时间：{{orderCartData.expressTime}}</view>
   </view>
 
   <view class="discountBox">
     <view class="item">
-      <view class="left">运费</view>
-      <view class="right">¥{{orderCartData.expressPrice || 0}}</view>
+      <view class="left">使用2000积分抵扣<text class="light">2</text>元</view>
+      <view class="right">你需要和商家说点什么</view>
     </view>
     <view class="item">
-      <view class="left">订单金额</view>
-      <view class="right">¥{{orderCartData.orderPrice}}</view>
+      <view class="left">优惠券（0）</view>
+      <image class="more_icon" src='/images/common/more_icon.png' />
     </view>
     <view class="item">
-      <view class="left">总计</view>
-      <view class="right">¥{{orderCartData.totalPrice}}</view>
+      <view class="left">开具发票</view>
+      <view class="right">本次不开具发票</view>
+      <image class="more_icon" src='/images/common/more_icon.png' />
     </view>
   </view>
 
   <view class="bottomBox">
-    <button class="bottomBtn" type="primary" catchtap='choosePayFun'>立即支付</button>
+    <view class="left">
+      <text class="desc1">共3件</text>
+      <text class="desc2">合计:</text>
+      <text class="desc3">¥890</text>
+    </view>
+    <view class="right" catchtap='choosePayFun'>提交订单</view>
   </view>
 
   <view class="shadowBox" catchtap="showShadowFun"  wx:if="{{showShadow}}">
