@@ -2,7 +2,7 @@
 
   <view class="descBox">
 
-    <block wx:for="{{3}}" wx:for-item="item" wx:key="index">
+    <block wx:for="{{5}}" wx:for-item="item" wx:key="index">
       <view class="descItem" bindtap="selectAddressFun" data-index="{{index}}">
         <view class="middle">
           <view class="desc1">

@@ -57,6 +57,7 @@ Page({
 
   // 新增/编辑地址
   toAddAddress (e) {
+    return;
     let addressId = e.currentTarget.dataset.addressId;
     wx.navigateTo({
       url: '/pages/addAddress/addAddress?addressId=' + addressId
