@@ -130,7 +130,8 @@ module.exports = {
         wx.showModal({
           title,
           content,
-          confirmColor: '#FB0E04',
+          cancelColor: '#666F83',
+          confirmColor: app.globalData.BASECOLOR,
           ...options,
           success: (res) => {
             if (res.confirm) {
