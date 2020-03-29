@@ -61,3 +61,5 @@ WXML：
 2.所有页面跳转；
 3.delete gongjian等；
 4.页面底部留白；//ok
+5.assemble样式调整；//ok
+6.图片阿里云；
