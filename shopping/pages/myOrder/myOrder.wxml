@@ -55,7 +55,7 @@
         <view class="list-ctrls-item">
 
           <!--待付款-->
-          <view class="ctrlBtn" data-index="{{index}}">删除订单</view>
+          <view class="ctrlBtn" data-index="{{index}}" catchtap="deleteItem">删除订单</view>
           <view class="ctrlBtn" data-index="{{index}}">查看物流</view>
           <view class="ctrlBtn red" data-index="{{index}}">确认收货</view>
           <!--<view class="ctrlBtn" catchtap="paySelect" data-index="{{index}}">立即支付</view>-->
