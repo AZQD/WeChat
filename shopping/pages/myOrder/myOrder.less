@@ -1,148 +1,160 @@
 @import "../../assets/common";
 .container{
+  background-color: #F5F5F5;
+  min-height: 100vh;
   .menuBox {
     background-color: #fff;
     display: flex;
-    border: 2rpx dotted #595959;
+    border-bottom: 3rpx solid rgba(0,0,0,0.03);;
     .menu_item {
-      color: #000;
-      font-size: 26rpx;
+      color: #666666;
+      font-size: 24rpx;
       width: 0;
-      height: 58rpx;
+      height: 88rpx;
       flex-grow: 1;
-      background-color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-right: 2rpx dotted #595959;
       &:last-child{
         border-right: none;
       }
     }
     .active {
-      background-color: #f4f4f4;
+      color: @redColor;
     }
   }
 
   .listBox{
+    padding: 24rpx 20rpx 0;
     .list-item{
+      background-color: #fff;
+      border-radius:10rpx;
+      padding-left: 30rpx;
+      padding-right: 20rpx;
+      margin-bottom: 16rpx;
       .list-ctrls-item{
-        padding: 20rpx 40rpx;
-        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 34rpx;
+        padding-bottom: 32rpx;
         .ctrlBtn {
-          color: #fff;
-          font-size: 36rpx;
-          height: 94rpx;
-          line-height: 94rpx;
-          border-radius: 10rpx;
-          background-color: #1AAD19;
+          color: #666666;
+          font-size: 26rpx;
+          height: 56rpx;
+          padding: 0 16rpx;
+          border-radius: 28rpx;
           outline: none;
           display: flex;
           align-items: center;
           justify-content: center;
-          border:2rpx solid #1AAD19;
-          margin-bottom: 30rpx;
+          border:1rpx solid #B2B2B2;
+          margin-right: 16rpx;
           &:last-child{
-            margin-bottom: 0;
+            margin-right: 0;
           }
         }
-        .gray{
-          color: #595959;
-          background-color: transparent;
-          border:2rpx solid #595959;
-        }
         .red{
-          color: #fff;
-          background-color: @redColor;
-          border:2rpx solid @redColor;
+          color: @redColor;
+          border:1rpx solid @redColor;
         }
       }
       .list-goods-item{
-        margin: 0 12rpx;
         .list-type-item{
-          border-bottom: 1rpx solid #D8D8D8;
           display: flex;
-          align-items: stretch;
+          align-items: center;
           justify-content: space-between;
-          font-size: 18rpx;
-          padding: 16rpx 0;
+          padding: 32rpx 0;
           &-left{
-            font-size: 0;
-            width: 40rpx;
-            height: 100%;
-            .check_icon{
-              width: 26rpx;
-              height: 26rpx;
+            display: flex;
+            align-items: center;
+            .logo{
+              width:36rpx;
+              height:36rpx;
+              border-radius:4rpx;
+            }
+            .name{
+              color: #1A1A1A;
+              font-size: 28rpx;
+              line-height: 44rpx;
+              padding: 0 8rpx;
+            }
+            .more_icon{
+              width:28rpx;
+              height:28rpx;
+              border-radius:4rpx;
             }
           }
-          &-middle{
-            color: #000;
-            flex-grow: 1;
-            padding-left: 34rpx;
-            background: url("@{ossDomain}purchaser/myOrder/cate_icon.png") no-repeat left center;
-            background-size: 22rpx 22rpx;
-          }
           &-right{
-            padding-right: 70rpx;
-            background: url("@{ossDomain}common/more2_black_right.png") no-repeat right 36rpx center;
-            background-size: 18rpx 18rpx;
-          }
-          .red{
             color: @redColor;
-          }
-          .black{
-            color: #000;
-          }
-          .gray{
-            color: #595959;
+            font-size: 20rpx;
+            line-height: 28rpx;
           }
         }
         .list-good-item{
-          padding:  20rpx 0;
           display: flex;
           align-items: stretch;
           font-size: 0;
-          border-bottom: 1rpx solid #F4F4F4;
+          padding-bottom: 24rpx;
           .list-good-item-left{
-            font-size: 0;
-            width: 40rpx;
-            display: flex;
-            align-items: center;
-            .check_icon{
-              width: 26rpx;
-              height: 26rpx;
+            border-radius:10rpx;
+            overflow: hidden;
+            margin-right: 20rpx;
+            .list-good-item-shop-img{
+              width:180rpx;
+              height:180rpx;
             }
           }
           .list-good-item-middle{
-            width:175rpx;
-            height:175rpx;
-            overflow: hidden;
-            margin-right: 42rpx;
-            .list-good-item-shop-img{
-              width: 100%;
-              height: 100%;
-            }
-          }
-          .list-good-item-right{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow:1;
-            width:0;
+            max-width: 322rpx;
             .list-good-item-desc1{
-              color: #000;
-              font-size: 26rpx;
-              line-height:35rpx;
+              color: #1A1A1A;
+              font-size: 24rpx;
+              line-height:36rpx;
               .ellipsis(2);
             }
             .list-good-item-desc2{
-              color: #BBBBBB;
-              font-size: 21rpx;
+              color: #666666;
+              font-size: 22rpx;
+              line-height:30rpx;
+              padding-top: 18rpx;
             }
-            .list-good-item-desc4{
-              color: @redColor;
-              font-size: 26rpx;
+          }
+          .list-good-item-right{
+            width: 0;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            &-desc1{
+              color: #1A1A1A;
+              font-size: 24rpx;
+              line-height:36rpx;
             }
+
+            &-desc2{
+              color: #666666;
+              font-size: 22rpx;
+              line-height:32rpx;
+              padding-top: 4rpx;
+            }
+          }
+        }
+        .list-total-item{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          &-desc1{
+            color: #666666;
+            font-size: 20rpx;
+            line-height:32rpx;
+          }
+
+          &-desc2{
+            color: #1A1A1A;
+            font-size: 26rpx;
+            line-height:38rpx;
+            padding-left: 16rpx;
           }
         }
       }

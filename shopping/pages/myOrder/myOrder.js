@@ -10,7 +10,7 @@ Page({
     orderStatus: 2, // 订单状态（6：待购单；2：待付款；4：待发货；5：待收货；1：已收货）
     currentOrderIndex: '', // 操作该订单的下标
 
-    listData: [],
+    listData: [1, 2, 3],
     pageIndex: 0,
     lastPage: false, // 是否最后一页
 
@@ -33,12 +33,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      lastPage: false,
-      pageIndex: 0,
-      listData: []
-    });
-    this.getList();
+    // this.setData({
+    //   lastPage: false,
+    //   pageIndex: 0,
+    //   listData: []
+    // });
+    // this.getList();
   },
 
   // 获取列表数据
