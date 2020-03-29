@@ -3,20 +3,25 @@
   <view class="addressBox">
     <view class="hasAddress" wx:if="{{shippingAddress.addressId}}" bindtap="toAddressPage" data-type="{{1}}">
       <view class="info1">
-        <text class="name">{{shippingAddress.consignee}}</text>
-        <text class="phone">{{shippingAddress.contact}}</text>
+        <image class="address_icon" src='/images/common/address_icon.png'></image>
+        <text class="name">创唯{{orderDetailData.orderAddress.consignee}}</text>
+        <text class="phone">18504599499{{orderDetailData.orderAddress.contact}}</text>
       </view>
       <view class="info2">
-        <view class="left" wx:if="{{shippingAddress.addressStatus==1}}">默认</view>
-        <view class="right">
-          {{shippingAddress.provinceName}}
-          {{shippingAddress.cityName}}
-          {{shippingAddress.districtName}}
-          {{shippingAddress.address}}
+        <!--<view class="left" wx:if="{{orderDetailData.orderAddress.addressStatus!==1}}">默认</view>-->
+        <view class="right">北京北京朝阳区三间房地区岩井里中街3区5号楼2单元901
+          {{orderDetailData.orderAddress.provinceName}}
+          {{orderDetailData.orderAddress.cityName}}
+          {{orderDetailData.orderAddress.districtName}}
+          {{orderDetailData.orderAddress.address}}
         </view>
       </view>
     </view>
-    <view class="notAddress" wx:else bindtap="toAddressPage" data-type="{{0}}">您的收货地址为空，点此添加收货地址</view>
+    <view class="notAddress" wx:else bindtap="toAddressPage" data-type="{{0}}">
+      <image class="address_icon" src='/images/common/address_icon.png'></image>
+      <text class="desc">请选择收货地址</text>
+      <image class="more_icon" src='/images/common/more_icon.png' />
+    </view>
   </view>
 
   <view class="goodsBox">
