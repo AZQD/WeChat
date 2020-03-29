@@ -69,9 +69,9 @@ Page({
       lastPage: false,
       orderStatus: Number(type),
       pageIndex: 0,
-      listData: []
+      // listData: []
     });
-    this.getList();
+    // this.getList();
   },
 
   // 购物车分页列表
