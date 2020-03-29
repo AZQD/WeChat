@@ -3,7 +3,7 @@
   <view class="addressBox">
     <view class="hasAddress">
       <view class="info1">
-        <image class="address_icon" src='/images/orderDetail/address_icon.png'></image>
+        <image class="address_icon" src='/images/common/address_icon.png'></image>
         <text class="name">创唯{{orderDetailData.orderAddress.consignee}}</text>
         <text class="phone">18504599499{{orderDetailData.orderAddress.contact}}</text>
       </view>
