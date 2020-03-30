@@ -32,13 +32,13 @@
         "pagePath": "pages/shoppingCart/shoppingCart",
         "text": "分类",
         "iconPath": "images/tabbar/tabbar_icon02.png",
-        "selectedIconPath": "images/tabbar/tabbar_icon02.png"
+        "selectedIconPath": "images/tabbar/tabbar_active_icon02.png"
       },
       {
         "pagePath": "pages/shoppingCart/shoppingCart",
         "text": "附近店铺",
         "iconPath": "images/tabbar/tabbar_icon03.png",
-        "selectedIconPath": "images/tabbar/tabbar_icon03.png"
+        "selectedIconPath": "images/tabbar/tabbar_active_icon03.png"
       },
       {
         "pagePath": "pages/shoppingCart/shoppingCart",
