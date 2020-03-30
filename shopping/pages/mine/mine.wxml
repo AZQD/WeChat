@@ -114,7 +114,7 @@
           <image class="icon skeleton-radius" src='/images/mine/module_icon06.png'></image>
           <text class="name skeleton-rect">预约</text>
         </view>
-        <view class="item" catchtap="jumpPageFun" data-type="4">
+        <view class="item" catchtap="jumpPageFun" data-type="10">
           <image class="icon skeleton-radius" src='/images/mine/module_icon07.png'></image>
           <text class="name skeleton-rect">地址管理</text>
         </view>

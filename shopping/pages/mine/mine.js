@@ -54,7 +54,6 @@ Page({
 
   // 页面跳转
   jumpPageFun: function (e) {
-    return;
     let type = Number(e.currentTarget.dataset.type);
     let url;
     if (type === 1) {
@@ -99,7 +98,7 @@ Page({
         }
       });
     }
-    url && wx.navigateTo({url});
+    type === 10 && url && wx.navigateTo({url});
   },
 
   // 取消冒泡
