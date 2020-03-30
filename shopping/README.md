@@ -63,3 +63,4 @@ WXML：
 4.页面底部留白；//ok
 5.assemble样式调整；//ok
 6.图片阿里云；
+7.动态修改样式思路，globalData可以动态；less文件怎么修改；
