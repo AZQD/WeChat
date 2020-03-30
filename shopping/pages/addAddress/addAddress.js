@@ -98,6 +98,7 @@ Page({
 
   // 新增/编辑保存
   saveAddressFun () {
+    return;
     let {addressId, consignee, contact, pickerAddress, detailAddress, addressStatus} = this.data;
     console.log(this.data);
     if (consignee) {
