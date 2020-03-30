@@ -9,7 +9,9 @@
     "pages/addAddress/addAddress",
     "pages/mine/mine",
     "pages/shoppingCart/shoppingCart",
-    "pages/assemble/assemble"
+    "pages/assemble/assemble",
+    "pages/cate/cate",
+    "pages/nearby/nearby"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -29,13 +31,13 @@
         "selectedIconPath": "images/tabbar/tabbar_active_icon01.png"
       },
       {
-        "pagePath": "pages/shoppingCart/shoppingCart",
+        "pagePath": "pages/cate/cate",
         "text": "分类",
         "iconPath": "images/tabbar/tabbar_icon02.png",
         "selectedIconPath": "images/tabbar/tabbar_active_icon02.png"
       },
       {
-        "pagePath": "pages/shoppingCart/shoppingCart",
+        "pagePath": "pages/nearby/nearby",
         "text": "附近店铺",
         "iconPath": "images/tabbar/tabbar_icon03.png",
         "selectedIconPath": "images/tabbar/tabbar_active_icon03.png"
