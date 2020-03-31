@@ -1,3 +1,3 @@
 <view class="container">
-  首页
+  <navigator class="navigator-item" url="/pages/myOrder/myOrder" hover-class="navigator-hover">我的订单</navigator>
 </view>
