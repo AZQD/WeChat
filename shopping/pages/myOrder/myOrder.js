@@ -104,6 +104,7 @@ Page({
 
   // 设置确认订单的数据
   setGoodsItemFun (e) {
+    return;
     let index = e.currentTarget.dataset.index;
     let {listData} = this.data;
     // Object.assign 复制对象重新赋值不改变原对象
@@ -234,6 +235,7 @@ Page({
 
   // 查看订单
   toOrderDetail (e) {
+    return;
     let orderCode = e.currentTarget.dataset.orderCode;
     wx.navigateTo({
       url: '/pages/orderDetail/orderDetail?orderCode=' + orderCode
