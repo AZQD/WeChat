@@ -124,6 +124,12 @@
 					"pathName": "pages/assemble/assemble",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "购物车- shoppingCartOld",
+					"pathName": "pages/shoppingCartOld/shoppingCartOld",
+					"scene": null
 				}
 			]
 		}

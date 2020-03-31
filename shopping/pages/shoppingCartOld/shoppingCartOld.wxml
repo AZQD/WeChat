@@ -1,6 +1,6 @@
 <view class="container">
 
-  <block wx:for="{{cartPageData}}" wx:for-item="item" wx:key="index">
+  <block wx:for="{{3}}" wx:for-item="item" wx:key="index">
     <view class="shopInfo">
       <image class="shop_icon" mode="aspectFit" src="{{item.shopLogo}}"></image>
       <view class="shop_name">{{item.shopName}}</view>
@@ -8,11 +8,14 @@
 
     <view class="cartList">
 
-      <block wx:for="{{item.skus}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild">
+      <block wx:for="{{2}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild">
         <view class="cartItem"  scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
           <view class="item checkWrap" bindtap="checkSkusFun" data-index="{{index}}" data-index-child="{{indexChild}}">
-            <image wx:if="{{itemChild.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
-            <image wx:else class="check_icon" src='{{ossDomain}}common/check_icon.png'></image>
+
+            <image wx:if="{{index===0}}" class="check_icon" src='/images/common/check_active_icon.png'></image>
+            <!--<image wx:if="{{itemChild.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>-->
+            <image wx:else class="check_icon" src='/images/common/check_icon.png'></image>
+
           </view>
 
           <view class="item">

@@ -9,6 +9,7 @@
     "pages/addAddress/addAddress",
     "pages/mine/mine",
     "pages/shoppingCart/shoppingCart",
+    "pages/shoppingCartOld/shoppingCartOld",
     "pages/assemble/assemble",
     "pages/cate/cate",
     "pages/nearby/nearby"
@@ -43,7 +44,7 @@
         "selectedIconPath": "images/tabbar/tabbar_active_icon03.png"
       },
       {
-        "pagePath": "pages/shoppingCart/shoppingCart",
+        "pagePath": "pages/shoppingCartOld/shoppingCartOld",
         "text": "购物车",
         "iconPath": "images/tabbar/tabbar_icon04.png",
         "selectedIconPath": "images/tabbar/tabbar_active_icon04.png"
