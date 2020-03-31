@@ -10,7 +10,7 @@ Page({
   data: {
     ossDomain: appUtils.globalData.ossDomain,
 
-    listData: [],
+    listData: [1, 1, 1],
     checkAll: false, // 是否全部选中
     orderCartData: {}, // 购物车价格计算
 
@@ -32,15 +32,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    this.setData({
-      listData: [],
-      lastPage: false,
-      pageIndex: 0,
-      checkAll: false,
-      orderCartData: {},
-      scrollLeft: false
-    });
-    this.getCartPage();
+    // this.setData({
+    //   listData: [],
+    //   lastPage: false,
+    //   pageIndex: 0,
+    //   checkAll: false,
+    //   orderCartData: {},
+    //   scrollLeft: false
+    // });
+    // this.getCartPage();
   },
 
   // 购物车分页列表

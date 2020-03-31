@@ -1,13 +1,13 @@
 <view class="container">
-  购物车
 
   <view class="cartList">
 
     <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
       <view class="cartItem"  scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
         <view class="item checkWrap" bindtap="checkSkusFun" data-index="{{index}}">
-          <image wx:if="{{item.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>
-          <image wx:else class="check_icon" src='{{ossDomain}}common/check_icon.png'></image>
+          <image wx:if="{{index===0}}" class="check_icon" src='/images/common/check_active_icon.png'></image>
+          <!--<image wx:if="{{item.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>-->
+          <image wx:else class="check_icon" src='/images/common/check_icon.png'></image>
         </view>
 
         <view class="item">
@@ -33,7 +33,7 @@
     <view class="noMoreData" wx:if="{{lastPage}}">没有更多数据</view>
   </view>
 
-  <view class="bottomFixBox" wx:if="{{false}}">
+  <view class="bottomFixBox">
     <view class="left">
       <image bindtap="checkAllSkusFun" class="check_icon" src='{{ossDomain}}common/{{checkAll && listData.length?"check_active_icon":"check_icon"}}.png'></image>
       <view class="name">全选</view>
