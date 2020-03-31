@@ -1,114 +1,156 @@
 @import "../../assets/common";
 
 .container{
-  background-color: #fff;
-  border-top: 1rpx solid #f5f5f5;
-  padding-bottom: 196rpx;
+  background-color: #F5F5F5;
+  min-height: 100vh;
+  overflow: hidden;
 
-  .shopInfo{
-    display: flex;
-    align-items: center;
-    padding: 30rpx 24rpx 0 16rpx;
-    .shop_icon{
-      width: 40rpx;
-      height: 40rpx;
-      margin-right: 16rpx;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    .shop_name{
-      font-size: 24rpx;
-      color: #000;
-      flex-grow: 1;
-      padding-bottom: 8rpx;
-      border-bottom: 1rpx solid #000000;
-    }
+  .contentBox{
+    padding-bottom: 100rpx;
   }
 
-  /*购物车列表*/
-  .cartList{
-    padding-left: 16rpx;
-    padding-right: 26rpx;
-    padding-top: 24rpx;
-    .cartItem{
-      margin-bottom: 72rpx;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      white-space: nowrap;
-      &::-webkit-scrollbar {
-        display: none;
+  .eachShopItem{
+    font-size: 0;
+    border-radius: 10rpx;
+    margin: 20rpx;
+    background-color: #fff;
+    .shopInfo{
+      display: flex;
+      align-items: center;
+      border-bottom: 2rpx solid #F5F5F5;
+      padding: 26rpx 24rpx;
+      .check_icon{
+        width: 36rpx;
+        height: 36rpx;
+        margin-right: 20rpx;
       }
-      &:last-child{
-        margin-bottom: 32rpx;
+      .shop_icon{
+        width:36rpx;
+        height:36rpx;
+        border-radius:4rpx;
       }
-      .item{
-        display: inline-block;
-        vertical-align: middle;
-        .goodImg{
-          width: 150rpx;
-          height: 150rpx;
-          margin-right: 21rpx;
-        }
+      .shop_name{
+        color: #1A1A1A;
+        font-size: 28rpx;
+        line-height: 44rpx;
+        padding: 0 8rpx;
       }
-      .checkWrap{
-        .check_icon{
-          width: 40rpx;
-          height: 40rpx;
-          margin-right: 14rpx;
-        }
+      .more_icon{
+        width:28rpx;
+        height:28rpx;
       }
-      .descBox{
-        width: 315rpx;
-        .desc1{
-          font-size: 24rpx;
-          color: #3C2E25;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space:nowrap;
-        }
-        .desc2{
-          font-size: 20rpx;
-          color: #595959;
-          padding-top: 48rpx;
-          padding-bottom: 12rpx;
-        }
-        .desc3{
-          font-size: 24rpx;
-          color: #FE0E04;
-        }
-      }
+    }
 
-      .ctrlBox{
-        vertical-align: bottom;
-        .ctrl_icon{
-          width: 25rpx;
-          height: 25rpx;
-          vertical-align: middle;
-          padding: 12rpx;
+    /*购物车列表*/
+    .cartList{
+      .lineDepart{
+        border-bottom: 2rpx solid #F5F5F5;
+        margin-left: 80rpx;
+        &:last-child{
+          border-bottom: none;
         }
-        .num{
+      }
+      .cartItem{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height:278rpx;
+        background-color: @redColor;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .item{
+          height: 100%;
           display: inline-block;
-          width: 79rpx;
-          height: 50rpx;
-          line-height: 50rpx;
-          border: 1rpx solid #E3E3E3;
-          border-radius:3rpx;
-          color: #3C2E25;
-          font-size: 24rpx;
-          text-align: center;
-          vertical-align: middle;
+          vertical-align: top;
         }
-      }
+        .checkWrap{
+          padding-top: 40rpx;
+          background-color: #fff;
+          padding-left: 24rpx;
+          .check_icon{
+            width: 36rpx;
+            height: 36rpx;
+            margin-top: 72rpx;
+          }
+        }
+        .goodImgWrap{
+          font-size: 0;
+          padding-top: 40rpx;
+          background-color: #fff;
+          .goodImg{
+            width: 180rpx;
+            height: 180rpx;
+            margin: 0 20rpx;
+          }
+        }
+        .descBox{
+          width: 406rpx;
+          padding-right: 24rpx; //原始
+          padding-right: 28rpx; // 避开圆角
+          background-color: #fff;
+          border-radius:0rpx 10rpx 10rpx 0rpx;
+          border-radius:0rpx 8rpx 8rpx 0rpx;
+          .desc1{
+            padding-top: 40rpx;
+            white-space: initial;
+            color: #1A1A1A;
+            font-size: 24rpx;
+            line-height: 36rpx;
+            .ellipsis(2);
+          }
+          .desc2{
+            color: #666666;
+            font-size: 22rpx;
+            padding-top: 18rpx;
+          }
+          .desc3{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 40rpx;
+            .price{
+              color: @redColor;
+              font-size: 28rpx;
+              line-height: 44rpx;
+            }
+            .ctrls{
+              display: flex;
+              align-items: center;
+              .ctrl_icon{
+                line-height: initial;
+                width:56rpx;
+                height:46rpx;
+                border-radius:4rpx 0rpx 0rpx 4rpx;
+                border:1rpx solid #D0D1D4;
+                color: #979797;
+                font-size: 32rpx;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+              .num{
+                width: 88rpx;
+                height: 46rpx;
+                border-top:1rpx solid #D0D1D4;
+                border-bottom:1rpx solid #D0D1D4;
+                color: #1A1A1A;
+                font-size: 26rpx;
+                text-align: center;
+              }
+            }
+          }
+        }
 
-      .delBox{
-        margin-left: 75rpx;
-        width: 149rpx;
-        height: 159rpx;
-        line-height: 159rpx;
-        text-align: center;
-        font-size: 24rpx;
-        color: #fff;
-        background-color: #FE0E04;
+        .delBox{
+          display: inline-block;
+          width: 160rpx;
+          height: 278rpx;
+          line-height: 278rpx;
+          text-align: center;
+          font-size: 26rpx;
+          color: #fff;
+        }
       }
     }
   }
@@ -123,41 +165,59 @@
   width: 100%;
   z-index: 2;
   background-color: #fff;
-  height: 96rpx;
-  border-top: 1rpx solid #ddd;
+  height: 98rpx;
+  border-top: 2rpx solid rgba(0,0,0,0.05);
   display: flex;
   .left{
     flex-grow: 1;
-    padding-left: 16rpx;
+    padding-left: 44rpx;
     display: flex;
     align-items: center;
     .check_icon{
-      width: 40rpx;
-      height: 40rpx;
+      width: 36rpx;
+      height: 36rpx;
+      margin-right: 16rpx;
     }
     .name{
-      margin: 0 16rpx;
-      font-size: 20rpx;
-      color: #3C2E25;
+      width: 0;
+      flex-grow: 1;
+      color: #1A1A1A;
+      font-size: 24rpx;
+      line-height: 36rpx;
     }
     .nums{
-      font-size: 20rpx;
+      text-align: right;
+      padding-right: 20rpx;
       .desc1{
-        color: #FB0E04;
+        color: #1A1A1A;
+        font-size: 20rpx;
+        line-height: 32rpx;
+        .light{
+          color: @redColor;
+          font-size: 26rpx;
+          line-height: 38rpx;
+        }
       }
       .desc2{
-        color: #4A4A4A;
-        padding-top: 8rpx;
+        color: #666;
+        font-size: 20rpx;
+        line-height: 32rpx;
+        .num{
+          padding-left: 16rpx;
+        }
       }
     }
   }
   .right{
-    width: 184rpx;
-    background-color: #FB0E04;
-    font-size: 30rpx;
+    width: 180rpx;
+    background-color: @redColor;
+    font-size: 28rpx;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .delete{
+    background-color: #D0D1D4;
   }
 }

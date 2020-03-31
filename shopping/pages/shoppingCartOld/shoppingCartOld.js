@@ -236,6 +236,7 @@ Page({
 
   // 跳转确认订单
   toConfirmOrder () {
+    return;
     console.log(this.data);
     let {cartPageData, totalPrice, totalNumber, cartParams} = this.data;
     // 购物车有数据&&有选中的商品
@@ -250,8 +251,22 @@ Page({
         url: '/pages/confirmOrder/confirmOrder'
       });
     } else {
-      appUtils.tips.alert('请选中要结算的商品');
+      // appUtils.tips.alert('请选中要结算的商品');
+
     }
+  },
+
+  tempDelete () {
+    appUtils.tips.confirm('', '确认将这2个商品删除吗？', () => {
+      appUtils.post(api.order_delete, {
+        orderCode
+      }).then((res) => {
+        console.log('删除订单', res);
+        let listData = this.data.listData;
+        listData.splice(index, 1);
+        this.setData({listData});
+      });
+    });
   },
 
   /**
