@@ -54,7 +54,7 @@ Page({
   // 滚动条监听
   scroll: function (e) {
     let navHeight = this.data.navHeight;
-    // this.setData({ scrollTop: e.detail.scrollTop });
+    this.setData({ scrollTop: e.detail.scrollTop });
 
     wx.createSelectorQuery().select('#detailBox')
       .boundingClientRect((rect) => {
@@ -99,24 +99,6 @@ Page({
           .exec();
       }, 500);
     });
-  },
-
-  // 顶部菜单切换
-  toggleTypeFun: function (e) {
-    let type = Number(e.currentTarget.dataset.type);
-    this.setData({
-      toggleType: type
-    });
-    if (type === 1) {
-      this.setData({
-        scrollTop: 0
-      });
-    } else if (type === 2) {
-      let {initDetailTop, navHeight} = this.data;
-      this.setData({
-        scrollTop: initDetailTop - navHeight + 2
-      });
-    }
   },
 
   showShadowFun (e) {

@@ -1,39 +1,33 @@
 <view style="height:100%;position:fixed;width:100%;">
   <scroll-view class="container" scroll-y="false" bindscroll="scroll" style="height:100%;" scroll-top="{{scrollTop}}">
 
-    <view class="customFixed" style='height:{{navHeight}}px'>
-      <view class="menuBox">
-        <image catchtap="backFun" class="backBtn" src='{{ossDomain}}common/more2_black_left.png'></image>
-        <view class="menus">
-          <view catchtap="toggleTypeFun" data-type="1" class="{{toggleType===1?'menu_item active':'menu_item'}}"><text class="toggle_name">商品</text></view>
-          <view catchtap="toggleTypeFun" data-type="2" class="{{toggleType===2?'menu_item active':'menu_item'}}"><text class="toggle_name">详情</text></view>
-        </view>
-      </view>
+    <view class="customFixed" style="height:{{navHeight}}px;">
+      <image catchtap="backFun" class="backBtn" src='/images/productDetail/back_icon.png'></image>
+      <view class="title" style="opacity:{{scrollTop / 400 > 0.9 ? 0.9 : scrollTop / 400}}">商品详情</view>
+      <image class="cartBtn" src='/images/productDetail/cart_icon.png'></image>
     </view>
 
-    <view class="basicInfo" style='padding-top:{{navHeight}}px'>
+    <view class="basicInfo">
       <view class="goodImgBox">
-        <image class="goodImg" wx:if="{{goodsItemData.goodsId}}" mode="aspectFit"  src="{{goodsItemData.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+        <image class="goodImg" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
       </view>
 
-      <view class="infos borderBottom">
-        <view class="desc1">{{goodsItemData.goodsTitle}}</view>
-        <view class="desc2">
-          <view class="coin">可兑换{{goodsItemData.goodsIntegral}}积分</view>
-          <view class="right">
-            <view class="labels">
-              <block wx:for="{{goodsItemData.otherLabel}}" wx:for-item="item" wx:key="index">
-                <text class="label">{{item.LabelValue}}</text>
-              </block>
-            </view>
-          </view>
+      <view class="infos">
+        <view class="desc1">
+          <text class="price1">￥<text class="num">268</text></text>
+          <text class="price2">¥300</text>
         </view>
-        <view class="desc3">￥{{selectType===''?goodsItemData.goodsPrice:goodsItemData.skus[selectType].currentPrice}}</view>
+        <view class="desc2">太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套韩版潮</view>
+        <view class="desc3">百搭使用 针对受损发质 充分滋养柔亮</view>
+
+        <view class="right1">月销 249</view>
+        <view class="right2">99.9%</view>
+        <view class="right3">好评率</view>
       </view>
 
-      <view class="posts borderBottom">
+      <view class="posts">
         <text class="desc1">配送</text>
-        <text class="desc2">供需双方协商进行配送</text>
+        <text class="desc2">预计 3 天后送达</text>
       </view>
 
       <view class="selects borderBottom" catchtap="chooseSizeFun">
