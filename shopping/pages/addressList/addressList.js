@@ -66,6 +66,7 @@ Page({
 
   // 选择当前地址，并返回上一层页面
   selectAddressFun (e) {
+    return;
     if (this.data.from === 'mine') {return;}
     let addressPageData = this.data.addressPageData;
     let index = e.currentTarget.dataset.index;
