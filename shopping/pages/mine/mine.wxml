@@ -11,7 +11,7 @@
   <view class="headerBox">
     <view class="avatarInfo">
       <image class="avatar skeleton-radius" src='/images/shop/goodImg.png' />
-      <text class="name skeleton-radius">185***849</text>
+      <text class="name skeleton-rect">185***849</text>
     </view>
   </view>
 
@@ -20,8 +20,8 @@
 
     <view class="orderBox">
       <view class="titleInfo">
-        <view class="left"><text class="skeleton-rect">我的订单</text></view>
-        <view class="right skeleton-rect">全部订单</view>
+        <view class="left"><text class="">我的订单</text></view>
+        <view class="right">全部订单</view>
         <image class="more" src='/images/common/more_icon.png' />
       </view>
       <view class="menuItem">
@@ -87,7 +87,7 @@
     <!--其他功能-->
     <view class="moduleBox">
       <view class="titleInfo">
-        <view class="left skeleton-rect">其他功能</view>
+        <view class="left">其他功能</view>
       </view>
       <view class="menuItem">
         <view class="item" catchtap="jumpPageFun" data-type="5">
