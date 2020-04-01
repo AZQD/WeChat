@@ -25,61 +25,84 @@
         <view class="right3">好评率</view>
       </view>
 
-      <view class="posts">
-        <text class="desc1">配送</text>
-        <text class="desc2">预计 3 天后送达</text>
-      </view>
-
-      <view class="selects borderBottom" catchtap="chooseSizeFun">
-        <text class="desc1" wx:if="{{selectType === ''}}">请选择规格</text>
-        <text class="desc2" wx:else>已选："{{goodsItemData.skus[selectType].skuTitle}}"</text>
+      <view class="infos2">
+        <view class="part">
+          <text class="desc1">配送</text>
+          <text class="desc2">预计 3 天后送达</text>
+        </view>
+        <view class="part">
+          <text class="desc1">促销</text>
+          <view class="labels">
+            <block wx:for="{{4}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+              <text class="label">手机专享</text>
+            </block>
+          </view>
+          <image class="more" src='/images/common/more_icon.png' />
+        </view>
       </view>
 
     </view>
 
     <view class="detailBox" id="detailBox">
-      <view class="title">商品详情</view>
-      <view class="paramsList" wx:if="{{goodsItemData.goodsParams.length}}">
-        <block wx:for="{{goodsItemData.goodsParams}}" wx:for-item="item" wx:key="index">
-          <view class="paramsItem">
-            <view class="key">{{item.paramTitle}}</view>
-            <view class="value">{{item.paramValue}}</view>
-          </view>
-        </block>
-      </view>
-      <view class="imgList" wx:if="{{goodsItemData.goodsImage.length}}">
-        <block wx:for="{{goodsItemData.goodsImage}}" wx:for-item="item" wx:key="index">
-          <view class="imgItem">
-            <image class="detailImg" mode="widthFix" src="{{item.imageUrl}}"></image>
-          </view>
-        </block>
-      </view>
-    </view>
 
-    <view class="tipsBox">
-      <view class="title">平台说明</view>
-      <view class="tipList">
-        <view class="tipItem">
-          <view class="tip_title">关于购买</view>
-          <text class="tip_desc">天天是为全行业用户打造的在线商品信息服务平台，任何注册天天的采购方，都可以登录采购平台，也可以根据自己的实际采购需要来搜索查看商品信息。\n 天天所有商品信息都由已注册的供应商用户自行上传，天天不对可搜索的所有资源的库存量及真实性负责，因此请用户在交易前自行确认资源的有效性。</text>
+      <view class="commentInfo">
+        <view class="desc1">
+          <view class="left">用户评价<text class="num">(2344)</text></view>
+          <view class="right">
+            <text class="rate">99.9%</text>
+            <text class="name">好评率</text>
+            <image class="more" src='/images/common/more_icon.png' />
+          </view>
         </view>
-        <view class="tipItem">
-          <view class="tip_title">关于支付</view>
-          <text class="tip_desc">标准化商品采取微信支付，询价商品采取线下协商方式付款。若微信支付超出单日额度，请联系供应商协商付款。</text>
+        <view class="desc2">
+          <block wx:for="{{3}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+            <text class="label">保暖性强 1235</text>
+          </block>
         </view>
-        <view class="tipItem">
-          <view class="tip_title">关于配送及售后</view>
-          <text class="tip_desc">标准化商品及询价单商品均采取供需双方协商进行配送。</text>
+        <view class="desc3">
+          <view class="left">
+            <image class="avatar" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+          </view>
+          <view class="right">
+            <view class="name">庆**余年</view>
+            <view class="date">2020.01.02</view>
+            <view class="say">衣服很好，上身太平鸟毛衣加外套，裤子阿迪灰色裤子，鞋高帮耐克鞋，后期拍图片，感谢佐丹客服的耐心解答，一级棒。</view>
+          </view>
         </view>
       </view>
+
+      <view class="detailInfo">
+        <view class="title">商品详情</view>
+        <view class="imgList" wx:if="{{!goodsItemData.goodsImage.length}}">
+          <block wx:for="{{2}}" wx:for-item="item" wx:key="index">
+            <view class="imgItem">
+              <image class="detailImg" mode="widthFix"  src='/images/shop/goodImg.png'></image>
+            </view>
+          </block>
+        </view>
+      </view>
+
     </view>
 
     <view class="bottomFixBox">
-      <button class="leftItem chat" hover-class="contactHover" open-type="contact">
-        <image class="leftIcon" src="{{ossDomain}}purchaser/productDetail/chat_icon.png"></image>
-      </button>
-      <view class="ctrlBtn" catchtap="showShadowFun" data-type="1">加入购物车</view>
-      <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2">立即下单</view>
+
+      <view class="leftCtrls">
+        <button class="ctrlItem" hover-class="contactHover" open-type="contact">
+          <image class="icon" src='/images/productDetail/service_icon.png'></image>
+          <text class="name">客服</text>
+        </button>
+        <view class="ctrlItem">
+          <image class="icon" src='/images/productDetail/home_icon.png'></image>
+          <text class="name">店铺</text>
+        </view>
+        <view class="ctrlItem">
+          <image class="icon" src='/images/productDetail/storage_icon.png'></image>
+          <text class="name">收藏</text>
+        </view>
+      </view>
+
+      <view class="ctrlBtn ctrlBtn1" catchtap="showShadowFun" data-type="1">加入购物车</view>
+      <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2">立即购买</view>
     </view>
 
     <!--提交订单前，选择的遮罩-->
