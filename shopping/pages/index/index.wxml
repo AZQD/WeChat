@@ -1,3 +1,9 @@
 <view class="container">
-  <navigator class="navigator-item" url="/pages/myOrder/myOrder" hover-class="navigator-hover">我的订单</navigator>
+
+  <view class="menuListBox">
+    <block wx:for="{{menuList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <button type="primary" catchtap="jumpPageFun" data-type="{{item.type}}" data-path="{{item.path}}" class="menuItem">{{item.name}}</button>
+    </block>
+  </view>
+
 </view>

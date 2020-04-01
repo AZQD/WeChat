@@ -5,13 +5,60 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    menuList: [
+      // {
+      //   type: 1,
+      //   path: 'index/index',
+      //   name: '首页'
+      // },
+      // {
+      //   type: 1,
+      //   path: 'shoppingCartOld/shoppingCartOld',
+      //   name: '购物车',
+      // },
+      {
+        type: 1,
+        path: 'mine/mine',
+        name: '个人中心'
+      },
+      {
+        type: 0,
+        path: 'addressList/addressList',
+        name: '地址管理'
+      },
+      {
+        type: 0,
+        path: 'addAddress/addAddress',
+        name: '新增地址'
+      },
+      {
+        type: 0,
+        path: 'myOrder/myOrder',
+        name: '我的订单'
+      },
+      {
+        type: 0,
+        path: 'orderDetail/orderDetail',
+        name: '订单详情'
+      },
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  },
+
+  jumpPageFun(e){
+    const {type, path} = e.currentTarget.dataset;
+    let url = `/pages/${path}`;
+    if(type){
+      wx.switchTab({url});
+    }else{
+      wx.navigateTo({url});
+    }
   },
 
   /**
