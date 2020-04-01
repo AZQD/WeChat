@@ -33,7 +33,7 @@ Component({
         width: systemInfo.windowWidth,
         height: systemInfo.windowHeight
       },
-      loading: this.data.loadingAni.includes(this.data.loading) ? this.data.loading : 'spin'
+      loading: this.data.loadingAni.includes(this.data.loading) ? this.data.loading : ''
     })
   },
 
