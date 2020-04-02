@@ -4,12 +4,13 @@
           wx:if="{{showSkeleton}}">
 </skeleton>
 
-<view style="height:100%;position:fixed;width:100%;">
-  <scroll-view class="container skeleton" scroll-y="false" bindscroll="scroll" style="height:100%;" scroll-top="{{scrollTop}}">
+<scroll-view class="container" scroll-y="{{true}}" style="height:100%;" scroll-top="{{scrollTop}}">
+
+  <view class="skeleton">
 
     <view class="customFixed" style="height:{{navHeight}}px;">
       <image catchtap="backFun" class="backBtn" src='/images/productDetail/back_icon.png'></image>
-      <view class="title" style="opacity:{{scrollTop / 400 > 0.9 ? 0.9 : scrollTop / 400}}">商品详情</view>
+      <view class="title" style="opacity:{{scrollTop / 300 > 0.9 ? 0.9 : scrollTop / 300}}">商品详情</view>
       <image class="cartBtn" src='/images/productDetail/cart_icon.png'></image>
     </view>
 
@@ -53,36 +54,36 @@
 
       <view class="commentInfo">
         <view class="desc1">
-          <view class="left">用户评价<text class="num">(2344)</text></view>
+          <view class="left">用户评价<text class="num skeleton-rect">(2344)</text></view>
           <view class="right">
-            <text class="rate">99.9%</text>
+            <text class="rate skeleton-rect">99.9%</text>
             <text class="name">好评率</text>
             <image class="more" src='/images/common/more_icon.png' />
           </view>
         </view>
-        <view class="desc2">
+        <view class="desc2 skeleton-rect">
           <block wx:for="{{3}}" wx:for-item="item" wx:for-index="index" wx:key="index">
             <text class="label">保暖性强 1235</text>
           </block>
         </view>
         <view class="desc3">
           <view class="left">
-            <image class="avatar" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+            <image class="avatar skeleton-radius" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
           </view>
           <view class="right">
-            <view class="name">庆**余年</view>
-            <view class="date">2020.01.02</view>
-            <view class="say">衣服很好，上身太平鸟毛衣加外套，裤子阿迪灰色裤子，鞋高帮耐克鞋，后期拍图片，感谢佐丹客服的耐心解答，一级棒。</view>
+            <view class="name skeleton-rect">庆**余年</view>
+            <view class="date skeleton-rect">2020.01.02</view>
+            <view class="say skeleton-rect">衣服很好，上身太平鸟毛衣加外套，裤子阿迪灰色裤子，鞋高帮耐克鞋，后期拍图片，感谢佐丹客服的耐心解答，一级棒。</view>
           </view>
         </view>
       </view>
 
       <view class="detailInfo">
         <view class="title">商品详情</view>
-        <view class="imgList" wx:if="{{!goodsItemData.goodsImage.length}}">
+        <view class="imgList skeleton-rect" wx:if="{{!goodsItemData.goodsImage.length}}">
           <block wx:for="{{2}}" wx:for-item="item" wx:key="index">
             <view class="imgItem">
-              <image class="detailImg" mode="widthFix"  src='/images/shop/goodImg.png'></image>
+              <image class="detailImg" mode="aspectFill"  src='/images/shop/goodImg.png'></image>
             </view>
           </block>
         </view>
@@ -90,90 +91,91 @@
 
     </view>
 
-    <view class="bottomFixBox">
+  </view>
 
-      <view class="leftCtrls">
-        <button class="ctrlItem" hover-class="contactHover" open-type="contact">
-          <image class="icon" src='/images/productDetail/service_icon.png'></image>
-          <text class="name">客服</text>
-        </button>
-        <view class="ctrlItem">
-          <image class="icon" src='/images/productDetail/home_icon.png'></image>
-          <text class="name">店铺</text>
-        </view>
-        <view class="ctrlItem">
-          <image class="icon" src='/images/productDetail/storage_icon.png'></image>
-          <text class="name">收藏</text>
-        </view>
+  <view class="bottomFixBox">
+
+    <view class="leftCtrls">
+      <button class="ctrlItem" hover-class="contactHover" open-type="contact">
+        <image class="icon" src='/images/productDetail/service_icon.png'></image>
+        <text class="name">客服</text>
+      </button>
+      <view class="ctrlItem">
+        <image class="icon" src='/images/productDetail/home_icon.png'></image>
+        <text class="name">店铺</text>
       </view>
-
-      <!--catchtap='gotoSave'-->
-      <view class="ctrlBtn ctrlBtn1" catchtap="showShadowFun" data-type="1">加入购物车</view>
-      <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2">立即购买</view>
+      <view class="ctrlItem">
+        <image class="icon" src='/images/productDetail/storage_icon.png'></image>
+        <text class="name">收藏</text>
+      </view>
     </view>
 
-    <!--提交订单前，选择的遮罩-->
-    <view class="shadowBox" catchtap="showShadowFun" wx:if="{{showShadow}}">
-      <view class="shadowWrap" catchtap="stopPropagation">
-        <view class="shadowInfo">
-          <image class="close_icon" catchtap="showShadowFun" src="/images/productDetail/close_icon.png"></image>
-          <view class="choose">
-            <image class="left" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
-            <view class="right">
-              <view class="desc1">价格：¥268-800</view>
-              <view class="desc2">已选：黑色;L</view>
-            </view>
-          </view>
-          <view class="selects">
-            <view class="title">尺码</view>
-            <view class="menuBox">
-              <block wx:for="{{7}}" wx:for-item="item" wx:key="index">
-                <!--<view catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">S</view>-->
-                <view wx:if="{{index===0}}" catchtap="stateToggle" data-index="{{index}}" class="{{selectType==index || ''?'menu_item active':'menu_item'}}">S</view>
-                <view wx:else catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">XL</view>
-              </block>
-            </view>
-          </view>
+    <!--catchtap='gotoSave'-->
+    <view class="ctrlBtn ctrlBtn1" catchtap="showShadowFun" data-type="1">加入购物车</view>
+    <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2">立即购买</view>
+  </view>
 
-          <view class="selects2">
-            <view class="title">颜色</view>
-            <view class="menuBox">
-              <block wx:for="{{8}}" wx:for-item="item" wx:key="index">
-                <!--<view catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">S</view>-->
-                <view wx:if="{{index===0}}" catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2==index || undefined?'menu_item active':'menu_item'}}">
-                  <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
-                  <text class="name">黑色</text>
-                </view>
-                <view wx:else catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">
-                  <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
-                  <text class="name">卡其</text>
-                </view>
-              </block>
-            </view>
+  <!--提交订单前，选择的遮罩-->
+  <view class="shadowBox" catchtap="showShadowFun" wx:if="{{showShadow}}">
+    <view class="shadowWrap" catchtap="stopPropagation">
+      <view class="shadowInfo">
+        <image class="close_icon" catchtap="showShadowFun" src="/images/productDetail/close_icon.png"></image>
+        <view class="choose">
+          <image class="left" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+          <view class="right">
+            <view class="desc1">价格：¥268-800</view>
+            <view class="desc2">已选：黑色;L</view>
           </view>
+        </view>
+        <view class="selects">
+          <view class="title">尺码</view>
+          <view class="menuBox">
+            <block wx:for="{{7}}" wx:for-item="item" wx:key="index">
+              <!--<view catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">S</view>-->
+              <view wx:if="{{index===0}}" catchtap="stateToggle" data-index="{{index}}" class="{{selectType==index || ''?'menu_item active':'menu_item'}}">S</view>
+              <view wx:else catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">XL</view>
+            </block>
+          </view>
+        </view>
+
+        <view class="selects2">
+          <view class="title">颜色</view>
+          <view class="menuBox">
+            <block wx:for="{{8}}" wx:for-item="item" wx:key="index">
+              <!--<view catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">S</view>-->
+              <view wx:if="{{index===0}}" catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2==index || undefined?'menu_item active':'menu_item'}}">
+                <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+                <text class="name">黑色</text>
+              </view>
+              <view wx:else catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">
+                <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+                <text class="name">卡其</text>
+              </view>
+            </block>
+          </view>
+        </view>
 
 
-          <view class="nums" wx:if="{{false}}"><!--暂时不展示-->
-            <view class="title">购买数量</view>
-            <view class="num_desc">
+        <view class="nums" wx:if="{{false}}"><!--暂时不展示-->
+          <view class="title">购买数量</view>
+          <view class="num_desc">
+            <image bindtap="modifyNumFun" data-type="0" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/reduce_icon.png'></image>
+            <input type="number" class="num" bindinput="inputValueFun" value="{{cartParams[0].number}}" />
+            <image bindtap="modifyNumFun" data-type="1" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/add_icon.png'></image>
+            <text class="unit">{{goodsItemData.minUnit}}</text>
+          </view>
+          <!--<view class="num_desc">
+            <view class="num_left">
               <image bindtap="modifyNumFun" data-type="0" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/reduce_icon.png'></image>
               <input type="number" class="num" bindinput="inputValueFun" value="{{cartParams[0].number}}" />
               <image bindtap="modifyNumFun" data-type="1" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/add_icon.png'></image>
-              <text class="unit">{{goodsItemData.minUnit}}</text>
+              <text class="unit">件</text>
             </view>
-            <!--<view class="num_desc">
-              <view class="num_left">
-                <image bindtap="modifyNumFun" data-type="0" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/reduce_icon.png'></image>
-                <input type="number" class="num" bindinput="inputValueFun" value="{{cartParams[0].number}}" />
-                <image bindtap="modifyNumFun" data-type="1" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/add_icon.png'></image>
-                <text class="unit">件</text>
-              </view>
-              <view class="num_right">{{goodsItemData.minSales || '1件'}}以上，免运费</view>
-            </view>-->
-          </view>
+            <view class="num_right">{{goodsItemData.minSales || '1件'}}以上，免运费</view>
+          </view>-->
         </view>
       </view>
     </view>
+  </view>
 
-  </scroll-view>
-</view>
+</scroll-view>

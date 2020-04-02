@@ -60,14 +60,13 @@ Page({
     // this.getGoodsItem();
   },
 
-  // 滚动条监听
-  scroll: function (e) {
+  onPageScroll(e){
+    //参数e会返回滚动条滚动的高度
     let navHeight = this.data.navHeight;
-    this.setData({ scrollTop: e.detail.scrollTop });
+    this.setData({ scrollTop: e.scrollTop });
 
     wx.createSelectorQuery().select('#detailBox')
       .boundingClientRect((rect) => {
-        // console.log(e.detail.scrollTop, rect.top - navHeight)
         this.setData({
           toggleType: (rect.top - navHeight > 0) ? 1 : 2
         });

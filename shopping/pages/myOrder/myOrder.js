@@ -28,7 +28,7 @@ Page({
       this.setData({
         showSkeleton: false
       })
-    }, 150000);
+    }, 1500);
 
     if (options.orderStatus) {
       this.setData({

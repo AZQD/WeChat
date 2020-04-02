@@ -17,7 +17,7 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#FF6D4C",
     "navigationBarTitleText": "天天商城",
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false
   },
   "tabBar": {

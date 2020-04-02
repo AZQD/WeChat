@@ -9,7 +9,9 @@ Page({
     ossDomain: appUtils.globalData.ossDomain,
     orderCode: '', // 订单编号
     orderDetailData: {},
-    paySelectType: 1 // 1：待付款：立即支付；2：已收货：再来一单
+    paySelectType: 1, // 1：待付款：立即支付；2：已收货：再来一单
+
+    showSkeleton: true,
   },
 
   /**
@@ -20,6 +22,13 @@ Page({
     this.setData({
       orderCode: options.orderCode
     });
+
+    setTimeout( () => {
+      this.setData({
+        showSkeleton: false
+      })
+    }, 1500);
+
     this.getOrderItem();
   },
 
