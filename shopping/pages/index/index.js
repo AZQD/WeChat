@@ -12,14 +12,29 @@ Page({
       //   name: '首页'
       // },
       // {
+      //   type: 0,
+      //   path: 'productDetail/productDetail',
+      //   name: '商品详情'
+      // },
+      // {
       //   type: 1,
-      //   path: 'shoppingCartOld/shoppingCartOld',
+      //   path: 'shoppingCart/shoppingCart',
       //   name: '购物车',
       // },
       {
-        type: 1,
-        path: 'mine/mine',
-        name: '个人中心'
+        type: 0,
+        path: 'confirmOrder/confirmOrder',
+        name: '确认订单'
+      },
+      {
+        type: 0,
+        path: 'myOrder/myOrder',
+        name: '我的订单'
+      },
+      {
+        type: 0,
+        path: 'orderDetail/orderDetail',
+        name: '订单详情'
       },
       {
         type: 0,
@@ -32,20 +47,10 @@ Page({
         name: '新增地址'
       },
       {
-        type: 0,
-        path: 'myOrder/myOrder',
-        name: '我的订单'
+        type: 1,
+        path: 'mine/mine',
+        name: '个人中心'
       },
-      {
-        type: 0,
-        path: 'orderDetail/orderDetail',
-        name: '订单详情'
-      },
-      // {
-      //   type: 0,
-      //   path: 'productDetail/productDetail',
-      //   name: '商品详情'
-      // }
     ],
   },
 
