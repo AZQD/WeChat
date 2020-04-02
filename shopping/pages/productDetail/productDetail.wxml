@@ -101,6 +101,7 @@
         </view>
       </view>
 
+      <!--catchtap='gotoSave'-->
       <view class="ctrlBtn ctrlBtn1" catchtap="showShadowFun" data-type="1">加入购物车</view>
       <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2">立即购买</view>
     </view>
@@ -109,23 +110,44 @@
     <view class="shadowBox" catchtap="showShadowFun" wx:if="{{showShadow}}">
       <view class="shadowWrap" catchtap="stopPropagation">
         <view class="shadowInfo">
-          <image class="close_icon" catchtap="showShadowFun" src="{{ossDomain}}common/close_icon2.png"></image>
-          <view class="descs">
-            <image class="left" mode="aspectFit" src="{{goodsItemData.goodsThumb || ossDomain+'purchaser/mine/logo.png'}}"></image>
+          <image class="close_icon" catchtap="showShadowFun" src="/images/productDetail/close_icon.png"></image>
+          <view class="choose">
+            <image class="left" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
             <view class="right">
-              <view class="desc">{{goodsItemData.goodsTitle}}</view>
-              <view class="desc">单价：<text class="price">￥{{selectType===''?goodsItemData.goodsPrice:goodsItemData.skus[selectType].currentPrice}}</text></view>
+              <view class="desc1">价格：¥268-800</view>
+              <view class="desc2">已选：黑色;L</view>
             </view>
           </view>
           <view class="selects">
-            <view class="title">属性</view>
+            <view class="title">尺码</view>
             <view class="menuBox">
-              <block wx:for="{{goodsItemData.skus}}" wx:for-item="item" wx:key="index">
-                <view catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">{{item.skuTitle}}</view>
+              <block wx:for="{{7}}" wx:for-item="item" wx:key="index">
+                <!--<view catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">S</view>-->
+                <view wx:if="{{index===0}}" catchtap="stateToggle" data-index="{{index}}" class="{{selectType==index || ''?'menu_item active':'menu_item'}}">S</view>
+                <view wx:else catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">XL</view>
               </block>
             </view>
           </view>
-          <view class="nums">
+
+          <view class="selects2">
+            <view class="title">颜色</view>
+            <view class="menuBox">
+              <block wx:for="{{8}}" wx:for-item="item" wx:key="index">
+                <!--<view catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">S</view>-->
+                <view wx:if="{{index===0}}" catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2==index || undefined?'menu_item active':'menu_item'}}">
+                  <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+                  <text class="name">黑色</text>
+                </view>
+                <view wx:else catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">
+                  <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+                  <text class="name">卡其</text>
+                </view>
+              </block>
+            </view>
+          </view>
+
+
+          <view class="nums" wx:if="{{false}}"><!--暂时不展示-->
             <view class="title">购买数量</view>
             <view class="num_desc">
               <image bindtap="modifyNumFun" data-type="0" class="ctrl_icon" src='{{ossDomain}}purchaser/productDetail/reduce_icon.png'></image>
@@ -143,9 +165,6 @@
               <view class="num_right">{{goodsItemData.minSales || '1件'}}以上，免运费</view>
             </view>-->
           </view>
-          <button class="submitBtn" type="primary" catchtap='gotoSave' wx:if="{{submitType===1}}">加入购物车</button>
-          <button class="submitBtn" type="primary" catchtap='gotoSave' wx:elif="{{submitType===2}}">提交订单</button>
-          <button class="submitBtn" type="primary" catchtap='gotoSave' wx:else>确定</button>
         </view>
       </view>
     </view>

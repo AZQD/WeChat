@@ -132,7 +132,16 @@ Page({
     this.setData({
       selectType: index
     });
-    cartParams[0].skuId = goodsItemData.skus[index].skuId;
+    // cartParams[0].skuId = goodsItemData.skus[index].skuId;
+  },
+  // 选择规格
+  stateToggle2: function (e) {
+    let index = Number(e.currentTarget.dataset.index);
+    let {goodsItemData, cartParams} = this.data;
+    this.setData({
+      selectType2: index
+    });
+    // cartParams[0].skuId = goodsItemData.skus[index].skuId;
   },
 
   // 加减商品数量
