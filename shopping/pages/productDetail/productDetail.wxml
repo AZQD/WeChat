@@ -1,5 +1,11 @@
+<skeleton selector="skeleton"
+          loading=""
+          bgcolor="transparent"
+          wx:if="{{showSkeleton}}">
+</skeleton>
+
 <view style="height:100%;position:fixed;width:100%;">
-  <scroll-view class="container" scroll-y="false" bindscroll="scroll" style="height:100%;" scroll-top="{{scrollTop}}">
+  <scroll-view class="container skeleton" scroll-y="false" bindscroll="scroll" style="height:100%;" scroll-top="{{scrollTop}}">
 
     <view class="customFixed" style="height:{{navHeight}}px;">
       <image catchtap="backFun" class="backBtn" src='/images/productDetail/back_icon.png'></image>
@@ -8,31 +14,31 @@
     </view>
 
     <view class="basicInfo">
-      <view class="goodImgBox">
+      <view class="goodImgBox skeleton-rect">
         <image class="goodImg" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
       </view>
 
       <view class="infos">
         <view class="desc1">
-          <text class="price1">￥<text class="num">268</text></text>
-          <text class="price2">¥300</text>
+          <view class="price1 skeleton-rect">￥<text class="num">268</text></view>
+          <view class="price2 skeleton-rect">¥300</view>
         </view>
-        <view class="desc2">太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套韩版潮</view>
-        <view class="desc3">百搭使用 针对受损发质 充分滋养柔亮</view>
+        <view class="desc2 skeleton-rect">太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套韩版潮</view>
+        <view class="desc3 skeleton-rect">百搭使用 针对受损发质 充分滋养柔亮</view>
 
-        <view class="right1">月销 249</view>
-        <view class="right2">99.9%</view>
+        <view class="right1">月销 <text class="skeleton-rect">249</text></view>
+        <view class="right2 skeleton-rect">99.9%</view>
         <view class="right3">好评率</view>
       </view>
 
       <view class="infos2">
         <view class="part">
           <text class="desc1">配送</text>
-          <text class="desc2">预计 3 天后送达</text>
+          <text class="desc2 skeleton-rect">预计 3 天后送达</text>
         </view>
         <view class="part">
           <text class="desc1">促销</text>
-          <view class="labels">
+          <view class="labels skeleton-rect">
             <block wx:for="{{4}}" wx:for-item="item" wx:for-index="index" wx:key="index">
               <text class="label">手机专享</text>
             </block>

@@ -23,7 +23,9 @@ Page({
 
     navHeight: 0, // 导航栏高度
     scrollTop: 0, // 滚动条距离顶部距离
-    initDetailTop: 0 // 初始详情距离顶部的距离
+    initDetailTop: 0, // 初始详情距离顶部的距离
+
+    showSkeleton: true,
   },
 
   /**
@@ -48,7 +50,13 @@ Page({
         goodsId: options.goodsId
       });
     }
-    this.getGoodsItem();
+    let that = this;
+    setTimeout(function () {
+      that.setData({
+        showSkeleton: false
+      })
+    }, 1500)
+    // this.getGoodsItem();
   },
 
   // 滚动条监听
