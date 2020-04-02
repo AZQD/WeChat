@@ -41,6 +41,11 @@ Page({
         path: 'orderDetail/orderDetail',
         name: '订单详情'
       },
+      // {
+      //   type: 0,
+      //   path: 'productDetail/productDetail',
+      //   name: '商品详情'
+      // }
     ],
   },
 
