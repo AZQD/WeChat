@@ -10,7 +10,7 @@
   <!--顶部信息-->
   <view class="headerBox">
     <view class="avatarInfo">
-      <image class="avatar skeleton-radius" src='/images/shop/goodImg.png' />
+      <image class="avatar skeleton-radius" src='/images/common/tempImg.png' />
       <text class="name skeleton-rect">185***849</text>
     </view>
   </view>
@@ -76,10 +76,10 @@
     <view class='swiperBox skeleton-rect'>
       <swiper circular="true">
         <swiper-item>
-          <image class="slideImage" src='/images/shop/goodImg.png'/>
+          <image class="slideImage" src='/images/common/tempImg.png'/>
         </swiper-item>
         <swiper-item>
-          <image class="slideImage" src='/images/shop/goodImg.png'/>
+          <image class="slideImage" src='/images/common/tempImg.png'/>
         </swiper-item>
       </swiper>
     </view>

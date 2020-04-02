@@ -16,7 +16,7 @@
 
     <view class="basicInfo">
       <view class="goodImgBox skeleton-rect">
-        <image class="goodImg" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+        <image class="goodImg" mode="aspectFit"  src='/images/common/tempImg.png'></image>
       </view>
 
       <view class="infos">
@@ -68,7 +68,7 @@
         </view>
         <view class="desc3">
           <view class="left">
-            <image class="avatar skeleton-radius" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+            <image class="avatar skeleton-radius" mode="aspectFit"  src='/images/common/tempImg.png'></image>
           </view>
           <view class="right">
             <view class="name skeleton-rect">庆**余年</view>
@@ -83,7 +83,7 @@
         <view class="imgList skeleton-rect" wx:if="{{!goodsItemData.goodsImage.length}}">
           <block wx:for="{{2}}" wx:for-item="item" wx:key="index">
             <view class="imgItem">
-              <image class="detailImg" mode="aspectFill"  src='/images/shop/goodImg.png'></image>
+              <image class="detailImg" mode="aspectFill"  src='/images/common/tempImg.png'></image>
             </view>
           </block>
         </view>
@@ -121,7 +121,7 @@
       <view class="shadowInfo">
         <image class="close_icon" catchtap="showShadowFun" src="/images/productDetail/close_icon.png"></image>
         <view class="choose">
-          <image class="left" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+          <image class="left" mode="aspectFit"  src='/images/common/tempImg.png'></image>
           <view class="right">
             <view class="desc1">价格：¥268-800</view>
             <view class="desc2">已选：黑色;L</view>
@@ -144,11 +144,11 @@
             <block wx:for="{{8}}" wx:for-item="item" wx:key="index">
               <!--<view catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">S</view>-->
               <view wx:if="{{index===0}}" catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2==index || undefined?'menu_item active':'menu_item'}}">
-                <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+                <image class="icon" mode="aspectFit"  src='/images/common/tempImg.png'></image>
                 <text class="name">黑色</text>
               </view>
               <view wx:else catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">
-                <image class="icon" mode="aspectFit"  src='/images/shop/goodImg.png'></image>
+                <image class="icon" mode="aspectFit"  src='/images/common/tempImg.png'></image>
                 <text class="name">卡其</text>
               </view>
             </block>

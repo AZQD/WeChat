@@ -6,7 +6,7 @@
 
         <view class="shopInfo">
           <image class="check_icon" src='/images/common/check_active_icon.png'></image>
-          <image class="shop_icon" mode="aspectFit" src='/images/shop/goodImg.png' />
+          <image class="shop_icon" mode="aspectFit" src='/images/common/tempImg.png' />
           <view class="shop_name">波司登羽绒服（海淀店）</view>
           <image class="more_icon" src='/images/common/more_icon.png'></image>
         </view>
@@ -23,7 +23,7 @@
               </view>
 
               <view class="item goodImgWrap">
-                <image class="goodImg" mode="aspectFit" src='/images/shop/goodImg.png'></image>
+                <image class="goodImg" mode="aspectFit" src='/images/common/tempImg.png'></image>
               </view>
 
               <view class="item descBox">
@@ -66,7 +66,7 @@
       </view>
     </view>
     <view class="right delete" catchtap="tempDelete">删除</view>
-    <view class="right" bindtap="toConfirmOrder">结算({{totalNumber}}8)</view>
+    <view class="right" bindtap="toConfirmOrder">结算(8)</view>
   </view>
 
 </view>

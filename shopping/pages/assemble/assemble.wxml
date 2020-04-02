@@ -5,35 +5,35 @@
     <view class="title">精选拼团</view>
     <view class="goodList">
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
       <view class="goodItem">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
       </view>
     </view>
@@ -77,7 +77,7 @@
   <view class="listBox">
     <view class="listItem">
       <view class="left">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
       </view>
       <view class="right">
         <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
@@ -103,7 +103,7 @@
     </view>
     <view class="listItem">
       <view class="left">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
       </view>
       <view class="right">
         <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
@@ -129,7 +129,7 @@
     </view>
     <view class="listItem">
       <view class="left">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
       </view>
       <view class="right">
         <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
@@ -155,7 +155,7 @@
     </view>
     <view class="listItem">
       <view class="left">
-        <image class="goodImg" src='/images/shop/goodImg.png' />
+        <image class="goodImg" src='/images/common/tempImg.png' />
       </view>
       <view class="right">
         <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>

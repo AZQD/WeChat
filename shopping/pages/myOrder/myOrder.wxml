@@ -24,7 +24,7 @@
           <!--类别-->
           <view class="list-type-item">
             <view class="list-type-item-left">
-              <image class="logo skeleton-rect" mode="aspectFit" src='/images/shop/goodImg.png' />
+              <image class="logo skeleton-rect" mode="aspectFit" src='/images/common/tempImg.png' />
               <view class="name skeleton-rect">波司登羽绒服（海淀店）</view>
               <image class="more_icon" src='/images/common/more_icon.png'></image>
             </view>
@@ -39,7 +39,7 @@
           <block  wx:for="{{2}}" wx:for-item="itemChild" wx:key="indexChild">
             <view class="list-good-item">
               <view class="list-good-item-left">
-                <image class="list-good-item-shop-img skeleton-rect" mode="aspectFit" src='/images/shop/goodImg.png'></image>
+                <image class="list-good-item-shop-img skeleton-rect" mode="aspectFit" src='/images/common/tempImg.png'></image>
               </view>
               <view class="list-good-item-middle">
                 <view class="list-good-item-desc1 skeleton-rect">{{itemChild.goodsTitle}}太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套</view>
