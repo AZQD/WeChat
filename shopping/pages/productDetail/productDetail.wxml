@@ -11,7 +11,7 @@
     <view class="customFixed" style="height:{{navHeight}}px;">
       <image catchtap="backFun" class="backBtn" src='/images/productDetail/back_icon.png'></image>
       <view class="title" style="opacity:{{scrollTop / 300 > 0.9 ? 0.9 : scrollTop / 300}}">商品详情</view>
-      <image class="cartBtn" src='/images/productDetail/cart_icon.png'></image>
+      <!--<image class="cartBtn" src='/images/productDetail/cart_icon.png'></image>-->
     </view>
 
     <view class="basicInfo">
