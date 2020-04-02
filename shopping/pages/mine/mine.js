@@ -15,12 +15,11 @@ Page({
 
   },
   onLoad: function () {
-    let that = this;
-    setTimeout(function () {
-      that.setData({
+    setTimeout( () => {
+      this.setData({
         showSkeleton: false
       })
-    }, 1500)
+    }, 1500);
   },
 
   onShow () {

@@ -1,4 +1,10 @@
-<view class="container">
+<skeleton selector="skeleton"
+          loading=""
+          bgcolor="transparent"
+          wx:if="{{showSkeleton}}">
+</skeleton>
+
+<view class="container skeleton">
 
   <view class="menuBox">
     <!--<view catchtap="stateToggle" data-type="6" class="{{orderStatus==6?'menu_item active':'menu_item'}}">待购单</view>-->
@@ -18,11 +24,11 @@
           <!--类别-->
           <view class="list-type-item">
             <view class="list-type-item-left">
-              <image class="logo" mode="aspectFit" src='/images/shop/goodImg.png' />
-              <view class="name">波司登羽绒服（海淀店）</view>
+              <image class="logo skeleton-rect" mode="aspectFit" src='/images/shop/goodImg.png' />
+              <view class="name skeleton-rect">波司登羽绒服（海淀店）</view>
               <image class="more_icon" src='/images/common/more_icon.png'></image>
             </view>
-            <view class="list-type-item-right">买家已发货</view>
+            <view class="list-type-item-right skeleton-rect">买家已发货</view>
             <!--<view wx:if="{{item.orderStatus === 2}}" class="list-type-item-right">买家已发货</view>-->
             <!--<view wx:if="{{item.orderStatus === 4}}" class="list-type-item-right"></view>-->
             <!--<view wx:if="{{item.orderStatus === 5}}" class="list-type-item-right"></view>-->
@@ -33,21 +39,21 @@
           <block  wx:for="{{2}}" wx:for-item="itemChild" wx:key="indexChild">
             <view class="list-good-item">
               <view class="list-good-item-left">
-                <image class="list-good-item-shop-img" mode="aspectFit" src='/images/shop/goodImg.png'></image>
+                <image class="list-good-item-shop-img skeleton-rect" mode="aspectFit" src='/images/shop/goodImg.png'></image>
               </view>
               <view class="list-good-item-middle">
-                <view class="list-good-item-desc1">{{itemChild.goodsTitle}}太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套</view>
-                <view class="list-good-item-desc2">{{itemChild.skuTitle}}69 藏青色;160/84A/M</view>
+                <view class="list-good-item-desc1 skeleton-rect">{{itemChild.goodsTitle}}太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套</view>
+                <view class="list-good-item-desc2 skeleton-rect">{{itemChild.skuTitle}}69 藏青色;160/84A/M</view>
               </view>
               <view class="list-good-item-right">
-                <view class="list-good-item-right-desc1">¥239</view>
-                <view class="list-good-item-right-desc2">x1</view>
+                <view class="list-good-item-right-desc1 skeleton-rect">¥239</view>
+                <view class="list-good-item-right-desc2 skeleton-rect">x1</view>
               </view>
             </view>
           </block>
           <view class="list-total-item">
-            <text class="list-total-item-desc1">共1件商品 合计:</text>
-            <text class="list-total-item-desc2">¥239</text>
+            <text class="list-total-item-desc1 skeleton-rect">共1件商品 合计:</text>
+            <text class="list-total-item-desc2 skeleton-rect">¥239</text>
           </view>
         </view>
 
@@ -55,9 +61,9 @@
         <view class="list-ctrls-item">
 
           <!--待付款-->
-          <view class="ctrlBtn" data-index="{{index}}" catchtap="deleteItem">删除订单</view>
-          <view class="ctrlBtn" data-index="{{index}}">查看物流</view>
-          <view class="ctrlBtn red" data-index="{{index}}">确认收货</view>
+          <view class="skeleton-rect ctrlBtn" data-index="{{index}}" catchtap="deleteItem">删除订单</view>
+          <view class="skeleton-rect ctrlBtn" data-index="{{index}}">查看物流</view>
+          <view class="skeleton-rect ctrlBtn red" data-index="{{index}}">确认收货</view>
           <!--<view class="ctrlBtn" catchtap="paySelect" data-index="{{index}}">立即支付</view>-->
           <!--<view class="ctrlBtn" catchtap="cancelItem" data-index="{{index}}" data-order-code="{{item.orderCode}}">取消订单</view>-->
 

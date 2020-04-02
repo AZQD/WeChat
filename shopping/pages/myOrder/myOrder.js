@@ -14,13 +14,22 @@ Page({
     pageIndex: 0,
     lastPage: false, // 是否最后一页
 
-    goodsItemData: {} // 详情接口数据（代购单才使用）
+    goodsItemData: {}, // 详情接口数据（代购单才使用）
+
+    showSkeleton: true,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    setTimeout( () => {
+      this.setData({
+        showSkeleton: false
+      })
+    }, 150000);
+
     if (options.orderStatus) {
       this.setData({
         orderStatus: Number(options.orderStatus)
