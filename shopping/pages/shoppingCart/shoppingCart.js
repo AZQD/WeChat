@@ -117,6 +117,7 @@ Page({
 
   // 选中和取消选中函数
   checkSkusFun (e) {
+    return;
     const {index, indexChild} = e.currentTarget.dataset;
     console.log(index, indexChild);
     let cartPageData = this.data.cartPageData;
