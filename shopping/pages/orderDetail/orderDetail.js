@@ -1,5 +1,6 @@
 let api = require('../../api.js');
 let appUtils = require('../../utils/appUtils.js');
+let app = getApp();
 Page({
 
   /**
@@ -18,6 +19,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 定义主题色
+    app.baseColorFun().then(res => {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff', // 前景颜色值，仅支持 #ffffff 和 #000000
+        backgroundColor: res, // 背景颜色值，有效值为十六进制颜色
+      });
+      this.setData({BASECOLOR: res});
+    });
+
     console.log('options', options);
     this.setData({
       orderCode: options.orderCode

@@ -21,14 +21,14 @@
 
       <view class="infos">
         <view class="desc1">
-          <view class="price1 skeleton-rect">￥<text class="num">268</text></view>
+          <view class="price1 skeleton-rect" style="color: {{BASECOLOR}}">￥<text class="num">268</text></view>
           <view class="price2 skeleton-rect">¥300</view>
         </view>
         <view class="desc2 skeleton-rect">太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套韩版潮</view>
         <view class="desc3 skeleton-rect">百搭使用 针对受损发质 充分滋养柔亮</view>
 
         <view class="right1">月销 <text class="skeleton-rect">249</text></view>
-        <view class="right2 skeleton-rect">99.9%</view>
+        <view class="right2 skeleton-rect" style="color: {{BASECOLOR}}">99.9%</view>
         <view class="right3">好评率</view>
       </view>
 
@@ -41,7 +41,7 @@
           <text class="desc1">促销</text>
           <view class="labels skeleton-rect">
             <block wx:for="{{4}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-              <text class="label">手机专享</text>
+              <text class="label" style="color: {{BASECOLOR}}; border-color: {{BASECOLOR}}">手机专享</text>
             </block>
           </view>
           <image class="more" src='/images/common/more_icon.png' />

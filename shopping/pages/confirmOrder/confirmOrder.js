@@ -1,5 +1,6 @@
 let api = require('../../api.js');
 let appUtils = require('../../utils/appUtils.js');
+let app = getApp();
 Page({
 
   /**
@@ -17,12 +18,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let BASECOLOR = appUtils.globalData.BASECOLOR;
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff', // 前景颜色值，仅支持 #ffffff 和 #000000
-      backgroundColor: BASECOLOR, // 背景颜色值，有效值为十六进制颜色
+    // 定义主题色
+    app.baseColorFun().then(res => {
+      wx.setNavigationBarColor({
+        frontColor: '#ffffff', // 前景颜色值，仅支持 #ffffff 和 #000000
+        backgroundColor: res, // 背景颜色值，有效值为十六进制颜色
+      });
+      this.setData({BASECOLOR: res});
     });
-    this.setData({BASECOLOR});
 
     // 获取当前页面的页桢，触发上个界面
     let pages = getCurrentPages();

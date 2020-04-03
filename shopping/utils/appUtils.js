@@ -1,6 +1,5 @@
 let app = getApp();
 let api = require('../api.js');
-console.log(12345);
 
 /**
  * Promise增加finally方法
