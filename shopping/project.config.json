@@ -69,13 +69,13 @@
 					"query": "goodsId=19",
 					"scene": null
 				},
-        {
-          "id": -1,
-          "name": "购物车",
-          "pathName": "pages/shoppingCart/shoppingCart",
-          "query": "",
-          "scene": null
-        },
+				{
+					"id": -1,
+					"name": "购物车",
+					"pathName": "pages/shoppingCart/shoppingCart",
+					"query": "",
+					"scene": null
+				},
 				{
 					"id": 3,
 					"name": "确认订单",

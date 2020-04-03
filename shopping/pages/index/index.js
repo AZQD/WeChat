@@ -1,4 +1,5 @@
 // pages/index/index.js
+let appUtils = require('../../utils/appUtils.js');
 Page({
 
   /**
@@ -6,21 +7,21 @@ Page({
    */
   data: {
     menuList: [
-      // {
-      //   type: 1,
-      //   path: 'index/index',
-      //   name: '首页'
-      // },
-      // {
-      //   type: 0,
-      //   path: 'productDetail/productDetail',
-      //   name: '商品详情'
-      // },
-      // {
-      //   type: 1,
-      //   path: 'shoppingCart/shoppingCart',
-      //   name: '购物车',
-      // },
+      {
+        type: 1,
+        path: 'index/index',
+        name: '首页'
+      },
+      {
+        type: 0,
+        path: 'productDetail/productDetail',
+        name: '商品详情'
+      },
+      {
+        type: 1,
+        path: 'shoppingCart/shoppingCart',
+        name: '购物车',
+      },
       {
         type: 0,
         path: 'confirmOrder/confirmOrder',
@@ -58,7 +59,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(appUtils.globalData);
   },
 
   jumpPageFun(e){

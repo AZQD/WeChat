@@ -1,5 +1,6 @@
 let app = getApp();
 let api = require('../api.js');
+console.log(12345);
 
 /**
  * Promise增加finally方法
@@ -206,7 +207,6 @@ module.exports = {
       url: url,
       data: {
         ...params,
-        wechatId: app.globalData.wechatId,
         openid: app.globalData.openid,
         sessionKey: wx.getStorageSync('sessionKey'),
         unionid: wx.getStorageSync('unionid')
@@ -314,7 +314,6 @@ module.exports = {
       let postData = Object.assign({
         // number: 1, // 购买数量
         payId: 1, // 支付方式（1：微信；2：支付宝；3：余额；4：货到付款；5：积分支付；）
-        wechatId: app.globalData.wechatId,
         openid: app.globalData.openid,
         sessionKey: wx.getStorageSync('sessionKey'),
         unionid: wx.getStorageSync('unionid')
@@ -335,7 +334,6 @@ module.exports = {
     return new Promise((resolve, reject) => {
       let postData = Object.assign({
         payId: 1, // 支付方式（1：微信；2：支付宝；3：余额；4：货到付款；5：积分支付；）
-        wechatId: app.globalData.wechatId,
         openid: app.globalData.openid,
         sessionKey: wx.getStorageSync('sessionKey'),
         unionid: wx.getStorageSync('unionid')

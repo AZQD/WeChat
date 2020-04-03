@@ -14,15 +14,13 @@
     "pages/nearby/nearby"
   ],
   "window": {
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#FF6D4C",
     "navigationBarTitleText": "天天商城",
-    "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": false
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#595D66",
-    "selectedColor": "#F15E34",
+    "color": "#000000",
+    "selectedColor": "#000000",
     "list": [
       {
         "pagePath": "pages/index/index",

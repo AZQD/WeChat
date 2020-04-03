@@ -49,7 +49,7 @@
             <view class="list-good-item-middle">
               <view class="list-good-item-desc1">{{itemChild.goodsTitle}}太平鸟男装 大毛领中长款加厚羽绒服后背刺绣休闲保暖外套</view>
               <view class="list-good-item-desc2">69 藏青色;160/84A/M</view>
-              <view class="list-good-item-desc3">订单完成赠送<text class="light">203</text>积分</view>
+              <view class="list-good-item-desc3">订单完成赠送<text class="light" style="color: {{BASECOLOR}}">203</text>积分</view>
             </view>
             <view class="list-good-item-right">
               <view class="list-good-item-right-desc1">¥239</view>
@@ -64,7 +64,7 @@
         </view>
         <view class="list-total-item">
           <text class="list-total-item-desc1">共3件商品 合计:</text>
-          <text class="list-total-item-desc2">¥890</text>
+          <text class="list-total-item-desc2" style="color: {{BASECOLOR}}">¥890</text>
         </view>
       </view>
     </view>
@@ -72,7 +72,7 @@
 
   <view class="discountBox">
     <view class="item">
-      <view class="left">使用2000积分抵扣<text class="light">2</text>元</view>
+      <view class="left">使用2000积分抵扣<text class="light" style="color: {{BASECOLOR}}">2</text>元</view>
       <view class="right">你需要和商家说点什么</view>
     </view>
     <view class="item">
@@ -90,9 +90,9 @@
     <view class="left">
       <text class="desc1">共3件</text>
       <text class="desc2">合计:</text>
-      <text class="desc3">¥890</text>
+      <text class="desc3" style="color: {{BASECOLOR}}">¥890</text>
     </view>
-    <view class="right" catchtap='choosePayFun'>提交订单</view>
+    <view class="right" catchtap='choosePayFun' style="background-color: {{BASECOLOR}}">提交订单</view>
   </view>
 
   <view class="shadowBox" catchtap="showShadowFun"  wx:if="{{showShadow}}">
