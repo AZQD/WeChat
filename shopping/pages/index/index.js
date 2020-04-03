@@ -9,6 +9,11 @@ Page({
   data: {
     menuList: [
       {
+        type: 0,
+        path: 'assemble/assemble',
+        name: 'DEMO'
+      },
+      {
         type: 1,
         path: 'index/index',
         name: '首页'

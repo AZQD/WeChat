@@ -47,6 +47,23 @@ Page({
         title: '新建地址'
       });
     }
+
+    this.chooseAddressFun();
+  },
+
+  //通讯地址（没有省市区编码，看后端是否支持）
+  chooseAddressFun:function () {
+    wx.chooseAddress({
+      success: function(res) {
+        console.log('通讯地址success',res);
+      },
+      fail:function (res) {
+        console.log('通讯地址fail',res);
+      },
+      complete:function(res){
+        console.log('通讯地址complete',res);
+      }
+    })
   },
 
   // 获取地址详情（编辑使用）

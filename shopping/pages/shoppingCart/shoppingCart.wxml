@@ -6,6 +6,8 @@
 
         <view class="shopInfo">
           <image class="check_icon" src='/images/common/check_active_icon.png'></image>
+          <!--<van-icon class="check_icon" name="checked" color="{{BASECOLOR}}" size="20px" />-->
+          <!--<van-icon class="check_icon" name="circle" color="#C8C8C8" size="20px" />-->
           <image class="shop_icon" mode="aspectFit" src='/images/common/tempImg.png' />
           <view class="shop_name">波司登羽绒服（海淀店）</view>
           <image class="more_icon" src='/images/common/more_icon.png'></image>
@@ -17,9 +19,10 @@
             <scroll-view scroll-y="{{false}}" class="cartItem" style="background-color: {{BASECOLOR}}" scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
 
               <view class="item checkWrap" bindtap="checkSkusFun" data-index="{{index}}" data-index-child="{{indexChild}}">
-                <image wx:if="{{index===0}}" class="check_icon" src='/images/common/check_active_icon.png'></image>
+                <image class="check_icon" src='/images/common/check_active_icon.png'></image>
                 <!--<image wx:if="{{itemChild.checked}}" class="check_icon" src='{{ossDomain}}common/check_active_icon.png'></image>-->
-                <image wx:else class="check_icon" src='/images/common/check_icon.png'></image>
+                <!--<van-icon class="check_icon" name="checked" color="{{BASECOLOR}}" size="20px" />-->
+                <!--<van-icon class="check_icon" name="circle" color="#C8C8C8" size="20px" />-->
               </view>
 
               <view class="item goodImgWrap">
@@ -32,9 +35,9 @@
                 <view class="desc3">
                   <view class="price" style="color: {{BASECOLOR}}">¥56.0</view>
                   <view class="ctrls">
-                    <image bindtap="modifyNumFun" data-type="0" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='/images/shoppingCart/reduce_icon2.png'></image>
+                    <image bindtap="modifyNumFun" data-type="0" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='/images/shoppingCart/reduce_icon.png'></image>
                     <input disabled type="number" class="num" value="{{itemChild.number}}1" />
-                    <image bindtap="modifyNumFun" data-type="1" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='/images/shoppingCart/add_icon2.png'></image>
+                    <image bindtap="modifyNumFun" data-type="1" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='/images/shoppingCart/add_icon.png'></image>
                   </view>
                 </view>
               </view>
@@ -55,6 +58,8 @@
     <view class="left">
       <image bindtap="checkAllSkusFun" class="check_icon" src='/images/common/check_active_icon.png'></image>
       <!--<image bindtap="checkAllSkusFun" class="check_icon" src='{{ossDomain}}common/{{checkAll && cartPageData.length?"check_active_icon":"check_icon"}}.png'></image>-->
+      <!--<van-icon class="check_icon" name="checked" color="{{BASECOLOR}}" size="20px" />-->
+      <!--<van-icon class="check_icon" name="circle" color="#C8C8C8" size="20px" />-->
       <view class="name">全选</view>
       <view class="nums">
         <view class="desc1">合计：<text class="light" style="color: {{BASECOLOR}}">¥268</text></view>
