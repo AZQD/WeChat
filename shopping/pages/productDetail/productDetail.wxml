@@ -123,7 +123,7 @@
         <view class="choose">
           <image class="left" mode="aspectFit"  src='/images/common/tempImg.png'></image>
           <view class="right">
-            <view class="desc1">价格：¥268-800</view>
+            <view class="desc1" style="color: {{BASECOLOR}}">价格：¥268-800</view>
             <view class="desc2">已选：黑色;L</view>
           </view>
         </view>
@@ -131,9 +131,10 @@
           <view class="title">尺码</view>
           <view class="menuBox">
             <block wx:for="{{7}}" wx:for-item="item" wx:key="index">
-              <!--<view catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">S</view>-->
-              <view wx:if="{{index===0}}" catchtap="stateToggle" data-index="{{index}}" class="{{selectType==index || ''?'menu_item active':'menu_item'}}">S</view>
-              <view wx:else catchtap="stateToggle" data-index="{{index}}" class="{{selectType===index?'menu_item active':'menu_item'}}">XL</view>
+              <view catchtap="stateToggle" data-index="{{index}}"
+                    class="menu_item"
+                    style="background-color: {{selectType===index?BASECOLOROPACITY:'#F5F6F8'}}; border-color: {{selectType===index?BASECOLOR:'#F5F6F8'}}"
+                    >S</view>
             </block>
           </view>
         </view>
@@ -143,13 +144,12 @@
           <view class="menuBox">
             <block wx:for="{{8}}" wx:for-item="item" wx:key="index">
               <!--<view catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">S</view>-->
-              <view wx:if="{{index===0}}" catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2==index || undefined?'menu_item active':'menu_item'}}">
+              <view catchtap="stateToggle2" data-index="{{index}}"
+                    class="menu_item"
+                    style="color: {{selectType2===index?BASECOLOR:'#1A1A1A'}};background-color: {{selectType2===index?BASECOLOROPACITY:'#F5F6F8'}}; border-color: {{selectType2===index?BASECOLOR:'#F5F6F8'}}"
+                    >
                 <image class="icon" mode="aspectFit"  src='/images/common/tempImg.png'></image>
                 <text class="name">黑色</text>
-              </view>
-              <view wx:else catchtap="stateToggle2" data-index="{{index}}" class="{{selectType2===index?'menu_item active':'menu_item'}}">
-                <image class="icon" mode="aspectFit"  src='/images/common/tempImg.png'></image>
-                <text class="name">卡其</text>
               </view>
             </block>
           </view>
