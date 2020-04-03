@@ -8,11 +8,11 @@
 
   <view class="menuBox">
     <!--<view catchtap="stateToggle" data-type="6" class="{{orderStatus==6?'menu_item active':'menu_item'}}">待购单</view>-->
-    <view catchtap="stateToggle" data-type="0" class="{{orderStatus==0?'menu_item active':'menu_item'}}">全部</view>
-    <view catchtap="stateToggle" data-type="2" class="{{orderStatus==2?'menu_item active':'menu_item'}}">待付款</view>
-    <view catchtap="stateToggle" data-type="4" class="{{orderStatus==4?'menu_item active':'menu_item'}}">待发货</view>
-    <view catchtap="stateToggle" data-type="5" class="{{orderStatus==5?'menu_item active':'menu_item'}}">待收货</view>
-    <view catchtap="stateToggle" data-type="1" class="{{orderStatus==1?'menu_item active':'menu_item'}}">待评价</view>
+    <view catchtap="stateToggle" data-type="0" class="menu_item" style="color: {{orderStatus===0?BASECOLOR:'#666666'}};">全部</view>
+    <view catchtap="stateToggle" data-type="2" class="menu_item" style="color: {{orderStatus===2?BASECOLOR:'#666666'}};">待付款</view>
+    <view catchtap="stateToggle" data-type="4" class="menu_item" style="color: {{orderStatus===4?BASECOLOR:'#666666'}};">待发货</view>
+    <view catchtap="stateToggle" data-type="5" class="menu_item" style="color: {{orderStatus===5?BASECOLOR:'#666666'}};">待收货</view>
+    <view catchtap="stateToggle" data-type="1" class="menu_item" style="color: {{orderStatus===1?BASECOLOR:'#666666'}};">待评价</view>
   </view>
   <view class="listBox" wx:if="{{listData.length>0}}">
     <!--购物车分页列表-->
@@ -28,7 +28,7 @@
               <view class="name skeleton-rect">波司登羽绒服（海淀店）</view>
               <image class="more_icon" src='/images/common/more_icon.png'></image>
             </view>
-            <view class="list-type-item-right skeleton-rect">买家已发货</view>
+            <view class="list-type-item-right skeleton-rect" style="color: {{BASECOLOR}}">买家已发货</view>
             <!--<view wx:if="{{item.orderStatus === 2}}" class="list-type-item-right">买家已发货</view>-->
             <!--<view wx:if="{{item.orderStatus === 4}}" class="list-type-item-right"></view>-->
             <!--<view wx:if="{{item.orderStatus === 5}}" class="list-type-item-right"></view>-->
@@ -63,7 +63,7 @@
           <!--待付款-->
           <view class="skeleton-rect ctrlBtn" data-index="{{index}}" catchtap="deleteItem">删除订单</view>
           <view class="skeleton-rect ctrlBtn" data-index="{{index}}">查看物流</view>
-          <view class="skeleton-rect ctrlBtn red" data-index="{{index}}">确认收货</view>
+          <view class="skeleton-rect ctrlBtn red" data-index="{{index}}" style="color: {{BASECOLOR}}; border-color: {{BASECOLOR}}">确认收货</view>
           <!--<view class="ctrlBtn" catchtap="paySelect" data-index="{{index}}">立即支付</view>-->
           <!--<view class="ctrlBtn" catchtap="cancelItem" data-index="{{index}}" data-order-code="{{item.orderCode}}">取消订单</view>-->
 

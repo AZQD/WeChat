@@ -30,7 +30,7 @@
   </view>
 
   <view class="bottomBox" bindtap="toAddAddress">
-    <view class="bottomBtn">
+    <view class="bottomBtn" style="background-color: {{BASECOLOR}}">
       <image class="add_icon" src='/images/addressList/add_icon.png'></image>
       <text class="text">新建收货地址</text>
     </view>

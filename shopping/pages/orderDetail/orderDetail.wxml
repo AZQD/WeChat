@@ -36,7 +36,7 @@
               <view class="name skeleton-rect">波司登羽绒服（海淀店）</view>
               <image class="more_icon" src='/images/common/more_icon.png'></image>
             </view>
-            <view class="list-type-item-right skeleton-rect">买家已发货</view>
+            <view class="list-type-item-right skeleton-rect" style="color: {{BASECOLOR}}">买家已发货</view>
             <!--<view wx:if="{{item.orderStatus === 2}}" class="list-type-item-right">买家已发货</view>-->
             <!--<view wx:if="{{item.orderStatus === 4}}" class="list-type-item-right"></view>-->
             <!--<view wx:if="{{item.orderStatus === 5}}" class="list-type-item-right"></view>-->
@@ -70,7 +70,7 @@
 
           <!--待付款-->
           <view class="skeleton-rect ctrlBtn" data-index="{{index}}">查看物流</view>
-          <view class="skeleton-rect ctrlBtn red" data-index="{{index}}">确认收货</view>
+          <view class="skeleton-rect ctrlBtn red" data-index="{{index}}" style="color: {{BASECOLOR}}; border-color: {{BASECOLOR}}">确认收货</view>
           <!--<view class="ctrlBtn" catchtap="paySelect" data-index="{{index}}">立即支付</view>-->
           <!--<view class="ctrlBtn" catchtap="cancelItem" data-index="{{index}}" data-order-code="{{item.orderCode}}">取消订单</view>-->
 
@@ -114,7 +114,7 @@
       </view>
       <view class="item total">
         <view class="left">应付合计</view>
-        <view class="right skeleton-rect">¥560{{orderDetailData.totalPrice}}</view>
+        <view class="right skeleton-rect" style="color: {{BASECOLOR}}">¥560{{orderDetailData.totalPrice}}</view>
       </view>
     </view>
   </view>

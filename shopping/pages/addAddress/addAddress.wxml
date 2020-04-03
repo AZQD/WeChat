@@ -42,14 +42,14 @@
   </view>
 
   <view class="bottomBox" wx:if="{{!addressId}}">
-    <view class="bottomBtn" bindtap="saveAddressFun">保存</view>
+    <view class="bottomBtn" bindtap="saveAddressFun" style="background-color: {{BASECOLOR}}">保存</view>
   </view>
 
   <view class="bottomBox bottomBoxConfirm" wx:if="{{addressId}}">
-    <view class="bottomBtn" bindtap="saveAddressFun">确认</view>
+    <view class="bottomBtn" bindtap="saveAddressFun" style="background-color: {{BASECOLOR}}">确认</view>
   </view>
   <view class="bottomBox bottomBoxDelete" wx:if="{{addressId}}">
-    <view class="bottomBtn" bindtap="deleteAddressFun">删除地址</view>
+    <view class="bottomBtn" bindtap="deleteAddressFun" style="background-color: {{BASECOLOR}}">删除地址</view>
   </view>
 
 </view>
