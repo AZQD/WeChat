@@ -28,6 +28,6 @@ App({
     openid: null,
     BASECOLOR: '#FFFFFF',
     appid: 'wxda6d9bc5c09906a2',
-    ossDomain: 'https://file.gongjian.mobi/wechat/gongjian/images/'// 阿里云图片域名
+    ossDomain: 'https://file.test.mobi/wechat/test/images/'// 阿里云图片域名
   }
 });

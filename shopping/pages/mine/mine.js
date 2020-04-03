@@ -10,8 +10,6 @@ Page({
 
     showShadow: false,
 
-    closeMini: false, // 关闭掉小程序
-
     showSkeleton: true,
 
   },
@@ -119,23 +117,6 @@ Page({
   showShadowFun () {
     this.setData({
       showShadow: !this.data.showShadow
-    });
-  },
-
-  // 清空用户身份，调试使用
-  userRoleClearFun: function () {
-    appUtils.tips.confirm('', '确认清空吗？', () => {
-      appUtils.post(api.user_role_clear).then((res) => {
-        wx.clearStorage({
-          success: (res) => {
-            console.log('清理本地数据缓存', res);
-            this.setData({
-              closeMini: true
-            });
-          }
-        });
-        console.log('清空用户身份接口调用成功');
-      });
     });
   },
 

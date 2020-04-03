@@ -241,7 +241,7 @@ module.exports = {
         success: function (res) {
           for (let i = 0; i < res.tempFilePaths.length; i++) {
             wx.uploadFile({
-              url: 'https://gateway.gongjian.mobi/file/upload',
+              url: 'https://gateway.test.mobi/file/upload',
               filePath: res.tempFilePaths[i],
               name: 'filePath', // 文件对应的 key，开发者在服务端可以通过这个 key 获取文件的二进制内容，是后端预先定义的
               formData: {
@@ -279,7 +279,7 @@ module.exports = {
         camera: 'back',
         success: function (res) {
           wx.uploadFile({
-            url: 'https://gateway.gongjian.mobi/file/upload',
+            url: 'https://gateway.test.mobi/file/upload',
             filePath: res.tempFilePath,
             name: 'filePath', // 文件对应的 key，开发者在服务端可以通过这个 key 获取文件的二进制内容，是后端预先定义的
             formData: {
