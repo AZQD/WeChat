@@ -59,6 +59,12 @@ Page({
     });
   },
 
+  toOrder(){
+    wx.navigateTo({
+      url: '/pages/myOrder/myOrder'
+    });
+  },
+
   // 页面跳转
   jumpPageFun: function (e) {
     let type = Number(e.currentTarget.dataset.type);

@@ -20,7 +20,7 @@
   <view class="contentWrap">
 
     <view class="orderBox">
-      <view class="titleInfo">
+      <view class="titleInfo" catchtap="toOrder">
         <view class="left"><text class="">我的订单</text></view>
         <view class="right">全部订单</view>
         <image class="more" src='/images/common/more_icon.png' />

@@ -78,6 +78,7 @@ Page({
 
   // 加减购物车skus的数量
   modifyNumFun (e) {
+    return;
     const {index, indexChild, type} = e.currentTarget.dataset;
     console.log(index, indexChild, type);
     let cartPageData = this.data.cartPageData;
@@ -268,7 +269,7 @@ Page({
   tempDelete () {
     appUtils.tips.confirm('', '确认将这2个商品删除吗？', () => {
       appUtils.post(api.order_delete, {
-        orderCode
+        orderCode: 1
       }).then((res) => {
         console.log('删除订单', res);
         let listData = this.data.listData;
