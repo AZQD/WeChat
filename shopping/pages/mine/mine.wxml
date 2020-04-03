@@ -9,6 +9,7 @@
 
   <!--顶部信息-->
   <view class="headerBox">
+    <image class="headBg" src='/images/mine/headBg.png' />
     <view class="avatarInfo">
       <image class="avatar skeleton-radius" src='/images/common/tempImg.png' />
       <text class="name skeleton-rect">185***849</text>

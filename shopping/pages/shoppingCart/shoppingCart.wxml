@@ -32,13 +32,9 @@
                 <view class="desc3">
                   <view class="price" style="color: {{BASECOLOR}}">¥56.0</view>
                   <view class="ctrls">
-                    <!--<image bindtap="modifyNumFun" data-type="0" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='{{ossDomain}}common/reduce_icon2.png'></image>-->
-                    <!--<input disabled type="number" class="num" value="{{itemChild.number}}1" />-->
-                    <!--<image bindtap="modifyNumFun" data-type="1" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='{{ossDomain}}common/add_icon2.png'></image>-->
-
-                    <text bindtap="modifyNumFun" data-type="0" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon">-</text>
+                    <image bindtap="modifyNumFun" data-type="0" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='/images/shoppingCart/add_icon.png'></image>
                     <input disabled type="number" class="num" value="{{itemChild.number}}1" />
-                    <text bindtap="modifyNumFun" data-type="1" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon">+</text>
+                    <image bindtap="modifyNumFun" data-type="1" data-index="{{index}}" data-index-child="{{indexChild}}" class="ctrl_icon" src='/images/shoppingCart/reduce_icon.png'></image>
                   </view>
                 </view>
               </view>

@@ -11,11 +11,10 @@ App({
   baseColorFun (url, params) {
     return new Promise((resolve, reject) => {
       setTimeout( () => {
-        // let BASECOLOR = '#FF6D4C';
-        let BASECOLOR = '#BBFFAA';
+        let BASECOLOR = '#F15E34';
         this.globalData.BASECOLOR = BASECOLOR;
         wx.setTabBarStyle({
-          color: '#000000', // tab 上的文字默认颜色
+          color: '#595D66', // tab 上的文字默认颜色
           selectedColor: BASECOLOR, // tab 上的文字选中时的颜色
           backgroundColor: '#FFFFFF', // tab 的背景色
         });
