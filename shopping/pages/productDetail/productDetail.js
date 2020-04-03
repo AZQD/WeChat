@@ -39,7 +39,10 @@ Page({
         frontColor: '#ffffff', // 前景颜色值，仅支持 #ffffff 和 #000000
         backgroundColor: res, // 背景颜色值，有效值为十六进制颜色
       });
-      this.setData({BASECOLOR: res});
+      this.setData({
+        BASECOLOR: res,
+        BASECOLOROPACITY: appUtils.hexToRgba(res, 0.1).rgba
+      });
     });
 
 

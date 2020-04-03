@@ -388,5 +388,25 @@ module.exports = {
     } else {
       this.tips.toast(res.data.message || '订单创建失败');
     }
+  },
+
+  // 将rgb颜色转成hex
+  colorRGB2Hex (color) {
+    let rgb = color.split(',');
+    let r = parseInt(rgb[0].split('(')[1]);
+    let g = parseInt(rgb[1]);
+    let b = parseInt(rgb[2].split(')')[0]);
+
+    return hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  },
+  // 将hex颜色转成rgba
+  hexToRgba (hex, opacity) {
+    let RGBA = "rgba(" + parseInt("0x" + hex.slice(1, 3)) + "," + parseInt("0x" + hex.slice(3, 5)) + "," + parseInt("0x" + hex.slice(5, 7)) + "," + opacity + ")";
+    return {
+      red: parseInt("0x" + hex.slice(1, 3)),
+      green: parseInt("0x" + hex.slice(3, 5)),
+      blue: parseInt("0x" + hex.slice(5, 7)),
+      rgba: RGBA
+    }
   }
 };

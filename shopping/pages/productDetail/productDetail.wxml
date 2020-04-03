@@ -56,14 +56,14 @@
         <view class="desc1">
           <view class="left">用户评价<text class="num skeleton-rect">(2344)</text></view>
           <view class="right">
-            <text class="rate skeleton-rect">99.9%</text>
+            <text class="rate skeleton-rect" style="color: {{BASECOLOR}}">99.9%</text>
             <text class="name">好评率</text>
             <image class="more" src='/images/common/more_icon.png' />
           </view>
         </view>
         <view class="desc2 skeleton-rect">
           <block wx:for="{{3}}" wx:for-item="item" wx:for-index="index" wx:key="index">
-            <text class="label">保暖性强 1235</text>
+            <text class="label" style="color: {{BASECOLOR}}; background-color: {{BASECOLOROPACITY}}">保暖性强 1235</text>
           </block>
         </view>
         <view class="desc3">
@@ -111,8 +111,8 @@
     </view>
 
     <!--catchtap='gotoSave'-->
-    <view class="ctrlBtn ctrlBtn1" catchtap="showShadowFun" data-type="1">加入购物车</view>
-    <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2">立即购买</view>
+    <view class="ctrlBtn ctrlBtn1" catchtap="showShadowFun" data-type="1" style="color: {{BASECOLOR}}; background-color: {{BASECOLOROPACITY}}">加入购物车</view>
+    <view class="ctrlBtn ctrlBtn2" catchtap="showShadowFun" data-type="2" style="background-color: {{BASECOLOR}}">立即购买</view>
   </view>
 
   <!--提交订单前，选择的遮罩-->
