@@ -42,7 +42,7 @@ Component({
     const that = this;
     //绘制背景
     wx.createSelectorQuery().selectAll(`.${this.data.selector}`).boundingClientRect().exec(function (res) {
-      console.log('skeleton', res);
+      // console.log('skeleton', res);
       that.setData({
         'systemInfo.height': res[0][0].height + res[0][0].top
       })
@@ -61,7 +61,7 @@ Component({
 
       //绘制不带样式的节点
       wx.createSelectorQuery().selectAll(`.${this.data.selector} >>> .${this.data.selector}-rect`).boundingClientRect().exec(function (res) {
-        console.log('skeleton-rect', res);
+        // console.log('skeleton-rect', res);
         that.setData({
           skeletonRectLists: res[0]
         })
@@ -72,7 +72,7 @@ Component({
       const that = this;
 
       wx.createSelectorQuery().selectAll(`.${this.data.selector} >>> .${this.data.selector}-radius`).boundingClientRect().exec(function (res) {
-        console.log('skeleton-radius', res);
+        // console.log('skeleton-radius', res);
         that.setData({
           skeletonCircleLists: res[0]
         })

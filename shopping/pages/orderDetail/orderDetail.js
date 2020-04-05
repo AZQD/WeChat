@@ -28,7 +28,7 @@ Page({
       this.setData({BASECOLOR: res});
     });
 
-    console.log('options', options);
+    // console.log('options', options);
     this.setData({
       orderCode: options.orderCode
     });

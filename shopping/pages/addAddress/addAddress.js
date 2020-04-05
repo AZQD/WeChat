@@ -34,7 +34,7 @@ Page({
       this.setData({BASECOLOR: res});
     });
 
-    console.log('options', options);
+    // console.log('options', options);
     let addressId = Number(options.addressId);
     if (addressId) {
       this.setData({addressId});
@@ -55,13 +55,13 @@ Page({
   chooseAddressFun:function () {
     wx.chooseAddress({
       success: function(res) {
-        console.log('通讯地址success',res);
+        // console.log('通讯地址success',res);
       },
       fail:function (res) {
-        console.log('通讯地址fail',res);
+        // console.log('通讯地址fail',res);
       },
       complete:function(res){
-        console.log('通讯地址complete',res);
+        // console.log('通讯地址complete',res);
       }
     })
   },

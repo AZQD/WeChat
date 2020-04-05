@@ -31,7 +31,7 @@ Page({
     let pages = getCurrentPages();
     if (pages.length > 1) {
       let prePage = pages[pages.length - 2];
-      console.log('上一层页面', prePage.data);
+      // console.log('上一层页面', prePage.data);
       this.setData({
         confirmOrderData: prePage.data.confirmOrderData
       });
