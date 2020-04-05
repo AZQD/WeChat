@@ -105,8 +105,8 @@
         <text class="name">店铺</text>
       </view>
       <view class="ctrlItem">
-        <image class="icon" src='/images/productDetail/storage_icon.png'></image>
-        <!--<van-icon class="icon" name="star-o" color="{{BASECOLOR}}" size="24px" />-->
+        <!--<image class="icon" src='/images/productDetail/storage_icon.png'></image>-->
+        <van-icon class="icon" name="star-o" color="{{BASECOLOR}}" size="24px" />
         <!--<van-icon class="icon" name="star-o" color="#535353" size="24px" />-->
         <text class="name">收藏</text>
       </view>

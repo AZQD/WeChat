@@ -13,9 +13,9 @@
         </view>
         <view class="ctrls">
           <view class="part" wx:if="{{addressId!==item.addressId}}">
-            <image wx:if="{{index===0}}" class="ctrl_icon" src='/images/common/check_active_icon.png'></image>
-            <image wx:else class="ctrl_icon" src='/images/common/check_icon.png'></image>
-            <!--<van-icon class="ctrl_icon" name="checked" color="{{BASECOLOR}}" size="20px" />-->
+            <!--<image wx:if="{{index===0}}" class="ctrl_icon" src='/images/common/check_active_icon.png'></image>-->
+            <!--<image wx:else class="ctrl_icon" src='/images/common/check_icon.png'></image>-->
+            <van-icon class="ctrl_icon" name="checked" color="{{BASECOLOR}}" size="20px" />
             <!--<van-icon class="ctrl_icon" name="circle" color="#C8C8C8" size="20px" />-->
             <text class="ctrl_desc">设为默认地址</text>
           </view>
