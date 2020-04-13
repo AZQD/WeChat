@@ -16,7 +16,7 @@
         <view class="cartList">
 
           <block wx:for="{{2}}" wx:for-item="itemChild" wx:for-index="indexChild" wx:key="indexChild">
-            <scroll-view scroll-y="{{false}}" class="cartItem" style="background-color: {{BASECOLOR}}" scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
+            <view scroll-y="{{false}}" class="cartItem" style="background-color: {{BASECOLOR}}" scroll-x="true" scroll-left="{{scrollLeft?'0':''}}">
 
               <view class="item checkWrap" bindtap="checkSkusFun" data-index="{{index}}" data-index-child="{{indexChild}}">
                 <!--<image class="check_icon" src='/images/common/check_active_icon.png'></image>-->
@@ -43,7 +43,7 @@
               </view>
 
               <view class="delBox" bindtap="deleteSkusFun" data-index="{{index}}" data-index-child="{{indexChild}}">删除</view>
-            </scroll-view>
+            </view>
             <view class="lineDepart"></view>
           </block>
         </view>
