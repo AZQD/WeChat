@@ -4,7 +4,7 @@
           wx:if="{{showSkeleton}}">
 </skeleton>
 
-<scroll-view class="container" scroll-y="{{true}}" style="height:100%;" scroll-top="{{scrollTop}}">
+<view class="container" scroll-y="{{true}}" style="height:100%;" scroll-top="{{scrollTop}}">
 
   <view class="skeleton">
 
@@ -180,4 +180,4 @@
     </view>
   </view>
 
-</scroll-view>
+</view>
