@@ -47,7 +47,8 @@ Page({
       "pages/action-sheet/action-sheet",
       "pages/contactService/contactService",
       "pages/contentCheck/contentCheck",
-      "pages/logistics/logistics"
+      "pages/logistics/logistics",
+      "pages/wxacode/wxacode"
     ],
   },
 

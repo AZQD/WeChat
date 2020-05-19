@@ -234,6 +234,12 @@
 					"name": "云函数-物流助手",
 					"pathName": "pages/logistics/logistics",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数-小程序码",
+					"pathName": "pages/wxacode/wxacode",
+					"scene": null
 				}
 			]
 		}
