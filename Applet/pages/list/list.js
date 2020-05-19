@@ -49,7 +49,8 @@ Page({
       "pages/contentCheck/contentCheck",
       "pages/logistics/logistics",
       "pages/wxacode/wxacode",
-      "pages/nearbyPoi/nearbyPoi"
+      "pages/nearbyPoi/nearbyPoi",
+      "pages/img/img"
     ],
   },
 
