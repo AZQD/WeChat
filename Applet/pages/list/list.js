@@ -48,7 +48,8 @@ Page({
       "pages/contactService/contactService",
       "pages/contentCheck/contentCheck",
       "pages/logistics/logistics",
-      "pages/wxacode/wxacode"
+      "pages/wxacode/wxacode",
+      "pages/nearbyPoi/nearbyPoi"
     ],
   },
 

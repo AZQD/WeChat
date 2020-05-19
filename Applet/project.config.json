@@ -240,6 +240,12 @@
 					"name": "云函数-小程序码",
 					"pathName": "pages/wxacode/wxacode",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数-附近的小程序",
+					"pathName": "pages/nearbyPoi/nearbyPoi",
+					"scene": null
 				}
 			]
 		}
