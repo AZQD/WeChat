@@ -1,0 +1,3 @@
+<view class="qrImgBox">
+  <image wx:if="{{qrImg}}" src="{{qrImg}}"></image>
+</view>
