@@ -1,12 +1,12 @@
 // pages/contentCheck/contentCheck.js
+const regeneratorRuntime = require('../../utils/runtime');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    pickerHidden: true,
-    chosen: ''
+    imageArr: []
   },
 
   /**
@@ -26,7 +26,7 @@ Page({
       },
       success(res) {
         console.log('检查文本内容是否违规：', res.result)
-        if (res.result.errCode == 87014) {
+        if (res.result.errCode === 87014) {
           wx.showToast({
             icon: 'none',
             title: '文字违规',
@@ -40,6 +40,68 @@ Page({
     })
   },
 
+  imgSecCheckFun(img){
+    return new Promise(function (resolve, reject) {
+      //  调用ContentCheck云函数检查图片是否违规
+      wx.cloud.callFunction({
+        name: 'ContentCheck',
+        data: {
+          img,
+        },
+        success(res) {
+          console.log('检查图片内容是否违规：', res.result)
+          if (res.result.errCode === 87014) {
+            // wx.showToast({
+            //   icon: 'none',
+            //   title: '图片违规',
+            // })
+          }else if(res.result.imageR && res.result.imageR.errCode === 0){
+            // wx.showToast({
+            //   title: '图片符合规范',
+            // });
+            resolve(true);
+          }
+        }
+      })
+    });
+  },
+
+  chooseImage(){
+    wx.chooseImage({
+      count: 9, // 默认9，最多是九张
+      sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+      sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+      success: (res)=> {
+        console.log(res);
+        // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+        let tempFilePaths = res.tempFilePaths;
+        this.chooseImageAfter(tempFilePaths);
+      }
+    })
+  },
+
+  async chooseImageAfter (tempFilePaths) {
+    // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
+    let checkImgResult = true;
+    for (let i = 0; i < tempFilePaths.length; i++) {
+      checkImgResult = await this.imgSecCheckFun(tempFilePaths[i]);
+      if (!checkImgResult) break; // 图片违规，取消渲染；
+    }
+    if(checkImgResult){
+      this.setData({
+        imageArr: tempFilePaths
+      });
+      wx.showToast({
+        title: '图片符合规范',
+      });
+    }else{
+      wx.showToast({
+        icon: 'none',
+        title: '图片违规哦',
+      })
+    }
+  },
+
   formSubmit(e) {
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     let inputVal = e.detail.value.input;
@@ -48,6 +110,9 @@ Page({
 
   formReset(e) {
     // console.log('form发生了reset事件，携带数据为：', e.detail.value)
+    this.setData({
+      imageArr: []
+    });
   },
 
   /**
