@@ -5,29 +5,49 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    pickerHidden: true,
+    chosen: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  },
+
+  msgSecCheckFun(msg){
     //  调用ContentCheck云函数检查文字是否违规
     wx.cloud.callFunction({
       name: 'ContentCheck',
       data: {
-        msg: 'hello',
+        msg,
         // msg: '特3456书yuuo莞6543李zxcz蒜7782法fgnv级完2347全dfji试3726测asad感3847知qwez到',
       },
       success(res) {
         console.log('检查文本内容是否违规：', res.result)
         if (res.result.errCode == 87014) {
           wx.showToast({
+            icon: 'none',
             title: '文字违规',
+          })
+        }else if(res.result.msgR && res.result.msgR.errCode === 0){
+          wx.showToast({
+            title: '文字符合规范',
           })
         }
       }
     })
+  },
+
+  formSubmit(e) {
+    // console.log('form发生了submit事件，携带数据为：', e.detail.value)
+    let inputVal = e.detail.value.input;
+    this.msgSecCheckFun(inputVal);
+  },
+
+  formReset(e) {
+    // console.log('form发生了reset事件，携带数据为：', e.detail.value)
   },
 
   /**

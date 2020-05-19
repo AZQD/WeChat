@@ -1,2 +1,23 @@
-<!--pages/contentCheck/contentCheck.wxml-->
-<text>pages/contentCheck/contentCheck.wxml</text>
+<view class="container">
+  <view class="page-body">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+
+      <view class="page-section">
+        <!--<view class="page-section-title">input</view>-->
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__bd" style="margin: 30rpx 0" >
+              <textarea class="weui-input" name="input" placeholder="这是一个输入框" id="" cols="30" rows="10"></textarea>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="btn-area">
+        <button style="margin: 30rpx 0" type="primary" formType="submit">Submit</button>
+        <button style="margin: 30rpx 0" formType="reset">Reset</button>
+      </view>
+    </form>
+  </view>
+
+</view>
