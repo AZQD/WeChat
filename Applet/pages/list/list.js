@@ -45,7 +45,8 @@ Page({
       "pages/skeleton/demo-position",
       "pages/skeleton/demo-component",
       "pages/action-sheet/action-sheet",
-      "pages/contactService/contactService"
+      "pages/contactService/contactService",
+      "pages/contentCheck/contentCheck"
     ],
   },
 

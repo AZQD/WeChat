@@ -1,5 +1,6 @@
 {
 	"description": "项目配置文件。",
+	"cloudfunctionRoot": "functions/",
 	"setting": {
 		"urlCheck": true,
 		"es6": true,
@@ -21,6 +22,7 @@
 	"projectname": "Applet",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -218,6 +220,13 @@
 					"id": -1,
 					"name": "联系客服",
 					"pathName": "pages/contactService/contactService",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数-内容安全",
+					"pathName": "pages/contentCheck/contentCheck",
 					"scene": null
 				}
 			]
