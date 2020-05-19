@@ -228,6 +228,12 @@
 					"name": "云函数-内容安全",
 					"pathName": "pages/contentCheck/contentCheck",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数-物流助手",
+					"pathName": "pages/logistics/logistics",
+					"scene": null
 				}
 			]
 		}
