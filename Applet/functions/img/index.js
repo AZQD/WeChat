@@ -8,10 +8,18 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
 
   try {
-    let imgR = await cloud.openapi.img.scanQRCode(event);
+    let aiCropR;
+    let scanQRCodeR;
+    if(event.api === 'aiCrop'){ // 暂未使用
+      aiCropR = await cloud.openapi.img.aiCrop(event);
+    }
+    if(event.api === 'scanQRCode'){
+      scanQRCodeR = await cloud.openapi.img.scanQRCode(event);
+    }
 
     return {
-      imgR
+      aiCropR,
+      scanQRCodeR
     }
   } catch (e) {
     return e

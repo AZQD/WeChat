@@ -22,11 +22,12 @@ Page({
     wx.cloud.callFunction({
       name: 'img',
       data: {
+        api: 'scanQRCode',
         imgUrl
       },
       success(res) {
-        console.log('本接口提供基于小程序的条码/二维码识别的API：', res.result.imgR);
-        const {errCode, codeResults = []} = res.result.imgR;
+        console.log('本接口提供基于小程序的条码/二维码识别的API：', res.result);
+        const {errCode, codeResults = []} = res.result.scanQRCodeR;
         if(errCode === 0){
           _that.setData({
             transformPath: codeResults[0].data
