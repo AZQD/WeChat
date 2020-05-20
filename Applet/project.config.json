@@ -223,6 +223,25 @@
 					"query": "",
 					"scene": null
 				},
+        {
+          "id": -1,
+          "name": "图片转base64",
+          "pathName": "pages/img2base64/img2base64",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-物流助手",
+          "pathName": "pages/cloud/logistics/logistics",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-附近的小程序",
+          "pathName": "pages/cloud/nearbyPoi/nearbyPoi",
+          "scene": null
+        },
+
 				{
 					"id": -1,
 					"name": "云函数-内容安全",
@@ -231,20 +250,8 @@
 				},
 				{
 					"id": -1,
-					"name": "云函数-物流助手",
-					"pathName": "pages/cloud/logistics/logistics",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "云函数-小程序码",
 					"pathName": "pages/cloud/wxacode/wxacode",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "云函数-附近的小程序",
-					"pathName": "pages/cloud/nearbyPoi/nearbyPoi",
 					"scene": null
 				},
 				{
@@ -257,12 +264,6 @@
 					"id": -1,
 					"name": "云函数-客服消息",
 					"pathName": "pages/cloud/customerServiceMessage/customerServiceMessage",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "云函数-图片转base64",
-					"pathName": "pages/img2base64/img2base64",
 					"scene": null
 				}
 			]
