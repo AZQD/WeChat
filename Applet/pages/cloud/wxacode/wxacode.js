@@ -23,7 +23,7 @@ Page({
         // errCode = 48001 指没有权限，企业用户才可以调用
         console.log('获取小程序码：', res.result);
         let buffer = res.result.wxacodeR.buffer;
-        let qrImg = "data:image/png;base64," + wx.arrayBufferToBase64(buffer.data);
+        let qrImg = "data:image/png;base64," + wx.arrayBufferToBase64(buffer);
         _that.setData({
           qrImg
         });
