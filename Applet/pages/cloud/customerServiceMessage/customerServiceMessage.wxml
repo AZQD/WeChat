@@ -1,0 +1,9 @@
+<view class="container">
+  <button type="primary" catchtap="cloudUploadFileFun">上传图片到云存储管理，并获取fileID</button>
+  <image wx:if="{{imgUrl}}" src="{{imgUrl}}" mode="aspectFit"></image>
+
+  <button type="primary" catchtap="getMediaIDFun">通过fileID获取mediaID</button>
+
+
+  <button type="primary" catchtap="sendFun">发送客服消息给用户</button>
+</view>

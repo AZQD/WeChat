@@ -252,6 +252,18 @@
 					"name": "云函数-图像处理",
 					"pathName": "pages/cloud/img/img",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数-客服消息",
+					"pathName": "pages/cloud/customerServiceMessage/customerServiceMessage",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数-图片转base64",
+					"pathName": "pages/img2base64/img2base64",
+					"scene": null
 				}
 			]
 		}

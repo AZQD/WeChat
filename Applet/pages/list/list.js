@@ -50,7 +50,9 @@ Page({
       "pages/cloud/logistics/logistics",
       "pages/cloud/wxacode/wxacode",
       "pages/cloud/nearbyPoi/nearbyPoi",
-      "pages/cloud/img/img"
+      "pages/cloud/img/img",
+      "pages/cloud/customerServiceMessage/customerServiceMessage",
+      "pages/img2base64/img2base64"
     ],
   },
 
