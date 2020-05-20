@@ -5,23 +5,33 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imgUrl: 'https://pic2.58cdn.com.cn/images/xq_img/n_v2c0c5abd5d4ff45fd9a74ccb73a59bb41.png', // 二维码url
+    transformPath: '', // 识别二维码生成的路径
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+  },
+
+  scanQRCodeFun(){
     let _that = this;
+    let imgUrl = this.data.imgUrl;
     wx.cloud.callFunction({
       name: 'img',
       data: {
-        // imgUrl: 'https://static.clewm.net/cli/images/beautify_demo/classic/4.png'
-        // imgUrl: 'https://gqrcode.alicdn.com/img?type=ali&w=320&h=320&el=m&text=http%3A%2F%2Fma.m.1688.com%2Frush.html%3Fsecret%3DrmPOubH3'
-        imgUrl: 'https://pic2.58cdn.com.cn/images/xq_img/n_v249f81bed96d14a07acb67a0144945eef.png'
+        imgUrl
       },
       success(res) {
-        console.log('本接口提供基于小程序的条码/二维码识别的API：', res.result);
+        console.log('本接口提供基于小程序的条码/二维码识别的API：', res.result.imgR);
+        const {errCode, codeResults = []} = res.result.imgR;
+        if(errCode === 0){
+          _that.setData({
+            transformPath: codeResults[0].data
+          }); 
+        }
       }
     })
   },

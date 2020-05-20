@@ -1,2 +1,14 @@
-<!--pages/img/img.wxml-->
-<text>pages/img/img.wxml</text>
+<view class="container">
+
+  <view class="">二维码url：</view>
+  <image src="{{imgUrl}}" mode="aspectFit"></image>
+
+
+  <button type="primary" catchtap="scanQRCodeFun">识别二维码</button>
+
+  <view wx:if="{{transformPath}}">
+    <view>识别二维码生成的路径：</view>
+    <view>{{transformPath}}</view>
+  </view>
+
+</view>
