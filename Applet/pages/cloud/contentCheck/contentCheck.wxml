@@ -13,7 +13,7 @@
           <image class="image-item" src="{{item}}"></image>
         </block>
         <view class="upload">
-          <image catchtap="chooseImage" class="upload_icon" src="../../images/contentCheck/upload.png"></image>
+          <image catchtap="chooseImage" class="upload_icon" src="../../../images/contentCheck/upload.png"></image>
         </view>
       </view>
 

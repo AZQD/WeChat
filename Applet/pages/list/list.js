@@ -46,11 +46,11 @@ Page({
       "pages/skeleton/demo-component",
       "pages/action-sheet/action-sheet",
       "pages/contactService/contactService",
-      "pages/contentCheck/contentCheck",
-      "pages/logistics/logistics",
-      "pages/wxacode/wxacode",
-      "pages/nearbyPoi/nearbyPoi",
-      "pages/img/img"
+      "pages/cloud/contentCheck/contentCheck",
+      "pages/cloud/logistics/logistics",
+      "pages/cloud/wxacode/wxacode",
+      "pages/cloud/nearbyPoi/nearbyPoi",
+      "pages/cloud/img/img"
     ],
   },
 

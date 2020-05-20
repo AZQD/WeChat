@@ -226,31 +226,31 @@
 				{
 					"id": -1,
 					"name": "云函数-内容安全",
-					"pathName": "pages/contentCheck/contentCheck",
+					"pathName": "pages/cloud/contentCheck/contentCheck",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "云函数-物流助手",
-					"pathName": "pages/logistics/logistics",
+					"pathName": "pages/cloud/logistics/logistics",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "云函数-小程序码",
-					"pathName": "pages/wxacode/wxacode",
+					"pathName": "pages/cloud/wxacode/wxacode",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "云函数-附近的小程序",
-					"pathName": "pages/nearbyPoi/nearbyPoi",
+					"pathName": "pages/cloud/nearbyPoi/nearbyPoi",
 					"scene": null
 				},
 				{
 					"id": -1,
 					"name": "云函数-图像处理",
-					"pathName": "pages/img/img",
+					"pathName": "pages/cloud/img/img",
 					"scene": null
 				}
 			]

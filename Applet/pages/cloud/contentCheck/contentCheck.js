@@ -1,5 +1,5 @@
 // pages/contentCheck/contentCheck.js
-const regeneratorRuntime = require('../../utils/runtime');
+const regeneratorRuntime = require('../../../utils/runtime');
 Page({
 
   /**
