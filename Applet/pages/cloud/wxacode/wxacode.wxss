@@ -1,0 +1,10 @@
+/* pages/wxacode/wxacode.wxss */
+.qrImgBox{
+  display: flex;
+  padding: 40rpx;
+}
+.qrImgBox image{
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+}

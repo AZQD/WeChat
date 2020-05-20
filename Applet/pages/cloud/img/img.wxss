@@ -1,0 +1,6 @@
+/* pages/img/img.wxss */
+.container{
+  padding: 40rpx;
+  text-align: center;
+  word-break: break-all;
+}

@@ -1,0 +1,35 @@
+/* pages/contentCheck/contentCheck.wxss */
+.container{
+  padding: 0 40rpx;
+}
+.weui-cell__bd{
+  padding: 20rpx;
+  background-color: #fff;
+}
+.weui-input{
+  width: 100%;
+}
+
+.image-box{
+  display: flex;
+}
+.image-item{
+  width: 126rpx;
+  height: 126rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #999;
+}
+.upload{
+  width: 126rpx;
+  height: 126rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1rpx solid #999;
+}
+
+.upload .upload_icon{
+  width: 60rpx;
+  height: 60rpx;
+}
