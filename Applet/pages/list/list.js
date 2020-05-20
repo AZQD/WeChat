@@ -6,11 +6,10 @@ Page({
    */
   data: {
     "pages":[
-      "pages/action-sheet/action-sheet",/*微信小程序之----底部菜单action-sheet*/
-
-      "pages/list/list",
       "pages/index/index",
+      "pages/list/list",
       "pages/logs/logs",
+      "pages/action-sheet/action-sheet",/*微信小程序之----底部菜单action-sheet*/
       "pages/swiper/swiper",
       "pages/elipsis/elipsis",
       "pages/canvas/canvas",
