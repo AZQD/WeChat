@@ -10,10 +10,10 @@ exports.main = async (event, context) => {
   try {
     let aiCropR;
     let scanQRCodeR;
-    if(event.api === 'aiCrop'){ // 暂未使用
+    if (event.api === 'aiCrop') { // 暂未使用
       aiCropR = await cloud.openapi.img.aiCrop(event);
     }
-    if(event.api === 'scanQRCode'){
+    if (event.api === 'scanQRCode') {
       scanQRCodeR = await cloud.openapi.img.scanQRCode(event);
     }
 
