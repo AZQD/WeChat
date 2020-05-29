@@ -1,5 +1,6 @@
 // pages/contentCheck/contentCheck.js
 const regeneratorRuntime = require('../../../utils/runtime');
+var {formatTime} = require('../../../utils/util.js');
 const PAGESIZE = 20;
 Page({
 
@@ -32,6 +33,9 @@ Page({
       success: function(res) {
         // res.data 是一个包含集合中有权限访问的所有记录的数据，不超过 20 条
         console.log('listData:', res.data);
+        for(let i = 0; i<res.data.length; i++){
+          res.data[i].date = formatTime(new Date(res.data[i].timestamp));
+        }
         that.setData({
           lastPage: res.data.length !== PAGESIZE,
           pageIndex: pageIndex + 1,

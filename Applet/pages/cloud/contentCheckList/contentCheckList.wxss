@@ -50,6 +50,11 @@ page{
 .listBox .listItem .imgs .image-item:nth-child(3n){
   margin-right: 0;
 }
+.listBox .listItem .date{
+  color: #666;
+  font-size: 28rpx;
+  padding-top: 12rpx;
+}
 
 .noMoreData {
   text-align: center;

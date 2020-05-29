@@ -10,6 +10,7 @@
             <image class="image-item" src="{{childItem}}" mode="aspectFit"></image>
           </block>
         </view>
+        <view class="date">发布时间：{{item.date}}</view>
       </view>
     </block>
   </view>
