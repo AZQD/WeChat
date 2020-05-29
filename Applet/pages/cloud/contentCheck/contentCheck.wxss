@@ -8,6 +8,10 @@
 }
 .weui-input{
   width: 100%;
+  line-height: 40rpx;
+}
+.weui-input-title{
+  height: 160rpx;
 }
 
 .image-box{

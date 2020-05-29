@@ -46,6 +46,7 @@ Page({
       "pages/action-sheet/action-sheet",
       "pages/contactService/contactService",
       "pages/cloud/contentCheck/contentCheck",
+      "pages/cloud/contentCheckList/contentCheckList",
       "pages/cloud/logistics/logistics",
       "pages/cloud/wxacode/wxacode",
       "pages/cloud/nearbyPoi/nearbyPoi",

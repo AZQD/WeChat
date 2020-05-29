@@ -250,6 +250,12 @@
 				},
 				{
 					"id": -1,
+					"name": "云函数-内容安全-列表信息",
+					"pathName": "pages/cloud/contentCheckList/contentCheckList",
+					"scene": null
+				},
+				{
+					"id": -1,
 					"name": "云函数-小程序码",
 					"pathName": "pages/cloud/wxacode/wxacode",
 					"scene": null

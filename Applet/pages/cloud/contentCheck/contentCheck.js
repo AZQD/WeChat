@@ -111,17 +111,20 @@ Page({
 
   async formSubmit(e) {
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
-    let inputVal = e.detail.value.input;
+    let title = e.detail.value.title;
+    let content = e.detail.value.content;
     let imageArr = this.data.imageArr;
-    let msgSecCheckFlag = await this.msgSecCheckFun(inputVal);
+    let titleSecCheckFlag = await this.msgSecCheckFun(title);
+    let contentSecCheckFlag = await this.msgSecCheckFun(content);
     let imgSecCheckFlag = this.data.imgSecCheckFlag;
 
-    if(msgSecCheckFlag && imgSecCheckFlag){
+    if(titleSecCheckFlag && contentSecCheckFlag && imgSecCheckFlag){
       const db = wx.cloud.database({});
       const contentCheckData = db.collection('contentCheckData');
       contentCheckData.add({
         data: {
-          inputVal,
+          title,
+          content,
           imageArr,
           timestamp: Date.now(),
         },
@@ -192,4 +195,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-})
+});

@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="listBox" data-type="{{listData.length}}">
+    <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="listItem">
+        <view class="title">{{item.title}}</view>
+        <view class="content">{{item.content}}</view>
+        <view class="imgs" wx:if="{{item.imageArr.length}}">
+          <block wx:for="{{item.imageArr}}" wx:for-item="childItem" wx:for-index="childIndex" wx:key="childIndex">
+            <image class="image-item" src="{{childItem}}" mode="aspectFit"></image>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="noMoreData" wx:if="{{lastPage}}">没有更多数据</view>
+
+
+</view>

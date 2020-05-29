@@ -4,13 +4,19 @@
 
       <view class="page-section">
         <view class="weui-cell__bd" style="margin: 30rpx 0" >
-          <textarea class="weui-input" name="input" placeholder="这是一个输入框" id="" cols="30" rows="10"></textarea>
+          <textarea class="weui-input weui-input-title" name="title" placeholder="请输入标题" id="" cols="30" rows="10"></textarea>
+        </view>
+      </view>
+
+      <view class="page-section">
+        <view class="weui-cell__bd" style="margin: 30rpx 0" >
+          <textarea class="weui-input" name="content" placeholder="请输入描述" id="" cols="30" rows="10"></textarea>
         </view>
       </view>
 
       <view class="image-box">
         <block wx:for="{{imageArr}}" wx:key="index"  wx:for-index="index" wx:for-item="item">
-          <image class="image-item" src="{{item}}"></image>
+          <image class="image-item" src="{{item}}" mode="aspectFit"></image>
         </block>
         <view class="upload">
           <image catchtap="chooseImage" class="upload_icon" src="../../../images/contentCheck/upload.png"></image>
