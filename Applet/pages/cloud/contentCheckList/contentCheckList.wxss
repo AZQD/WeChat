@@ -19,11 +19,23 @@ page{
   color: #222;
   font-size: 32rpx;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-word;
 }
 .listBox .listItem .content{
   color: #666;
   font-size: 28rpx;
   padding-top: 12rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  word-break: break-word;
 }
 .listBox .listItem .imgs{
   overflow: hidden;
