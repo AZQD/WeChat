@@ -1,4 +1,5 @@
 <view class="container">
+
   <view class="listBox" data-type="{{listData.length}}">
     <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
       <view class="listItem">
@@ -13,6 +14,5 @@
     </block>
   </view>
   <view class="noMoreData" wx:if="{{lastPage}}">没有更多数据</view>
-
 
 </view>
