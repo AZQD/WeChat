@@ -45,7 +45,7 @@ Page({
         fileID
       },
       success(res) {
-        console.log('获取fileID：', res.result);
+        console.log('获取mediaId：', res.result);
         const {uploadTempMediaR = {mediaId: ''}} = res.result;
         that.setData({mediaId: uploadTempMediaR.mediaId});
         wx.showToast({
