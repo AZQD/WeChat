@@ -6,15 +6,102 @@
   font-size: 0;
   overflow: hidden;
 
-  .selectedBox {
+  .headerBox{
+    .location{
+      display: flex;
+      align-items: center;
+      padding: 20rpx 0;
+      margin-top: 70rpx;
+      .icon{
+        width: 38rpx;
+        height: 48rpx;
+      }
+      .name{
+        font-size:32rpx;
+        font-family:PingFang SC;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        padding-left: 15rpx;
+        padding-right: 12rpx;
+      }
+      .more{
+
+      }
+    }
+
+    .search{
+      height:56rpx;
+      background:rgba(255,255,255,1);
+      opacity:0.9;
+      border-radius:28rpx;
+      display: flex;
+      align-items: center;
+      padding: 0 28rpx;
+      margin-top: 10rpx;
+      .icon{
+        width: 30rpx;
+        height: 30rpx;
+      }
+      .name{
+        font-size:28rpx;
+        font-family:PingFang SC;
+        font-weight:300;
+        color:rgba(102,102,102,1);
+        padding-left: 22rpx;
+      }
+    }
+
+    .bigImg{
+      padding-top: 26rpx;
+      .img{
+        width:100%;
+        height:280rpx;
+      }
+    }
+
+    .labels{
+      padding: 20rpx 20rpx 24rpx;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .labelItem{
+        display: flex;
+        align-items: center;
+        .icon{
+          width: 25rpx;
+          height: 30rpx;
+        }
+        .name{
+          font-size:24rpx;
+          font-family:PingFang SC;
+          font-weight:300;
+          color:rgba(255,255,255,1);
+          line-height:35rpx;
+          padding-left: 6rpx;
+        }
+      }
+    }
+  }
+
+  .flashSaleBox {
     background-color:#FFF;
     border-radius:10rpx;
     opacity:0.9;
-    padding: 18rpx 20rpx 4rpx 20rpx;
+    padding: 18rpx 24rpx 16rpx;
     .title{
       font-size:32rpx;
       color:#1A1A1A;
       line-height:48rpx;
+      display: flex;
+      align-items: flex-end;
+      .desc{
+        font-size:24rpx;
+        font-family:PingFang SC;
+        font-weight:300;
+        color:rgba(136,136,136,1);
+        line-height:35rpx;
+        padding-left: 16rpx;
+      }
     }
     .goodList{
       padding-top: 14rpx;
@@ -22,25 +109,64 @@
       box-sizing: border-box;
       .goodItem{
         float: left;
-        width:160rpx;
-        padding-right: 10rpx;
-        &:nth-child(4n){
-          padding-right: 0;
+        margin-right: 8rpx;
+        position: relative;
+        &:last-child{
+          margin-right: 0;
         }
         .goodImg{
-          width:160rpx;
-          height:160rpx;
-          border-radius:10rpx;
-          overflow: hidden;
+          width:126rpx;
+          height:126rpx;
         }
         .price{
-          color: #1A1A1A;
+          color: #212121;
+          font-size: 20rpx;
+          text-align: center;
+          padding-top: 12rpx;
+          .unit{
+            font-size: 16rpx;
+            padding-right: 3rpx;
+          }
+        }
+        .rank{
+          width:30rpx;
+          height:36rpx;
+          position: absolute;
+          left: 10rpx;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .selectedBox {
+    margin-top: 24rpx;
+    background-color:#FFF;
+    border-radius:10rpx;
+    opacity:0.9;
+    padding: 34rpx 24rpx 0;
+    .goodList{
+      overflow: hidden;
+      box-sizing: border-box;
+      .goodItem{
+        float: left;
+        width:106rpx;
+        margin-right: 32rpx;
+        &:nth-child(5n){
+          margin-right: 0;
+        }
+        .goodImg{
+          width:106rpx;
+          height:106rpx;
+          overflow: hidden;
+          border-radius:44rpx;
+        }
+        .name{
+          color: #666;
           font-size: 24rpx;
           text-align: center;
-          padding: 10rpx 0 14rpx 0;
-          .unit{
-            font-size: 20rpx;
-          }
+          padding-top: 16rpx;
+          padding-bottom: 30rpx;
         }
       }
     }
