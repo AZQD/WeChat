@@ -109,6 +109,28 @@
     </view>
   </view>
 
+  <view class="selectedBox">
+    <view class="goodList">
+      <view class="goodItem">
+        <view class="desc1"></view>
+        <image class="goodImg" src='/images/common/tempImg.png' />
+        <view class="name">蔬菜豆制</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/common/tempImg.png' />
+        <view class="name">蔬菜豆制</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/common/tempImg.png' />
+        <view class="name">蔬菜豆制</view>
+      </view>
+      <view class="goodItem">
+        <image class="goodImg" src='/images/common/tempImg.png' />
+        <view class="name">蔬菜豆制</view>
+      </view>
+    </view>
+  </view>
+
   <view class="toggleBox">
     <view class="toggleItem active">
       <view class="desc1" style="color: {{BASECOLOR}}">全部拼团</view>

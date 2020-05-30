@@ -172,6 +172,39 @@
     }
   }
 
+  .selectedBox {
+    margin-top: 24rpx;
+    background-color:#FFF;
+    border-radius:10rpx;
+    opacity:0.9;
+    padding: 18rpx 24rpx 24rpx;
+    .goodList{
+      overflow: hidden;
+      box-sizing: border-box;
+      .goodItem{
+        float: left;
+        width:106rpx;
+        margin-right: 32rpx;
+        &:nth-child(5n){
+          margin-right: 0;
+        }
+        .goodImg{
+          width:106rpx;
+          height:106rpx;
+          overflow: hidden;
+          border-radius:44rpx;
+        }
+        .name{
+          color: #666;
+          font-size: 24rpx;
+          text-align: center;
+          padding-top: 16rpx;
+          padding-bottom: 30rpx;
+        }
+      }
+    }
+  }
+
   .toggleBox{
     overflow-x: scroll;
     overflow-y: hidden;
