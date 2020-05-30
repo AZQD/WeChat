@@ -8,7 +8,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    currentSwiper: 1, // 初始展示第一个轮播
+    bannerArr: [ // swiper-item数量
+      {
+        id: 1
+      },
+      {
+        id: 2
+      },
+      {
+        id: 3
+      }
+    ],
   },
 
   /**
@@ -22,6 +33,12 @@ Page({
         backgroundColor: res, // 背景颜色值，有效值为十六进制颜色
       });
       this.setData({BASECOLOR: res});
+    });
+  },
+
+  swiperChange: function (e) {
+    this.setData({
+      currentSwiper: e.detail.current
     });
   },
 

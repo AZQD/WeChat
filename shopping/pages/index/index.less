@@ -25,7 +25,6 @@
         padding-right: 12rpx;
       }
       .more{
-
       }
     }
 
@@ -88,6 +87,7 @@
     border-radius:10rpx;
     opacity:0.9;
     padding: 18rpx 24rpx 16rpx;
+    box-shadow:0rpx 6rpx 20rpx 0rpx rgba(31,34,43,0.07);
     .title{
       font-size:32rpx;
       color:#1A1A1A;
@@ -139,23 +139,24 @@
     }
   }
 
-  .selectedBox {
+  .sortBox {
     margin-top: 24rpx;
     background-color:#FFF;
     border-radius:10rpx;
     opacity:0.9;
     padding: 34rpx 24rpx 0;
-    .goodList{
+    box-shadow:0rpx 6rpx 20rpx 0rpx rgba(31,34,43,0.07);
+    .sortList{
       overflow: hidden;
       box-sizing: border-box;
-      .goodItem{
+      .sortItem{
         float: left;
         width:106rpx;
         margin-right: 32rpx;
         &:nth-child(5n){
           margin-right: 0;
         }
-        .goodImg{
+        .sortImg{
           width:106rpx;
           height:106rpx;
           overflow: hidden;
@@ -172,36 +173,165 @@
     }
   }
 
+  .sort2Box {
+    margin-top: 24rpx;
+    background-color:#FFF;
+    border-radius:10rpx;
+    opacity:0.9;
+    box-shadow:0rpx 6rpx 20rpx 0rpx rgba(31,34,43,0.07);
+    .sortList{
+      overflow: hidden;
+      box-sizing: border-box;
+      .sortItem{
+        float: left;
+        width:calc(50% - 2rpx);
+        border-right: 2rpx solid #F5F5F5;
+        border-bottom: 2rpx solid #F5F5F5;
+        &:nth-child(2n){
+          border-right: none;
+        }
+        &:nth-last-child(1){
+          border-bottom: none;
+        }
+        &:nth-last-child(2){
+          border-bottom: none;
+        }
+        .desc1{
+          font-size:32rpx;
+          font-family:PingFang SC;
+          font-weight:400;
+          color:rgba(33,33,33,1);
+          line-height:35rpx;
+          padding-top: 22rpx;
+          padding-left: 24rpx;
+        }
+        .desc2{
+          font-size:24rpx;
+          font-family:PingFang SC;
+          font-weight:300;
+          color:rgba(136,136,136,1);
+          line-height:35rpx;
+          padding-top: 10rpx;
+          padding-left: 24rpx;
+        }
+        .imgs{
+          display: flex;
+          justify-content: space-between;
+          padding: 26rpx 39rpx;
+          .img{
+            width: 120rpx;
+            height: 120rpx;
+          }
+        }
+      }
+    }
+  }
+
   .selectedBox {
     margin-top: 24rpx;
     background-color:#FFF;
     border-radius:10rpx;
     opacity:0.9;
-    padding: 18rpx 24rpx 24rpx;
-    .goodList{
-      overflow: hidden;
-      box-sizing: border-box;
-      .goodItem{
-        float: left;
-        width:106rpx;
-        margin-right: 32rpx;
-        &:nth-child(5n){
-          margin-right: 0;
-        }
-        .goodImg{
-          width:106rpx;
-          height:106rpx;
-          overflow: hidden;
-          border-radius:44rpx;
-        }
-        .name{
-          color: #666;
-          font-size: 24rpx;
-          text-align: center;
-          padding-top: 16rpx;
-          padding-bottom: 30rpx;
+    padding: 20rpx 24rpx 0;
+    box-shadow:0rpx 6rpx 20rpx 0rpx rgba(31,34,43,0.07);
+    .title{
+      font-size:32rpx;
+      color:#1A1A1A;
+      line-height:48rpx;
+      display: flex;
+      align-items: flex-end;
+      .desc{
+        font-size:24rpx;
+        font-family:PingFang SC;
+        font-weight:300;
+        color:rgba(136,136,136,1);
+        line-height:35rpx;
+        padding-left: 16rpx;
+      }
+    }
+    .bannerBox {
+      margin-top: 28rpx;
+      width: 100%;
+      height: 180rpx;
+      position: relative;
+      swiper {
+        width: 100%;
+        height: 100%;
+        .selectedInner{
+          display: flex;
+          .selectedItem{
+            width: 0;
+            flex-grow: 1;
+            display: flex;
+            .img{
+              width:110rpx;
+              height:110rpx;
+              margin-right: 16rpx;
+            }
+            .desc{
+              width: 0;
+              flex-grow: 1;
+              .desc1{
+                font-size:28rpx;
+                font-family:PingFang SC;
+                font-weight:300;
+                color:rgba(33,33,33,1);
+                line-height:35rpx;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+              .desc2{
+                padding-top: 20rpx;
+                display: flex;
+                align-items: center;
+                .left{
+                  display: flex;
+                  align-items: center;
+                  .star{
+                    width:18rpx;
+                    height:19rpx;
+                    margin-right: 5rpx;
+                  }
+                  .num{
+                    font-size:20rpx;
+                    font-family:PingFang SC;
+                    font-weight:300;
+                    color:rgba(253,161,1,1);
+                    line-height:35rpx;
+                  }
+                }
+                .right{
+                  padding-left: 22rpx;
+                  font-size:20rpx;
+                  font-family:PingFang SC;
+                  font-weight:300;
+                  color:rgba(164,164,164,1);
+                  line-height:35rpx;
+                }
+              }
+            }
+          }
         }
       }
+      .dots {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 24rpx;
+        height:4rpx;
+        background:rgba(0,0,0,.2);
+        border-radius:2rpx;
+      }
+      /*未选中时的小圆点样式 */
+      .dot {
+        width:24rpx;
+        height:4rpx;
+      }
+      /*选中以后的小圆点样式  */
+      //.active {
+      //  background:rgba(241,94,52,1);
+      //}
     }
   }
 
@@ -209,25 +339,24 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    padding-top: 32rpx;
+    padding-top: 56rpx;
     padding-bottom: 24rpx;
     .toggleItem{
       text-align: center;
       display: inline-block;
-      margin-right: 56rpx;
+      margin-right: 45rpx;
       &:last-child{
         margin-right: 30rpx;
       }
       .desc1{
-        color:#1A1A1A;
+        color:#212121;
         font-size:32rpx;
-        line-height:48rpx;
-        margin-bottom: 4rpx;
+        margin-bottom: 16rpx;
       }
       .desc2{
         display: inline-block;
         color:#666;
-        font-size:20rpx;
+        font-size:24rpx;
         height: 32rpx;
         line-height:32rpx;
       }
@@ -247,102 +376,68 @@
 
 }
 
-
-
-.listBox{
-  .listItem{
-    margin-bottom: 24rpx;
-    background-color: #fff;
-    border-radius:10rpx;
-    padding: 20rpx;
-    display: flex;
-    align-items: center;
-    .left{
-      width:220rpx;
-      height:220rpx;
-      border-radius:10rpx;
-      overflow: hidden;
-      .goodImg{
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .right{
-      width: 0;
-      flex-grow: 1;
-      padding-left: 20rpx;
-      .desc1{
-        color:#1A1A1A;
-        font-size:24rpx;
-        line-height:36rpx;
-      }
-      .desc2{
-        color:#666;
-        font-size:24rpx;
-        line-height:36rpx;
-        padding-top: 4rpx;
-      }
-      .desc3{
-        display: flex;
-        align-items: center;
-        padding-top: 18rpx;
-        .avatars{
-          padding-left: 12rpx;
-          .avatarImg{
-            width:32rpx;
-            height:32rpx;
-            border-radius: 50rpx;
-            float: left;
-            margin-left: -12rpx;
+.infoBox{
+  display: flex;
+  justify-content: space-between;
+  .part{
+    font-size: 30rpx;
+    width: 346rpx;
+    .content{
+      .infoItem{
+        border-radius: 10rpx;
+        background-color: #fff;
+        margin-bottom: 18rpx;
+        .img{
+          width:346rpx;
+          height:346rpx;
+        }
+        .desc{
+          font-size:24rpx;
+          font-family:PingFang SC;
+          font-weight:400;
+          color:rgba(102,102,102,1);
+          line-height:36rpx;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          padding: 28rpx 20rpx 0;
+        }
+        .labels{
+          padding: 16rpx 20rpx 0;
+          font-size: 0;
+          .label{
+            display: inline-block;
+            padding: 2rpx 10rpx;
+            background:rgba(255,255,255,1);
+            border-radius:4rpx;
+            font-size:20rpx;
+            font-family:PingFang SC;
+            font-weight:300;
+            //color:rgba(226,80,38,1);
+            //border:1rpx solid rgba(226, 80, 38, 1);
+            margin-right: 6rpx;
+            &:last-child{
+              margin-right: 0;
+            }
           }
         }
-        .number{
-          color: #B2B2B2;
-          font-size: 20rpx;
-          padding-left: 8rpx;
-        }
-      }
-      .desc4{
-        display: flex;
-        align-items: center;
-        padding-top: 42rpx;
-        .numbers{
-          width: 0;
-          flex-grow: 1;
+        .bottom{
+          padding: 10rpx 20rpx 24rpx;
           display: flex;
           align-items: center;
-          .currentPrice{
-            color:@redColor;
+          justify-content: space-between;
+          .price{
             font-size:32rpx;
-            line-height:48rpx;
+            font-family:PingFang SC;
+            font-weight:600;
+            //color:rgba(226,80,38,1);
+            line-height:36rpx;
           }
-          .originPrice{
-            color:#B2B2B2;
-            font-size:22rpx;
-            line-height:30rpx;
-            margin-left: 8rpx;
-            text-decoration: line-through;
-            padding-top: 12rpx;
+          .add{
+
           }
-          .regiment{
-            color:@redColor;
-            font-size:20rpx;
-            line-height:30rpx;
-            margin-left: 6rpx;
-            border: 1rpx solid @redColor;
-            border-radius:4rpx;
-            padding: 0 8rpx;
-          }
-        }
-        .join{
-          color:#FFFFFF;
-          font-size:26rpx;
-          line-height:38rpx;
-          background:@redColor;
-          //box-shadow:0rpx 4rpx 8rpx 0rpx rgba(241,94,52,0.3);
-          border-radius:28rpx;
-          padding: 9rpx 36rpx;
-          float: right;
         }
       }
     }

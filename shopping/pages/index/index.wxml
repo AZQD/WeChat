@@ -64,187 +64,287 @@
     </view>
   </view>
 
-  <view class="selectedBox">
-    <view class="goodList">
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+  <view class="sortBox">
+    <view class="sortList">
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
+      <view class="sortItem">
+        <image class="sortImg" src='/images/common/tempImg.png' />
         <view class="name">蔬菜豆制</view>
       </view>
     </view>
   </view>
 
+  <view class="sort2Box">
+    <view class="sortList">
+      <view class="sortItem">
+        <view class="desc1">热销排行</view>
+        <view class="desc2">爆款限时限量抢购</view>
+        <view class="imgs">
+          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img" src='/images/common/tempImg.png' />
+        </view>
+      </view>
+      <view class="sortItem">
+        <view class="desc1">热销排行</view>
+        <view class="desc2">爆款限时限量抢购</view>
+        <view class="imgs">
+          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img" src='/images/common/tempImg.png' />
+        </view>
+      </view>
+      <view class="sortItem">
+        <view class="desc1">热销排行</view>
+        <view class="desc2">爆款限时限量抢购</view>
+        <view class="imgs">
+          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img" src='/images/common/tempImg.png' />
+        </view>
+      </view>
+      <view class="sortItem">
+        <view class="desc1">热销排行</view>
+        <view class="desc2">爆款限时限量抢购</view>
+        <view class="imgs">
+          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img" src='/images/common/tempImg.png' />
+        </view>
+      </view>
+    </view>
+  </view>
+
   <view class="selectedBox">
-    <view class="goodList">
-      <view class="goodItem">
-        <view class="desc1"></view>
-        <image class="goodImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
-      </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
-      </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
-      </view>
-      <view class="goodItem">
-        <image class="goodImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+    <view class="title">限时抢购<view class="desc">爆款限时限量抢购</view></view>
+    <view class='bannerBox'>
+      <swiper bindchange="swiperChange" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
+        <swiper-item>
+          <view class="selectedInner">
+            <view class="selectedItem">
+              <image class="img" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+            <view class="selectedItem">
+              <image class="img" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="selectedInner">
+            <view class="selectedItem">
+              <image class="img" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+            <view class="selectedItem">
+              <image class="img" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="selectedInner">
+            <view class="selectedItem">
+              <image class="img" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+            <view class="selectedItem">
+              <image class="img" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+      <view class="dots" wx:if="{{bannerArr.length}}" style="left: calc(50% - {{bannerArr.length * 24 + 'rpx'}});">
+        <block wx:for="{{bannerArr}}" wx:key="index">
+          <view class="dot" style="background-color: {{index == currentSwiper?BASECOLOR:''}};"></view>
+        </block>
       </view>
     </view>
   </view>
 
   <view class="toggleBox">
     <view class="toggleItem active">
-      <view class="desc1" style="color: {{BASECOLOR}}">全部拼团</view>
-      <view class="desc2" style="background-color: {{BASECOLOR}}">来拼吧</view>
+      <view class="desc1" style="color: {{BASECOLOR}}">全部</view>
+      <view class="desc2" style="background-color: {{BASECOLOR}}">精选物品</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">爆款热卖</view>
-      <view class="desc2">百万人在拼</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">百元内好物</view>
-      <view class="desc2">百万人在拼</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">低价拼</view>
-      <view class="desc2">血拼进行</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">全部拼团</view>
-      <view class="desc2">来拼吧</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">爆款热卖</view>
-      <view class="desc2">百万人在拼</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">百元内好物</view>
-      <view class="desc2">百万人在拼</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
     <view class="toggleItem">
-      <view class="desc1">低价拼</view>
-      <view class="desc2">血拼进行</view>
+      <view class="desc1">手机配件</view>
+      <view class="desc2">漂亮最重要</view>
     </view>
   </view>
 
-  <view class="listBox">
-    <view class="listItem">
-      <view class="left">
-        <image class="goodImg" src='/images/common/tempImg.png' />
-      </view>
-      <view class="right">
-        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
-        <view class="desc2">菱格链条时尚单肩包</view>
-        <view class="desc3">
-          <view class="avatars">
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
-            <image class="avatarImg" src='/images/shop/moreImg.png' />
+
+  <view class="infoBox">
+
+    <view class="part">
+      <view class="content">
+        <view class="infoItem">
+          <image class="img" src='/images/common/tempImg.png' />
+          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <view class="labels">
+            <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>-->
+            <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>-->
           </view>
-          <view class="number">12948 人已拼</view>
+          <view class="bottom">
+            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+          </view>
         </view>
-        <view class="desc4">
-          <view class="numbers">
-            <view class="currentPrice" style="color: {{BASECOLOR}}">¥268</view>
-            <view class="originPrice">¥300</view>
-            <view class="regiment" style="color: {{BASECOLOR}}; border-color: {{BASECOLOR}}">99人团</view>
+        <view class="infoItem">
+          <image class="img" src='/images/common/tempImg.png' />
+          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <view class="labels">
+            <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>-->
+            <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>-->
           </view>
-          <view class="join" style="background-color: {{BASECOLOR}}">去开团</view>
-        </view>
-      </view>
-    </view>
-    <view class="listItem">
-      <view class="left">
-        <image class="goodImg" src='/images/common/tempImg.png' />
-      </view>
-      <view class="right">
-        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
-        <view class="desc2">菱格链条时尚单肩包</view>
-        <view class="desc3">
-          <view class="avatars">
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
-            <image class="avatarImg" src='/images/shop/moreImg.png' />
+          <view class="bottom">
+            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
           </view>
-          <view class="number">12948 人已拼</view>
-        </view>
-        <view class="desc4">
-          <view class="numbers">
-            <view class="currentPrice" style="color: {{BASECOLOR}}">¥268</view>
-            <view class="originPrice">¥300</view>
-            <view class="regiment" style="color: {{BASECOLOR}}; border-color: {{BASECOLOR}}">99人团</view>
-          </view>
-          <view class="join" style="background-color: {{BASECOLOR}}">去开团</view>
         </view>
       </view>
     </view>
-    <view class="listItem">
-      <view class="left">
-        <image class="goodImg" src='/images/common/tempImg.png' />
-      </view>
-      <view class="right">
-        <view class="desc1">维尼小巷风单肩菱格链条斜挎宝</view>
-        <view class="desc2">菱格链条时尚单肩包</view>
-        <view class="desc3">
-          <view class="avatars">
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2019/10/211026214.jpg' />
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2020/2/101248148.jpg' />
-            <image class="avatarImg" src='http://i.bootstrapmb.com/2018/12/200224420.jpg' />
-            <image class="avatarImg" src='/images/shop/moreImg.png' />
+
+    <view class="part">
+      <view class="content">
+        <view class="infoItem">
+          <image class="img" src='/images/common/tempImg.png' />
+          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <view class="labels">
+            <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>
+            <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>
           </view>
-          <view class="number">12948 人已拼</view>
+          <view class="bottom">
+            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+          </view>
         </view>
-        <view class="desc4">
-          <view class="numbers">
-            <view class="currentPrice" style="color: {{BASECOLOR}}">¥268</view>
-            <view class="originPrice">¥300</view>
-            <view class="regiment" style="color: {{BASECOLOR}}; border-color: {{BASECOLOR}}">99人团</view>
+        <view class="infoItem">
+          <image class="img" src='/images/common/tempImg.png' />
+          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <view class="labels">
+            <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>
+            <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>
           </view>
-          <view class="join" style="background-color: {{BASECOLOR}}">去开团</view>
+          <view class="bottom">
+            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+          </view>
         </view>
       </view>
     </view>
+
   </view>
 
 </view>
