@@ -1,11 +1,191 @@
-@import "./../../assets/common";
+@import "../../assets/common";
 
 .container{
+  min-height: 100vh;
+  padding: 0 20rpx;
+  font-size: 0;
+  overflow: hidden;
 
-  .menuListBox{
-    padding: 0 36rpx;
-    button{
-      margin-top: 12rpx;
+  .selectedBox {
+    background-color:#FFF;
+    border-radius:10rpx;
+    opacity:0.9;
+    padding: 18rpx 20rpx 4rpx 20rpx;
+    .title{
+      font-size:32rpx;
+      color:#1A1A1A;
+      line-height:48rpx;
+    }
+    .goodList{
+      padding-top: 14rpx;
+      overflow: hidden;
+      box-sizing: border-box;
+      .goodItem{
+        float: left;
+        width:160rpx;
+        padding-right: 10rpx;
+        &:nth-child(4n){
+          padding-right: 0;
+        }
+        .goodImg{
+          width:160rpx;
+          height:160rpx;
+          border-radius:10rpx;
+          overflow: hidden;
+        }
+        .price{
+          color: #1A1A1A;
+          font-size: 24rpx;
+          text-align: center;
+          padding: 10rpx 0 14rpx 0;
+          .unit{
+            font-size: 20rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .toggleBox{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-top: 32rpx;
+    padding-bottom: 24rpx;
+    .toggleItem{
+      text-align: center;
+      display: inline-block;
+      margin-right: 56rpx;
+      &:last-child{
+        margin-right: 30rpx;
+      }
+      .desc1{
+        color:#1A1A1A;
+        font-size:32rpx;
+        line-height:48rpx;
+        margin-bottom: 4rpx;
+      }
+      .desc2{
+        display: inline-block;
+        color:#666;
+        font-size:20rpx;
+        height: 32rpx;
+        line-height:32rpx;
+      }
+    }
+    .active{
+      .desc1{
+        color:@redColor;
+      }
+      .desc2{
+        color:#FFF;
+        padding: 0 10rpx;
+        border-radius:16rpx;
+        background-color: @redColor;
+      }
+    }
+  }
+
+}
+
+
+
+.listBox{
+  .listItem{
+    margin-bottom: 24rpx;
+    background-color: #fff;
+    border-radius:10rpx;
+    padding: 20rpx;
+    display: flex;
+    align-items: center;
+    .left{
+      width:220rpx;
+      height:220rpx;
+      border-radius:10rpx;
+      overflow: hidden;
+      .goodImg{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .right{
+      width: 0;
+      flex-grow: 1;
+      padding-left: 20rpx;
+      .desc1{
+        color:#1A1A1A;
+        font-size:24rpx;
+        line-height:36rpx;
+      }
+      .desc2{
+        color:#666;
+        font-size:24rpx;
+        line-height:36rpx;
+        padding-top: 4rpx;
+      }
+      .desc3{
+        display: flex;
+        align-items: center;
+        padding-top: 18rpx;
+        .avatars{
+          padding-left: 12rpx;
+          .avatarImg{
+            width:32rpx;
+            height:32rpx;
+            border-radius: 50rpx;
+            float: left;
+            margin-left: -12rpx;
+          }
+        }
+        .number{
+          color: #B2B2B2;
+          font-size: 20rpx;
+          padding-left: 8rpx;
+        }
+      }
+      .desc4{
+        display: flex;
+        align-items: center;
+        padding-top: 42rpx;
+        .numbers{
+          width: 0;
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          .currentPrice{
+            color:@redColor;
+            font-size:32rpx;
+            line-height:48rpx;
+          }
+          .originPrice{
+            color:#B2B2B2;
+            font-size:22rpx;
+            line-height:30rpx;
+            margin-left: 8rpx;
+            text-decoration: line-through;
+            padding-top: 12rpx;
+          }
+          .regiment{
+            color:@redColor;
+            font-size:20rpx;
+            line-height:30rpx;
+            margin-left: 6rpx;
+            border: 1rpx solid @redColor;
+            border-radius:4rpx;
+            padding: 0 8rpx;
+          }
+        }
+        .join{
+          color:#FFFFFF;
+          font-size:26rpx;
+          line-height:38rpx;
+          background:@redColor;
+          //box-shadow:0rpx 4rpx 8rpx 0rpx rgba(241,94,52,0.3);
+          border-radius:28rpx;
+          padding: 9rpx 36rpx;
+          float: right;
+        }
+      }
     }
   }
 }

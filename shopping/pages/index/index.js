@@ -1,64 +1,14 @@
-// pages/index/index.js
+let api = require('../../api.js');
 let appUtils = require('../../utils/appUtils.js');
 let app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menuList: [
-      {
-        type: 0,
-        path: 'assemble/assemble',
-        name: 'DEMO'
-      },
-      {
-        type: 1,
-        path: 'index/index',
-        name: '首页'
-      },
-      {
-        type: 0,
-        path: 'productDetail/productDetail',
-        name: '商品详情'
-      },
-      {
-        type: 1,
-        path: 'shoppingCart/shoppingCart',
-        name: '购物车',
-      },
-      {
-        type: 0,
-        path: 'confirmOrder/confirmOrder',
-        name: '确认订单'
-      },
-      {
-        type: 0,
-        path: 'myOrder/myOrder',
-        name: '我的订单'
-      },
-      {
-        type: 0,
-        path: 'orderDetail/orderDetail',
-        name: '订单详情'
-      },
-      {
-        type: 0,
-        path: 'addressList/addressList',
-        name: '地址管理'
-      },
-      {
-        type: 0,
-        path: 'addAddress/addAddress',
-        name: '新增地址'
-      },
-      {
-        type: 1,
-        path: 'mine/mine',
-        name: '个人中心'
-      },
-    ],
+
   },
 
   /**
@@ -73,16 +23,6 @@ Page({
       });
       this.setData({BASECOLOR: res});
     });
-  },
-
-  jumpPageFun(e){
-    const {type, path} = e.currentTarget.dataset;
-    let url = `/pages/${path}`;
-    if(type){
-      wx.switchTab({url});
-    }else{
-      wx.navigateTo({url});
-    }
   },
 
   /**
