@@ -20,6 +20,7 @@ Page({
         id: 3
       }
     ],
+    showSkeleton: true,
   },
 
   /**
@@ -34,6 +35,11 @@ Page({
       });
       this.setData({BASECOLOR: res});
     });
+    setTimeout( () => {
+      this.setData({
+        showSkeleton: false
+      })
+    }, 1500);
   },
 
   swiperChange: function (e) {

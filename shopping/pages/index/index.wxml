@@ -1,4 +1,10 @@
-<view class="container" style='background: #F5F5F5 url("/images/shop/bg.jpg") no-repeat; background-size: 100% 550px;'>
+<skeleton selector="skeleton"
+          loading=""
+          bgcolor="transparent"
+          wx:if="{{showSkeleton}}">
+</skeleton>
+
+<view class="container skeleton" style='background: #F5F5F5 url("/images/shop/bg.jpg") no-repeat; background-size: 100% 550px;'>
 
   <view class="headerBox">
 
@@ -8,16 +14,16 @@
       <van-icon class="more" name="arrow-down" color="#fff" size="18px" />
     </view>
 
-    <view class="search">
+    <view class="search skeleton-radius">
       <image class="icon" src='/images/index/search_icon.png' />
       <view class="name">搜索商品关键词</view>
     </view>
 
-    <view class="bigImg">
+    <view class="bigImg skeleton-rect">
       <image class="img" src='/images/common/tempImg.png' />
     </view>
 
-    <view class="labels">
+    <view class="labels skeleton-rect">
       <view class="labelItem">
         <image class="icon" src='/images/index/label_icon.png' />
         <view class="name">TTSHOP自营</view>
@@ -34,29 +40,29 @@
   </view>
 
   <view class="flashSaleBox">
-    <view class="title">限时抢购<view class="desc">爆款限时限量抢购</view></view>
+    <view class="title skeleton-rect">限时抢购<view class="desc">爆款限时限量抢购</view></view>
     <view class="goodList">
-      <view class="goodItem">
+      <view class="goodItem skeleton-rect">
         <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
         <image class="rank" src='/images/index/rank1.png' />
       </view>
-      <view class="goodItem">
+      <view class="goodItem skeleton-rect">
         <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
         <image class="rank" src='/images/index/rank2.png' />
       </view>
-      <view class="goodItem">
+      <view class="goodItem skeleton-rect">
         <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
         <image class="rank" src='/images/index/rank3.png' />
       </view>
-      <view class="goodItem">
+      <view class="goodItem skeleton-rect">
         <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
         <image class="rank" src='/images/index/rank4.png' />
       </view>
-      <view class="goodItem">
+      <view class="goodItem skeleton-rect">
         <image class="goodImg" src='/images/common/tempImg.png' />
         <view class="price"><text class="unit">¥</text>230</view>
         <image class="rank" src='/images/index/rank5.png' />
@@ -67,44 +73,44 @@
   <view class="sortBox">
     <view class="sortList">
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
       <view class="sortItem">
-        <image class="sortImg" src='/images/common/tempImg.png' />
-        <view class="name">蔬菜豆制</view>
+        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+        <view class="name skeleton-rect">蔬菜豆制</view>
       </view>
     </view>
   </view>
@@ -112,51 +118,51 @@
   <view class="sort2Box">
     <view class="sortList">
       <view class="sortItem">
-        <view class="desc1">热销排行</view>
-        <view class="desc2">爆款限时限量抢购</view>
+        <view class="desc1 skeleton-rect">热销排行</view>
+        <view class="desc2 skeleton-rect">爆款限时限量抢购</view>
         <view class="imgs">
-          <image class="img" src='/images/common/tempImg.png' />
-          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
         </view>
       </view>
       <view class="sortItem">
-        <view class="desc1">热销排行</view>
-        <view class="desc2">爆款限时限量抢购</view>
+        <view class="desc1 skeleton-rect">热销排行</view>
+        <view class="desc2 skeleton-rect">爆款限时限量抢购</view>
         <view class="imgs">
-          <image class="img" src='/images/common/tempImg.png' />
-          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
         </view>
       </view>
       <view class="sortItem">
-        <view class="desc1">热销排行</view>
-        <view class="desc2">爆款限时限量抢购</view>
+        <view class="desc1 skeleton-rect">热销排行</view>
+        <view class="desc2 skeleton-rect">爆款限时限量抢购</view>
         <view class="imgs">
-          <image class="img" src='/images/common/tempImg.png' />
-          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
         </view>
       </view>
       <view class="sortItem">
-        <view class="desc1">热销排行</view>
-        <view class="desc2">爆款限时限量抢购</view>
+        <view class="desc1 skeleton-rect">热销排行</view>
+        <view class="desc2 skeleton-rect">爆款限时限量抢购</view>
         <view class="imgs">
-          <image class="img" src='/images/common/tempImg.png' />
-          <image class="img" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
         </view>
       </view>
     </view>
   </view>
 
   <view class="selectedBox">
-    <view class="title">限时抢购<view class="desc">爆款限时限量抢购</view></view>
+    <view class="title skeleton-rect">限时抢购<view class="desc">爆款限时限量抢购</view></view>
     <view class='bannerBox'>
       <swiper bindchange="swiperChange" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
         <swiper-item>
           <view class="selectedInner">
             <view class="selectedItem">
-              <image class="img" src='/images/common/tempImg.png' />
+              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
               <view class="desc">
-                <view class="desc1">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2">
+                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2 skeleton-rect">
                   <view class="left">
                     <image class="star" src='/images/common/tempImg.png' />
                     <text class="num">4.8</text>
@@ -166,40 +172,10 @@
               </view>
             </view>
             <view class="selectedItem">
-              <image class="img" src='/images/common/tempImg.png' />
+              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
               <view class="desc">
-                <view class="desc1">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-          </view>
-        </swiper-item>
-        <swiper-item>
-          <view class="selectedInner">
-            <view class="selectedItem">
-              <image class="img" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-            <view class="selectedItem">
-              <image class="img" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2">
+                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2 skeleton-rect">
                   <view class="left">
                     <image class="star" src='/images/common/tempImg.png' />
                     <text class="num">4.8</text>
@@ -213,10 +189,10 @@
         <swiper-item>
           <view class="selectedInner">
             <view class="selectedItem">
-              <image class="img" src='/images/common/tempImg.png' />
+              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
               <view class="desc">
-                <view class="desc1">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2">
+                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2 skeleton-rect">
                   <view class="left">
                     <image class="star" src='/images/common/tempImg.png' />
                     <text class="num">4.8</text>
@@ -226,10 +202,40 @@
               </view>
             </view>
             <view class="selectedItem">
-              <image class="img" src='/images/common/tempImg.png' />
+              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
               <view class="desc">
-                <view class="desc1">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2">
+                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2 skeleton-rect">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="selectedInner">
+            <view class="selectedItem">
+              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2 skeleton-rect">
+                  <view class="left">
+                    <image class="star" src='/images/common/tempImg.png' />
+                    <text class="num">4.8</text>
+                  </view>
+                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+            </view>
+            <view class="selectedItem">
+              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="desc">
+                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                <view class="desc2 skeleton-rect">
                   <view class="left">
                     <image class="star" src='/images/common/tempImg.png' />
                     <text class="num">4.8</text>
@@ -241,7 +247,7 @@
           </view>
         </swiper-item>
       </swiper>
-      <view class="dots" wx:if="{{bannerArr.length}}" style="left: calc(50% - {{bannerArr.length * 24 + 'rpx'}});">
+      <view class="dots skeleton-rect" wx:if="{{bannerArr.length}}" style="left: calc(50% - {{bannerArr.length * 24 + 'rpx'}});">
         <block wx:for="{{bannerArr}}" wx:key="index">
           <view class="dot" style="background-color: {{index == currentSwiper?BASECOLOR:''}};"></view>
         </block>
@@ -250,35 +256,35 @@
   </view>
 
   <view class="toggleBox">
-    <view class="toggleItem active">
+    <view class="toggleItem active skeleton-rect">
       <view class="desc1" style="color: {{BASECOLOR}}">全部</view>
       <view class="desc2" style="background-color: {{BASECOLOR}}">精选物品</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
-    <view class="toggleItem">
+    <view class="toggleItem skeleton-rect">
       <view class="desc1">手机配件</view>
       <view class="desc2">漂亮最重要</view>
     </view>
@@ -290,27 +296,27 @@
     <view class="part">
       <view class="content">
         <view class="infoItem">
-          <image class="img" src='/images/common/tempImg.png' />
-          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <view class="desc skeleton-rect">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
           <view class="labels">
             <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>-->
             <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>-->
           </view>
           <view class="bottom">
-            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
-            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+            <view class="price skeleton-rect" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add skeleton-rect" name="add" color="{{BASECOLOR}}" size="22px" />
           </view>
         </view>
         <view class="infoItem">
-          <image class="img" src='/images/common/tempImg.png' />
-          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <view class="desc skeleton-rect">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
           <view class="labels">
             <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>-->
             <!--<text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>-->
           </view>
           <view class="bottom">
-            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
-            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+            <view class="price skeleton-rect" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add skeleton-rect" name="add" color="{{BASECOLOR}}" size="22px" />
           </view>
         </view>
       </view>
@@ -319,27 +325,27 @@
     <view class="part">
       <view class="content">
         <view class="infoItem">
-          <image class="img" src='/images/common/tempImg.png' />
-          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
-          <view class="labels">
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <view class="desc skeleton-rect">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <view class="labels skeleton-rect">
             <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>
             <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>
           </view>
           <view class="bottom">
-            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
-            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+            <view class="price skeleton-rect" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add skeleton-rect" name="add" color="{{BASECOLOR}}" size="22px" />
           </view>
         </view>
         <view class="infoItem">
-          <image class="img" src='/images/common/tempImg.png' />
-          <view class="desc">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
-          <view class="labels">
+          <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+          <view class="desc skeleton-rect">无穷盐焗鸡腿70g 肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产肉类卤味熟食鸡翅办公休闲食品网红零食小吃特产</view>
+          <view class="labels skeleton-rect">
             <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">退货运费险</text>
             <text class="label" style="color: {{BASECOLOR}};border: 1rpx solid {{BASECOLOR}};">团购</text>
           </view>
           <view class="bottom">
-            <view class="price" style="color: {{BASECOLOR}};">¥268</view>
-            <van-icon class="add" name="add" color="{{BASECOLOR}}" size="22px" />
+            <view class="price skeleton-rect" style="color: {{BASECOLOR}};">¥268</view>
+            <van-icon class="add skeleton-rect" name="add" color="{{BASECOLOR}}" size="22px" />
           </view>
         </view>
       </view>
