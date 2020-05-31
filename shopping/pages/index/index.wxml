@@ -4,7 +4,8 @@
           wx:if="{{showSkeleton}}">
 </skeleton>
 
-<view class="container skeleton" style='background: #F5F5F5 url("/images/shop/bg.jpg") no-repeat; background-size: 100% 550px;'>
+<view class="container skeleton">
+  <image class="bodyBg" src='/images/shop/bg.jpg' />
 
   <view class="headerBox">
 

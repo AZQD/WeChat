@@ -39,7 +39,7 @@ Page({
       this.setData({
         showSkeleton: false
       })
-    }, 1500);
+    }, 3000);
   },
 
   swiperChange: function (e) {
