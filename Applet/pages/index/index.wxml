@@ -13,7 +13,7 @@
       </view>
       <view class="item" catchtap="jumpPageFun" data-type="2">
         <image class="icon" src='./../../images/mine/menu_icon.png'></image>
-        <text class="name">列表数据</text>
+        <text class="name">内容数据</text>
       </view>
       <view class="item" catchtap="jumpPageFun" data-type="3">
         <image class="icon" src='./../../images/mine/menu_icon.png'></image>
