@@ -1,3 +1,5 @@
+const regeneratorRuntime = require('../../../utils/runtime');
+const {cloudUploadFileArr} = require('../../../utils/cloudUtil');
 Page({
 
   /**
@@ -19,20 +21,22 @@ Page({
 
   cloudUploadFileFun(){
     wx.chooseImage({
-      count: 1,
       success: res => {
         console.log(111, res);
         this.setData({imgUrl: res.tempFilePaths[0]});
-        wx.cloud.uploadFile({
-          cloudPath: `customerServiceMessage/${Date.now()}.png`, // 上传至云端的路径
-          filePath: res.tempFilePaths[0], // 小程序临时文件路径
-          success: res => {
-            // 返回文件 ID
-            console.log('获取fileID：', res.fileID);
-            this.setData({fileID: res.fileID});
-          },
-          fail: console.error
+        cloudUploadFileArr(res.tempFilePaths).then((res) => {
+          console.log(2344444, res);
         });
+        // wx.cloud.uploadFile({
+        //   cloudPath: `customerServiceMessage/${Date.now()}.png`, // 上传至云端的路径
+        //   filePath: res.tempFilePaths[0], // 小程序临时文件路径
+        //   success: res => {
+        //     // 返回文件 ID
+        //     console.log('获取fileID：', res.fileID);
+        //     this.setData({fileID: res.fileID});
+        //   },
+        //   fail: console.error
+        // });
       }
     })
   },

@@ -62,83 +62,57 @@ const cloudImgCheck = (img = '') => {
 
 // 使用Promise.all遍历，检查多张图片是否违规
 const cloudImgArrCheck = (imgsArr = []) => {
-  return Promise.all(imgsArr.map(item => cloudImgCheck(item))).then((res) => {
-    let flag = !res.includes(false);
-    if (flag) {
-      // wx.showToast({
-      //   title: '图片符合规范',
-      // });
-    } else {
-      wx.showToast({
-        icon: 'none',
-        title: '图片违规哦',
-      })
-    }
-    return flag
-  });
-};
-
-
-// 将本地资源上传至云存储空间
-const cloudUploadFile = (img = '') => {
-
   return new Promise(function (resolve, reject) {
-    wx.cloud.uploadFile({
-      cloudPath: `customerServiceMessage/${Date.now()}.png`, // 上传至云端的路径
-      filePath: res.tempFilePaths[0], // 小程序临时文件路径
-      success: res => {
-        // 返回文件 ID
-        console.log('获取fileID：', res.fileID);
-        this.setData({fileID: res.fileID});
-        wx.cloud.getTempFileURL({
-          fileList: [fileid],
-          success: res => {
-            console.log(33, res);
-            console.log(33, res.fileList);
-            that.setData({
-              //res.fileList[0].tempFileURL是https格式的路径，可以根据这个路径在浏览器上下载
-              imgSrc: res.fileList[0].tempFileURL
-            });
-          },
-          fail: err => {
-            console.log(err);
-          }
+    Promise.all(imgsArr.map(item => cloudImgCheck(item))).then((res) => {
+      let flag = !res.includes(false);
+      if (flag) {
+        // wx.showToast({
+        //   title: '图片符合规范',
+        // });
+      } else {
+        wx.showToast({
+          icon: 'none',
+          title: '图片违规哦',
         })
-      },
-      fail: console.error
+      }
+      resolve(flag);
     });
   });
 };
 
 
-const cloudUploadFileFun = (cloudPath) => {
-  wx.chooseImage({
-    success: res => {
-      wx.cloud.uploadFile({
-        cloudPath: `customerServiceMessage/${Date.now()}.png`, // 上传至云端的路径
-        filePath: res.tempFilePaths[0], // 小程序临时文件路径
+/*********************************************/
+
+
+// 将本地资源上传至云存储空间（上传一张图片）(获取fileID，可以再小程序中展示)
+const cloudUploadFile = (filePath = '', cloudPath=`common/${Date.now()}.png`) => {
+  return new Promise(function (resolve, reject) {
+    wx.cloud.uploadFile({
+      filePath, // 小程序临时文件路径
+      cloudPath, // 上传至云端的路径
+      success: res => {
+        console.log('获取fileID：', res.fileID);// 返回文件 ID
+        resolve(res.fileID);
+      }
+    });
+  });
+};
+
+
+// 使用Promise.all遍历
+// 将本地资源上传至云存储空间（上传多张图片）(获取fileID和tempFileURL，都可以再小程序中展示，tempFileURL在浏览器中可访问)
+const cloudUploadFileArr = (filePathArr = [], cloudPath=`common/${Date.now()}.png`) => {
+  return new Promise(function (resolve, reject) {
+    Promise.all(filePathArr.map(item => cloudUploadFile(item, cloudPath))).then((fileIDArr) => {
+      wx.cloud.getTempFileURL({
+        fileList: fileIDArr,
         success: res => {
-          // 返回文件 ID
-          console.log('获取fileID：', res.fileID);
-          this.setData({fileID: res.fileID});
-          wx.cloud.getTempFileURL({
-            fileList: [fileid],
-            success: res => {
-              console.log(33, res);
-              console.log(33, res.fileList);
-              that.setData({
-                //res.fileList[0].tempFileURL是https格式的路径，可以根据这个路径在浏览器上下载
-                imgSrc: res.fileList[0].tempFileURL
-              });
-            },
-            fail: err => {
-              console.log(err);
-            }
-          })
-        },
-        fail: console.error
-      });
-    }
+          if(res.errMsg === 'cloud.getTempFileURL:ok'){
+            resolve(res.fileList);
+          }
+        }
+      })
+    });
   });
 };
 
@@ -146,5 +120,9 @@ const cloudUploadFileFun = (cloudPath) => {
 // 调用的时候，可以使用 fun.then，也可以使用async, await
 export {
   cloudTextCheck,
-  cloudImgArrCheck
+  cloudImgCheck,
+  cloudImgArrCheck,
+
+  cloudUploadFile,
+  cloudUploadFileArr
 };
