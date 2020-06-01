@@ -1,12 +1,12 @@
 // pages/contentCheck/contentCheck.js
 const regeneratorRuntime = require('../../../utils/runtime');
+const {cloudTextCheck, cloudImgArrCheck} = require('../../../utils/cloudUtil');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgSecCheckFlag: true, // 图片校验是否符合规范
     imageArr: []
   },
 
@@ -17,108 +17,39 @@ Page({
 
   },
 
-  msgSecCheckFun(msg){
-    return new Promise(function (resolve, reject) {
-      //  调用ContentCheck云函数检查文字是否违规
-      wx.cloud.callFunction({
-        name: 'ContentCheck',
-        data: {
-          msg,
-          // msg: '特3456书yuuo莞6543李zxcz蒜7782法fgnv级完2347全dfji试3726测asad感3847知qwez到',
-        },
-        success(res) {
-          console.log('检查文本内容是否违规：', res.result)
-          if (res.result.errCode === 87014) {
-            wx.showToast({
-              icon: 'none',
-              title: '文字违规',
-            })
-          }else if(res.result.msgR && res.result.msgR.errCode === 0){
-            // wx.showToast({
-            //   title: '文字符合规范',
-            // });
-            resolve(true);
-          }
-        }
-      })
-    });
-  },
-
-  imgSecCheckFun(img){
-    return new Promise(function (resolve, reject) {
-      //  调用ContentCheck云函数检查图片是否违规
-      wx.cloud.callFunction({
-        name: 'ContentCheck',
-        data: {
-          img,
-        },
-        success(res) {
-          console.log('检查图片内容是否违规：', res.result)
-          if (res.result.errCode === 87014) {
-            // wx.showToast({
-            //   icon: 'none',
-            //   title: '图片违规',
-            // })
-          }else if(res.result.imageR && res.result.imageR.errCode === 0){
-            // wx.showToast({
-            //   title: '图片符合规范',
-            // });
-            resolve(true);
-          }
-        }
-      })
-    });
-  },
-
-  async chooseImage(){
+  chooseImage(){
     wx.chooseImage({
       count: 9, // 默认9，最多是九张
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: (res)=> {
-        console.log(res);
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         let tempFilePaths = res.tempFilePaths;
-        this.chooseImageAfter(tempFilePaths);
+        this.setData({
+          imageArr: tempFilePaths
+        });
       }
     })
   },
 
-  async chooseImageAfter (tempFilePaths) {
-    // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
-    let imgSecCheckFlag = true;
-    for (let i = 0; i < tempFilePaths.length; i++) {
-      imgSecCheckFlag = await this.imgSecCheckFun(tempFilePaths[i]);
-      if (!imgSecCheckFlag) break; // 图片违规，取消渲染；
-    }
-    this.setData({
-      imgSecCheckFlag
-    });
-    if(imgSecCheckFlag){
-      this.setData({
-        imageArr: tempFilePaths
-      });
-      wx.showToast({
-        title: '图片符合规范',
-      });
-    }else{
-      wx.showToast({
-        icon: 'none',
-        title: '图片违规哦',
-      })
-    }
-  },
-
   async formSubmit(e) {
+    wx.showLoading({
+      title: '加载中',
+      mask: true
+    });
     // console.log('form发生了submit事件，携带数据为：', e.detail.value)
     let title = e.detail.value.title;
     let content = e.detail.value.content;
     let imageArr = this.data.imageArr;
-    let titleSecCheckFlag = await this.msgSecCheckFun(title);
-    let contentSecCheckFlag = await this.msgSecCheckFun(content);
-    let imgSecCheckFlag = this.data.imgSecCheckFlag;
 
+    let titleSecCheckFlag = await cloudTextCheck(title);
+    let contentSecCheckFlag = await cloudTextCheck(content);
+    let imgSecCheckFlag = await cloudImgArrCheck(imageArr);
+    console.log('校验结果：', titleSecCheckFlag, contentSecCheckFlag, imgSecCheckFlag);
+
+    wx.hideLoading();
     if(titleSecCheckFlag && contentSecCheckFlag && imgSecCheckFlag){
+
       const db = wx.cloud.database({});
       const contentCheckData = db.collection('contentCheckData');
       contentCheckData.add({

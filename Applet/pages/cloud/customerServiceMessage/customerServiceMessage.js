@@ -19,7 +19,9 @@ Page({
 
   cloudUploadFileFun(){
     wx.chooseImage({
+      count: 1,
       success: res => {
+        console.log(111, res);
         this.setData({imgUrl: res.tempFilePaths[0]});
         wx.cloud.uploadFile({
           cloudPath: `customerServiceMessage/${Date.now()}.png`, // 上传至云端的路径
