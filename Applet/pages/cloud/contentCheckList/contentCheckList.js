@@ -48,6 +48,20 @@ Page({
     })
   },
 
+  // 预览图片
+  previewImageAnswer: function (e) {
+    let index = e.currentTarget.dataset.index;
+    let childIndex = e.currentTarget.dataset.childIndex;
+
+    let listData = this.data.listData;
+    let pictures = listData[index].imageArr;
+    let previewPictures = pictures.map(item => item.tempFileURL);
+    wx.previewImage({
+      current: previewPictures[childIndex],
+      urls: previewPictures
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
