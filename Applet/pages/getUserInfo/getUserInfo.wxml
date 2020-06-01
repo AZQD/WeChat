@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+
+    <view class="usermotto">
+        <text class="user-motto" catchtap="clickBtn">{{motto}}</text>
+    </view>
+
+  <view  bindtap="bindViewTap" class="userinfo">
+    <view>1、使用 button 组件，并将 open-type 指定为 getUserInfo 类型，获取用户基本信息。</view>
+    <button class="onGotUserInfo" bindgetuserinfo="onGotUserInfo" open-type="getUserInfo">获取用户信息</button>
+    <view class="userinfo-avatar-box"><image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image></view>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+
+  <view class="open-data-box">
+    <view>2、使用 open-data 展示用户基本信息。</view>
+    <view class="open-data-view"><view class="userAvatarUrl"><open-data type="userAvatarUrl"></open-data></view></view>
+    <view class="open-data-view"><open-data type="userGender"  lang="zh_CN"></open-data></view>
+    <view class="open-data-view"><open-data type="userProvince"></open-data></view>
+  </view>
+
+    <view class="gotoList">
+        <view>3、前往列表</view>
+        <button class="gotoListBtn" catchtap="gotoList">MENU BUTTON</button>
+    </view>
+
+
+</view>

@@ -48,6 +48,7 @@
     "pages/img2base64/img2base64",
 
 
+    "pages/getUserInfo/getUserInfo",
     "pages/mine/mine"
   ],
   "window": {
@@ -57,26 +58,20 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#666",
+    "color": "#333",
     "selectedColor": "#F15E34",
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "动态",
+        "text": "首页",
         "iconPath": "/images/tabbar/tabbar_icon01.png",
         "selectedIconPath": "/images/tabbar/tabbar_active_icon01.png"
       },
       {
         "pagePath": "pages/list/list",
-        "text": "发现",
-        "iconPath": "/images/tabbar/tabbar_icon02_new.png",
-        "selectedIconPath": "/images/tabbar/tabbar_active_icon02_new.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "好友",
-        "iconPath": "/images/tabbar/tabbar_icon03.png",
-        "selectedIconPath": "/images/tabbar/tabbar_active_icon03.png"
+        "text": "功能汇总",
+        "iconPath": "/images/tabbar/tabbar_icon02.png",
+        "selectedIconPath": "/images/tabbar/tabbar_active_icon02.png"
       },
       {
         "pagePath": "pages/mine/mine",

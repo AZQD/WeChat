@@ -1,95 +1,39 @@
 let app = getApp();
 Page({
   data: {
-    userInfoData: {},
-    walletBlance: 0, // 钱包余额
-    integralBlance: 0, // 积分余额
-
     showShadow: false,
-
-    showSkeleton: true,
-
   },
   onLoad: function () {
-    // 定义主题色
-    wx.setNavigationBarColor({
-      frontColor: '#ffffff', // 前景颜色值，仅支持 #ffffff 和 #000000
-      backgroundColor: '#F15E34', // 背景颜色值，有效值为十六进制颜色
-    });
-    this.setData({BASECOLOR: '#F15E34'});
-
-    setTimeout( () => {
+    const systemInfo = wx.getAccountInfoSync && wx.getAccountInfoSync();
+    if(systemInfo){
+      console.log('获取小程序APPID和版本号：', systemInfo);
       this.setData({
-        showSkeleton: false
-      })
-    }, 1500);
-  },
-
-  onShow () {
-    let users = wx.getStorageSync('users');
-    this.setData({
-      userInfoData: users
-    });
-  },
-
-  toOrder(){
-    wx.navigateTo({
-      url: '/pages/myOrder/myOrder'
-    });
-  },
-
-  // 页面跳转
-  jumpPageFun: function (e) {
-    let type = Number(e.currentTarget.dataset.type);
-    let url;
-    if (type === 1) {
-      let from = Number(e.currentTarget.dataset.from);
-      url = '/pages/mine/myWallet/myWallet';
-      if (from) {
-        url = url + '?from=' + from;
-      }
-    } else if (type === 2) {
-      url = '/pages/mine/recharge/recharge';
-    } else if (type === 3) {
-      url = '/pages/mine/myIntegral/myIntegral';
-    } else if (type === 4) {
-      url = '/pages/purchaser/ask/myAsk/myAsk';
-    } else if (type === 5) {
-      url = '/pages/myOrder/myOrder';
-      let orderStatus = Number(e.currentTarget.dataset.orderStatus);
-      url = url + '?orderStatus=' + orderStatus;
-    } else if (type === 6) {
-      url = '/pages/mine/setting/setting';
-    } else if (type === 7) {
-      this.showShadowFun();
-    } else if (type === 8) {
-      url = '/pages/mine/question/question';
-    } else if (type === 9) {
-      url = '/pages/mine/about/about';
-    } else if (type === 10) {
-      url = '/pages/addressList/addressList?from=mine';
-    } else if (type === 11) {
-      this.showShadowFun();
-      let phoneNumber = '4000000216';
-      wx.showModal({
-        content: phoneNumber,
-        confirmText: '拨打',
-        showCancel: true,
-        success: function (sm) {
-          if (sm.confirm) {
-            wx.makePhoneCall({
-              phoneNumber: phoneNumber
-            });
-          }
-        }
+        version: systemInfo.miniProgram.version
       });
     }
-    type === 10 && url && wx.navigateTo({url});
   },
 
-  // 取消冒泡
-  stopPropagation () {
-    return;
+  // 前往用户信息授权
+  toUserInfo(){
+    wx.navigateTo({
+      url: '/pages/getUserInfo/getUserInfo'
+    });
+  },
+
+  // 拨打电话
+  callFun(){
+    wx.showModal({
+      content: '159****9468',
+      confirmText: '拨打',
+      showCancel: true,
+      success: function (res) {
+        if (res.confirm) {
+          wx.makePhoneCall({
+            phoneNumber: '15936239468'
+          });
+        }
+      }
+    });
   },
 
   // 遮罩显示隐藏
@@ -103,12 +47,5 @@ Page({
     setTimeout(function () {
       wx.stopPullDownRefresh();
     }, 1000);
-  },
-
-  onShareAppMessage: function () {
-    return {
-      title: '天天招投标资质查询',
-      path: '/pages/index/index'
-    };
   }
 });
