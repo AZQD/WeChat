@@ -1,6 +1,6 @@
 // pages/contentCheck/contentCheck.js
 const regeneratorRuntime = require('../../../utils/runtime');
-const {cloudTextCheck, cloudImgArrCheck} = require('../../../utils/cloudUtil');
+const {cloudTextCheck, cloudImgArrCheck, cloudUploadFileArr} = require('../../../utils/cloudUtil');
 Page({
 
   /**
@@ -47,8 +47,10 @@ Page({
     let imgSecCheckFlag = await cloudImgArrCheck(imageArr);
     console.log('校验结果：', titleSecCheckFlag, contentSecCheckFlag, imgSecCheckFlag);
 
-    wx.hideLoading();
+
     if(titleSecCheckFlag && contentSecCheckFlag && imgSecCheckFlag){
+      // 校验成功，将图片上传到云数据库
+      let cloudImageArr = await cloudUploadFileArr(imageArr);
 
       const db = wx.cloud.database({});
       const contentCheckData = db.collection('contentCheckData');
@@ -56,14 +58,20 @@ Page({
         data: {
           title,
           content,
-          imageArr,
+          imageArr: cloudImageArr,
           timestamp: Date.now(),
         },
         success: function (res) {
           console.log(res);
+          wx.hideLoading();
           wx.showModal({
-            title: '成功',
-            content: '成功插入记录'
+            title: '提示',
+            content: '发布成功！',
+            success: () => {
+              wx.navigateTo({
+                url:'/pages/cloud/contentCheckList/contentCheckList'
+              });
+            }
           });
         }
       });

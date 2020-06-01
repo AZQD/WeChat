@@ -85,11 +85,11 @@ const cloudImgArrCheck = (imgsArr = []) => {
 
 
 // 将本地资源上传至云存储空间（上传一张图片）(获取fileID，可以再小程序中展示)
-const cloudUploadFile = (filePath = '', cloudPath=`common/${Date.now()}.png`) => {
+const cloudUploadFile = (filePath = '', cloudPath = '') => {
   return new Promise(function (resolve, reject) {
     wx.cloud.uploadFile({
       filePath, // 小程序临时文件路径
-      cloudPath, // 上传至云端的路径
+      cloudPath: `${cloudPath || 'common'}/${Date.now()}.png`, // 上传至云端的路径
       success: res => {
         console.log('获取fileID：', res.fileID);// 返回文件 ID
         resolve(res.fileID);
@@ -101,7 +101,7 @@ const cloudUploadFile = (filePath = '', cloudPath=`common/${Date.now()}.png`) =>
 
 // 使用Promise.all遍历
 // 将本地资源上传至云存储空间（上传多张图片）(获取fileID和tempFileURL，都可以再小程序中展示，tempFileURL在浏览器中可访问)
-const cloudUploadFileArr = (filePathArr = [], cloudPath=`common/${Date.now()}.png`) => {
+const cloudUploadFileArr = (filePathArr = [], cloudPath = '') => {
   return new Promise(function (resolve, reject) {
     Promise.all(filePathArr.map(item => cloudUploadFile(item, cloudPath))).then((fileIDArr) => {
       wx.cloud.getTempFileURL({
