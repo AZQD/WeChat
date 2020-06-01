@@ -1,9 +1,58 @@
 <view class="container">
-  <button type="primary" catchtap="cloudUploadFileFun">上传图片到云存储管理，并获取fileID</button>
-  <image wx:if="{{imgUrl}}" src="{{imgUrl}}" mode="aspectFit"></image>
 
-  <button type="primary" catchtap="getMediaIDFun">通过fileID获取mediaID</button>
+  <view class="tabTitle">选择下发客服消息的类型：</view>
+  <view class='tabBox'>
+    <block wx:for="{{tabList}}" wx:key="index" wx:for-item="item">
+      <view  class="tabItem {{currentTab===(index+1)}}" catchtap="_switchNav" data-current="{{index+1}}">{{item.name}}</view>
+    </block>
+  </view>
 
+  <view class="tabInfo tabInfo1" wx:if="{{currentTab===1}}">
+    <input class="ipt" type="text" value="{{tabInfo1}}" bindinput='tabInfo1Change' placeholder="输入文本" />
+  </view>
 
-  <button type="primary" catchtap="sendFun">发送客服消息给用户</button>
+  <view class="tabInfo tabInfo2" wx:if="{{currentTab===2}}">
+    <view class="upload">
+      <image catchtap="tabInfo2ChooseImage" class="upload_icon" src="{{tabInfo2 || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <view class="tabInfo tabInfo3" wx:if="{{currentTab===3}}">
+    <input class="ipt" type="text" value="{{tabInfo3.title}}" bindinput='tabInfo31Change' placeholder="输入标题"/>
+    <input class="ipt" type="text" value="{{tabInfo3.description}}" bindinput='tabInfo32Change' placeholder="输入描述" />
+    <view class="upload">
+      <image catchtap="tabInfo3ChooseImage" class="upload_icon" src="{{tabInfo3.thumbUrl || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
+    </view>
+    <view class="url">链接地址：https://tongzhen.58.com</view>
+  </view>
+
+  <view class="tabInfo tabInfo4" wx:if="{{currentTab===4}}">
+    <input class="ipt" type="text" value="{{tabInfo4.title}}" bindinput='tabInfo4Change' placeholder="输入标题"/>
+    <view class="upload">
+      <image catchtap="tabInfo4ChooseImage" class="upload_icon" src="{{tabInfo4.thumbMediaId || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
+    </view>
+    <view class="path">小程序页面路径：pages/list/list?foo=bar</view>
+  </view>
+
+  <view class="tabInfo tabInfo5" wx:if="{{currentTab===5}}">
+    <view class="desc">1.上传图片到云存储管理，并获取fileID；</view>
+    <view class="desc">2.通过fileID获取mediaID；</view>
+    <view class="desc">3.发送客服消息给用户；</view>
+    <view class="tips">注意：发送超过5条消息，如果用户不回复就不能再发了；</view>
+  </view>
+
+  <button type="primary" catchtap="sendFun" wx:if="{{currentTab!==5}}">发送客服消息给用户</button>
 </view>
+
+<!--
+步骤：
+1.上传图片到云存储管理，并获取fileID；
+2.通过fileID获取mediaID；
+3.发送客服消息给用户；
+
+注意点：
+1.超过5条消息不回复就不能再发了，用户回复之后，还可以重新发送5条数据；
+用户动作	允许下发条数限制	下发时限
+用户发送消息	5 条	48 小时
+https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/customer-message/send.html
+-->

@@ -1,6 +1,102 @@
-.container{
+.container {
   padding: 40rpx;
+  background-color: #fff;
 }
-button{
+.container .tabBox {
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+.container .tabBox .tabItem {
+  color: #1A1A1A;
+  font-size: 30rpx;
+  line-height: 45rpx;
+  padding-top: 23rpx;
+  padding-bottom: 17rpx;
+  border-bottom: 5px solid transparent;
+  margin-right: 54rpx;
+}
+.container .tabBox .tabItem:last-child {
+  margin-right: 0;
+}
+.container .tabBox .tabItem.true {
+  color: #0080FF;
+  border-bottom: 5px solid #0080FF;
+}
+.container .tabInfo {
+  padding: 40rpx 0;
+}
+.container .tabInfo1 .ipt {
+  border: 1rpx solid #999;
+  border-radius: 8rpx;
+  padding: 20rpx;
+}
+.container .tabInfo2 .upload {
+  width: 126rpx;
+  height: 126rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1rpx solid #999;
+}
+.container .tabInfo2 .upload .upload_icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.container .tabInfo3 .ipt {
+  border: 1rpx solid #999;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.container .tabInfo3 .upload {
+  width: 126rpx;
+  height: 126rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1rpx solid #999;
+}
+.container .tabInfo3 .upload .upload_icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.container .tabInfo3 .url {
+  padding-top: 20rpx;
+}
+.container .tabInfo4 .ipt {
+  border: 1rpx solid #999;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.container .tabInfo4 .upload {
+  width: 126rpx;
+  height: 126rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1rpx solid #999;
+}
+.container .tabInfo4 .upload .upload_icon {
+  width: 100rpx;
+  height: 100rpx;
+}
+.container .tabInfo4 .path {
+  padding-top: 20rpx;
+}
+.container .tabInfo5 .desc {
+  padding-top: 20rpx;
+}
+.container .tabInfo5 .tips {
+  padding-top: 20rpx;
+  font-weight: bold;
+}
+button {
   margin-top: 20rpx;
 }

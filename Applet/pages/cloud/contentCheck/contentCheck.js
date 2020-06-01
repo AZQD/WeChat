@@ -64,9 +64,8 @@ Page({
         success: function (res) {
           console.log(res);
           wx.hideLoading();
-          wx.showModal({
-            title: '提示',
-            content: '发布成功！',
+          wx.showToast({
+            title: '发布成功！',
             success: () => {
               wx.navigateTo({
                 url:'/pages/cloud/contentCheckList/contentCheckList'
