@@ -1,0 +1,73 @@
+button::after {
+  border: none;
+}
+.noMoreData {
+  text-align: center;
+  padding: 32rpx 0;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.container {
+  background-color: #F5F5F5;
+  min-height: 100vh;
+  overflow: hidden;
+}
+.container .headerBox {
+  height: 398rpx;
+  position: relative;
+  background-color: #F15E34;
+}
+.container .headerBox .avatarInfo {
+  display: flex;
+  align-items: center;
+  padding: 115rpx 30rpx 0;
+  position: relative;
+  z-index: 2;
+}
+.container .headerBox .avatarInfo .avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border: 2rpx solid #ffffff;
+  border-radius: 50%;
+}
+.container .headerBox .avatarInfo .name {
+  margin-left: 23rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 50rpx;
+}
+.container .menuBox {
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.container .menuBox .menuItem {
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.container .menuBox .menuItem .icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 50rpx;
+}
+.container .menuBox .menuItem .name {
+  font-size: 30rpx;
+  color: #000;
+  flex-grow: 1;
+}
+.container .menuBox .menuItem .more {
+  width: 44rpx;
+  height: 44rpx;
+}
+.container .version {
+  text-align: center;
+  color: #666;
+  font-size: 24rpx;
+  padding: 30rpx 0;
+}

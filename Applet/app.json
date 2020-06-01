@@ -45,13 +45,46 @@
     "pages/cloud/nearbyPoi/nearbyPoi",
     "pages/cloud/img/img",
     "pages/cloud/customerServiceMessage/customerServiceMessage",
-    "pages/img2base64/img2base64"
+    "pages/img2base64/img2base64",
+
+
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#F15E34",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "动态",
+        "iconPath": "/images/tabbar/tabbar_icon01.png",
+        "selectedIconPath": "/images/tabbar/tabbar_active_icon01.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "发现",
+        "iconPath": "/images/tabbar/tabbar_icon02_new.png",
+        "selectedIconPath": "/images/tabbar/tabbar_active_icon02_new.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "好友",
+        "iconPath": "/images/tabbar/tabbar_icon03.png",
+        "selectedIconPath": "/images/tabbar/tabbar_active_icon03.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "/images/tabbar/tabbar_icon04.png",
+        "selectedIconPath": "/images/tabbar/tabbar_active_icon04.png"
+      }
+    ]
   },
   "plugins": {
     "calendar": {

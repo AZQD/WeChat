@@ -1,0 +1,27 @@
+<view class="container">
+
+  <!--顶部信息-->
+  <view class="headerBox">
+    <view class="avatarInfo">
+      <image class="avatar skeleton-radius" src='/images/common/tempImg.png' />
+      <text class="name skeleton-rect">185***849</text>
+    </view>
+  </view>
+
+  <!--容器信息-->
+  <view class="menuBox">
+    <view class="menuItem" catchtap="jumpPageFun" data-type="8">
+      <image class="icon" src="./../../images/mine/menu_icon.png"></image>
+      <text class="name">小程序名片</text>
+      <image class="more" src="./../../images/mine/more_right.png"></image>
+    </view>
+    <view class="menuItem" catchtap="jumpPageFun" data-type="10">
+      <image class="icon" src="./../../images/mine/menu_icon.png"></image>
+      <text class="name">联系客服</text>
+      <image class="more" src="./../../images/mine/more_right.png"></image>
+    </view>
+  </view>
+
+  <view class="version">版本号：V2.0.0</view>
+
+</view>

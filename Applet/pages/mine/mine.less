@@ -1,0 +1,64 @@
+@import "./../../assets/common";
+.container{
+  background-color: #F5F5F5;
+  min-height: 100vh;
+  overflow: hidden;
+  .headerBox{
+    height:398rpx;
+    position: relative;
+    background-color: @redColor;
+    .avatarInfo{
+      display: flex;
+      align-items: center;
+      padding: 115rpx 30rpx 0;
+      position: relative;
+      z-index: 2;
+      .avatar{
+        width:120rpx;
+        height:120rpx;
+        border:2rpx solid rgba(255,255,255,1);
+        border-radius: 50%;
+      }
+      .name{
+        margin-left: 23rpx;
+        font-size:36rpx;
+        font-weight:500;
+        color:rgba(255,255,255,1);
+        line-height:50rpx;
+      }
+    }
+  }
+
+  .menuBox{
+    margin-top: 10rpx;
+    background-color: #fff;
+    .menuItem{
+      height: 108rpx;
+      display: flex;
+      align-items: center;
+      padding: 0 40rpx;
+      border-bottom: 1rpx solid #eee;
+      .icon{
+        width: 44rpx;
+        height: 44rpx;
+        margin-right: 50rpx;
+      }
+      .name{
+        font-size:30rpx;
+        color: #000;
+        flex-grow: 1;
+      }
+      .more{
+        width: 44rpx;
+        height: 44rpx;
+      }
+    }
+  }
+
+  .version{
+    text-align: center;
+    color: #666;
+    font-size: 24rpx;
+    padding: 30rpx 0;
+  }
+}
