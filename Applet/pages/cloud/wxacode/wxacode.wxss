@@ -1,9 +1,13 @@
 /* pages/wxacode/wxacode.wxss */
 .qrImgBox{
-  display: flex;
   padding: 40rpx;
 }
+.qrImgBox .title{
+  padding: 30rpx 0;
+  font-weight: bold;
+}
 .qrImgBox image{
+  display: block;
   width: 400rpx;
   height: 400rpx;
   margin: 0 auto;

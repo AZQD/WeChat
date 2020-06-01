@@ -6,7 +6,7 @@
 
   <button type="primary" catchtap="scanQRCodeFun">识别二维码</button>
 
-  <view wx:if="{{transformPath}}">
+  <view class="bottom" wx:if="{{transformPath}}">
     <view>识别二维码生成的路径：</view>
     <view>{{transformPath}}</view>
   </view>

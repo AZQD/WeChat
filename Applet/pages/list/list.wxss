@@ -1,9 +1,29 @@
-/* pages/list/list.wxss */
-.navigator-item{
-  border: 1rpx solid pink;
-  padding: 20rpx;
+.container .menuBox {
+  margin-top: 10rpx;
+  background-color: #fff;
 }
-.navigator-hover{
-  opacity: .6;
-  background-color: yellow;
+.container .menuBox .menuItem {
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.container .menuBox .menuItem .icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 50rpx;
+}
+.container .menuBox .menuItem .name {
+  font-size: 30rpx;
+  color: #000;
+  width: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.container .menuBox .menuItem .more {
+  width: 44rpx;
+  height: 44rpx;
 }

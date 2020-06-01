@@ -6,9 +6,10 @@ Page({
    */
   data: {
     "pages":[
-      "pages/index/index",
-      "pages/list/list",
+      // "pages/index/index",
+      // "pages/list/list",
       "pages/logs/logs",
+      "pages/getUserInfo/getUserInfo",
       "pages/action-sheet/action-sheet",/*微信小程序之----底部菜单action-sheet*/
       "pages/swiper/swiper",
       "pages/elipsis/elipsis",
@@ -45,14 +46,15 @@ Page({
       "pages/skeleton/demo-component",
       "pages/action-sheet/action-sheet",
       "pages/contactService/contactService",
+      "pages/img2base64/img2base64",
+
       "pages/cloud/contentCheck/contentCheck",
       "pages/cloud/contentCheckList/contentCheckList",
-      "pages/cloud/logistics/logistics",
       "pages/cloud/wxacode/wxacode",
-      "pages/cloud/nearbyPoi/nearbyPoi",
       "pages/cloud/img/img",
       "pages/cloud/customerServiceMessage/customerServiceMessage",
-      "pages/img2base64/img2base64"
+      "pages/cloud/logistics/logistics",
+      "pages/cloud/nearbyPoi/nearbyPoi",
     ],
   },
 

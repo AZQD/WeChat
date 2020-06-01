@@ -4,3 +4,6 @@
   text-align: center;
   word-break: break-all;
 }
+.bottom{
+  padding-top: 20rpx;
+}

@@ -1,58 +1,44 @@
-/**index.wxss**/
-.container{
-  padding-left: 20rpx;
-  padding-right: 20rpx;
+.container .moduleBox {
+  background-color: #fff;
+  border-radius: 10rpx;
+  margin-top: 24rpx;
 }
-.open-data-box{
-  margin-top: 50rpx;
+.container .moduleBox .titleInfo {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  padding: 22rpx 20rpx;
 }
-.userAvatarUrl{
-  width: 128rpx;
-  height: 128rpx;
-  border-radius: 50%;
-  border: 1rpx solid gold;
-}
-.open-data-view{
-  display: flex;
-  justify-content: center;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.onGotUserInfo{
-  margin:20rpx 40rpx;
-  color:#FFFFFF;
-  background-color:#1AAD19;
-}
-.userinfo-avatar-box{
-  display: flex;
-  justify-content: center;
-}
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  border: 1rpx solid gold;
-}
-.userinfo-nickname {
+.container .moduleBox .titleInfo .left {
+  width: 0;
+  flex-grow: 1;
+  font-size: 28rpx;
+  font-weight: 500;
   color: #000;
-  text-align: center;
+  line-height: 44rpx;
 }
-.usermotto {
-  margin-bottom: 40rpx;
-  text-align: center;
-  color: deeppink;
+.container .moduleBox .menuItem {
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #F5F5F5;
+  padding-top: 50rpx;
+  padding-bottom: 31rpx;
+  flex-flow: wrap;
 }
-
-.gotoListBtn{
-  margin:20rpx 40rpx;
-  color:#FFFFFF;
-  background-color:#1AAD19;
-
+.container .moduleBox .menuItem .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  text-align: center;
+  padding-bottom: 34rpx;
+}
+.container .moduleBox .menuItem .item .icon {
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 24rpx;
+}
+.container .moduleBox .menuItem .item .name {
+  font-size: 24rpx;
+  color: #1A1A1A;
+  line-height: 36rpx;
 }

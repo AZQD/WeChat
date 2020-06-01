@@ -1,5 +1,17 @@
-<!--pages/list/list.wxml-->
+<view class="container">
 
-<view wx:for="{{pages}}" wx:for-item="item" wx:for-index="key" wx:key="index">
-    <navigator class="navigator-item" url="/{{item}}" hover-class="navigator-hover">{{item}}</navigator>
+  <view class="menuBox">
+
+    <block wx:for="{{pages}}" wx:for-item="item" wx:for-index="key" wx:key="index">
+      <navigator url="/{{item}}" hover-class="navigator-hover">
+        <view class="menuItem">
+          <image class="icon" src="./../../images/mine/menu_icon.png"></image>
+          <text class="name">{{item}}</text>
+          <image class="more" src="./../../images/mine/more_right.png"></image>
+        </view>
+      </navigator>
+    </block>
+
+  </view>
+
 </view>

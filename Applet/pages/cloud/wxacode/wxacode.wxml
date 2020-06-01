@@ -1,3 +1,4 @@
 <view class="qrImgBox">
+  <view class="title">页面路径：page/list/list</view>
   <image wx:if="{{qrImg}}" src="{{qrImg}}"></image>
 </view>

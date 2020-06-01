@@ -1,2 +1,6 @@
-<!--pages/logistics/logistics.wxml-->
-<text>pages/logistics/logistics.wxml</text>
+<view class="container">
+
+  <view class="desc">获取运单数据：</view>
+  <view class="desc">个人类型小程序不可用</view>
+
+</view>

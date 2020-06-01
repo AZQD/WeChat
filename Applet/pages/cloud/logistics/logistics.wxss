@@ -1,1 +1,6 @@
-/* pages/logistics/logistics.wxss */
+.container{
+  padding: 40rpx;
+}
+.container .desc{
+  padding: 20rpx 0;
+}
