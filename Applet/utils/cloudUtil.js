@@ -145,6 +145,6 @@ const cloudUploadFileFun = (cloudPath) => {
 
 // 调用的时候，可以使用 fun.then，也可以使用async, await
 export {
-  msgSecCheckFun,
-  imgArrSecCheckFun
+  cloudTextCheck,
+  cloudImgArrCheck
 };
