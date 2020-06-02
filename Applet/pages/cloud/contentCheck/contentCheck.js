@@ -65,7 +65,7 @@ Page({
           console.log(res);
           wx.hideLoading();
           wx.showToast({
-            title: '发布成功！',
+            title: '提交成功！',
             success: () => {
               wx.navigateTo({
                 url:'/pages/cloud/contentCheckList/contentCheckList'

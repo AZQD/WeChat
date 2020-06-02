@@ -1,12 +1,11 @@
 .container .moduleBox {
   background-color: #fff;
   border-radius: 10rpx;
-  margin-top: 24rpx;
 }
 .container .moduleBox .titleInfo {
   display: flex;
   align-items: center;
-  padding: 22rpx 20rpx;
+  padding: 24rpx 20rpx;
 }
 .container .moduleBox .titleInfo .left {
   width: 0;
@@ -14,7 +13,6 @@
   font-size: 28rpx;
   font-weight: 500;
   color: #000;
-  line-height: 44rpx;
 }
 .container .moduleBox .menuItem {
   display: flex;

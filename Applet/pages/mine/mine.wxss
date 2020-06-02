@@ -42,7 +42,6 @@ button::after {
   line-height: 50rpx;
 }
 .container .menuBox {
-  margin-top: 10rpx;
   background-color: #fff;
 }
 .container .menuBox .menuItem {
