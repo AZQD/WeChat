@@ -3,8 +3,7 @@
 var app = getApp()
 Page({
   data: {
-    motto: 'Welcome to WeChat applet !',
-    userInfo: {}
+    date: ''
   },
 
   onLoad: function () {
@@ -13,6 +12,11 @@ Page({
             userInfo:wx.getStorageSync('userInfo')
         });
     }
+
+    let date = String(new Date().getMonth() + 1) + String(new Date().getDay());
+    this.setData({
+      date
+    });
   },
 
   // 页面跳转

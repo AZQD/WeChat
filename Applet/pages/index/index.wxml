@@ -7,11 +7,11 @@
       <view class="left">云函数</view>
     </view>
     <view class="menuItem">
-      <view class="item" catchtap="jumpPageFun" data-type="1">
+      <view class="item" catchtap="jumpPageFun" data-type="1" wx:if="{{date!=64}}">
         <image class="icon" src='./../../images/mine/menu_icon.png'></image>
         <text class="name">内容安全</text>
       </view>
-      <view class="item" catchtap="jumpPageFun" data-type="2">
+      <view class="item" catchtap="jumpPageFun" data-type="2" wx:if="{{date!=64}}">
         <image class="icon" src='./../../images/mine/menu_icon.png'></image>
         <text class="name">内容数据</text>
       </view>

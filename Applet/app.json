@@ -64,7 +64,7 @@
     "list": [
       {
         "pagePath": "pages/list/list",
-        "text": "功能汇总",
+        "text": "首页",
         "iconPath": "/images/tabbar/tabbar_icon01.png",
         "selectedIconPath": "/images/tabbar/tabbar_active_icon01.png"
       },

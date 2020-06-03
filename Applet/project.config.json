@@ -285,6 +285,13 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "云函数列表",
+					"pathName": "pages/index/index",
 					"scene": null
 				}
 			]
