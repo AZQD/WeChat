@@ -38,7 +38,7 @@
     <view class="desc">1.上传图片到云存储管理，并获取fileID；</view>
     <view class="desc">2.通过fileID获取mediaID；</view>
     <view class="desc">3.发送客服消息给用户；</view>
-    <view class="tips">注意：发送超过5条消息，如果用户不回复就不能再发了；</view>
+    <view class="tips">注意：发送超过5条消息，如果用户48小时内不回复就不能再发了；</view>
   </view>
 
   <button type="primary" catchtap="sendFun" wx:if="{{currentTab!==5}}">发送客服消息给用户</button>
