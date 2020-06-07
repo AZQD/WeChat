@@ -32,6 +32,72 @@ Page({
         id: 3
       }
     ],
+    tabList: [
+      {
+        id: 0,
+        desc: {
+          desc1: '全部',
+          desc2: '精选物品',
+        }
+      },
+      {
+        id: 1,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 2,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 3,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 4,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 5,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 6,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 7,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      },
+      {
+        id: 8,
+        desc: {
+          desc1: '手机配件',
+          desc2: '漂亮最重要',
+        }
+      }
+    ],
+    currentTab: 0,
     // showSkeleton: true,
   },
 
@@ -65,6 +131,13 @@ Page({
   swiperChange3: function (e) {
     this.setData({
       currentSwiper3: e.detail.current
+    });
+  },
+
+  _switchNav: function (e) {
+    let current = e.currentTarget.dataset.current;
+    this.setData({
+      currentTab: current
     });
   },
 

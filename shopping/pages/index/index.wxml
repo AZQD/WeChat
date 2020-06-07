@@ -367,38 +367,12 @@
   </view>
 
   <view class="toggleBox">
-    <view class="toggleItem active skeleton-rect">
-      <view class="desc1" style="color: {{BASECOLOR}}">全部</view>
-      <view class="desc2" style="background-color: {{BASECOLOR}}">精选物品</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
-    <view class="toggleItem skeleton-rect">
-      <view class="desc1">手机配件</view>
-      <view class="desc2">漂亮最重要</view>
-    </view>
+    <block wx:for="{{tabList}}" wx:key="index" wx:for-item="item">
+      <view class="toggleItem {{currentTab===index?'active':''}} skeleton-rect" catchtap="_switchNav" data-current="{{index}}">
+        <view class="desc1" style="color: {{currentTab===index?BASECOLOR:''}}">{{item.desc.desc1}}</view>
+        <view class="desc2" style="background-color: {{currentTab===index?BASECOLOR:''}}">{{item.desc.desc2}}</view>
+      </view>
+    </block>
   </view>
 
 
