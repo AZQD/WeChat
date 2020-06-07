@@ -23,15 +23,11 @@
 
     <view class="bigImg skeleton-rect">
       <swiper bindchange="swiperChange1" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
-        <swiper-item>
-          <image class="img" src='/images/common/tempImg.png' />
-        </swiper-item>
-        <swiper-item>
-          <image class="img" src='/images/common/tempImg.png' />
-        </swiper-item>
-        <swiper-item>
-          <image class="img" src='/images/common/tempImg.png' />
-        </swiper-item>
+        <block wx:for="{{bannerArr1}}" wx:key="index">
+          <swiper-item>
+            <image class="img" src='/images/common/tempImg.png' />
+          </swiper-item>
+        </block>
       </swiper>
       <view class="dots skeleton-rect" wx:if="{{bannerArr1.length}}" style="left: calc(50% - {{bannerArr1.length * 24 + 'rpx'}});">
         <block wx:for="{{bannerArr1}}" wx:key="index">
@@ -90,138 +86,52 @@
   <view class="sortBox">
 
     <swiper bindchange="swiperChange2" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
-      <swiper-item>
-        <view class="sortList">
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
+      <block wx:for="{{bannerArr2}}" wx:key="index">
+        <swiper-item>
+          <view class="sortList">
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
+            <view class="sortItem">
+              <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+              <view class="name skeleton-rect">蔬菜豆制</view>
+            </view>
           </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-        </view>
-      </swiper-item>
-      <swiper-item>
-        <view class="sortList">
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-        </view>
-      </swiper-item>
-      <swiper-item>
-        <view class="sortList">
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-          <view class="sortItem">
-            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-            <view class="name skeleton-rect">蔬菜豆制</view>
-          </view>
-        </view>
-      </swiper-item>
+        </swiper-item>
+      </block>
     </swiper>
 
   </view>
@@ -267,96 +177,38 @@
     <view class="title skeleton-rect">限时抢购<view class="desc">爆款限时限量抢购</view></view>
     <view class='bannerBox'>
       <swiper bindchange="swiperChange3" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
-        <swiper-item>
-          <view class="selectedInner">
-            <view class="selectedItem">
-              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2 skeleton-rect">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
+        <block wx:for="{{bannerArr3}}" wx:key="index">
+          <swiper-item>
+            <view class="selectedInner">
+              <view class="selectedItem">
+                <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+                <view class="desc">
+                  <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                  <view class="desc2 skeleton-rect">
+                    <view class="left">
+                      <image class="star" src='/images/common/tempImg.png' />
+                      <text class="num">4.8</text>
+                    </view>
+                    <view class="right">销量: 3万+</view>
                   </view>
-                  <view class="right">销量: 3万+</view>
+                </view>
+              </view>
+              <view class="selectedItem">
+                <image class="img skeleton-rect" src='/images/common/tempImg.png' />
+                <view class="desc">
+                  <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
+                  <view class="desc2 skeleton-rect">
+                    <view class="left">
+                      <image class="star" src='/images/common/tempImg.png' />
+                      <text class="num">4.8</text>
+                    </view>
+                    <view class="right">销量: 3万+</view>
+                  </view>
                 </view>
               </view>
             </view>
-            <view class="selectedItem">
-              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2 skeleton-rect">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-          </view>
-        </swiper-item>
-        <swiper-item>
-          <view class="selectedInner">
-            <view class="selectedItem">
-              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2 skeleton-rect">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-            <view class="selectedItem">
-              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2 skeleton-rect">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-          </view>
-        </swiper-item>
-        <swiper-item>
-          <view class="selectedInner">
-            <view class="selectedItem">
-              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2 skeleton-rect">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-            <view class="selectedItem">
-              <image class="img skeleton-rect" src='/images/common/tempImg.png' />
-              <view class="desc">
-                <view class="desc1 skeleton-rect">波司登羽绒服波司登羽绒服</view>
-                <view class="desc2 skeleton-rect">
-                  <view class="left">
-                    <image class="star" src='/images/common/tempImg.png' />
-                    <text class="num">4.8</text>
-                  </view>
-                  <view class="right">销量: 3万+</view>
-                </view>
-              </view>
-            </view>
-          </view>
-        </swiper-item>
+          </swiper-item>
+        </block>
       </swiper>
       <view class="dots skeleton-rect" wx:if="{{bannerArr3.length}}" style="left: calc(50% - {{bannerArr3.length * 24 + 'rpx'}});">
         <block wx:for="{{bannerArr3}}" wx:key="index">

@@ -12,24 +12,18 @@ Page({
     bannerArr1: [ // swiper-item数量
       {
         id: 1
-      },
+      }
+    ],
+    currentSwiper2: 0, // 初始展示第一个轮播
+    bannerArr2: [ // swiper-item数量
       {
-        id: 2
-      },
-      {
-        id: 3
+        id: 1
       }
     ],
     currentSwiper3: 0, // 初始展示第一个轮播
     bannerArr3: [ // swiper-item数量
       {
         id: 1
-      },
-      {
-        id: 2
-      },
-      {
-        id: 3
       }
     ],
     tabList: [
@@ -98,7 +92,7 @@ Page({
       }
     ],
     currentTab: 0,
-    // showSkeleton: true,
+    showSkeleton: true,
   },
 
   /**
@@ -113,11 +107,44 @@ Page({
       });
       this.setData({BASECOLOR: res});
     });
-    // setTimeout( () => {
-    //   this.setData({
-    //     showSkeleton: false
-    //   })
-    // }, 3000);
+    setTimeout( () => {
+      this.setData({
+        showSkeleton: false,
+        bannerArr1: [
+          {
+            id: 1
+          },
+          {
+            id: 2
+          },
+          {
+            id: 3
+          }
+        ],
+        bannerArr2: [
+          {
+            id: 1
+          },
+          {
+            id: 2
+          },
+          {
+            id: 3
+          }
+        ],
+        bannerArr3: [
+          {
+            id: 1
+          },
+          {
+            id: 2
+          },
+          {
+            id: 3
+          }
+        ],
+      })
+    }, 3000);
   },
 
   swiperChange1: function (e) {
