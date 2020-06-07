@@ -20,8 +20,28 @@
       <view class="name">搜索商品关键词</view>
     </view>
 
+    <!--<view class="bigImg skeleton-rect">-->
+      <!--<image class="img" src='/images/common/tempImg.png' />-->
+    <!--</view>-->
+
+
     <view class="bigImg skeleton-rect">
-      <image class="img" src='/images/common/tempImg.png' />
+      <swiper bindchange="swiperChange1" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
+        <swiper-item>
+          <image class="img" src='/images/common/tempImg.png' />
+        </swiper-item>
+        <swiper-item>
+          <image class="img" src='/images/common/tempImg.png' />
+        </swiper-item>
+        <swiper-item>
+          <image class="img" src='/images/common/tempImg.png' />
+        </swiper-item>
+      </swiper>
+      <view class="dots skeleton-rect" wx:if="{{bannerArr1.length}}" style="left: calc(50% - {{bannerArr1.length * 24 + 'rpx'}});">
+        <block wx:for="{{bannerArr1}}" wx:key="index">
+          <view class="dot" style="background-color: {{index == currentSwiper1?'#F5F5F5':''}};"></view>
+        </block>
+      </view>
     </view>
 
     <view class="labels skeleton-rect">
@@ -156,7 +176,7 @@
   <view class="selectedBox">
     <view class="title skeleton-rect">限时抢购<view class="desc">爆款限时限量抢购</view></view>
     <view class='bannerBox'>
-      <swiper bindchange="swiperChange" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
+      <swiper bindchange="swiperChange3" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
         <swiper-item>
           <view class="selectedInner">
             <view class="selectedItem">
@@ -248,9 +268,9 @@
           </view>
         </swiper-item>
       </swiper>
-      <view class="dots skeleton-rect" wx:if="{{bannerArr.length}}" style="left: calc(50% - {{bannerArr.length * 24 + 'rpx'}});">
-        <block wx:for="{{bannerArr}}" wx:key="index">
-          <view class="dot" style="background-color: {{index == currentSwiper?BASECOLOR:''}};"></view>
+      <view class="dots skeleton-rect" wx:if="{{bannerArr3.length}}" style="left: calc(50% - {{bannerArr3.length * 24 + 'rpx'}});">
+        <block wx:for="{{bannerArr3}}" wx:key="index">
+          <view class="dot" style="background-color: {{index == currentSwiper3?BASECOLOR:''}};"></view>
         </block>
       </view>
     </view>

@@ -61,12 +61,45 @@
       }
     }
 
+    //.bigImg{
+    //  margin-top: 26rpx;
+    //  .img{
+    //    width:100%;
+    //    height:280rpx;
+    //  }
+    //}
+
     .bigImg{
       margin-top: 26rpx;
-      .img{
+      position: relative;
+      swiper{
         width:100%;
         height:280rpx;
+        border-radius: 8rpx;
+        overflow: hidden;
+        .img{
+          width:100%;
+          height:100%;
+        }
       }
+      .dots {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        bottom: 20rpx;
+        height:4rpx;
+        background:rgba(0,0,0,.2);
+        border-radius:2rpx;
+      }
+      /*未选中时的小圆点样式 */
+      .dot {
+        width:24rpx;
+        height:4rpx;
+      }
+      /*选中以后的小圆点样式  */
+      //.active {
+      //  background:rgba(241,94,52,1);
+      //}
     }
 
     .labels{

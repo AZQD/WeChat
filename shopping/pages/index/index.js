@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentSwiper: 1, // 初始展示第一个轮播
-    bannerArr: [ // swiper-item数量
+    currentSwiper1: 0, // 初始展示第一个轮播
+    bannerArr1: [ // swiper-item数量
       {
         id: 1
       },
@@ -20,7 +20,19 @@ Page({
         id: 3
       }
     ],
-    showSkeleton: true,
+    currentSwiper3: 0, // 初始展示第一个轮播
+    bannerArr3: [ // swiper-item数量
+      {
+        id: 1
+      },
+      {
+        id: 2
+      },
+      {
+        id: 3
+      }
+    ],
+    // showSkeleton: true,
   },
 
   /**
@@ -35,16 +47,22 @@ Page({
       });
       this.setData({BASECOLOR: res});
     });
-    setTimeout( () => {
-      this.setData({
-        showSkeleton: false
-      })
-    }, 3000);
+    // setTimeout( () => {
+    //   this.setData({
+    //     showSkeleton: false
+    //   })
+    // }, 3000);
   },
 
-  swiperChange: function (e) {
+  swiperChange1: function (e) {
+      console.log(123, e.detail);
     this.setData({
-      currentSwiper: e.detail.current
+      currentSwiper1: e.detail.current
+    });
+  },
+  swiperChange3: function (e) {
+    this.setData({
+      currentSwiper3: e.detail.current
     });
   },
 
