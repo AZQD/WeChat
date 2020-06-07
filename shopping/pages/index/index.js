@@ -55,10 +55,12 @@ Page({
   },
 
   swiperChange1: function (e) {
-      console.log(123, e.detail);
     this.setData({
       currentSwiper1: e.detail.current
     });
+  },
+  swiperChange2: function (e) {
+    console.log(e.detail);
   },
   swiperChange3: function (e) {
     this.setData({

@@ -20,10 +20,6 @@
       <view class="name">搜索商品关键词</view>
     </view>
 
-    <!--<view class="bigImg skeleton-rect">-->
-      <!--<image class="img" src='/images/common/tempImg.png' />-->
-    <!--</view>-->
-
 
     <view class="bigImg skeleton-rect">
       <swiper bindchange="swiperChange1" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
@@ -92,48 +88,142 @@
   </view>
 
   <view class="sortBox">
-    <view class="sortList">
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-      <view class="sortItem">
-        <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
-        <view class="name skeleton-rect">蔬菜豆制</view>
-      </view>
-    </view>
+
+    <swiper bindchange="swiperChange2" autoplay="{{false}}" interval="4000" duration="1000" circular="true">
+      <swiper-item>
+        <view class="sortList">
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="sortList">
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="sortList">
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+          <view class="sortItem">
+            <image class="sortImg skeleton-rect" src='/images/common/tempImg.png' />
+            <view class="name skeleton-rect">蔬菜豆制</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+
   </view>
 
   <view class="sort2Box">
