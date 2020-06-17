@@ -13,7 +13,7 @@ exports.main = async (event, context) => {
     let imageR = false;
 
     //  检查文本内容是否违规，返回校验结果
-    if(event.msg){
+    if (event.msg) {
       msgR = await cloud.openapi.security.msgSecCheck({
         content: event.msg
       })
