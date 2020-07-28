@@ -12,23 +12,23 @@ Page({
           },
           {
               id: 1,
-              name: '内蒙特产'
+              name: '北京'
           },
           {
               id: 2,
-              name: '金融'
+              name: '上海'
           },
           {
               id: 3,
-              name: '制造'
+              name: '广州'
           },
           {
               id: 4,
-              name: '企业服务'
+              name: '哈尔滨'
           },
           {
               id: 5,
-              name: '商业'
+              name: '呼和浩特'
           },
           {
               id: 10000,

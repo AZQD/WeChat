@@ -20,8 +20,21 @@
     <navigator url="/pages/list/list" hover-class="none" open-type='switchTab'>回到首页</navigator>
   </view>
 
-  <!--ios横向滚动条兼容问题-->
+  <!--ios横向滚动条兼容问题（宽度不定，由内容撑开）-->
   <view class="tabListWrap">
+    <view class="tabListBox">
+      <view class="tabList">
+        <block wx:for="{{tabList}}" wx:key="index" wx:for-item="item">
+          <view class="toggleItem {{currentTab===item.id?'active':''}}" catchtap="_switchNav" data-index="{{index}}">
+            <view class="desc1">{{item.name}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!--ios横向滚动条兼容问题（等宽）-->
+  <view class="tabListWrap2">
     <view class="tabListBox">
       <view class="tabList">
         <block wx:for="{{tabList}}" wx:key="index" wx:for-item="item">
