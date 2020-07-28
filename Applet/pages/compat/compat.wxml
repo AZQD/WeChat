@@ -1,0 +1,23 @@
+<view class="container">
+
+
+  <view class="box1">
+    <!--两种placeholder的颜色样式-->
+    <input type="text" class="ipt1" placeholder="请输入内容" placeholder-style="color: pink;"/>
+    <input type="text" class="ipt1" placeholder="请输入内容" placeholder-class="placeholderClass"/>
+  </view>
+
+  <view class="box2">
+    <!--hover-class="none"去掉点击时的灰色阴影-->
+    <button hover-class="none">点击button</button>
+
+    <!--hover-class也可以自定义点击时的样式-->
+    <navigator class="navigator" hover-class="navigator-hover" url="/pages/rank/rank">
+      跳转新的页面
+    </navigator>
+
+    <!--navigator跳转tabbar页面-->
+    <navigator url="/pages/list/list" hover-class="none" open-type='switchTab'>回到首页</navigator>
+  </view>
+
+</view>

@@ -50,7 +50,8 @@
 
 
     "pages/getUserInfo/getUserInfo",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/compat/compat"
   ],
   "window": {
     "backgroundTextStyle": "light",

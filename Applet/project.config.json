@@ -292,6 +292,13 @@
 					"id": -1,
 					"name": "云函数列表",
 					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "小程序常见问题总结",
+					"pathName": "pages/compat/compat",
 					"scene": null
 				}
 			]

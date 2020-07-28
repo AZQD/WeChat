@@ -1,0 +1,21 @@
+.container {
+  padding: 30rpx;
+}
+.container .box1 {
+  caret-color: red;
+}
+.container .box1 .ipt1 {
+  padding: 0 10rpx;
+  border: 1rpx solid #666;
+}
+.container .box1 .placeholderClass {
+  color: blue;
+}
+.container .box2 .navigator {
+  color: blue;
+}
+.container .box2 .navigator-hover {
+  font-size: 50rpx;
+  color: red;
+  background-color: pink;
+}

@@ -55,6 +55,7 @@ Page({
       "pages/cloud/customerServiceMessage/customerServiceMessage",
       "pages/cloud/logistics/logistics",
       "pages/cloud/nearbyPoi/nearbyPoi",
+      "pages/compat/compat",
     ],
   },
 
