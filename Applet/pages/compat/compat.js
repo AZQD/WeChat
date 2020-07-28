@@ -5,7 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+      tabList: [
+          {
+              id: 0,
+              name: '全部'
+          },
+          {
+              id: 1,
+              name: '内蒙特产'
+          },
+          {
+              id: 2,
+              name: '金融'
+          },
+          {
+              id: 3,
+              name: '制造'
+          },
+          {
+              id: 4,
+              name: '企业服务'
+          },
+          {
+              id: 5,
+              name: '商业'
+          },
+          {
+              id: 10000,
+              name: '其他'
+          }
+      ],
+      currentTab: 0,
   },
 
   /**
@@ -14,6 +44,15 @@ Page({
   onLoad: function (options) {
 
   },
+
+    // 切换tab
+    _switchNav: function (e) {
+        let tabList = this.data.tabList;
+        let index = e.currentTarget.dataset.index;
+        this.setData({
+            currentTab: tabList[index].id
+        });
+    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

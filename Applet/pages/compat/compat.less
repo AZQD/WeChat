@@ -23,4 +23,53 @@
     }
   }
 
+  .tabListWrap{
+    font-size: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    border-bottom: 1rpx solid #E5E5E5;
+    .tabListBox{
+      height: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      /*解决ios上滑动不流畅*/
+      -webkit-overflow-scrolling: touch;
+      /*纵向超出部分将会隐藏，即滚动条部分被挤出可视区域*/
+      padding-bottom: 20rpx;
+      margin-bottom: -20rpx;
+      .tabList {
+        display: flex;
+        align-items: center;
+        font-size: 0;
+        .toggleItem{
+          text-align: center;
+          display: inline-block;
+          padding-right: 32rpx;
+          white-space: nowrap;
+          &:first-child{
+            padding-left: 40rpx;
+          }
+          &:last-child{
+            padding-right: 40rpx;
+          }
+          .desc1{
+            color:#1A1A1A;
+            font-size:32rpx;
+            padding: 22rpx 0;
+            border-bottom: 6rpx solid transparent;
+          }
+        }
+        .active{
+          .desc1{
+            color:red;
+            border-bottom: 6rpx solid red;
+          }
+        }
+      }
+    }
+  }
+
 }
