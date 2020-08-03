@@ -46,4 +46,20 @@
     </view>
   </view>
 
+
+  <view class="mockBox">
+    <view class="title">小程序mockData1：</view>
+    <view>
+      <block wx:for="{{mockData1}}" wx:key="index" wx:for-item="item">
+        <view class="desc1">{{item.city}}</view>
+      </block>
+    </view>
+    <view class="title">小程序mockData2：</view>
+    <view>
+      <block wx:for="{{mockData2}}" wx:key="index" wx:for-item="item">
+        <view class="desc1">{{item.city}}</view>
+      </block>
+    </view>
+  </view>
+
 </view>

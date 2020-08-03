@@ -1,4 +1,9 @@
 // pages/compat/compat.js
+
+var API = require('../../utils/api.js');
+
+var Mock = require("mockjs");
+
 Page({
 
   /**
@@ -42,6 +47,38 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    // 使用Mock（方法一）
+    API.ajax('', (res)=> {
+      //这里即可以获取模拟的res
+      console.log('mockData1', res);
+      console.log('mockData1', res.data);
+      this.setData({
+        mockData1: res.data
+      });
+    });
+
+    // 使用Mock（方法二）
+    let mockData2 = Mock.mock({
+      'error_code': '',
+      'error_msg': '',
+      'data|10': [{
+        'id|+1': 1,
+        'img': "@image('200x100', '#4A7BF7','#fff','pic')",
+        'title': '@ctitle(3,8)',
+        'city': "@county(true)",
+        'stock_num': '@integer(0,100)',//库存数量  
+        'marketing_start': '@datetime()',
+        'marketing_stop': '@now()',
+        'price': '@integer(100,2000)',//现价，单位：分  
+        'original_price': '@integer(100,3000)'
+      }]
+    });
+    console.log('mockData2', mockData2);
+    console.log('mockData2', mockData2.data);
+    this.setData({
+      mockData2: mockData2.data
+    });
 
   },
 
