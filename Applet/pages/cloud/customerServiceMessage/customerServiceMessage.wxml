@@ -3,25 +3,28 @@
   <view class="tabTitle">选择下发客服消息的类型：</view>
   <view class='tabBox'>
     <block wx:for="{{tabList}}" wx:key="index" wx:for-item="item">
-      <view  class="tabItem {{currentTab===(index+1)}}" catchtap="_switchNav" data-current="{{index+1}}">{{item.name}}</view>
+      <view class="tabItem {{currentTab===(index+1)}}" catchtap="_switchNav" data-current="{{index+1}}">{{item.name}}
+      </view>
     </block>
   </view>
 
   <view class="tabInfo tabInfo1" wx:if="{{currentTab===1}}">
-    <input class="ipt" type="text" value="{{tabInfo1}}" bindinput='tabInfo1Change' placeholder="输入文本" />
+    <input class="ipt" type="text" value="{{tabInfo1}}" bindinput='tabInfo1Change' placeholder="输入文本"/>
   </view>
 
   <view class="tabInfo tabInfo2" wx:if="{{currentTab===2}}">
     <view class="upload">
-      <image catchtap="tabInfo2ChooseImage" class="upload_icon" src="{{tabInfo2 || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
+      <image catchtap="tabInfo2ChooseImage" class="upload_icon"
+             src="{{tabInfo2 || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
     </view>
   </view>
 
   <view class="tabInfo tabInfo3" wx:if="{{currentTab===3}}">
     <input class="ipt" type="text" value="{{tabInfo3.title}}" bindinput='tabInfo31Change' placeholder="输入标题"/>
-    <input class="ipt" type="text" value="{{tabInfo3.description}}" bindinput='tabInfo32Change' placeholder="输入描述" />
+    <input class="ipt" type="text" value="{{tabInfo3.description}}" bindinput='tabInfo32Change' placeholder="输入描述"/>
     <view class="upload">
-      <image catchtap="tabInfo3ChooseImage" class="upload_icon" src="{{tabInfo3.thumbUrl || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
+      <image catchtap="tabInfo3ChooseImage" class="upload_icon"
+             src="{{tabInfo3.thumbUrl || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
     </view>
     <view class="url">链接地址：https://tongzhen.58.com</view>
   </view>
@@ -29,7 +32,8 @@
   <view class="tabInfo tabInfo4" wx:if="{{currentTab===4}}">
     <input class="ipt" type="text" value="{{tabInfo4.title}}" bindinput='tabInfo4Change' placeholder="输入标题"/>
     <view class="upload">
-      <image catchtap="tabInfo4ChooseImage" class="upload_icon" src="{{tabInfo4.thumbMediaId || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
+      <image catchtap="tabInfo4ChooseImage" class="upload_icon"
+             src="{{tabInfo4.thumbMediaId || '../../../images/contentCheck/upload.png'}}" mode="aspectFit"></image>
     </view>
     <view class="path">小程序页面路径：pages/list/list?foo=bar</view>
   </view>
