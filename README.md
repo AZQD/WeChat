@@ -31,7 +31,32 @@ Q：小程序通过button获取电话，提示：errMsg: "getPhoneNumber:fail Er
 
 A：目前该接口针对非个人开发者，且完成了认证的小程序开放。
 
-### 1.微信小程序图片设置圆角会先闪一下才变成圆角:
+---
+
+### 1.小程序placeholder文字颜色:
+
+方法1：
+```
+    <input type="text" placeholder="请输入" placeholder-style="color:#000;"></input>
+```
+
+方法2：
+```
+.placeholderStyle{
+  //样式
+}
+<input type="text" placeholder="请输入" placeholder-class="placeholderStyle"></input>
+```
+
+---
+
+### 2.小程序placeholder光标颜色：
+
+```
+caret-color: #bfc;
+```
+
+### 3.微信小程序图片设置圆角会先闪一下才变成圆角:
 ```
 尝试加一下这个试试，transform变形
 当我们通过某些行为触发页面进行大面积绘制的时候，浏览器由于没有事先准备，应付渲染够呛，于是掉帧，于是卡顿。而will-change则是真正的行为触发之前告诉浏览器：“我待会儿就要变形了”。于是乎，浏览器把GPU给拉上了，从容应对即将到来的变形。
