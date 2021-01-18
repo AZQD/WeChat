@@ -37,15 +37,15 @@ A：目前该接口针对非个人开发者，且完成了认证的小程序开�
 
 方法1：
 ```
-    <input type="text" placeholder="请输入" placeholder-style="color:#000;"></input>
+<input type="text" placeholder="请输入内容" placeholder-style="color:#ccc;"></input>
 ```
 
 方法2：
 ```
 .placeholderStyle{
-  //样式
+  color: #ccc;
 }
-<input type="text" placeholder="请输入" placeholder-class="placeholderStyle"></input>
+<input type="text" placeholder="请输入内容" placeholder-class="placeholderStyle"></input>
 ```
 
 ---
