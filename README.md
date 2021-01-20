@@ -60,7 +60,7 @@ caret-color: #bfc;
 
 ```
     1.去掉默认阴影效果：
-    <button hover-class="none">btn</button>
+        <button hover-class="none">btn</button>
 
     2.修改阴影效果：
         WXML: <button hover-class="newClass">btn</button>
