@@ -76,7 +76,7 @@ will-change: transform
 }
 ```
 
-### 4.微信小程序button设置了open-type="share"的按钮如何禁止向上冒泡:
+### 5.微信小程序button设置了open-type="share"的按钮如何禁止向上冒泡:
 ```
     定义一个空的事件 catchtap="share"
     <button open-type="share" catchtap="share">
