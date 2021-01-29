@@ -85,3 +85,9 @@ will-change: transform
         console.log('禁止冒泡')
     },
 ```
+
+### 6.flex多行多列均分:
+```
+    display: flex;
+    flex-flow: wrap;
+```
