@@ -1,4 +1,4 @@
-<!--方案3：小程序引导关注公众号-小程序通过公众号关注组件official-account-->
+<!--方案4：小程序引导关注公众号-小程序通过公众号关注组件official-account-->
 
 <!--注意：只有从一定场景(如扫码小程序码)进入小程序，才具有展示引导关注公众号组件的能力；-->
 <!--参考文档：https://developers.weixin.qq.com/miniprogram/dev/component/official-account.html-->
