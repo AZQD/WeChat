@@ -1,3 +1,6 @@
+
+<!--方案1：小程序引导关注公众号-长按保存或者截屏-->
+
 <view class="wrapper">
 
     <view class="contact-qrcode">
