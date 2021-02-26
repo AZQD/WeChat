@@ -54,7 +54,8 @@
     "pages/compat/compat",
     "pages/officialAccount/way1/way1",
     "pages/officialAccount/way2/way2",
-    "pages/officialAccount/way3/way3"
+    "pages/officialAccount/way3/way3",
+    "pages/officialAccount/way4/way4"
   ],
   "window": {
     "backgroundTextStyle": "light",

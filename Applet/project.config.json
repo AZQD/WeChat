@@ -319,6 +319,12 @@
           "pathName": "pages/officialAccount/way3/way3",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "小程序引导关注公众号4",
+          "pathName": "pages/officialAccount/way4/way4",
+          "query": "",
+          "scene": 1047
         }
       ]
     }
