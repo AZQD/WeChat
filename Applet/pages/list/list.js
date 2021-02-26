@@ -56,6 +56,9 @@ Page({
       "pages/cloud/logistics/logistics",
       "pages/cloud/nearbyPoi/nearbyPoi",
       "pages/compat/compat",
+
+      // 小程序引导关注公众号
+      "pages/officialAccount/way1/way1",
     ],
   },
 

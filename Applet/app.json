@@ -51,7 +51,8 @@
 
     "pages/getUserInfo/getUserInfo",
     "pages/mine/mine",
-    "pages/compat/compat"
+    "pages/compat/compat",
+    "pages/officialAccount/way1/way1"
   ],
   "window": {
     "backgroundTextStyle": "light",

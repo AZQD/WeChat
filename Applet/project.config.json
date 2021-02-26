@@ -2,12 +2,13 @@
   "description": "项目配置文件。",
   "cloudfunctionRoot": "functions/",
   "setting": {
-    "urlCheck": false,
+    "urlCheck": true,
     "es6": true,
     "postcss": true,
     "minified": true,
     "newFeature": true,
     "nodeModules": true,
+    "scopeDataCheck": false,
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
@@ -36,12 +37,6 @@
   "simulatorPluginLibVersion": {},
   "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -304,6 +299,13 @@
           "id": -1,
           "name": "小程序常见问题总结",
           "pathName": "pages/compat/compat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小程序引导关注公众号1",
+          "pathName": "pages/officialAccount/way1/way1",
+          "query": "",
           "scene": null
         }
       ]
