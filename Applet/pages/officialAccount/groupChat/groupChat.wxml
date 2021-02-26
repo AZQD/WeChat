@@ -1,0 +1,16 @@
+
+<!--小程序引导加入微信群聊-->
+
+<!--说明文档：https://open.work.weixin.qq.com/api/doc/90000/90136/93884-->
+<!--参考文档：https://developers.weixin.qq.com/community/develop/doc/000c4aa3db4328a3cb3a7b0a751000?_at=1586435937678-->
+<!--plugid需要找PM要，待验证；-->
+
+
+<view class="wrapper">
+
+    <chatGroupCell bind:startmessage='startmessageChatGroup' bind:completemessage="completemessageChatGroup" plugid='fea6a403e1dfd86e7b269fc83d76d129'  />
+
+
+    <contactCell bind:startmessage='startmessageContact' bind:completemessage="completemessageContact" plugid='fea6a403e1dfd86e7b269fc83d76d129'  />
+
+</view>

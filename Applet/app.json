@@ -55,7 +55,8 @@
     "pages/officialAccount/way1/way1",
     "pages/officialAccount/way2/way2",
     "pages/officialAccount/way3/way3",
-    "pages/officialAccount/way4/way4"
+    "pages/officialAccount/way4/way4",
+    "pages/officialAccount/groupChat/groupChat"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -91,6 +92,14 @@
     "calendar": {
       "version": "1.1.3",
       "provider": "wx92c68dae5a8bb046"
+    },
+    "chatGroupPlugin": {
+      "version": "1.0.0",
+      "provider": "wxaae6519cee98d824"
+    },
+    "contactPlugin": {
+      "version": "1.3.0",
+      "provider": "wx104a1a20c3f81ec2"
     }
   },
   "sitemapLocation": "sitemap.json"

@@ -325,6 +325,12 @@
           "pathName": "pages/officialAccount/way4/way4",
           "query": "",
           "scene": 1047
+        },
+        {
+          "name": "小程序引导加入微信群聊",
+          "pathName": "pages/officialAccount/groupChat/groupChat",
+          "query": "",
+          "scene": null
         }
       ]
     }

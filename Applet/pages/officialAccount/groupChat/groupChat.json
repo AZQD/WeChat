@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "chatGroupCell": "plugin://chatGroupPlugin/cell",
+    "contactCell": "plugin://contactPlugin/cell"
+  }
+}
