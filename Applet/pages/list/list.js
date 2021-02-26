@@ -60,7 +60,7 @@ Page({
       // 小程序引导关注公众号
       "pages/officialAccount/way1/way1", // 长按保存或者截屏
       "pages/officialAccount/way2/way2", // 小程序通过web-view打开关联公众号文章
-      "pages/officialAccount/way3/way3", // 小程序通过客服消息
+      "pages/officialAccount/way3/way3", // 小程序通过客服消息-回复公众号二维码
       "pages/officialAccount/way4/way4", // 小程序通过公众号关注组件official-account
       "pages/officialAccount/groupChat/groupChat", // 小程序引导加入微信群聊-account
 
