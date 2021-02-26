@@ -1,0 +1,15 @@
+.contactService{
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    background: none;
+}
+.contactService::after{
+    border: none;
+}
+.contactBox{
+    color: #fff;
+    background-color: #00D1B5;
+}

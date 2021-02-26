@@ -53,7 +53,8 @@
     "pages/mine/mine",
     "pages/compat/compat",
     "pages/officialAccount/way1/way1",
-    "pages/officialAccount/way2/way2"
+    "pages/officialAccount/way2/way2",
+    "pages/officialAccount/way3/way3"
   ],
   "window": {
     "backgroundTextStyle": "light",
