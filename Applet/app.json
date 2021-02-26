@@ -52,7 +52,8 @@
     "pages/getUserInfo/getUserInfo",
     "pages/mine/mine",
     "pages/compat/compat",
-    "pages/officialAccount/way1/way1"
+    "pages/officialAccount/way1/way1",
+    "pages/officialAccount/way2/way2"
   ],
   "window": {
     "backgroundTextStyle": "light",

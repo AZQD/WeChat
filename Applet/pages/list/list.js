@@ -58,7 +58,8 @@ Page({
       "pages/compat/compat",
 
       // 小程序引导关注公众号
-      "pages/officialAccount/way1/way1",
+      "pages/officialAccount/way1/way1", // 长按保存或者截屏
+      "pages/officialAccount/way2/way2", // 小程序通过web-view打开公众号文章
     ],
   },
 
