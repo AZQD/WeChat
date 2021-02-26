@@ -8,9 +8,11 @@
 
 <view class="wrapper">
 
+    「加入群聊」插件
     <chatGroupCell bind:startmessage='startmessageChatGroup' bind:completemessage="completemessageChatGroup" plugid='fea6a403e1dfd86e7b269fc83d76d129'  />
 
 
+    「联系我」插件
     <contactCell bind:startmessage='startmessageContact' bind:completemessage="completemessageContact" plugid='fea6a403e1dfd86e7b269fc83d76d129'  />
 
 </view>
