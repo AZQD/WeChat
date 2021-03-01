@@ -1,1 +1,3 @@
-/* pages/officialAccount/groupChat/groupChat.wxss */
+.wrapper{
+    padding: 24rpx;
+}
