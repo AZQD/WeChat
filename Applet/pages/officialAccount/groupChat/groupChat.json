@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "小程序引导加入微信群聊",
   "usingComponents": {
     "chatGroupCell": "plugin://chatGroupPlugin/cell",
     "contactCell": "plugin://contactPlugin/cell"
