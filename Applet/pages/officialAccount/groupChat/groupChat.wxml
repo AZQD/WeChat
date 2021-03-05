@@ -8,11 +8,16 @@
 
 <view class="wrapper">
 
-    <!--「加入群聊」插件-->
+    通过企业微信「加入群聊」
 
     <chatGroupCell bind:startmessage='startmessageChatGroup' bind:completemessage="completemessageChatGroup" plugid='2ac19f6d5b77ea226484fa51d8e79368'  />
 
-    <!--「联系我」插件-->
-    <contactCell bind:startmessage='startmessageContact' bind:completemessage="completemessageContact" plugid='fea6a403e1dfd86e7b269fc83d76d129'  />
+    <text>
+        \n
+        \n
+        \n
+    </text>
 
+    通过企业微信「加好友」
+    <contactCell bind:startmessage='startmessageContact' bind:completemessage="completemessageContact" plugid='fea6a403e1dfd86e7b269fc83d76d129'  />
 </view>
