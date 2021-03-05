@@ -91,3 +91,10 @@ will-change: transform
     display: flex;
     flex-flow: wrap;
 ```
+
+### 7.微信小程序中的空格和换行操作:
+```
+    空格 ：\t
+    换行 ：\n 
+    注意：必须在text标签中添加！
+```
