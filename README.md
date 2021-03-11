@@ -98,3 +98,11 @@ will-change: transform
     换行 ：\n 
     注意：必须在text标签中添加！
 ```
+
+### 8.小程序滚动到顶部:
+
+```js
+    wx.pageScrollTo({
+      scrollTop: 0
+    });
+```
