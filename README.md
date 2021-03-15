@@ -106,3 +106,10 @@ will-change: transform
       scrollTop: 0
     });
 ```
+
+### 9.报错提示：TypeError: Cannot read property ‘mark’ of undefined:
+
+```
+    原因：使用ES7异步网络请求方法：async init(){ const res=await request({}};
+    解决方案：详情-—>本地设置,将增强编译勾选上即可。
+```
