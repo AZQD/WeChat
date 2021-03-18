@@ -123,3 +123,12 @@ will-change: transform
       }
     });
 ```
+
+### 11.小程序loading时禁掉其他操作；
+
+```js
+    wx.showLoading({
+      title: '加载中...',
+      mask: true
+    });
+```
