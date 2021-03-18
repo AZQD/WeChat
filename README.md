@@ -113,3 +113,13 @@ will-change: transform
     原因：使用ES7异步网络请求方法：async init(){ const res=await request({}};
     解决方案：详情-—>本地设置,将增强编译勾选上即可。
 ```
+
+### 10.隐藏返回首页按钮功能；
+
+```js
+    wx.hideHomeButton({
+      complete: (res) => {
+        console.log('隐藏返回首页按钮', res);
+      }
+    });
+```
