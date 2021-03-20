@@ -132,3 +132,10 @@ will-change: transform
       mask: true
     });
 ```
+
+### 12.小程序输入框键盘弹起时，是否自动上推页面：
+
+```
+    重要属性：adjust-position
+    参考：http://www.xmdeal.com/mobanjiaocheng/246.html
+```
