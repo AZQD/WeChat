@@ -1,11 +1,10 @@
-
 <!--方案1：小程序引导关注公众号-长按保存或者截屏-->
 
 <view class="wrapper">
 
     <view class="contact-qrcode">
         <view class="title">沿途岁月</view>
-        <image class="qrcode" catchtap="saveImgFun" src="{{qrcode}}" mode="aspectFill" />
+        <image class="qrcode" catchtap="saveImgFun" src="{{qrcode}}" mode="aspectFill"/>
         <view class="tip">保存图片到相册（长按保存或者截屏）</view>
         <view class="tip">微信-扫一扫-选择相册二维码图片-添加微信</view>
     </view>
