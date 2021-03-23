@@ -23,13 +23,13 @@ Page({
   },
 
   //获取授权信息
-  getSettingFun:function () {
+  getSettingFun: function () {
     wx.getSetting({
       success: res => {
-        console.log('保存到相册',res.authSetting['scope.writePhotosAlbum']);
+        console.log('保存到相册', res.authSetting['scope.writePhotosAlbum']);
       },
       fail: res => {
-        console.log('获取授权信息fail',res);
+        console.log('获取授权信息fail', res);
       }
     })
   },
@@ -64,9 +64,9 @@ Page({
     });
   },
 
-  openSetting(){
+  openSetting() {
     wx.openSetting({
-      success (res) {
+      success(res) {
         console.log(res.authSetting)
       }
     })
@@ -113,4 +113,4 @@ Page({
   onShareAppMessage: function () {
 
   }
-})
+});
