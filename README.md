@@ -139,3 +139,9 @@ will-change: transform
     重要属性：adjust-position
     参考：http://www.xmdeal.com/mobanjiaocheng/246.html
 ```
+
+### 13.小程序开发调试时，遇到wxss里面定义的尺寸(如：width、height)和模拟器不一样；
+
+```
+    开发调试时，如果遇到上述情况，看一下模拟器选择的机型是不是：iPhone6/7/8 375*667；
+```
