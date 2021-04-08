@@ -2,7 +2,7 @@
  * 图片加载容错：远程图片no found情况下指引
  * @param e
  * @param that
- * @param replaceUrl
+ * @param replaceUrl：支持本地路径
  */
 function errImgFun(e, that, replaceUrl) {
   let _errImg = e.target.dataset.errImg;
