@@ -151,3 +151,13 @@ will-change: transform
 ```
     待总结
 ```
+
+### 15.获取DOM节点位置信息，如果返回rect为null，需要添加`.in(this)`；
+
+```js
+    wx.createSelectorQuery().in(this).select('.commentIptWrap')
+    .boundingClientRect((rect) => {
+      console.log('rect：', rect);
+    })
+    .exec();
+```
