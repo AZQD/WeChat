@@ -1,6 +1,7 @@
 var imageBinderrorUtil = require('../../utils/imageBinderrorUtil');
 
 Page({
+
   data: {
     singleImg: "https://img.58cdn.com.cn/weixin/r/business/userCenter/single_error.png",
 
