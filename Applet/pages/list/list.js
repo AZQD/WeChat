@@ -64,6 +64,8 @@ Page({
       "pages/officialAccount/way4/way4", // 小程序通过公众号关注组件official-account
       "pages/officialAccount/groupChat/groupChat", // 小程序引导加入微信群聊-account
 
+      "pages/imageBinderror/imageBinderror", // 图片加载容错，binderror事件应用
+
     ],
   },
 

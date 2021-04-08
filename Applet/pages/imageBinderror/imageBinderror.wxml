@@ -1,0 +1,12 @@
+
+<view class="singleBox">
+    <!--src要和data-err-img的值一样-->
+    <image src="{{singleImg}}" binderror="errImg" data-err-img="singleImg" />
+</view>
+
+<view class="manyBox">
+    <block wx:for="{{listData}}" wx:key="index">
+        <!--src要和data-err-img的值一样-->
+        <image src="{{item.img}}" binderror="errImg" data-err-img="listData[{{index}}].img" />
+    </block>
+</view>

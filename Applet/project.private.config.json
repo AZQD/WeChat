@@ -1,0 +1,308 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "swiper",
+          "pathName": "pages/swiper/swiper",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "elipsis",
+          "pathName": "pages/elipsis/elipsis",
+          "query": ""
+        },
+        {
+          "id": 2,
+          "name": "canvas",
+          "pathName": "pages/canvas/canvas",
+          "query": ""
+        },
+        {
+          "id": 3,
+          "name": "授权setting",
+          "pathName": "pages/setting/setting",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "获取unionId和openId",
+          "pathName": "pages/login/login",
+          "query": ""
+        },
+        {
+          "id": 5,
+          "name": "launchApp",
+          "pathName": "pages/launchApp/launchApp",
+          "query": "",
+          "scene": "1036",
+          "referrerInfo": {
+            "appId": "wxc97b21c63d084d92"
+          }
+        },
+        {
+          "id": -1,
+          "name": "遮罩居中",
+          "pathName": "pages/juZhong/juZhong",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "截屏事件",
+          "pathName": "pages/jiePing/jiePing",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "chooseLocation",
+          "pathName": "pages/chooseLocation/chooseLocation",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "chooseImage",
+          "pathName": "pages/chooseImage/chooseImage",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "getPhoneNumber",
+          "pathName": "pages/getPhoneNumber/getPhoneNumber",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "bindscrolltolower",
+          "pathName": "pages/bindscrolltolower/bindscrolltolower",
+          "query": ""
+        },
+        {
+          "id": 12,
+          "name": "cutPicture",
+          "pathName": "pages/cutPicture/dashboard/index",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "复制到剪切板",
+          "pathName": "pages/copy/copy",
+          "query": "",
+          "scene": "1036",
+          "referrerInfo": {
+            "appId": "wxc97b21c63d084d92"
+          }
+        },
+        {
+          "id": -1,
+          "name": "rank",
+          "pathName": "pages/rank/rank",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "日历插件",
+          "pathName": "pages/calendar/calendar",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "日历-自定义",
+          "pathName": "pages/calendar-DIY/calendar-DIY",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "canvasNew",
+          "pathName": "pages/canvasNew/canvas/New",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "ajaxLimit",
+          "pathName": "pages/ajaxLimit/ajaxLimit",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "wifi",
+          "pathName": "pages/wifi/wifi",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "promiseTest",
+          "pathName": "pages/promiseTest/promiseTest",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "picker",
+          "pathName": "pages/picker/picker",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pickerTime",
+          "pathName": "pages/pickerTime/pickerTime",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pickerView",
+          "pathName": "pages/pickerView/pickerView",
+          "query": ""
+        },
+        {
+          "id": 24,
+          "name": "skeleton骨架屏",
+          "pathName": "pages/skeleton/demo",
+          "query": ""
+        },
+        {
+          "id": 25,
+          "name": "skeleton骨架屏-定位",
+          "pathName": "pages/skeleton/demo-position",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "skeleton骨架屏-component",
+          "pathName": "pages/skeleton/demo-component",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "联系客服",
+          "pathName": "pages/contactService/contactService",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "图片转base64",
+          "pathName": "pages/img2base64/img2base64",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-物流助手",
+          "pathName": "pages/cloud/logistics/logistics",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-附近的小程序",
+          "pathName": "pages/cloud/nearbyPoi/nearbyPoi",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-内容安全",
+          "pathName": "pages/cloud/contentCheck/contentCheck",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-内容安全-列表信息",
+          "pathName": "pages/cloud/contentCheckList/contentCheckList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-小程序码",
+          "pathName": "pages/cloud/wxacode/wxacode",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-图像处理",
+          "pathName": "pages/cloud/img/img",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数-客服消息",
+          "pathName": "pages/cloud/customerServiceMessage/customerServiceMessage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "我的",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "云函数列表",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "小程序常见问题总结",
+          "pathName": "pages/compat/compat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小程序引导关注公众号1",
+          "pathName": "pages/officialAccount/way1/way1",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小程序引导关注公众号2",
+          "pathName": "pages/officialAccount/way2/way2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小程序引导关注公众号3",
+          "pathName": "pages/officialAccount/way3/way3",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小程序引导关注公众号4",
+          "pathName": "pages/officialAccount/way4/way4",
+          "query": "",
+          "scene": 1047
+        },
+        {
+          "name": "小程序引导加入微信群聊",
+          "pathName": "pages/officialAccount/groupChat/groupChat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "图片加载容错",
+          "pathName": "pages/imageBinderror/imageBinderror",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

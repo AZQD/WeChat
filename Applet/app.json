@@ -56,7 +56,9 @@
     "pages/officialAccount/way2/way2",
     "pages/officialAccount/way3/way3",
     "pages/officialAccount/way4/way4",
-    "pages/officialAccount/groupChat/groupChat"
+    "pages/officialAccount/groupChat/groupChat",
+
+    "pages/imageBinderror/imageBinderror"
   ],
   "window": {
     "backgroundTextStyle": "light",
