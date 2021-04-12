@@ -65,6 +65,7 @@ Page({
       "pages/officialAccount/groupChat/groupChat", // 小程序引导加入微信群聊-account
 
       "pages/imageBinderror/imageBinderror", // 图片加载容错，binderror事件应用
+      "pages/pullDownRefresh/pullDownRefresh", // 下拉刷新
 
     ],
   },

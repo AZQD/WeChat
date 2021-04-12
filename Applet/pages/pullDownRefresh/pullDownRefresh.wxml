@@ -1,0 +1,7 @@
+
+<view class="container">
+    <view>listData数据：</view>
+    <block wx:for="{{listData}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="list-item">这是第{{index}}条数据，值为{{item}}</view>
+    </block>
+</view>

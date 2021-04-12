@@ -58,7 +58,8 @@
     "pages/officialAccount/way4/way4",
     "pages/officialAccount/groupChat/groupChat",
 
-    "pages/imageBinderror/imageBinderror"
+    "pages/imageBinderror/imageBinderror",
+    "pages/pullDownRefresh/pullDownRefresh"
   ],
   "window": {
     "backgroundTextStyle": "light",

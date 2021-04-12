@@ -301,6 +301,11 @@
           "pathName": "pages/imageBinderror/imageBinderror",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/pullDownRefresh/pullDownRefresh",
+          "pathName": "pages/pullDownRefresh/pullDownRefresh",
+          "scene": null
         }
       ]
     }

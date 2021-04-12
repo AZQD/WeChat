@@ -1,0 +1,6 @@
+/* pages/pullDownRefresh/pullDownRefresh.wxss */
+
+.list-item{
+    height: 500rpx;
+    border-bottom: 1rpx solid #ccc;
+}

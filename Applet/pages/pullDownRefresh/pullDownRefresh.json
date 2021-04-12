@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "下拉刷新",
+  "backgroundTextStyle": "dark",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100,
+  "usingComponents": {}
+}
