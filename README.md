@@ -166,4 +166,8 @@ will-change: transform
     .exec();
 ```
 
-### 16.picker组件样式调整：使用view包裹picker，可设置picker宽度撑满view: flex-grow: 1;
+### 16.picker组件样式调整：
+
+```
+    使用view包裹picker，可设置picker宽度撑满view: flex-grow: 1;
+```
