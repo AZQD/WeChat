@@ -171,3 +171,11 @@ will-change: transform
 ```
     使用view包裹picker，可设置picker宽度撑满view: flex-grow: 1;
 ```
+
+
+### 17.小程序登录、用户信息相关接口调整说明：
+
+```
+    官方文档：https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801
+    社区提问：https://developers.weixin.qq.com/community/develop/doc/000aa606800b48d2510c58aca55400
+```
