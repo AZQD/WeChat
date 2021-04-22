@@ -59,7 +59,9 @@
     "pages/officialAccount/groupChat/groupChat",
 
     "pages/imageBinderror/imageBinderror",
-    "pages/pullDownRefresh/pullDownRefresh"
+    "pages/pullDownRefresh/pullDownRefresh",
+
+    "pages/authentication/authentication"
   ],
   "window": {
     "backgroundTextStyle": "light",

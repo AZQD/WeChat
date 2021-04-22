@@ -305,6 +305,12 @@
         {
           "name": "pages/pullDownRefresh/pullDownRefresh",
           "pathName": "pages/pullDownRefresh/pullDownRefresh",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "指纹/人脸/声纹识别",
+          "pathName": "pages/authentication/authentication",
           "scene": null
         }
       ]

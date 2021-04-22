@@ -1,0 +1,11 @@
+<view >
+
+    <button type="primary"   bindtap="checkIsFingerPrint"> 检测是否可以指纹识别 </button>
+    <button type="primary"   bindtap="checkIsFacial"> 检测是否可以人脸识别 </button>
+    <button type="primary"   bindtap="HaveFingerPrint"> 该设备是否录入指纹 </button>
+    <button type="primary"   bindtap="FingerPrint"> 识别指纹 </button>
+    <button type="primary"   bindtap="FacialPrint"> 识别人脸 </button>
+
+
+
+</view>

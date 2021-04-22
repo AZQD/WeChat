@@ -67,6 +67,9 @@ Page({
       "pages/imageBinderror/imageBinderror", // 图片加载容错，binderror事件应用
       "pages/pullDownRefresh/pullDownRefresh", // 下拉刷新
 
+
+      "pages/authentication/authentication", // 获取本机支持的 SOTER 生物认证方式
+
     ],
   },
 
