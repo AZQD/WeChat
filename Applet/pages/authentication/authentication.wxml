@@ -1,3 +1,12 @@
+<!--
+API参考：https://developers.weixin.qq.com/miniprogram/dev/api/open-api/soter/wx.checkIsSupportSoterAuthentication.html
+
+微信小程序人脸识别，需要邮件申请开通，你可以看一下这个：https://developers.weixin.qq.com/community/business/doc/000442d352c1202bd498ecb105c00d
+
+-->
+
+
+
 <view >
 
     <button type="primary"   bindtap="checkIsFingerPrint"> 检测是否可以指纹识别 </button>
@@ -5,7 +14,5 @@
     <button type="primary"   bindtap="HaveFingerPrint"> 该设备是否录入指纹 </button>
     <button type="primary"   bindtap="FingerPrint"> 识别指纹 </button>
     <button type="primary"   bindtap="FacialPrint"> 识别人脸 </button>
-
-
 
 </view>
