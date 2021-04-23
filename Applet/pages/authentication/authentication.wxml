@@ -5,8 +5,6 @@ API参考：https://developers.weixin.qq.com/miniprogram/dev/api/open-api/soter/
 
 -->
 
-
-
 <view >
 
     <button type="primary"   bindtap="checkIsFingerPrint"> 检测是否可以指纹识别 </button>
