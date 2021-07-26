@@ -179,3 +179,62 @@ will-change: transform
     官方文档：https://developers.weixin.qq.com/community/develop/doc/000cacfa20ce88df04cb468bc52801
     社区提问：https://developers.weixin.qq.com/community/develop/doc/000aa606800b48d2510c58aca55400
 ```
+
+
+### 18.小程序打开超链接：
+
+```
+	域名必须是我们自己维护的域名才可以。也就是说，比如要打开的h5超链接地址是：https://51imu.com/abc.html，那么在51imu.com服务器根目录添加微信提供的配置文件 Wi44Z0yVMR.txt 后，才可以在小程序打开https://51imu.com/abc.html
+
+	如果要打开的h5超链接是https://jinshuju.net/***.html，必须在jinshuju.net根目录添加微信提供的配置文件 Wi44Z0yVMR.txt ，才可以。而jinshuju.net服务器不是我们维护的，所以不能在它根目录添加。
+
+	所以，目前第三方超链接是在小程序里面打不开的。
+```
+
+
+### 19.小程序订阅消息总结：
+
+```
+	1.前端获取订阅状态：
+	...js
+	wx.getSetting({
+		  withSubscriptions: true,
+		  success (res) {
+			console.log(res.subscriptionsSetting)
+			// res.subscriptionsSetting = {
+			//   mainSwitch: true, // 订阅消息总开关
+			//   itemSettings: {   // 每一项开关
+				   // 普通一次性订阅消息，值包括'accept'、'reject'、'ban'、'filter'
+			//     zun-LzcQyW-edafCVvzPkK4de2Rllr1fFpw2A_x0oXE: 'reject',
+			//   }
+			// }
+		  }
+		})
+	...
+
+	2.订阅状态说明：
+	2.1.mainSwitch：订阅消息总开关：true;false，表示是否开启；
+	2.2.itemSettings：订阅结果。
+	因为我们的通知模板类型是“一次性订阅”，因此如果不点击“总是保持以上选择，不再询问”，不会返回itemSettings；
+	一次性订阅消息的话肯定只能订阅一次发送一次，长期的目前只有特定行业支持。
+	（“长期性订阅”只有政企等公共服务行业才可以开通，因此不用考虑）
+
+	itemSettings对应模板id值包括'accept'、'reject'、'ban'、'filter'。
+	'accept'表示用户同意订阅该条id对应的模板消息，'reject'表示用户拒绝订阅该条id对应的模板消息，'ban'表示已被后台封禁，'filter'表示该模板因为模板标题同名被后台过滤。
+
+	3.产品设计思路：
+	初始化页面：
+	3.1.mainSwitch：false:引导用户打开通知设置总开关；confirm(取消，确认)+截图引导；
+	3.2.mainSwitch：true:
+		3.2.1.没有itemSettings：则为不可关闭弹窗+截图引导，文案：请打开通知设置，订阅活动通知，如避免频繁打扰，可选择“总是保持以上选择，不再询问”；
+		3.2.2.有itemSettings，且对应模板id值为accept，则为长期允许订阅，每次都能收到通知，无需处理；
+		3.2.3.有itemSettings，且对应模板id值为reject，则为长期拒绝订阅，每次都不能收到通知，在页面加常驻按钮，用户可进入设置页面手动开启；
+		3.2.4.有itemSettings，且对应模板id值为ban或filter，表为特殊场景，不做处理；
+
+	4.前后端协作：
+	4.1.前端从多维度引导用户订阅通知；
+	4.2.后端负责按照指定时间发送通知；
+
+	5.其他说明：
+	用户选择订阅结果后（不管是允许，还是拒绝），删掉小程序，重新搜索进入小程序，选择结果会保留；
+```
