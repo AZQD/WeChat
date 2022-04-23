@@ -17,7 +17,7 @@ const cloudTextCheck = (msg = '') => {
         } else if (res.result.errCode === 87014) {
           wx.showToast({
             icon: 'none',
-            title: '文字违规哦',
+            title: '文字违规！',
           });
           resolve(false);
         } else {
