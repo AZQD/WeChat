@@ -30,8 +30,8 @@ Page({
             }
         })*/
         //这个tempFilePaths应该是后端传过来的图片，可以封装为函数，tempFilePaths作为参数传过来，参数获取到之后再调用绘制canvas;
-        // ctx.drawImage('http://tmp/wx201070c15385a377.o6zAJs8K071VheWTO07zzHgnG5a8.bc39ad4615333a21cdeea841aeb8ada2.jpg', 100, 40, 150, 100)
-        ctx.drawImage('http://pic1.58cdn.com.cn/nowater/wxacode/n_v23d1a07a5418348d5af4a84db0aec552c.jpg', 90, 40, 215, 215)
+        ctx.drawImage('http://tmp/aS2g5CmVNmY7e9d53f7f4641d89c3f9e8c7bf67cc962.jpg', 100, 40, 150, 100)
+        // ctx.drawImage('http://pic1.58cdn.com.cn/nowater/wxacode/n_v23d1a07a5418348d5af4a84db0aec552c.jpg', 90, 40, 215, 215)
         ctx.draw()
     },
 
