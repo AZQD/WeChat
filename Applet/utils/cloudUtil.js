@@ -72,7 +72,7 @@ const cloudImgArrCheck = (imgsArr = []) => {
       } else {
         wx.showToast({
           icon: 'none',
-          title: '图片违规哦',
+          title: '图片违规！',
         })
       }
       resolve(flag);
