@@ -85,6 +85,8 @@ Page({
     onShareAppMessage: function () {
 
     },
+
+    // 长按保存canvas
     saveImage: function () {
         console.log(222);
         wx.canvasToTempFilePath({
