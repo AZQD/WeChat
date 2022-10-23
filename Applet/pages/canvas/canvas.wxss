@@ -1,5 +1,47 @@
-/* pages/canvas/canvas.wxss */
-#myCanvas{
-    width: 100vw;
-    height: 100vh;
+.canvasBox {
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+}
+.canvasBox #myCanvas {
+  width: 100vw;
+  height: 1110rpx;
+}
+.bottomShadowBox {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 0;
+}
+.bottomShadowBox .canvasWrap {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 24rpx 24rpx 0 0;
+}
+.bottomShadowBox .canvasWrap .canvas-img {
+  width: 100%;
+  height: 850rpx;
+  margin-top: 30rpx;
+}
+.bottomShadowBox .canvasWrap .ctrlBox .ctrlItem {
+  font-size: 32rpx;
+  height: 108rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  background-color: #0080FF;
+}
+.bottomShadowBox .canvasWrap .ctrlBox .cancelItem {
+  color: #999;
+  background-color: #FFF;
 }

@@ -1,0 +1,62 @@
+
+.canvasBox{
+  //transform: scale(0.6);
+  //transform-origin: center bottom;
+  position: fixed;
+  top: 100rpx;
+  left: 0;
+  //left: -10000rpx;
+  #myCanvas{
+    width: 100vw;
+    //height: 100vh;
+    height: 1110rpx;
+  }
+}
+
+.bottomShadowBox {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  //height: 100%;
+  z-index: 99;
+  background: rgba(0, 0, 0, .6);
+  font-size: 0;
+
+  .canvasWrap{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 24rpx 24rpx 0 0;
+
+    .canvas-img{
+      width: 100%;
+      //height: 70vh;
+      height: 850rpx;
+      margin-top: 30rpx;
+    }
+
+    .ctrlBox {
+      .ctrlItem {
+        font-size: 32rpx;
+        height: 108rpx;
+        display: flex;
+        align-items: center;
+
+        justify-content: center;
+        color: #FFF;
+
+        background-color: #0080FF;
+      }
+      .cancelItem {
+        color: #999;
+        background-color: #FFF;
+      }
+    }
+  }
+}

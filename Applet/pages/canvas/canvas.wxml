@@ -1,1 +1,18 @@
-<canvas id="myCanvas" canvas-id="myCanvas" bindlongtap="saveImage"></canvas>
+
+<button type="primary" catchtap="generateCanvasFun">生成海报</button>
+
+<!-- 由于canvas不能缩放，所以隐藏真实canvas，使用image代替；-->
+<view class="canvasBox">
+    <canvas id="myCanvas" canvas-id="myCanvas" bindlongtap="saveImage"></canvas>
+</view>
+
+<view class="bottomShadowBox" wx:if="{{bottomShadowFlag}}">
+    <view class="canvasWrap">
+        <image class="canvas-img" wx:if="canvasToTempFilePathImg" src="{{canvasToTempFilePathImg}}" mode="aspectFit" />
+        <view class="ctrlBox">
+            <view class="ctrlItem" catchtap="saveImage">保存海报</view>
+            <view class="ctrlItem cancelItem" catchtap="cancelFun" data-type="0">取消</view>
+        </view>
+    </view>
+
+</view>
