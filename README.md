@@ -238,3 +238,19 @@ will-change: transform
 	5.其他说明：
 	用户选择订阅结果后（不管是允许，还是拒绝），删掉小程序，重新搜索进入小程序，选择结果会保留；
 ```
+
+
+
+微信小程序：
+
+
+
+商业能力 /交易组件 /基础交易工具（原标准版交易组件）及开放接口 /接入指引：
+https://developers.weixin.qq.com/miniprogram/dev/platform-capabilities/business-capabilities/ministore/minishopopencomponent/guideline.html
+
+
+企业&个体工商户 - 开店指引：https://developers.weixin.qq.com/community/business/doc/00042e93c00b00754bcaec2575600d
+
+
+小程序开发服务商入驻微信服务平台指引攻略：
+https://developers.weixin.qq.com/community/develop/doc/000e8cb217c0e0ce143bde14056402
